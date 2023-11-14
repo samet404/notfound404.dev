@@ -30,7 +30,8 @@
       "@/svg*": ["public/images/svg/*"],
       "@/png*": ["public/images/png/*"],
       "@/jpg*": ["public/images/jpg/*"],
-      "@/fonts*": ["public/fonts/*"]
+      "@/fonts*": ["public/fonts/*"],
+      "@/videos*": ["public/videos/*"]
     },
     "plugins": [{ "name": "next" }]
   },
