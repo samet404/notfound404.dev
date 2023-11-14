@@ -36,16 +36,17 @@ const Home = () => {
             </div>
           }
           hobbies={
-            <div
-              className={`${inter.className} flex flex-col gap-1 rounded-md bg-gradient-to-r from-[#ff738a8b] to-[#ff6e86b1] p-3 leading-5 text-[rgba(255,255,255,0.7)] shadow-[0_0px_15px_0px_rgba(0,0,0,0.5)]`}
-            >
-              <div className="pb-2 pt-5 font-[900]">{`My Hobbies:`}</div>
-              <div>{`- Watching film`}</div>
-              <div>{`- Playing video games`}</div>
-              <div>{`- Learning new things`}</div>
-              <div>{`- Reading book`}</div>
-              <div>{`- Drawing picture`}</div>
-
+            <div className="w-full">
+              <div
+                className={`${inter.className} flex flex-col gap-1 rounded-md bg-gradient-to-r from-[#ff738a8b] to-[#ff6e86b1] p-3 leading-5 text-[rgba(255,255,255,0.7)] shadow-[0_0px_15px_0px_rgba(0,0,0,0.5)]`}
+              >
+                <div className="pb-2 pt-5 font-[900]">{`My Hobbies:`}</div>
+                <div>{`- Watching film`}</div>
+                <div>{`- Playing video games`}</div>
+                <div>{`- Learning new things`}</div>
+                <div>{`- Reading book`}</div>
+                <div>{`- Drawing picture`}</div>
+              </div>
             </div>
           }
           pfp={pfp}
