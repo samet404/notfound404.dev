@@ -27,7 +27,7 @@ const Home = () => {
             <div
               className={`${inter.className} flex flex-col gap-2 rounded-md bg-gradient-to-r from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0.3)] p-3 leading-5 text-[rgba(255,255,255,0.7)] shadow-[0_0px_15px_0px_rgba(0,0,0,0.5)]`}
             >
-              <div>{`Hi i'm full-stack web developer`}</div>
+              <div>{`Hi i'm 17 years old and full-stack web developer. I don't go to school, I just learn from home.`}</div>
               <div className="pb-2 pt-5 font-[900]">{`Qualifications:`}</div>
               <div>{`- A minimum of 1-2 years of experience in the web`}</div>
               <div>{`- Nextjs, Reactjs, Typesript, Zod, Zedux,Tailwind, TRPC, Mysql, SQL, RESTFull, Websockets, NextAuth knowledge`}</div>
