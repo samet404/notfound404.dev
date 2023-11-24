@@ -25,7 +25,7 @@ const Home = () => {
           name="I'm 404"
           description={
             <div
-              className={`${inter.className} flex flex-col gap-2 rounded-md bg-gradient-to-r from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0.3)] p-3 leading-5 text-[rgba(255,255,255,0.7)] shadow-[0_0px_15px_0px_rgba(0,0,0,0.5)]`}
+              className={`${inter.className} flex flex-col gap-2 rounded-md bg-gradient-to-r from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0.3)] p-3 leading-5 text-[rgba(255,255,255,0.7)] shadow-[0_0px_10px_3px_rgba(255,255,255,0.9)]`}
             >
               <div>{`Hi i'm 17 years old and full-stack web developer. I don't go to school, I just learn from home.`}</div>
               <div className="pb-2 pt-5 font-[900]">{`Qualifications:`}</div>
@@ -40,18 +40,18 @@ const Home = () => {
           hobbies={
             <div className="w-full">
               <div
-                className={`${inter.className} flex flex-col gap-1 rounded-md bg-gradient-to-r from-[#ff738a8b] to-[#ff6e86b1] p-3 leading-5 text-[rgba(255,255,255,0.7)] shadow-[0_0px_15px_0px_rgba(0,0,0,0.5)]`}
+                className={`${inter.className} flex flex-col gap-1 rounded-md bg-gradient-to-r from-[#ff7990cb] to-[#ff738a8b] p-3 leading-5 text-[rgba(255,255,255,0.7)] shadow-[0_0px_10px_3px_rgba(255,255,255,0.9)]`}
               >
-                <div className="pb-2 pt-5 font-[900]">{`My Hobbies:`}</div>
+                <div className="pb-2 pt-2 font-[900]">{`My Hobbies:`}</div>
                 <div>{`- Watching film`}</div>
                 <div>{`- Playing video games`}</div>
                 <div>{`- Learning new things`}</div>
                 <div>{`- Reading book`}</div>
-                <div>{`- Drawing picture and so on :P`}</div>  
+                <div>{`- Drawing picture and so on :P`}</div>
               </div>
             </div>
           }
-          pfp='https://avatars.githubusercontent.com/u/145053429?v=4'
+          pfp="https://avatars.githubusercontent.com/u/145053429?v=4"
         />
         <ProjectsSection />
       </main>
