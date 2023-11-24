@@ -10,7 +10,7 @@ type AboutMeSectionProps = {
   name: string
   description: JSX.Element
   hobbies: JSX.Element
-  pfp: StaticImageData
+  pfp: StaticImageData | string
 }
 const AboutMeSection = ({
   name,
@@ -23,6 +23,8 @@ const AboutMeSection = ({
       <div className="flex flex-col gap-3">
         <div className="flex flex-row items-center gap-3 text-2xl">
           <Image
+            width={500}
+            height={500}
             src={pfp}
             alt="pfp"
             placeholder="blur"

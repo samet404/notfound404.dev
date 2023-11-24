@@ -51,7 +51,7 @@ const Home = () => {
               </div>
             </div>
           }
-          pfp={pfp}
+          pfp='https://avatars.githubusercontent.com/u/145053429?v=4'
         />
         <ProjectsSection />
       </main>
