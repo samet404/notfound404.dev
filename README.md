@@ -1,1 +1,1 @@
-## Just a simple porfolio
+## Just a simple portfolio
