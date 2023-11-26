@@ -34,7 +34,7 @@ const Home = () => {
               <div className="pb-2 pt-5 font-[900]">{`I'm learning now:`}</div>
               <div>{`- Prisma, sql, Nextauth, Websockets`}</div>
               <div className="pb-2 pt-5 font-[900]">{`I will learn these:`}</div>
-              <div>{`- Zedux, Zod, websockets, trpc and maybe little bit react animations`}</div>
+              <div>{`- Zedux, Zod and react animations`}</div>
             </div>
           }
           hobbies={
