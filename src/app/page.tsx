@@ -32,9 +32,7 @@ const Home = () => {
               <div>{`- A minimum of 1-2 years of experience in the web`}</div>
               <div>{`- Nextjs, Reactjs, Typescript, Tailwind, SQL knowledge`}</div>
               <div className="pb-2 pt-5 font-[900]">{`I'm learning now:`}</div>
-              <div>{`- Prisma, sql, Nextauth, Websockets`}</div>
-              <div className="pb-2 pt-5 font-[900]">{`I will learn these:`}</div>
-              <div>{`- Zedux, Zod and react animations`}</div>
+              <div>{`- Prisma, sql, Nextauth, Websockets, Jotai, Zod and react animations`}</div>
             </div>
           }
           hobbies={
