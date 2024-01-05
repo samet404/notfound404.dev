@@ -30,9 +30,9 @@ const Home = () => {
               <div>{`Hi i'm 17 years old and full-stack web developer. I don't go to school, I just learn from home.`}</div>
               <div className="pb-2 pt-5 font-[900]">{`Qualifications:`}</div>
               <div>{`- A minimum of 1-2 years of experience in the web`}</div>
-              <div>{`- Nextjs, Reactjs, Typescript, Tailwind, SQL knowledge`}</div>
+              <div>{`- Nextjs, Reactjs, Typescript, Tailwind, Prisma, Drizzle, Nextauth, LuciaAuth, Jotai, Zod, React spring  Knowladge`}</div>
               <div className="pb-2 pt-5 font-[900]">{`I'm learning now:`}</div>
-              <div>{`- Prisma, sql, Nextauth, Websockets, Jotai, Zod and react animations`}</div>
+              <div>{`- Websockets`}</div>
             </div>
           }
           hobbies={
