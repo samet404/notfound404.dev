@@ -4,7 +4,7 @@ import '@/output.css'
 const RootLayout = (props: { children: ReactNode }) => {
   return (
     <html lang="en">
-      <body>{props.children}</body>
+      <body className='selection:bg-[#ffffff54] w-full h-full'>{props.children}</body>
     </html>
   )
 }

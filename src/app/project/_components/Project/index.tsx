@@ -6,8 +6,8 @@ import MediaSection from './components/MediaSection'
 type ProjectProps = {
   name: string
   descriptionSection: JSX.Element
-  videos: Array<string>
-  images: Array<StaticImageData>
+  videos: Array<string> | null
+  images: Array<StaticImageData>  | null
   mediaSectionType?: 'Vertical' | 'Horizontal'
 }
 
@@ -19,7 +19,7 @@ const Project = ({
   images,
 }: ProjectProps) => {
   let mediaSection
-  if (videos || images) {
+  if (videos ?? images) {
     if (mediaSectionType == 'Vertical')
       mediaSection = (
         <MediaSectionVertical
@@ -37,9 +37,9 @@ const Project = ({
   return (
     <div
       style={{
-        backgroundColor: 'hsla(151,100%,43%,1)',
+        backgroundColor: 'hsla(151,100%,65%,1)',
         backgroundImage:
-          'radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),radial-gradient(at 80% 0%, hsla(151,100%,53%,1) 0px, transparent 50%),radial-gradient(at 0% 50%, hsla(152,100%,78%,1) 0px, transparent 50%),radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),radial-gradient(at 100% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%)',
+          'radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),radial-gradient(at 80% 0%, hsla(151,100%,53%,1) 0px, transparent 50%),radial-gradient(at 0% 50%, hsla(152,100%,78%,1) 0px, transparent 50%),radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),radial-gradient(at 100% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),radial-gradient(at 0% 0%, hsla(343, 100%, 72%, 1) 0px, transparent 50%)',
       }}
       className="h-full w-full xxs:p-0 md:p-2 lg:p-5"
     >
@@ -48,7 +48,7 @@ const Project = ({
           <Navbar name={name} />
           <div className=" flex grow flex-col gap-5 rounded-md bg-[rgba(255,255,255,0.3)] shadow-[0_0px_60px_-15px_rgba(0,0,0,0.3)]">
             {mediaSection}
-            {descriptionSection}
+            <div className="flex flex-col gap-3 p-3 text-[#000000b0]">{descriptionSection}</div>
           </div>
         </main>
       </div>

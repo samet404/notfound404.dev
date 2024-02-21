@@ -21,7 +21,7 @@ const ProjectBox = ({
 }: ProjectBoxProps) => {
   return (
     <Link href={link}>
-      <div className='lg:hover:opacity-80 duration-300 p-2 flex flex-col gap-2 bg-[rgba(255,255,255,0.3)] backdrop-blur-2  rounded-lg shadow-[0_0px_60px_-15px_rgba(0,0,0,0.3)]'>
+      <div className='lg:hover:opacity-80 duration-300 p-2 flex flex-col gap-2 bg-[rgba(255,255,255,0.3)] backdrop-blur-2 max-w-[15rem] rounded-lg shadow-[0_0px_60px_-15px_rgba(0,0,0,0.3)]'>
       <Image
         src={thumbnail}
         alt='project'
@@ -30,10 +30,10 @@ const ProjectBox = ({
         placeholder='blur'
       />
       <div className='bg-[rgba(255,255,255,0.4)] flex flex-col gap-2 rounded-md p-2'>
-      <div className={`${inter.className} text-1xl`}>
+      <div className={`${inter.className} text-[rgba(0,0,0,0.6)] leading-5`}>
         {name}
       </div>
-      <div className={`${inter.className} py-1 px-2 text-sm bg-[rgba(0,0,0,0.05)] text-[rgba(0,0,0,0.6)] rounded-2xl`}>
+      <div className={`${inter.className} leading-4 p-2 text-sm font-[300] bg-[rgba(0,0,0,0.05)] text-[rgba(0,0,0,0.3)] rounded-2xl`}>
         {description}
       </div>
       </div>

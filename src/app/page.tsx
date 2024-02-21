@@ -3,6 +3,7 @@ import HelloSection from './_components/HelloSection'
 import AboutMeSection from './_components/AboutMeSection'
 import pfp from '@/jpg/pfp.jpeg'
 import ProjectsSection from './_components/ProjectsSection'
+import Link from 'next/link'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -11,7 +12,7 @@ const inter = Inter({
 
 const Home = () => {
   return (
-    <div className="overflow-y-auto">
+    <div className="">
       <main
         style={{
           backgroundColor: 'hsla(152,100%,50%,1)',
@@ -25,20 +26,37 @@ const Home = () => {
           name="I'm 404"
           description={
             <div
-              className={`${inter.className} flex flex-col gap-2 rounded-md bg-gradient-to-r from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0.3)] p-3 leading-5 text-[rgba(255,255,255,0.7)] shadow-[0_0px_10px_3px_rgba(255,255,255,0.9)]`}
+              className={`${inter.className} flex flex-col gap-2 rounded-md bg-gradient-to-r from-[hsla(171,83%,32%,1)] to-[rgba(0,0,0,0.3)] p-3 leading-5 text-[rgba(255,255,255,0.7)] shadow-[0_0px_15px_3px_rgba(0,0,0,0.2)]`}
             >
-              <div>{`Hi i'm 17 years old and full-stack web developer. I don't go to school, I just learn from home.`}</div>
+              <div className="flex flex-row items-start gap-2 pb-4">
+                <Link
+                  className="flex bg-[#ffffff8a] p-1 font-[900] text-[#00000074] hover:opacity-60"
+                  href="https://github.com/404nnotfoundddd"
+                >
+                  GitHub
+                </Link>
+                <Link
+                  className="flex bg-[#ffffff8a] p-1 font-[900] text-[#00000074] hover:opacity-60"
+                  href="https://www.linkedin.com/in/samet-alpdeger-291a132b5/"
+                >
+                  Linkledin
+                </Link>
+              </div>
+
+              <div>{`Hi i'm 18 years old and full-stack web developer. I live in turkey. I don't go to school, I just learn from home.`}</div>
               <div className="pb-2 pt-5 font-[900]">{`Qualifications:`}</div>
-              <div>{`- A minimum of 1-2 years of experience in the web`}</div>
-              <div>{`- Nextjs, Reactjs, Typescript, Tailwind, Prisma, Drizzle, Nextauth, LuciaAuth, Jotai, Zod, React spring  Knowladge`}</div>
+              <div>{`- A minimum of 2-3 years of experience in the web`}</div>
+              <div>{`- HTML, CSS, Reactjs, Nextjs Typescript, TRPC api Tailwind, Prisma, Drizzle, Nextauth, LuciaAuth, Jotai, Zod, PostgreSQL, MySQL, experience`}</div>
               <div className="pb-2 pt-5 font-[900]">{`I'm learning now:`}</div>
-              <div>{`- Websockets`}</div>
+              <div>{`- React spring, pusher websockets`}</div>
+              <div className="pb-2 pt-5 font-[900]">{`Technologies that I have had experience with in the past but don't remember now`}</div>
+              <div>{`- PHP, Laravel, MangoDB, Mangoose`}</div>
             </div>
           }
           hobbies={
             <div className="w-full">
               <div
-                className={`${inter.className} flex flex-col gap-1 rounded-md bg-gradient-to-r from-[#ff7990cb] to-[#ff738a8b] p-3 leading-5 text-[rgba(255,255,255,0.7)] shadow-[0_0px_10px_3px_rgba(255,255,255,0.9)]`}
+                className={`${inter.className} flex flex-col gap-1 rounded-md bg-gradient-to-r  from-[hsla(171,83%,32%,1)] to-[rgba(0,0,0,0.3)]  p-3 leading-5 text-[rgba(255,255,255,0.7)] shadow-[0_0px_15px_3px_rgba(0,0,0,0.2)]`}
               >
                 <div className="pb-2 pt-2 font-[900]">{`My Hobbies:`}</div>
                 <div>{`- Watching film`}</div>
