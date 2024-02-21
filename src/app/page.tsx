@@ -46,7 +46,15 @@ const Home = () => {
               <div>{`Hi i'm 18 years old and full-stack web developer. I live in turkey. I don't go to school, I just learn from home.`}</div>
               <div className="pb-2 pt-5 font-[900]">{`Qualifications:`}</div>
               <div>{`- A minimum of 2-3 years of experience in the web`}</div>
-              <div>{`- HTML, CSS, Reactjs, Nextjs Typescript, TRPC api Tailwind, Prisma, Drizzle, Nextauth, LuciaAuth, Jotai, Zod, PostgreSQL, MySQL, experience`}</div>
+              <div className="py-1 pl-6">
+                <div className="pb-1 pt-1 font-[900]">{`Languages:`}</div>
+                <div>{`- Typescript, Javascript, SQL, HTML, CSS`}</div>
+              </div>
+              <div className="py-1 pl-6">
+                <div className="pb-1 pt-1 font-[900]">{`Frameworks, Packages And Libraries:`}</div>
+                <div>{`- Reactjs, Nextjs, TRPC, Tailwind, Prisma, Drizzle, Nextauth, LuciaAuth, Jotai, Zod`}</div>
+              </div>
+
               <div className="pb-2 pt-5 font-[900]">{`I'm learning now:`}</div>
               <div>{`- React spring, pusher websockets`}</div>
               <div className="pb-2 pt-5 font-[900]">{`Technologies that I have had experience with in the past but don't remember now`}</div>
