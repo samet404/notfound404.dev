@@ -19,12 +19,12 @@ const ProjectsSection = () => {
           </div>
         </div>
       </div>
-      <div className="grid h-[40rem] w-full justify-center xs:grid-cols-2 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-3 overflow-y-auto bg-[rgba(255,255,255,0.3)] px-3 py-20">
+      <div className="grid h-[40rem] w-full justify-center gap-3 overflow-y-auto  bg-[rgba(255,255,255,0.3)] px-3 py-20 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <ProjectBox
           name={"<name_here> (I'm not sure yet about the name)"}
           description={'Web based online sketch game coming soon...'}
           thumbnail={thumbail}
-          link='project/p'
+          link={null}
         />
       </div>
     </div>
