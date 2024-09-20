@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google'
-import BackButton from '@/src/components/BackButton'
+import BackButton from '@/components/BackButton'
 
 const inter = Inter({
   subsets: ['latin'],

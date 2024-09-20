@@ -35,12 +35,6 @@ const Home = () => {
                 >
                   GitHub
                 </Link>
-                <Link
-                  className="flex bg-[#ffffff8a] p-1 font-[900] text-[#00000074] hover:opacity-60"
-                  href="https://www.linkedin.com/in/samet-alpdeger-291a132b5/"
-                >
-                  Linkledin
-                </Link>
               </div>
 
               <div>{`Hi i'm 18 years old and full-stack web developer. I live in turkey. I don't go to school, I just learn from home.`}</div>
@@ -52,11 +46,9 @@ const Home = () => {
               </div>
               <div className="py-1 pl-6">
                 <div className="pb-1 pt-1 font-[900]">{`Frameworks, Packages And Libraries:`}</div>
-                <div>{`- Reactjs, Nextjs, TRPC, Tailwind, Prisma, Drizzle, Nextauth, LuciaAuth, Jotai, Zod`}</div>
+                <div>{`- Reactjs, Nextjs, TRPC, Tailwind, Prisma, Drizzle, Nextauth, LuciaAuth, Jotai, Zustand, Zod, React spring, Pusher, Soketi, Ably, simple-peer`}</div>
               </div>
 
-              <div className="pb-2 pt-5 font-[900]">{`I'm learning now:`}</div>
-              <div>{`- React spring, pusher websockets`}</div>
               <div className="pb-2 pt-5 font-[900]">{`Technologies that I have had experience with in the past but don't remember now`}</div>
               <div>{`- PHP, Laravel, MangoDB, Mangoose`}</div>
             </div>
@@ -67,7 +59,6 @@ const Home = () => {
                 className={`${inter.className} flex flex-col gap-1 rounded-md bg-gradient-to-r  from-[hsla(171,83%,32%,1)] to-[rgba(0,0,0,0.3)]  p-3 leading-5 text-[rgba(255,255,255,0.7)] shadow-[0_0px_15px_3px_rgba(0,0,0,0.2)]`}
               >
                 <div className="pb-2 pt-2 font-[900]">{`My Hobbies:`}</div>
-                <div>{`- Watching film`}</div>
                 <div>{`- Playing video games`}</div>
                 <div>{`- Learning new things`}</div>
                 <div>{`- Reading book`}</div>

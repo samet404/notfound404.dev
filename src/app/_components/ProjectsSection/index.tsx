@@ -21,10 +21,10 @@ const ProjectsSection = () => {
       </div>
       <div className="grid h-[40rem] w-full justify-center gap-3 overflow-y-auto  bg-[rgba(255,255,255,0.3)] px-3 py-20 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <ProjectBox
-          name={"<name_here> (I'm not sure yet about the name)"}
-          description={'Web based online sketch game coming soon...'}
+          name={'PIXGU'}
+          description={'Web based online sketch game'}
           thumbnail={thumbail}
-          link={null}
+          link={'https://pixgu.com'}
         />
       </div>
     </div>

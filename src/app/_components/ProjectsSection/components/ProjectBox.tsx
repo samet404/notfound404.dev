@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from 'next/image'
+import Image, { type StaticImageData } from 'next/image'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
 
@@ -20,7 +20,7 @@ const ProjectBox = ({
   link,
 }: ProjectBoxProps) => {
   return (
-    <Link href={link ? link : '/'}>
+    <Link href={link ? link : '/'} target="_blank">
       <div className="backdrop-blur-2 flex max-w-[15rem] flex-col gap-2 rounded-lg bg-[rgba(255,255,255,0.3)] p-2 shadow-[0_0px_60px_-15px_rgba(0,0,0,0.3)] duration-300 lg:hover:opacity-80">
         <Image
           src={thumbnail}
@@ -31,12 +31,12 @@ const ProjectBox = ({
         />
         <div className="flex flex-col gap-2 rounded-md bg-[rgba(255,255,255,0.4)] p-2">
           <div
-            className={`${inter.className} leading-5 text-[rgba(0,0,0,0.6)]`}
+            className={`${inter.className} leading-5 text-[rgba(0,0,0,0.5)]`}
           >
             {name}
           </div>
           <div
-            className={`${inter.className} rounded-2xl bg-[rgba(0,0,0,0.05)] p-2 text-sm font-[300] leading-4 text-[rgba(0,0,0,0.3)]`}
+            className={`${inter.className} break-words rounded-md bg-[rgba(0,0,0,0.05)] p-2 text-sm font-[300] leading-4 text-[rgba(0,0,0,0.3)]`}
           >
             {description}
           </div>
