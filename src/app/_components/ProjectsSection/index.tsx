@@ -15,7 +15,7 @@ const ProjectsSection = () => {
           className={`${inter.className} rounded-lg bg-[rgba(255,255,255,0.59)] text-2xl shadow-[0_0px_15px_5px_rgba(0,0,0,0.1)]`}
         >
           <div className=" bg-gradient-to-tl  from-cyan-600 to-emerald-500  bg-clip-text  px-3 py-1 text-transparent ">
-            {"Here's my projects"}
+            {'Here are my projects'}
           </div>
         </div>
       </div>
