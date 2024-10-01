@@ -98,9 +98,9 @@ const Home = () => {
               </div>
               <div className="pb-2 pt-5 font-[900]">{`Technologies that I have had experience with in the past but don't remember now`}</div>
               <div className="flex flex-col gap-1">
-                <div>{`PHP - Because i don't like PHP`}</div>
-                <div>Laravel - i think bad framework</div>
-                <div>{`MangoDB - i don't like`}</div>
+                <div>{`PHP - Because I don't like PHP`}</div>
+                <div>Laravel - {`I think it's a bad framework`}</div>
+                <div>{`MangoDB - I don't like it`}</div>
                 <div>Mangoose - same</div>
                 <div>Prisma ORM - SO SLOW</div>
               </div>
