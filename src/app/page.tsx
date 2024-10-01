@@ -26,7 +26,7 @@ const Home = () => {
           name="I'm 404"
           description={
             <div
-              className={`${inter.className} flex flex-col gap-2 rounded-md bg-gradient-to-r from-[hsla(171,83%,32%,1)] to-[rgba(0,0,0,0.3)] p-3 leading-5 text-[rgba(255,255,255,0.7)] shadow-[0_0px_15px_3px_rgba(0,0,0,0.2)]`}
+              className={`${inter.className} flex flex-col gap-2 rounded-md bg-gradient-to-r from-[hsla(171,83%,32%,1)] to-[rgba(0,0,0,0.3)] p-3 text-[0.9rem] leading-5 text-[rgba(255,255,255,0.7)] shadow-[0_0px_15px_3px_rgba(0,0,0,0.2)]`}
             >
               <div className="flex flex-row items-start gap-2 pb-4">
                 <Link
@@ -36,21 +36,74 @@ const Home = () => {
                   GitHub
                 </Link>
               </div>
-
               <div>{`Hi i'm 18 years old and full-stack web developer. I live in turkey. I don't go to school, I just learn from home.`}</div>
               <div className="pb-2 pt-5 font-[900]">{`Qualifications:`}</div>
-              <div>{`- A minimum of 2-3 years of experience in the web`}</div>
-              <div className="py-1 pl-6">
+              <div>{`- A minimum of 4 years of experience in the web`}</div>
+              <div className="flex flex-col gap-2 py-1 pl-6 leading-4">
                 <div className="pb-1 pt-1 font-[900]">{`Languages:`}</div>
-                <div>{`- Typescript, Javascript, SQL, HTML, CSS`}</div>
-              </div>
-              <div className="py-1 pl-6">
-                <div className="pb-1 pt-1 font-[900]">{`Frameworks, Packages And Libraries:`}</div>
-                <div>{`- Reactjs, Nextjs, TRPC, Tailwind, Prisma, Drizzle, Nextauth, LuciaAuth, Jotai, Zustand, Zod, React spring, Pusher, Soketi, Ably, simple-peer`}</div>
+                <div className="flex flex-col gap-1">
+                  <div>Typescript (2 yrs 9/10)</div>
+                  <div>Javascript (4 yrs)</div>
+                  <div>HTML (4 yrs 10/10)</div>
+                  <div>CSS (4 yrs 10/10)</div>
+                  <div>PostgreSQL (1 yrs 4/10)</div>
+                  <div>MySQL (1 yrs 5/10)</div>
+                </div>
               </div>
 
+              <div className="flex flex-col gap-2 py-1 pl-6 leading-4">
+                <div className="pb-1 pt-1 font-[900]">{`Frameworks:`}</div>
+                <div className="flex flex-col gap-1">
+                  <div>Reactjs (2 yrs 9/10)</div>
+                  <div>Nextjs (2 yrs 9/10)</div>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2 py-1 pl-6 leading-4">
+                <div className="pb-1 pt-1 font-[900]">{`Packages And Libraries:`}</div>
+                <div className="flex flex-col gap-1">
+                  <div>NodeJS (4 yrs 7/10)</div>
+                  <div>TRPC (2 yrs 8/10)</div>
+                  <div>Tailwind (3 yrs 9.5/10)</div>
+                  <div>Drizzle ORM (2 yrs 10/10)</div>
+                  <div>
+                    Nextauth ({`I not used so much because didn't like it`})
+                    (8/10)
+                  </div>
+                  <div>LuciaAuth (10/10)</div>
+                  <div>Jotai (10/10)</div>
+                  <div>React-Query (10/10)</div>
+                  <div>Zustand (10/10)</div>
+                  <div>Zod (10/10)</div>
+                  <div>React Spring (5/10)</div>
+                  <div>Pusher realtime (10/10)</div>
+                  <div>Ably realtime (10/10)</div>
+                  <div>Soketi (10/10)</div>
+                  <div>simple-peer (8/10)</div>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2 py-1 pl-6 leading-4">
+                <div className="pb-1 pt-1 font-[900]">{`Third party services i used:`}</div>
+                <div className="flex flex-col gap-1">
+                  <div>Vercel</div>
+                  <div>Planetscale</div>
+                  <div>Hetzner</div>
+                  <div>Upstash redis</div>
+                  <div>Porkbun</div>
+                  <div>Neon database</div>
+                  <div>XATA database</div>
+                  <div>Pusher realtime</div>
+                  <div>Ably realtime</div>
+                  <div>Maxmind</div>
+                </div>
+              </div>
               <div className="pb-2 pt-5 font-[900]">{`Technologies that I have had experience with in the past but don't remember now`}</div>
-              <div>{`- PHP, Laravel, MangoDB, Mangoose`}</div>
+              <div className="flex flex-col gap-1">
+                <div>{`PHP - Because i don't like PHP`}</div>
+                <div>Laravel - i think bad framework</div>
+                <div>{`MangoDB - i don't like`}</div>
+                <div>Mangoose - same</div>
+                <div>Prisma ORM - SO SLOW</div>
+              </div>
             </div>
           }
           hobbies={

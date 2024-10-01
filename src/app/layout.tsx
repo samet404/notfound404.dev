@@ -1,10 +1,12 @@
 import { type ReactNode } from 'react'
-import '@/output.css'
+import './_styles/globals.css'
 
 const RootLayout = (props: { children: ReactNode }) => {
   return (
     <html lang="en">
-      <body className='selection:bg-[#ffffff54] w-full h-full'>{props.children}</body>
+      <body className="h-full w-full selection:bg-[#ffffff54]">
+        {props.children}
+      </body>
     </html>
   )
 }
