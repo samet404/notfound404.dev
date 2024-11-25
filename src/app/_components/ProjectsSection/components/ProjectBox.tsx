@@ -21,7 +21,7 @@ const ProjectBox = ({
 }: ProjectBoxProps) => {
   return (
     <Link href={link ? link : '/'} target="_blank">
-      <div className="backdrop-blur-2 flex max-w-[15rem] flex-col gap-2 rounded-lg bg-[rgba(255,255,255,0.3)] p-2 shadow-[0_0px_60px_-15px_rgba(0,0,0,0.3)] duration-300 lg:hover:opacity-80">
+      <div className="backdrop-blur-2 flex w-full h-full justify-between flex-col gap-2 rounded-lg bg-[rgba(255,255,255,0.3)] p-2 shadow-[0_0px_60px_-15px_rgba(0,0,0,0.3)] duration-300 lg:hover:opacity-80">
         <Image
           src={thumbnail}
           alt="project"
@@ -36,7 +36,7 @@ const ProjectBox = ({
             {name}
           </div>
           <div
-            className={`${inter.className} break-words rounded-md bg-[rgba(0,0,0,0.05)] p-2 text-sm font-[300] leading-4 text-[rgba(0,0,0,0.3)]`}
+            className={`${inter.className} break-words rounded-md text-sm font-[300] leading-4 text-[rgba(0,0,0,0.3)]`}
           >
             {description}
           </div>

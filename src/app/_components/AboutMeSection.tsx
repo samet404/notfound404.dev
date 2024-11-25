@@ -19,7 +19,7 @@ const AboutMeSection = ({
   hobbies,
 }: AboutMeSectionProps) => {
   return (
-    <div className="flex w-full animate-fade-up flex-row items-center  px-4 py-4 shadow-[0_0px_60px_-15px_rgba(0,0,0,0.3)] animate-once">
+    <div className="flex w-full flex-row items-center  px-4 py-4 shadow-[0_0px_60px_-15px_rgba(0,0,0,0.3)] animate-once">
       <div className="flex flex-col gap-3">
         <div className="flex flex-row items-center gap-3 text-2xl">
           <Image
@@ -36,7 +36,7 @@ const AboutMeSection = ({
             {name}
           </div>
         </div>
-        <div className="grid  gap-4 xxs:grid-cols-1 md:grid-cols-2">
+        <div className="flex flex-col 1 gap-4 max-w-[40rem]">
           {description}
           {hobbies}
         </div>

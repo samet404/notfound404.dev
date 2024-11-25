@@ -35,8 +35,23 @@ const Home = () => {
                 >
                   GitHub
                 </Link>
+                <Link
+                  className="flex bg-[#ffffff8a] p-1 font-[900] text-[#00000074] hover:opacity-60"
+                  href="https://www.linkedin.com/in/samet-alpdeger-291a132b5"
+                  target="_blank"
+                >
+                  LinkedIn
+                </Link>
+
+                <Link
+                  className="flex bg-[#ffffff8a] p-1 font-[900] text-[#00000074] hover:opacity-60"
+                  href="mailto:sametalpdeger9@gmail.com"
+                  target="_blank"
+                >
+                  Email: sametalpdeger9@gmail.com
+                </Link>
               </div>
-              <div>{`Hi i'm 18 years old and full-stack web developer. I live in turkey. I don't go to school, I just learn from home.`}</div>
+              <div>{`Hi i'm 18 years old and full-stack web developer. I live in turkey. I don't go to school, I just learn from home. I like to create things and learn new things.`}</div>
               <div className="pb-2 pt-5 font-[900]">{`Qualifications:`}</div>
               <div>{`- A minimum of 4 years of experience in the web`}</div>
               <div className="flex flex-col gap-2 py-1 pl-6 leading-4">

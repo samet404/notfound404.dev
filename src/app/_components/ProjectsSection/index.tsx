@@ -19,10 +19,10 @@ const ProjectsSection = () => {
           </div>
         </div>
       </div>
-      <div className="grid h-[40rem] w-full justify-center gap-3 overflow-y-auto  bg-[rgba(255,255,255,0.3)] px-3 py-20 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid grid-rows-[20rem]  w-full justify-center gap-3 overflow-y-auto  bg-[rgba(255,255,255,0.3)] px-3 py-20 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <ProjectBox
           name={'PIXGU'}
-          description={'Web based online sketch game'}
+          description={'Online web game inspired by gartic.io and skribbl.io'}
           thumbnail={thumbail}
           link={'https://pixgu.com'}
         />
