@@ -92,6 +92,7 @@ const Home = () => {
                   <div>React Spring (5/10)</div>
                   <div>Pusher realtime (10/10)</div>
                   <div>Ably realtime (10/10)</div>
+                  <div>Socket.io (7/10)</div>
                   <div>Soketi (10/10)</div>
                   <div>simple-peer (8/10)</div>
                 </div>
