@@ -66,7 +66,7 @@
       { "name": "PHP", "note": null },
       { "name": "Laravel", "note": null },
       { "name": "MangoDB", "note": null },
-      { "name": "Mangoose", "note": "same" },
+      { "name": "Mangoose", "note": null },
       { "name": "Prisma ORM", "note": "I prefer to use drizzle instead" }
     ]
   }

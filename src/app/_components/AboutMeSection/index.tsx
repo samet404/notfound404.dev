@@ -72,10 +72,12 @@ export const AboutMeSection = async () => {
               ))}
             </div>
             <div className="pb-2 pt-2 font-[700]">{`My Hobbies:`}</div>
-            {hobbies.map((item, id) => (
-              <div key={item}>- {item}</div>
-            ))}
+            <div className='flex flex-col'>
+              {hobbies.map((item, id) => (
+                <div key={item}>• {item}</div>
+              ))}
 
+            </div>
           </div>
         </div>
       </div>
