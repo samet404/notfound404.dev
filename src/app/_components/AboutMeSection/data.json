@@ -1,0 +1,73 @@
+{
+  "name": "I'm 404",
+  "description": "I'm an 18-year-old self-taught full-stack web developer based in Turkey. With a passion for coding and a commitment to continuous learning, I focus on creating efficient and innovative web solutions. I specialize in modern web technologies and enjoy tackling complex development challenges. (I don't like to be idle)",
+  "hobbies": [
+    "Playing video games",
+    "Reading scientific papers and books",
+    "Learning new technologies and programming languages",
+    "Learning new things",
+    "Reading book",
+    "Drawing picture and so on :P"
+  ],
+  "qualifications": {
+    "experience": "A minimum of 4 years of experience in the web",
+    "languages": [
+      { "name": "Typescript", "experience": "2 yrs", "level": "9/10" },
+      { "name": "Javascript", "experience": "4 yrs", "level": null },
+      { "name": "HTML", "experience": "4 yrs", "level": "10/10" },
+      { "name": "CSS", "experience": "4 yrs", "level": "10/10" },
+      { "name": "PostgreSQL", "experience": "1 yrs", "level": "4/10" },
+      { "name": "MySQL", "experience": "1 yrs", "level": "5/10" }
+    ],
+    "frameworks": [
+      { "name": "Reactjs", "experience": "2 yrs", "level": "9/10" },
+      { "name": "Nextjs", "experience": "2 yrs", "level": "9/10" }
+    ],
+    "packagesAndLibraries": [
+      { "name": "NodeJS", "experience": "4 yrs", "level": "7/10" },
+      { "name": "TRPC", "experience": "2 yrs", "level": "8/10" },
+      { "name": "Tailwind", "experience": "3 yrs", "level": "9.5/10" },
+      { "name": "Drizzle ORM", "experience": "2 yrs", "level": "10/10" },
+      {
+        "name": "Nextauth",
+        "experience": null,
+        "level": "8/10",
+        "note": "I not used so much because didn't like it"
+      },
+      { "name": "LuciaAuth", "level": "10/10" },
+      { "name": "Jotai", "level": "10/10" },
+      { "name": "React-Query", "level": "10/10" },
+      { "name": "Zustand", "level": "10/10" },
+      { "name": "Zod", "level": "10/10" },
+      { "name": "React Spring", "level": "5/10" },
+      { "name": "Pusher realtime", "level": "10/10" },
+      { "name": "Ably realtime", "level": "10/10" },
+      { "name": "Socket.io", "level": "7/10" },
+      { "name": "Soketi", "level": "10/10" },
+      { "name": "simple-peer", "level": "8/10" }
+    ],
+    "thirdPartyServices": [
+      "Vercel",
+      "Cloudflare",
+      "Google Analytics",
+      "Google Adsense",
+      "Gemini AI",
+      "Planetscale",
+      "Hetzner",
+      "Upstash redis",
+      "Porkbun",
+      "Neon database",
+      "XATA database",
+      "Pusher realtime",
+      "Ably realtime",
+      "Maxmind"
+    ],
+    "pastExperience": [
+      { "name": "PHP", "note": null },
+      { "name": "Laravel", "note": null },
+      { "name": "MangoDB", "note": null },
+      { "name": "Mangoose", "note": "same" },
+      { "name": "Prisma ORM", "note": "I prefer to use drizzle instead" }
+    ]
+  }
+}

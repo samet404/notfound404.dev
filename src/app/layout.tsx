@@ -1,11 +1,19 @@
 import { type ReactNode } from 'react'
 import './_styles/globals.css'
+import { Inter } from 'next/font/google'
 
-const RootLayout = (props: { children: ReactNode }) => {
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['500', '600', '700', '900'],
+})
+
+const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <html lang="en">
-      <body className="h-full w-full selection:bg-[#ffffff54]">
-        {props.children}
+    <html style={{
+      scrollbarWidth: 'none',
+    }} lang="en">
+      <body className={`${inter.className} h-full w-full overflow-y-scroll selection:bg-[#ffffff54]`}>
+        {children}
       </body>
     </html>
   )
