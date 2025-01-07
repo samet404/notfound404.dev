@@ -21,8 +21,8 @@ export const AboutMeSection = async () => {
             <div className="flex flex-col gap-2 py-1 pl-6 leading-4">
               <div className="pb-1 pt-1 font-[700]">{`Languages:`}</div>
               <div className="flex flex-col gap-1">
-                {qualifications.languages.map((lang, index) => (
-                  <div key={index}>
+                {qualifications.languages.map((lang) => (
+                  <div key={lang.name}>
                     {lang.name} {lang.experience && `(${lang.experience})`} {lang.level && `${lang.level}`}
                   </div>
                 ))}
@@ -32,8 +32,8 @@ export const AboutMeSection = async () => {
             <div className="flex flex-col gap-2 py-1 pl-6 leading-4">
               <div className="pb-1 pt-1 font-[700]">{`Frameworks:`}</div>
               <div className="flex flex-col gap-1">
-                {qualifications.frameworks.map((framework, index) => (
-                  <div key={index}>
+                {qualifications.frameworks.map((framework) => (
+                  <div key={framework.name}>
                     {framework.name} ({framework.experience} {framework.level})
                   </div>
                 ))}
@@ -44,7 +44,7 @@ export const AboutMeSection = async () => {
               <div className="pb-1 pt-1 font-[700]">{`Packages And Libraries:`}</div>
               <div className="flex flex-col gap-1">
                 {qualifications.packagesAndLibraries.map((pkg, index) => (
-                  <div key={index}>
+                  <div key={pkg.name}>
                     {pkg.name} {pkg.experience && `(${pkg.experience})`} {pkg.level && `(${pkg.level})`}
                     {pkg.note && ` - ${pkg.note}`}
                   </div>
@@ -55,8 +55,8 @@ export const AboutMeSection = async () => {
             <div className="flex flex-col gap-2 py-1 pl-6 leading-4">
               <div className="pb-1 pt-1 font-[700]">{`Third party services I used:`}</div>
               <div className="flex flex-col gap-1">
-                {qualifications.thirdPartyServices.map((service, index) => (
-                  <div key={index}>{service}</div>
+                {qualifications.thirdPartyServices.map((service) => (
+                  <div key={service}>{service}</div>
                 ))}
               </div>
             </div>
@@ -65,15 +65,15 @@ export const AboutMeSection = async () => {
               {`Technologies that I have had experience with in the past but don't remember or don't like now`}
             </div>
             <div className="flex flex-col gap-1">
-              {qualifications.pastExperience.map((tech, index) => (
-                <div key={index}>
+              {qualifications.pastExperience.map((tech) => (
+                <div key={tech.name}>
                   {tech.name} {tech.note && `- ${tech.note}`}
                 </div>
               ))}
             </div>
             <div className="pb-2 pt-2 font-[700]">{`My Hobbies:`}</div>
             {hobbies.map((item, id) => (
-              <div key={id}>- {item}</div>
+              <div key={item}>- {item}</div>
             ))}
 
           </div>

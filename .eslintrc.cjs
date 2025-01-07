@@ -36,6 +36,8 @@ const config = {
     // Feel free to reconfigure them to your own preference.
     'react/react-in-jsx-scope': 'off',
     'react/jsx-uses-react': 'off',
+    'react/no-unescaped-entities': 'off',
+
     'no-empty': 'warn',
     'no-unused-vars': 'warn',
     '@typescript-eslint/no-var-requires': 'warn',

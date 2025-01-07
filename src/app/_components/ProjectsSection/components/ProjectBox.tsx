@@ -43,7 +43,7 @@ const ProjectBox = ({
             </div>
           </div>
           <div className='flex gap-1 flex-row flex-wrap'>
-            {['Private Project', 'Next.js', 'React.js', 'Typescript', 'PostgreSQL', 'Redis', 'Socket.io', 'WebRTC'].map(i => <div className='text-xs px-2 py-1 text-white bg-[#9900ff82] rounded-md'>
+            {['Private Project', 'Next.js', 'React.js', 'Typescript', 'PostgreSQL', 'Redis', 'Socket.io', 'WebRTC'].map(i => <div key={i} className='text-xs px-2 py-1 text-white bg-[#9900ff82] rounded-md'>
               {i}
             </div>)}
           </div>
