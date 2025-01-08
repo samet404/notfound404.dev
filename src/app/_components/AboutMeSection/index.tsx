@@ -13,7 +13,6 @@ export const AboutMeSection = () => {
 
             <div className="prose prose-headings:text-[#ffffffc0] p-3 prose-strong:text-[#ffffffc0] prose-p:text-[#ffffffa0] prose-li:text-[#ffffffa0]">
               <Content />
-
             </div>
           </div>
         </div>
