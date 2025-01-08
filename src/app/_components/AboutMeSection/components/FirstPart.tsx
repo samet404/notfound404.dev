@@ -14,7 +14,7 @@ export const FirstPart = () => {
                 sizes="calc(1.96vw + 75px)"
             />
             <div className='font-[700] flex flex-row text-[rgba(0,0,0,0.5)] items-center gap-2'>
-                <div>I'm 404</div>/ <div className='text-sm'>Samet Alpdeger</div>
+                <div>I'm</div> <div className='flex flex-row gap-1 items-center'><div>404</div>/ <div className='text-sm'>Samet Alpdeger</div></div>
             </div>
         </div>
     )
