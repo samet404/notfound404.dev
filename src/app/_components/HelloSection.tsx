@@ -1,5 +1,5 @@
 
-const HelloSection = () => {
+export const HelloSection = () => {
   return (
     <div
       className='select-none flex w-full flex-col items-center justify-center gap-1 bg-[rgb(35,35,35)] p-5 text-[rgba(0,0,0,0.5)] shadow-[0_0px_60px_-15px_rgba(0,0,0,0.3)]'
@@ -10,5 +10,3 @@ const HelloSection = () => {
     </div>
   )
 }
-
-export default HelloSection

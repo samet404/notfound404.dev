@@ -1,15 +1,12 @@
-import HelloSection from './_components/HelloSection'
+import { HelloSection } from './_components/HelloSection'
 import { AboutMeSection } from './_components/AboutMeSection'
-import ProjectsSection from './_components/ProjectsSection'
-import { Svg } from '../components/Svg'
+import { ProjectsSection } from './_components/ProjectsSection'
 
 const Home = () => {
   return (
     <div style={{
       scrollbarWidth: 'none',
     }} className='overflow-y-scroll w-full h-full'>
-      <Svg alt='scroll-down' src='scroll-down-svgrepo-com' className='w-[3rem] bottom-2 right-0 absolute opacity-40 animate-fade-down z-40' />
-
       <div
         style={{
           backgroundColor: 'hsla(201, 100%, 50%, 1)',

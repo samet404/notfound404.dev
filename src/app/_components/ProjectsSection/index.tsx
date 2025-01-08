@@ -1,7 +1,7 @@
 import ProjectBox from './components/ProjectBox'
 import thumbail from '@/png/logo.png'
 
-const ProjectsSection = () => {
+export const ProjectsSection = () => {
   return (
     <div className="flex w-full flex-col gap-6 pt-4 ">
       <div className=" flex items-center justify-center ">
@@ -27,5 +27,3 @@ const ProjectsSection = () => {
     </div>
   )
 }
-
-export default ProjectsSection
