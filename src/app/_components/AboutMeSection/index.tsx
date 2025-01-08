@@ -2,8 +2,7 @@ import { FirstPart } from './components/FirstPart'
 import { Links } from './components/Links'
 import Content from './content.mdx'
 
-export const AboutMeSection = async () => {
-
+export const AboutMeSection = () => {
   return (
     <div className="flex w-full flex-col items-center px-2 py-2 animate-fade">
       <div className="flex flex-col gap-3 max-w-[40rem] items-start">
