@@ -1,11 +1,5 @@
 import Image, { type StaticImageData } from 'next/image'
-import { Inter } from 'next/font/google'
 import Link from 'next/link'
-
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['600'],
-})
 
 type ProjectBoxProps = {
   name: string

@@ -9,10 +9,8 @@ const outfit = Outfit({
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <html style={{
-      scrollbarWidth: 'none',
-    }} lang="en">
-      <body className={`${outfit.className} h-full w-full overflow-y-scroll selection:bg-[#ffffff54]`}>
+    <html lang="en">
+      <body className={`${outfit.className} relative selection:bg-[#ffffff54]`}>
         {children}
       </body>
     </html>
