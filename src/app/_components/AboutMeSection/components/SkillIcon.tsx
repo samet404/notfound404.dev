@@ -27,9 +27,12 @@ export const SkillIcon = ({ icon, title, description }: Props) => {
             <div className={`hidden z-40 group-hover:block absolute bottom-0 ${showOnLeft ? 'right-[calc(100%+1rem)]' : 'left-[calc(100%+1rem)]'} w-max h-full bg-[#ffffff71] rounded-lg`}>
                 <div className="flex flex-col gap-2 p-3 text-white w-[20rem] shadow-[0_0px_10px_1px_rgba(0,0,0,0.5)] bg-[#000000] rounded-md">
                     <div className="text-sm tex-white font-bold">{title}</div>
-                    <div className="text-[0.8rem]">{description}</div>
+                    {
+                        description && (<div className="text-[0.8rem]">{description}</div>)
+                    }
                 </div>
             </div>
+
         </div>
     )
 }
@@ -37,5 +40,5 @@ export const SkillIcon = ({ icon, title, description }: Props) => {
 type Props = {
     icon: ReactNode,
     title: string
-    description: string
+    description?: string
 }

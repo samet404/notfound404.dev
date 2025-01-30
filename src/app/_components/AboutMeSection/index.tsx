@@ -30,37 +30,44 @@ export const AboutMeSection = () => {
                   <SkillIcon
                     icon={<Svg src='typescript' className='w-10 h-10' alt='TypeScript logo' />}
                     title="TypeScript"
-                    description="My primary programming language. I use TypeScript to build type-safe, scalable applications with enhanced developer experience and reduced runtime errors."
+                    description="My preferred language for web development. I choose TypeScript whenever possible."
                   />
                   <SkillIcon
                     icon={<Svg src='javascript' className='w-10 h-10' alt='JavaScript logo' />}
                     title="JavaScript"
-                    description="Proficient in modern JavaScript (ES6+) features and best practices for both frontend and backend development."
+                    description="While I can work with plain JavaScript, I prefer TypeScript for its added type safety and tooling"
                   />
 
                   <SkillIcon
                     icon={<Svg src='html-5' className='w-10 h-10' alt='HTML5 logo' />}
                     title="HTML5"
-                    description="Experienced in writing semantic HTML5 markup with accessibility and SEO best practices in mind."
+                    description="I'm using html to create the user interface of my websites and applications"
                   />
                   <SkillIcon
                     icon={<Svg src='css-3' className='w-10 h-10' alt='CSS3 logo' />}
                     title="CSS3"
-                    description="Strong knowledge of modern CSS including Flexbox, Grid, animations, and responsive design principles."
+                    description="I can write CSS with a strong knowledge of modern CSS including Flexbox, Grid, animations, and responsive design principles"
                   />
                   <SkillIcon
                     icon={<Svg src='tailwind' className='w-9 h-9' alt='Tailwind CSS logo' />}
                     title="Tailwind CSS"
-                    description="My preferred CSS framework for building responsive and maintainable user interfaces with utility-first approach."
+                    description="My preferred CSS library for building responsive and maintainable user interfaces with utility-first approach."
                   />
+
                   <SkillIcon
                     icon={<Svg src='react' className='w-10 h-10' alt='React logo' />}
-                    title="React"
+                    title="React and react-native"
                     description="My primary frontend library for building dynamic user interfaces. Experienced in React patterns, hooks, context, and performance optimization."
                   />
 
                   <SkillIcon
-                    icon={<Image src={nextjs} className='w-9 h-9 rounded-md' alt='Next.js logo' />}
+                    icon={<Svg src='expo' className='w-10 h-10' alt='Expo logo' />}
+                    title="Expo"
+                    description="A powerful framework and platform built around React Native that simplifies mobile app development."
+                  />
+
+                  <SkillIcon
+                    icon={<Image src={nextjs} className='w-10 h-10 rounded-md' alt='Next.js logo' />}
                     title="Next.js"
                     description="Full-stack React framework for production-grade applications with features like server-side rendering, API routes, and optimized performance."
                   />
@@ -92,7 +99,7 @@ export const AboutMeSection = () => {
                   <SkillIcon
                     icon={<Svg src='nodejs' className='w-10 h-10' alt='Node.js logo' />}
                     title="Node.js"
-                    description="Building scalable backend services and APIs using Node.js runtime environment."
+                    description="Cross-platform JavaScript runtime environment and library"
                   />
                   <SkillIcon
                     icon={<Image src={bun} className='w-10 h-10 rounded-md' alt='Bun logo' />}
@@ -103,8 +110,15 @@ export const AboutMeSection = () => {
                   <SkillIcon
                     icon={<Image src={trpc} className='w-10 h-10 rounded-md' alt='tRPC logo' />}
                     title="tRPC"
-                    description="End-to-end typesafe API layer for TypeScript applications. Enables seamless client-server communication with full type inference and zero runtime overhead."
+                    description="End-to-end typesafe API layer, perfect for full-stack TypeScript projects. Best when client and server code live together for maximum type safety."
                   />
+
+                  <SkillIcon
+                    icon={<Svg src='graphql' className='w-10 h-10' alt='Express.js logo' />}
+                    title="GraphQL"
+                    description="Query language for APIs, ideal when client and server are separate. Provides type safety data fetching and mutations."
+                  />
+
                   <SkillIcon
                     icon={<Svg src='express' className='w-10 h-10' alt='Express.js logo' />}
                     title="Express.js"
@@ -113,7 +127,7 @@ export const AboutMeSection = () => {
                   <SkillIcon
                     icon={<Svg src='fastify' className='w-8 h-8' alt='Fastify logo' />}
                     title="Fastify"
-                    description="High-performance web framework for Node.js, focused on providing the best developer experience."
+                    description="Alternative to Express.js. Since Express.js is no longer actively maintained, I prefer using Fastify as my Node.js framework"
                   />
                   <SkillIcon
                     icon={<Svg src='prisma' className='w-8 h-8' alt='Prisma logo' />}
@@ -227,8 +241,33 @@ export const AboutMeSection = () => {
 
 
                 </div>
-
               </div>
+
+              <div className='flex flex-col gap-2 items-center'>
+                <h2 className='text-center w-[90%]'>Technologies I haven't used for a long time</h2>
+                <div className='gap-2 flex flex-row flex-wrap justify-center'>
+                  <SkillIcon
+                    icon={<Svg src='php' className='w-10 h-10' alt='TypeScript logo' />}
+                    title="PHP"
+                  />
+
+                  <SkillIcon
+                    icon={<Svg src='laravel' className='w-10 h-10' alt='TypeScript logo' />}
+                    title="Laravel"
+                  />
+
+                  <SkillIcon
+                    icon={<Svg src='mongodb' className='w-10 h-10' alt='TypeScript logo' />}
+                    title="Mangodb"
+                  />
+
+                  <SkillIcon
+                    icon={<Svg src='scss' className='w-10 h-10' alt='TypeScript logo' />}
+                    title="SCSS"
+                  />
+
+                </div>
+              </div >
             </div>
           </div>
         </div>
