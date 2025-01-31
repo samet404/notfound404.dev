@@ -218,6 +218,11 @@ export const AboutMeSection = () => {
                     description="Web infrastructure and security services including CDN, DNS, and DDoS protection."
                   />
                   <SkillIcon
+                    icon={<Svg src='docker' className='w-10 h-10' alt='Docker logo' />}
+                    title="Docker"
+                    description="I'm using Docker for containerizing applications, ensuring consistent development environments, and simplifying deployment processes."
+                  />
+                  <SkillIcon
                     icon={<Svg src='porkbun' className='w-10 h-10' alt='Porkbun logo' />}
                     title="Porkbun"
                     description="Domain registrar service for managing and purchasing domain names."
