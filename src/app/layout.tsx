@@ -1,6 +1,7 @@
 import { type ReactNode } from 'react'
 import './_styles/globals.css'
 import { Outfit } from 'next/font/google'
+import { Nav } from './_components/Nav'
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -11,6 +12,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en">
       <body className={`${outfit.className} relative selection:bg-[#ffffff54]`}>
+        <Nav />
         {children}
       </body>
     </html>
