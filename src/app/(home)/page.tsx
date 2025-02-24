@@ -2,7 +2,7 @@ import { AboutMeSection } from './_components/AboutMeSection'
 import { ProjectsSection } from './_components/ProjectsSection'
 
 
-const Home = async () => {
+const Home = () => {
   return (
     <div style={{
       scrollbarWidth: 'none',

@@ -1,7 +1,6 @@
 import { Svg } from '../components/Svg'
 
-const Loading = async () => {
-
+const Loading = () => {
   return (
     <div className="flex h-full w-full z-50 items-center bg-gray-800 justify-center">
       <Svg

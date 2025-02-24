@@ -21,7 +21,7 @@ const Blog = async () => {
 
                 <div className='bg-white shadow-[0_0px_15px_5px_rgba(0,0,0,0.1)] animate-fade-up p-5 w-[40rem] rounded-lg'>
                     {posts.length > 0 ? posts.map(post => {
-                        return <Link href={`/blog/${post.id}`} className='hover:text-black text-gray-500 flex flex-col gap-3'>
+                        return <Link href={`/blog/${post.id}`} key={post.id} className='hover:text-black text-gray-500 flex flex-col gap-3'>
                             <div className='flex flex-col gap-1'>
                                 <div className='text-[1.2rem] font-bold'>{post.title}</div>
                                 <p>{post.description}</p>
