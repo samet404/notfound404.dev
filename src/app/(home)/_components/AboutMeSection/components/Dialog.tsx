@@ -37,7 +37,7 @@ export const Dialog = () => {
     const { title, description, x, y } = info
 
     const getDialogPosition = () => {
-        if (windowWidth <= 480) {
+        if (windowWidth <= 550) {
             return {
                 left: '50%',
                 transform: 'translateX(-50%) translateY(-100%)',
@@ -54,7 +54,7 @@ export const Dialog = () => {
     }
 
     return (
-        <div className='absolute inset-0 pointer-events-none'>
+        <div className='absolute inset-0 pointer-events-none z-50'>
             <div
                 style={{
                     position: 'absolute',
@@ -63,8 +63,8 @@ export const Dialog = () => {
                 }}
                 className='pointer-events-none'
             >
-                <div className="flex flex-col gap-2 p-3 text-white w-[15rem] shadow-[0_0px_10px_1px_rgba(0,0,0,0.5)] bg-[#000000] rounded-md">
-                    <div className="text-sm tex-white font-bold">{title}</div>
+                <div className="flex flex-col gap-2 p-3 text-white w-[15rem] shadow-[0_0px_10px_1px_rgba(0,0,0,0.5)] bg-[#000000b9] backdrop-blur-lg rounded-md">
+                    <div className="text-sm font-bold">{title}</div>
                     {description && <div className="text-[0.8rem]">{description}</div>}
                 </div>
             </div>

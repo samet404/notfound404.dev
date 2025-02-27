@@ -1,11 +1,12 @@
 import Link from 'next/link';
+import type { ReactNode } from 'react';
 
-export const ProfileLink = ({ href, text }: { href: string; text: string }) => (
+export const ProfileLink = ({ href, children }: { href: string; children: ReactNode }) => (
     <Link
-        className="flex bg-[#ffffff8a] px-2 py-1 font-[600] rounded-md text-[#00000074] hover:opacity-60"
+        className="flex font-[600] rounded-md text-[#ffffffc0] hover:opacity-60 items-center justify-center"
         href={href}
         target="_blank"
     >
-        {text}
+        {children}
     </Link>
 )

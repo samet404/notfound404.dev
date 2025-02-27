@@ -12,8 +12,8 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en">
       <body className={`${outfit.className} relative selection:bg-[#ffffff54]`}>
-        <Nav />
         {children}
+        <Nav />
       </body>
     </html>
   )

@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export const FirstPart = () => {
     return (
-        <div className="flex xxs:flex-col md:flex-row xxs:justify-center xxs:w-full md:w-auto xxs:pb-4 items-center md:gap-3 xxs:gap-4 text-2xl">
+        <div className="flex flex-row gap-5">
             <Image
                 width={500}
                 height={500}
@@ -13,8 +13,8 @@ export const FirstPart = () => {
                 className="h-20 w-20 rounded-full drop-shadow-[0_0px_20px_rgba(0,0,0,0.55)]"
                 sizes="calc(1.96vw + 75px)"
             />
-            <div className='font-[700] flex flex-row text-[rgba(0,0,0,0.5)] items-center gap-2'>
-                <div>I'm</div> <div className='flex flex-row gap-1 items-center'><div>404</div>/ <div className='text-sm'>Samet Alpdeger</div></div>
+            <div className='font-[700] text-2xl flex flex-row text-[rgba(255,255,255,0.85)] items-center gap-2'>
+                <div>I'm</div> <div className='flex flex-row gap-1 items-center '><div>404</div>/ <div className='text-sm'>Samet Alpdeger</div></div>
             </div>
         </div>
     )

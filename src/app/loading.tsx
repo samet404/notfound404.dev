@@ -1,13 +1,12 @@
-import { Svg } from '../components/Svg'
+import { Spinner } from '../components/Spinner'
 
 const Loading = () => {
   return (
-    <div className="flex h-full w-full z-50 items-center bg-gray-800 justify-center">
-      <Svg
-        src='spinner-one-third-svgrepo-com'
-        alt="spinner"
-        className="animate-spin animate-infinite w-12 h-12 animate-ease-in-out"
-      />
+    <div className="flex h-full w-full z-50 items-center text-white bg-gray-800 justify-center flex-col gap-3">
+      <div>
+        Please wait...
+      </div>
+      <Spinner />
     </div>
   )
 }
