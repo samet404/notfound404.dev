@@ -8,7 +8,7 @@ import coolify from '@/png/coolify.png'
 import trpc from '@/png/trpc.png'
 import bun from '@/png/bun.png'
 
-export const TechIUse = async () => {
+export const TechIUse = () => {
     return (
         <div className='flex flex-col gap-2 items-center'>
 

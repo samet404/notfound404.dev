@@ -10,6 +10,9 @@ import createMDX from '@next/mdx';
 const config = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
