@@ -35,8 +35,6 @@ export const AboutMeSection = () => {
               <TechIUse />
               <HavntUsedL />
             </Suspense>
-            <MusicsILike />
-
           </div>
         </div>
       </div>
