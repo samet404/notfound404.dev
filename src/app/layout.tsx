@@ -3,6 +3,7 @@ import './_styles/globals.css'
 import { Outfit } from 'next/font/google'
 import { Nav } from './_components/Nav'
 import type { Metadata } from 'next'
+import { Providers } from './_components/Providers'
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -68,12 +69,14 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en">
       <body className={`${outfit.className} relative selection:bg-[#ffffff54]`}>
-        {process.env.NODE_ENV === 'development' && <script
-          crossOrigin="anonymous"
-          src="//unpkg.com/react-scan/dist/auto.global.js"
-        />}
-        {children}
-        <Nav />
+        <Providers>
+          {process.env.NODE_ENV === 'development' && <script
+            crossOrigin="anonymous"
+            src="//unpkg.com/react-scan/dist/auto.global.js"
+          />}
+          {children}
+          <Nav />
+        </Providers>
       </body>
     </html>
   )
