@@ -12,7 +12,7 @@ export const TechIUse = () => {
     return (
         <div className='flex flex-col gap-2 items-center'>
 
-            <h2 className='text-center w-[90%]'>Technologies & Services I Use</h2>
+            <h2 className='text-center w-[90%]'>Technologies & Services I Know</h2>
             <div className='gap-2 flex flex-row flex-wrap justify-center'>
                 <SkillIcon
                     icon={<Svg src='typescript' className='w-10 h-10' alt='TypeScript logo' />}
