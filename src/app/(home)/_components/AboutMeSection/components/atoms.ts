@@ -4,7 +4,8 @@ export const dialogInfoAtom = atom<{
     x: number,
     y: number
     title: string,
-    description?: string
+    description?: string,
+    skillLevel: number | null
 } | null>(
     null
 )

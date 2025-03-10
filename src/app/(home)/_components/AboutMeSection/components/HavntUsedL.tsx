@@ -9,21 +9,25 @@ export const HavntUsedL = () => {
                 <SkillIcon
                     icon={<Svg src='php' className='w-10 h-10' alt='TypeScript logo' />}
                     title="PHP"
+                    skillLevel={5}
                 />
 
                 <SkillIcon
                     icon={<Svg src='laravel' className='w-10 h-10' alt='TypeScript logo' />}
                     title="Laravel"
+                    skillLevel={4}
                 />
 
                 <SkillIcon
                     icon={<Svg src='mongodb' className='w-10 h-10' alt='TypeScript logo' />}
                     title="Mangodb"
+                    skillLevel={20}
                 />
 
                 <SkillIcon
                     icon={<Svg src='scss' className='w-10 h-10' alt='TypeScript logo' />}
                     title="SCSS"
+                    skillLevel={90}
                 />
 
             </div>

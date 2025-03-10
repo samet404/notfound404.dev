@@ -34,7 +34,7 @@ export const Dialog = () => {
 
     if (!info) return null
 
-    const { title, description, x, y } = info
+    const { title, description, x, y, skillLevel } = info
 
     const getDialogPosition = () => {
         if (windowWidth <= 550) {
@@ -63,9 +63,19 @@ export const Dialog = () => {
                 }}
                 className='pointer-events-none'
             >
-                <div className="flex flex-col gap-2 p-3 text-white w-[15rem] shadow-[0_0px_10px_1px_rgba(0,0,0,0.5)] bg-[#000000b9] backdrop-blur-lg rounded-md">
-                    <div className="text-sm font-bold">{title}</div>
-                    {description && <div className="text-[0.8rem]">{description}</div>}
+                <div className="flex flex-col gap-3 p-3 text-white w-[15rem] shadow-[0_0px_10px_1px_rgba(0,0,0,0.5)] bg-[#000000b9] backdrop-blur-lg rounded-md">
+                    <div className='flex flex-col gap-1'>
+                        <div className="text-sm font-bold">{title}</div>
+                        {description && <div className="text-[0.7rem]">{description}</div>}
+                    </div>
+                    {skillLevel && <div className='flex flex-col'>
+                        <div className='text-[0.9rem]'>
+                            Skill level: {skillLevel}/100
+                        </div>
+                        <div className='text-[0.6rem]'>
+                            Calculated based on my guess, experience and the amount of time I've spent using the technology.
+                        </div>
+                    </div>}
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@ import type { ReactNode } from 'react'
 import { useRef } from 'react'
 import { dialogInfoAtom } from './atoms'
 
-export const SkillIcon = ({ icon, title, description }: Props) => {
+export const SkillIcon = ({ icon, title, description, skillLevel }: Props) => {
     const iconRef = useRef<HTMLDivElement>(null)
     const setDialogInfo = useSetAtom(dialogInfoAtom)
 
@@ -16,6 +16,7 @@ export const SkillIcon = ({ icon, title, description }: Props) => {
             setDialogInfo({
                 title,
                 description,
+                skillLevel,
                 x: boundingRect.left,
                 y: boundingRect.top,
             })
@@ -37,4 +38,5 @@ type Props = {
     icon: ReactNode,
     title: string
     description?: string
+    skillLevel: number | null
 }
