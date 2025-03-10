@@ -19,13 +19,15 @@ export const AboutMeSection = () => {
         <Dialog />
 
         <div className='flex flex-col gap-4 rounded-lg relative text-[0.9rem] leading-5 text-[rgba(255,255,255,0.7)]'>
-          <div className="prose  prose-headings:text-[#ffffffdd] px-6 pt-10 pb-10  prose-strong:text-[#ffffffc0] prose-p:text-[#ffffffc1] prose-li:text-[#ffffffa0]">
+          <div className="prose prose-headings:text-[#ffffffdd] pt-10 pb-10 prose-strong:text-[#ffffffc0] prose-p:text-[#ffffffc1] prose-li:text-[#ffffffa0]">
             <Description />
 
-            <h2>Why am I self-taught?</h2>
-            <p>
-              I think turkey's current education system is not good enough to provide a good education for a software developer.
-            </p>
+            <div className='w-full flex flex-col justify-center items-center'>
+              <h2>Why am I self-taught?</h2>
+              <p className='text-center'>
+                I think turkey's current education system is not good enough to provide a good education for a software developer.
+              </p>
+            </div>
             <Suspense fallback={
               <div className='w-full pt-4 flex justify-center items-center flex-col text-white'>
                 <div>Please wait... :)</div>

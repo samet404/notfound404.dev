@@ -16,7 +16,7 @@ export const ProjectsSection = () => {
         </div>
       </div>
       <div className='bg-[rgba(255,255,255,0.3)] flex flex-col gap-16 items-center pb-8'>
-        <div className="flex flex-row w-full flex-wrap justify-center items-start gap-10 px-3 py-20">
+        <div className="flex flex-row w-full flex-wrap justify-center items-start gap-10 xxs:px-1 md:px-3 py-20">
           <ProjectBox
             name={'PIXGU'}
             description={'Real-time multiplayer drawing and guessing game built with Next.js 15 and React 19. Using peer-to-peer connections via WebRTC, WebSocket for real-time communication, and Web Workers for optimal performance. Inspired by popular games like Gartic.io and Skribbl.io.'}

@@ -15,18 +15,27 @@ export const Nav = () => {
         if (!scrollContainer) { return }
 
         let lastScrollY = 0
+        const scrollThreshold = 10 // Minimum scroll distance needed to trigger hide/show
+        let lastScrollTime = Date.now()
+        const debounceTime = 50 // Milliseconds to wait between scroll events
 
         const handleScroll = () => {
+            const now = Date.now()
             const currentScrollY = scrollContainer.scrollTop
+            const scrollDifference = Math.abs(currentScrollY - lastScrollY)
 
-            if (currentScrollY > lastScrollY) {
-                setIsVisible(false)
-                setIsMobileMenuOpen(false)
-            } else {
-                setIsVisible(true)
+            // Only process scroll if threshold is met and enough time has passed
+            if (scrollDifference > scrollThreshold && (now - lastScrollTime) > debounceTime) {
+                if (currentScrollY > lastScrollY) {
+                    setIsVisible(false)
+                    setIsMobileMenuOpen(false)
+                } else {
+                    setIsVisible(true)
+                }
+
+                lastScrollY = currentScrollY
+                lastScrollTime = now
             }
-
-            lastScrollY = currentScrollY
         }
 
         scrollContainer.addEventListener('scroll', handleScroll)
