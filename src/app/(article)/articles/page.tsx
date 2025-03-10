@@ -22,7 +22,7 @@ const Article = async () => {
             <SetScrollContainer />
             <div className='pt-[5rem] pb-5 w-full justify-center items-center flex flex-col gap-10'>
 
-                <div className='bg-white shadow-[0_0px_15px_5px_rgba(0,0,0,0.1)] flex flex-col gap-10 animate-fade-up p-5 w-[40rem] rounded-lg'>
+                <div className='bg-white shadow-[0_0px_15px_5px_rgba(0,0,0,0.1)] flex flex-col gap-10 p-5 md:w-[40rem] xxs:w-[90%] rounded-lg'>
                     {posts.length > 0 ? posts.map(post => {
                         return <Link href={`/article/${post.id}`} key={post.id} className=' hover:text-gray-700 text-gray-500 flex flex-col gap-3'>
                             <div className='flex flex-col gap-1'>
@@ -35,7 +35,7 @@ const Article = async () => {
                                 <div>{post.date}</div>
                             </div>
                         </Link>
-                    }) : <div className='text-center text-[#000000b9]'>Looks like there are no posts yet</div>}
+                    }) : <div className='text-center text-[#0000008f]'>Looks like there are no posts yet :P</div>}
                 </div>
             </div>
         </div>
