@@ -24,7 +24,7 @@ export const AboutMeSection = () => {
 
             <div className='w-full flex flex-col justify-center items-center'>
               <h2>Why am I self-taught?</h2>
-              <p className='text-center'>
+              <p className='text-center w-[30rem]'>
                 I think turkey's current education system is not good enough to provide a good education for a software developer.
               </p>
             </div>

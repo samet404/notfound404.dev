@@ -16,7 +16,7 @@ export const TechIUse = () => {
 
             <div>
                 <h2 className='text-center w-[90%]'>Technologies & Services I Use</h2>
-                <p>Hover or click on the icons to see more information.</p>
+                <p className='text-center'>Hover or click on the icons to see more information.</p>
             </div>
             <div className='gap-2 flex flex-row flex-wrap justify-center'>
                 <SkillIcon
