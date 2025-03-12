@@ -6,45 +6,55 @@ import neon from '@/png/neon.png'
 import nextjs from '@/png/nextjs.png'
 import coolify from '@/png/coolify.png'
 import trpc from '@/png/trpc.png'
-import bun from '@/png/bun.png'
 import kmp from '@/png/kmp.png'
 import ktor from '@/png/ktor.png'
+import koin from '@/png/koin.png'
 
 export const TechIUse = () => {
     return (
         <div className='flex flex-col gap-2 items-center'>
 
-            <div>
-                <h2 className='text-center w-[90%]'>Technologies & Services I Use</h2>
+            <div className='flex flex-col items-center'>
+                <h2 className='text-center xxs:w-[80%] md:w-full'>Technologies & Services I Use</h2>
                 <p className='text-center'>Hover or click on the icons to see more information.</p>
             </div>
             <div className='gap-2 flex flex-row flex-wrap justify-center'>
                 <SkillIcon
                     title='Kotlin'
-                    description="Kotlin is a modern programming language that is fully interoperable with Java. Kotlin makes easier to develop applications."
+                    description="Kotlin is a modern programming language that is fully interoperable with Java. Kotlin makes easier to develop java applications."
                     icon={<Svg src="kotlin" alt='kotlin' className='w-8 h-8' />}
-                    skillLevel={30}
+                    skillLevel={34}
+                    learning={true}
                 />
 
                 <SkillIcon
                     icon={<Image loading='lazy' sizes='calc(1vw + 37px)' placeholder='blur' src={kmp} className='w-10 h-10 rounded-md' alt='Kotlin Multiplatform' />}
                     title="Kotlin Multiplatform"
                     description="Kotlin Multiplatform is a framework for building cross-platform applications with Kotlin."
-                    skillLevel={10}
+                    skillLevel={20}
+                    learning={true}
                 />
 
                 <SkillIcon
                     icon={<Image loading='lazy' sizes='calc(1vw + 37px)' placeholder='blur' src={ktor} className='w-10 h-10 rounded-md' alt='Ktor' />}
                     title="Ktor"
                     description="Kotlin server framework for building server applications with Kotlin. Very similar to express.js."
-                    skillLevel={20}
+                    skillLevel={23}
+                    learning={true}
+                />
+
+                <SkillIcon
+                    icon={<Image loading='lazy' sizes='calc(1vw + 37px)' placeholder='blur' src={koin} className='w-10 h-10 rounded-md' alt='Ktor' />}
+                    title="Koin"
+                    description="Simple way to handle dependency injection in kotlin and kmp."
+                    skillLevel={100}
                 />
 
                 <SkillIcon
                     title='Jetpack Compose'
                     description="I'm using jetpack compose for building modern android applications."
                     icon={<Svg src="jetpackcompose" alt='jetpack compose' className='w-8 h-8' />}
-                    skillLevel={50}
+                    skillLevel={54}
                 />
 
                 <SkillIcon
@@ -52,6 +62,7 @@ export const TechIUse = () => {
                     title="C"
                     description="Mother of all programming languages."
                     skillLevel={10}
+                    learning={true}
                 />
 
 
@@ -71,13 +82,13 @@ export const TechIUse = () => {
                 <SkillIcon
                     icon={<Svg src='html-5' className='w-10 h-10' alt='HTML5 logo' />}
                     title="HTML5"
-                    description="I'm using html to create the user interface of my websites and applications"
+                    description="Markup language for creating the user interface of my websites and applications"
                     skillLevel={100}
                 />
                 <SkillIcon
                     icon={<Svg src='css-3' className='w-10 h-10' alt='CSS3 logo' />}
                     title="CSS3"
-                    description="I can write CSS with a strong knowledge of modern CSS including Flexbox, Grid, animations, and responsive design principles"
+                    description="Web design language for styling and layouting html pages."
                     skillLevel={100}
                 />
 
@@ -90,22 +101,29 @@ export const TechIUse = () => {
 
                 <SkillIcon
                     icon={<Svg src='react' className='w-10 h-10' alt='React logo' />}
-                    title="React and react-native"
-                    description="My primary frontend library for building dynamic user interfaces. Experienced in React patterns, hooks, context, and performance optimization."
+                    title="React"
+                    description="My primary web frontend library for building dynamic user interfaces."
                     skillLevel={100}
+                />
+
+                <SkillIcon
+                    icon={<Svg src='react' className='w-10 h-10' alt='React logo' />}
+                    title="React Native"
+                    description="Simple way to build basic mobile applications with React."
+                    skillLevel={70}
                 />
 
                 <SkillIcon
                     icon={<Svg src='expo' className='w-10 h-10' alt='Expo logo' />}
                     title="Expo"
-                    description="A powerful framework and platform built around React Native that simplifies mobile app development."
+                    description="A powerful framework built around React Native that simplifies mobile app development."
                     skillLevel={70}
                 />
 
                 <SkillIcon
                     icon={<Image loading='lazy' sizes='calc(1vw + 37px)' placeholder='blur' src={nextjs} className='w-10 h-10 rounded-md' alt='Next.js logo' />}
                     title="Next.js"
-                    description="Full-stack React framework for production-grade applications with features like server-side rendering, API routes, and optimized performance."
+                    description="Full-stack React framework for applications with features like server-side rendering, API routes, and optimized performance."
                     skillLevel={100}
                 />
 
@@ -131,18 +149,30 @@ export const TechIUse = () => {
                 />
 
                 <SkillIcon
-                    icon={<Svg src='redux' className='w-10 h-10' alt='Redux logo' />}
-                    title="Redux"
-                    description="Experience with Redux and Redux Toolkit for managing complex application state."
-                    skillLevel={100}
-                />
-
-
-                <SkillIcon
                     icon={<Svg src='nodejs' className='w-10 h-10' alt='Node.js logo' />}
                     title="Node.js"
                     description="Cross-platform JavaScript runtime environment and library"
-                    skillLevel={70}
+                    skillLevel={100}
+                />
+
+                <SkillIcon
+                    icon={<Svg src='websocket' className='w-8 h-8' alt='WebSocket logo' />}
+                    title="WebSocket"
+                    description="Protocol for full-duplex communication channels over TCP connection."
+                    skillLevel={100}
+                />
+                <SkillIcon
+                    icon={<Svg src='socket' className='w-8 h-8' alt='Socket.io logo' />}
+                    title="Socket.io"
+                    description="Library for real-time bidirectional event-based communication."
+                    skillLevel={100}
+
+                />
+                <SkillIcon
+                    icon={<Svg src='webrtc' className='w-9 h-9' alt='WebRTC logo' />}
+                    title="WebRTC"
+                    description="Technology for real-time communication of audio, video, and data in web browsers."
+                    skillLevel={60}
                 />
 
                 <SkillIcon
@@ -163,20 +193,20 @@ export const TechIUse = () => {
                     icon={<Svg src='express' className='w-10 h-10' alt='Express.js logo' />}
                     title="Express.js"
                     description="Creating RESTful APIs and web applications using Express.js framework."
-                    skillLevel={90}
+                    skillLevel={100}
                 />
 
                 <SkillIcon
                     icon={<Svg src='fastify' className='w-8 h-8' alt='Fastify logo' />}
                     title="Fastify"
                     description="Alternative to Express.js. Since Express.js is no longer actively maintained, I prefer using Fastify as my Node.js framework"
-                    skillLevel={90}
+                    skillLevel={100}
                 />
 
                 <SkillIcon
                     icon={<Svg src='postgresql' className='w-9 h-9' alt='PostgreSQL logo' />}
                     title="PostgreSQL"
-                    description="My favorite relational database. I'm using it for complex queries, data structres."
+                    description="Powerfull relational database. I'm using it for complex queries, data structres."
                     skillLevel={50}
                 />
 
@@ -211,14 +241,14 @@ export const TechIUse = () => {
                 <SkillIcon
                     icon={<Svg src='redis' className='w-9 h-9' alt='Redis logo' />}
                     title="Redis"
-                    description="In-memory data structure store used as a database, cache, message broker, and queue. Experienced in implementing real-time features and optimizing application performance."
+                    description="In-memory database for caching, non persistent data storage and real-time data processing."
                     skillLevel={90}
                 />
 
                 <SkillIcon
                     icon={<Svg src='keydb' className='w-9 h-9' alt='KeyDB logo' />}
                     title="KeyDB"
-                    description="Multithreaded fork of Redis focusing on high performance and lower latency. Used for handling high-throughput caching and real-time data processing."
+                    description="Multithreaded fork of Redis focusing on high performance and lower latency.."
                     skillLevel={null}
                 />
 
@@ -238,21 +268,21 @@ export const TechIUse = () => {
                 <SkillIcon
                     icon={<Svg src='vscode' className='w-10 h-10' alt='VS Code logo' />}
                     title="VS Code"
-                    description="My primary code editor with extensive customization for optimal development workflow."
+                    description="I'm using VS Code for coding web applications."
                     skillLevel={null}
                 />
                 <SkillIcon
                     title='Android studio'
-                    description="I'm using Android studio for developing Android applications. It's a powerful IDE with a wide range of features and plugins."
+                    description="I'm using Android studio for developing kotlin-java applications. It's a powerful IDE with a wide range of features and plugins."
                     icon={<Svg src='androidstudio' className='w-9 h-9' alt='android studio' />}
-                    skillLevel={100}
+                    skillLevel={null}
                 />
 
                 <SkillIcon
                     title='IntelliJ IDEA'
-                    description="I'm using IntelliJ for developing Kotlin applications. It's best IDE for Kotlin language because kotlin developing by JetBrains which is developer of IntelliJ IDEA."
+                    description="I'm using IntelliJ for developing Kotlin applications."
                     icon={<Svg src='intellij' className='w-9 h-9' alt='IntelliJ' />}
-                    skillLevel={100}
+                    skillLevel={null}
                 />
 
                 <SkillIcon
@@ -313,25 +343,7 @@ export const TechIUse = () => {
                     skillLevel={null}
                 />
 
-                <SkillIcon
-                    icon={<Svg src='websocket' className='w-8 h-8' alt='WebSocket logo' />}
-                    title="WebSocket"
-                    description="Protocol for full-duplex communication channels over TCP connection."
-                    skillLevel={100}
-                />
-                <SkillIcon
-                    icon={<Svg src='socket' className='w-8 h-8' alt='Socket.io logo' />}
-                    title="Socket.io"
-                    description="Library for real-time bidirectional event-based communication."
-                    skillLevel={100}
 
-                />
-                <SkillIcon
-                    icon={<Svg src='webrtc' className='w-9 h-9' alt='WebRTC logo' />}
-                    title="WebRTC"
-                    description="Technology for real-time communication of audio, video, and data in web browsers."
-                    skillLevel={60}
-                />
 
 
             </div>

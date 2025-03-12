@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export const FirstPart = () => {
     return (
-        <div className="flex flex-row gap-5">
+        <div className="flex xxs:flex-col xxs:items-center md:flex-row gap-5">
             <Image
                 width={500}
                 height={500}
