@@ -5,8 +5,9 @@ export const dialogInfoAtom = atom<{
     y: number
     title: string,
     description?: string,
-    skillLevel: number | null
+    skillLevel?: number | null
     learning?: boolean,
     lastHoverTime: number,
-    isHovering: boolean
+    isHovering: boolean,
+    imageFound?: boolean
 } | null>(null)
