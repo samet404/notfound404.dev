@@ -17,7 +17,7 @@ export const TechIUse = () => {
         <div className='flex flex-col gap-2 items-center'>
 
             <div className='flex flex-col items-center'>
-                <h2 className='text-center px-4'>Technologies & Services I Use</h2>
+                <h2 className='text-center px-4'>Technologies & Services I Used</h2>
                 <p className='text-center px-7'>Hover or click on the icons to see more information.</p>
             </div>
             <div className='gap-2 flex flex-row flex-wrap justify-center'>
@@ -33,7 +33,7 @@ export const TechIUse = () => {
                     icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={kmp} className='w-10 h-10 rounded-md' alt='Kotlin Multiplatform' />}
                     title="Kotlin Multiplatform (Android, Desktop)"
                     description="Kotlin Multiplatform is a framework for building cross-platform applications with Kotlin."
-                    skillLevel={36}
+                    skillLevel={56}
                     learning={true}
                 />
 
@@ -85,6 +85,12 @@ export const TechIUse = () => {
                     title="JavaScript"
                     description="While I can work with plain JavaScript, I prefer TypeScript for its added type safety and tooling"
                     skillLevel={100}
+                />
+
+                <SkillIcon
+                    title='Python'
+                    skillLevel={10}
+                    icon={<Svg src='python' className='w-10 h-10' alt='Python logo' />}
                 />
 
                 <SkillIcon
@@ -278,6 +284,14 @@ export const TechIUse = () => {
                     icon={<Svg src='intellij' className='w-9 h-9' alt='IntelliJ' />}
                     skillLevel={null}
                 />
+
+                <SkillIcon
+                    title="Pycharm"
+                    description="I'm using Pycharm for developing Python applications."
+                    icon={<Svg src='pycharm' className='w-9 h-9' alt='Pycharm' />}
+                    skillLevel={null}
+                />
+
                 <SkillIcon
                     icon={<Svg src='supermaven' className='w-9 h-9' alt='Supermaven logo' />}
                     title="Supermaven"
