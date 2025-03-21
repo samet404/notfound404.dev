@@ -39,13 +39,13 @@ export const ProjectsSection = () => {
             link={'https://github.com/404nnotfoundddd/Aspect'}
           />
 
-          <ProjectBox
+          {/* <ProjectBox
             thumbnail={null}
             name={'Synoon'}
             tags={['personal project']}
             description={"The biggest project plan in my mind. I'm currently in planning stages for this project. Synoon will be a website that have a big database of fictional planet information, allowing users to explore, discover and create new worlds."}
             link={'https://synoon.app/'}
-          />
+          /> */}
         </div>
         <div className='text-center drop-shadow-[0_0px_50px_rgba(0,0,0,0.7)] font-[400] rounded-md px-2 py-1 text-white'>{`Made with <3 by 404`}</div>
       </div>

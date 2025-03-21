@@ -5,7 +5,7 @@ import { useRef } from 'react'
 import { dialogInfoAtom } from './atoms'
 import { Svg } from '@/src/components/Svg'
 
-export const SkillIcon = ({ icon, title, description, skillLevel, learning }: Props) => {
+export const SkillIcon = ({ icon, title, description, skillLevel, learning, type }: Props) => {
     const iconRef = useRef<HTMLDivElement>(null)
     const setDialogInfo = useSetAtom(dialogInfoAtom)
 
@@ -41,16 +41,37 @@ export const SkillIcon = ({ icon, title, description, skillLevel, learning }: Pr
         } : null)
     }
 
+    const typeStatusColor = (() => {
+        switch (type) {
+            case 'language':
+                return '#ffb1f7ff'
+            case 'library-framework':
+                return '#fffab1ff'
+            case 'service':
+                return '#9785ffff'
+            case 'tool':
+                return '#1184ffff'
+            case 'database':
+                return '#42fba5bc'
+            case 'low-skill':
+                return '#00000022'
+            case 'API':
+                return '#ffbe4dbc'
+        }
+    })()
+
     return (
         <div
             onMouseEnter={handleMouseEnter}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             ref={iconRef}
-            className="group flex bg-[#ffffffa3] w-[3rem] h-[3rem] relative flex-col items-center justify-center rounded-lg"
+            style={{
+                borderColor: typeStatusColor,
+            }}
+            className={`group bg-[#ffffffa3] border-[0.15rem] p-[0.2rem] flex w-[3rem] h-[3rem] relative flex-col items-center justify-center rounded-lg`}
         >
             {icon ? icon : <Svg src='ban' className='w-9 h-9 opacity-20' alt='no image' />}
-
             {learning && <div className='animate-pulse shadow-[0_0px_10px_1px_rgba(0,0,0,0.4)] absolute bottom-[-3px] right-[-3px] w-2 h-2 rounded-full bg-[#ff7dee]'></div>}
         </div>
     )
@@ -61,4 +82,5 @@ type Props = {
     description?: string
     skillLevel?: number | null
     learning?: boolean
+    type: 'tool' | 'service' | 'library-framework' | 'language' | 'database' | 'low-skill' | 'API'
 }
