@@ -72,6 +72,14 @@ export const TechIUse = () => {
                 />
 
                 <SkillIcon
+                    icon={<Svg src='gradle' className='w-10 h-10' alt='gradle logo' />}
+                    title="Gradle"
+                    description="Package manager and build tool for Java and Kotlin projects."
+                    skillLevel={60}
+                    type='library-framework'
+                />
+
+                <SkillIcon
                     icon={<Svg src='c' className='w-10 h-10' alt='C logo' />}
                     title="C"
                     description="Mother of all programming languages."
@@ -110,6 +118,15 @@ export const TechIUse = () => {
                     skillLevel={20}
                     learning={true}
                     type='service'
+                />
+
+                <SkillIcon
+                    icon={<Svg src='pytorch' className='w-9 h-9' alt='HTML5 logo' />}
+                    title="PyTorch"
+                    description="Most popular machine learning library for Python."
+                    skillLevel={2}
+                    type='library-framework'
+                    learning
                 />
 
                 <SkillIcon
@@ -245,6 +262,15 @@ export const TechIUse = () => {
                     icon={<Svg src='postgresql' className='w-9 h-9' alt='PostgreSQL logo' />}
                     title="PostgreSQL"
                     description="Powerfull relational database. I'm using it for complex queries, data structres."
+                    skillLevel={50}
+                    type='database'
+                />
+
+
+                <SkillIcon
+                    icon={<Svg src='mysql' className='w-9 h-9' alt='PostgreSQL logo' />}
+                    title="MySQL"
+                    description="One of the most popular relational databases."
                     skillLevel={50}
                     type='database'
                 />
