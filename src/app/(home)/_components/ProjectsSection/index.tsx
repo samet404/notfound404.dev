@@ -31,13 +31,13 @@ export const ProjectsSection = () => {
           />
 
           <ProjectBox
-
             name={'Aspect'}
             tags={['personal project']}
             description={'Aspect, a decentralized peer-to-peer (P2P) chat application designed to work across Android devices. This project currently under development and represents my commitment to creating privacy-focused communication solutions using modern technologies.'}
             thumbnail={<Svg src={'aspectus'} className='w-[7rem]' alt='Aspectus logo' />}
             link={'https://github.com/404nnotfoundddd/Aspect'}
           />
+
 
           {/* <ProjectBox
             thumbnail={null}

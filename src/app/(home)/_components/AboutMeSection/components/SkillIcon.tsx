@@ -20,7 +20,8 @@ export const SkillIcon = ({ icon, title, description, skillLevel, learning, type
             learning,
             lastHoverTime: Date.now(),
             isHovering: true,
-            imageFound: !!icon
+            imageFound: !!icon,
+            skillType: type
         })
     }
 
@@ -54,7 +55,7 @@ export const SkillIcon = ({ icon, title, description, skillLevel, learning, type
             case 'database':
                 return '#42fba5bc'
             case 'low-skill':
-                return '#00000022'
+                return '#ff00007d'
             case 'API':
                 return '#ffbe4dbc'
         }

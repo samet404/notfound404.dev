@@ -45,8 +45,8 @@ export const Nav = () => {
     return (
         <div className='fixed h-[4rem] w-full flex p-2 justify-center top-0 z-[45]'>
             <nav
-                style={{ transform: `translateY(${isVisible ? '0' : '-200%'})`, transition: 'transform 0.3s ease' }}
-                className='md:w-[50rem] xxs:w-full flex h-full px-5 top-0 rounded-lg shadow-[0_0px_20px_1px_rgba(0,0,0,0.4)] md:bg-[#00000061] xxs:bg-[#0000009a] xxs:backdrop-blur-sm md:backdrop-blur-md items-center justify-between drop-shadow-md relative'
+                style={{ transform: `translateY(${isVisible ? '0' : '-200%'})`, transition: 'transform 0.3s ease', pointerEvents: isVisible ? 'auto' : 'none' }}
+                className='md:w-[50rem] xxs:w-full flex h-full px-5 top-0 rounded-lg shadow-[0_0px_20px_0.5px_rgba(0,0,0,0.3)] md:bg-[#00000061] xxs:bg-[#0000009a] xxs:backdrop-blur-sm md:backdrop-blur-md items-center justify-between drop-shadow-md relative'
             >
                 <NavLink href="/">
                     notfound404.dev

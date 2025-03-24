@@ -28,3 +28,7 @@ button {
 ::-webkit-scrollbar {
   width: 0px;
 }
+
+* {
+  cursor: none;
+}

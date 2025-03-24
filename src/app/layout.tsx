@@ -4,6 +4,9 @@ import { Outfit } from 'next/font/google'
 import { Nav } from './_components/Nav'
 import type { Metadata } from 'next'
 import { Providers } from './_components/Providers'
+import { CustomCursor } from './_components/CustomCursor'
+import { headers } from 'next/headers'
+import { getOSFromUA } from '../utils/getOSFromUA'
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -65,7 +68,12 @@ export const metadata: Metadata = {
 }
 
 
-const RootLayout = ({ children }: { children: ReactNode }) => {
+const RootLayout = async ({ children }: { children: ReactNode }) => {
+  const headersRes = await headers()
+  const os = getOSFromUA(headersRes.get('user-agent'))
+
+
+
   return (
     <html lang="en">
       <body className={`${outfit.className} relative selection:bg-[#ffffff54]`}>
@@ -74,9 +82,12 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
             crossOrigin="anonymous"
             src="//unpkg.com/react-scan/dist/auto.global.js"
           />}
+          {os?.includes('android') || os?.includes('ios') ? null : <CustomCursor />}
+
           {children}
           <Nav />
         </Providers>
+
       </body>
     </html>
   )

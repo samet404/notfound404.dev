@@ -1,10 +1,7 @@
 import { FirstPart } from './components/FirstPart'
 import { Links } from './components/Links'
-import { HavntUsedL } from './components/HavntUsedL'
 import { TechIUse } from './components/TechIUse'
 import { Description } from './components/Description'
-import { Suspense } from 'react'
-import { Spinner } from '@/src/components/Spinner'
 import { DialogLoader } from './components/DialogLoader'
 
 export const AboutMeSection = () => {
@@ -21,21 +18,7 @@ export const AboutMeSection = () => {
           <div className="prose prose-headings:text-[#ffffffdd] pt-10 pb-10 prose-strong:text-[#ffffffc0] prose-p:text-[#ffffffc1] prose-li:text-[#ffffffa0]">
             <Description />
 
-            <div className='w-full flex flex-col justify-center items-center'>
-              <h2 className='px-4'>Why am I self-taught?</h2>
-              <p className='text-center px-7'>
-                I think turkey's current education system is not good enough to provide a good education for a software developer.
-              </p>
-            </div>
-            <Suspense fallback={
-              <div className='w-full pt-4 flex justify-center items-center flex-col text-white'>
-                <div>Please wait... :)</div>
-                <Spinner />
-              </div>
-            }>
-              <TechIUse />
-              <HavntUsedL />
-            </Suspense>
+            <TechIUse />
           </div>
         </div>
       </div>

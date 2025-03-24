@@ -66,7 +66,7 @@ export const Dialog = () => {
 
     if (!info) return null
 
-    const { title, description, x, y, skillLevel, learning, imageFound } = info
+    const { title, description, x, y, skillLevel, learning, imageFound, skillType } = info
     const position = getDialogPosition(x, y)
 
     return (
@@ -82,7 +82,6 @@ export const Dialog = () => {
                     style={dialogBaseStyle}
                     className="flex flex-col gap-3 p-3 text-white w-[15rem] shadow-[0_0px_10px_1px_rgba(0,0,0,0.5)] backdrop-blur-lg rounded-md"
                 >
-                    {!imageFound && <div className='text-[0.7rem]'>No image found for that.</div>}
 
                     {learning && (
                         <div className='flex flex-row gap-2 items-center'>
@@ -96,6 +95,8 @@ export const Dialog = () => {
                         {description && <div className="text-[0.7rem]">{description}</div>}
                     </div>
 
+
+
                     {skillLevel && (
                         <div className='flex flex-col'>
                             <div className='text-[0.9rem]'>
@@ -106,6 +107,10 @@ export const Dialog = () => {
                             </div>
                         </div>
                     )}
+                    <div className='flex flex-col gap-1'>
+                        {skillType && <div className='text-[0.7rem]'>{skillType}</div>}
+                        {!imageFound && <div className='text-[0.7rem]'>No image found for that.</div>}
+                    </div>
                 </div>
             </div>
         </div>

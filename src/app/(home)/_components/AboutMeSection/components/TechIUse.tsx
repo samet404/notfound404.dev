@@ -2,7 +2,6 @@ import { Svg } from '@/src/components/Svg'
 import { SkillIcon } from './SkillIcon'
 import Image from 'next/image'
 import drizzle from '@/png/drizzle.png'
-import neon from '@/png/neon.png'
 import nextjs from '@/png/nextjs.png'
 import coolify from '@/png/coolify.png'
 import trpc from '@/png/trpc.png'
@@ -17,8 +16,8 @@ export const TechIUse = () => {
         <div className='flex flex-col gap-2 items-center'>
 
             <div className='flex flex-col items-center'>
-                <h2 className='text-center px-4'>Technologies & Services I Used</h2>
-                <p className='text-center px-7'>Hover or click on the icons to see more information.</p>
+                <h2 className='text-center px-4'>Main Technologies & Services I Used</h2>
+                <p className='text-center px-7'>Hover or click on the icons to see more information about them. Each border color represents it's type.</p>
             </div>
             <div className='gap-2 flex flex-row flex-wrap justify-center'>
                 <SkillIcon
@@ -58,8 +57,17 @@ export const TechIUse = () => {
 
                 <SkillIcon
                     title="Dagger hilt"
+                    icon={<Svg src='android' className='w-10 h-10' alt='Android logo' />}
                     description="Dependency injection library for kotlin and android."
                     skillLevel={70}
+                    type='library-framework'
+                />
+
+                <SkillIcon
+                    title="Room database"
+                    icon={<Svg src='android' className='w-10 h-10' alt='Android logo' />}
+                    description="SQLite database library for Android developed by Google."
+                    skillLevel={40}
                     type='library-framework'
                 />
 
@@ -106,9 +114,18 @@ export const TechIUse = () => {
 
                 <SkillIcon
                     title='Python'
-                    skillLevel={10}
+                    skillLevel={30}
                     icon={<Svg src='python' className='w-10 h-10' alt='Python logo' />}
                     type='language'
+                    learning
+                />
+
+                <SkillIcon
+                    icon={<Svg src='flask' className='w-10 h-10' alt='Flask logo' />}
+                    title="Flask"
+                    description="Python web framework for building web applications and APIs. Similar to express.js, fastify and ktor."
+                    skillLevel={10}
+                    type='library-framework'
                 />
 
                 <SkillIcon
@@ -121,10 +138,29 @@ export const TechIUse = () => {
                 />
 
                 <SkillIcon
+                    icon={<Svg src='numpy' className='w-9 h-9' alt='Numpy logo' />}
+                    title="Numpy"
+                    description="Python library for fast array computations than original Python lists."
+                    skillLevel={15}
+                    type='library-framework'
+                    learning
+                />
+
+
+                <SkillIcon
+                    icon={<Svg src='pandas' className='w-10 h-10' alt='Numpy logo' />}
+                    title="pandas"
+                    description="Python library for data analysis and manipulation."
+                    skillLevel={5}
+                    type='library-framework'
+                    learning
+                />
+
+                <SkillIcon
                     icon={<Svg src='pytorch' className='w-9 h-9' alt='HTML5 logo' />}
                     title="PyTorch"
                     description="Most popular machine learning library for Python."
-                    skillLevel={2}
+                    skillLevel={6}
                     type='library-framework'
                     learning
                 />
@@ -143,6 +179,14 @@ export const TechIUse = () => {
                     skillLevel={100}
                     type='language'
                 />
+
+                <SkillIcon
+                    icon={<Svg src='scss' className='w-10 h-10' alt='Scss logo' />}
+                    title="SCSS"
+                    skillLevel={90}
+                    type='language'
+                />
+
                 <SkillIcon
                     icon={<Svg src='tailwind' className='w-9 h-9' alt='Tailwind CSS logo' />}
                     title="Tailwind CSS"
@@ -248,14 +292,14 @@ export const TechIUse = () => {
                     title="Express.js"
                     description="Creating RESTful APIs and web applications using Express.js framework."
                     skillLevel={100}
-                    type='API'
+                    type='library-framework'
                 />
                 <SkillIcon
                     icon={<Svg src='fastify' className='w-8 h-8' alt='Fastify logo' />}
                     title="Fastify"
                     description="Alternative to Express.js. Since Express.js is no longer actively maintained, I prefer using Fastify as my Node.js framework"
                     skillLevel={100}
-                    type='API'
+                    type='library-framework'
                 />
 
                 <SkillIcon
@@ -434,7 +478,42 @@ export const TechIUse = () => {
                     skillLevel={null}
                     type='service'
                 />
+                <SkillIcon
+                    icon={<Svg src='php' className='w-10 h-10' alt='Php logo' />}
+                    title="PHP"
+                    skillLevel={5}
+                    type='low-skill'
+                />
 
+                <SkillIcon
+                    icon={<Svg src='laravel' className='w-10 h-10' alt='Laravel logo' />}
+                    title="Laravel"
+                    skillLevel={4}
+                    type='low-skill'
+                />
+
+                <SkillIcon
+                    icon={<Svg src='mongodb' className='w-10 h-10' alt='Mangodb logo' />}
+                    title="Mangodb"
+                    skillLevel={2}
+                    type='low-skill'
+
+                />
+
+                <SkillIcon
+                    icon={<Svg src='mongoose' className='w-10 h-10' alt='Mangoose logo' />}
+                    title="Mangoose"
+                    skillLevel={2}
+                    type='low-skill'
+
+                />
+
+                <SkillIcon
+                    icon={<Svg src='csharp' className='w-[2.5rem] h-[2.5rem]' alt='C# logo' />}
+                    title="C#"
+                    skillLevel={1}
+                    type='low-skill'
+                />
 
             </div>
         </div>)
