@@ -13,7 +13,7 @@ export const FirstPart = () => {
                 className="h-20 w-20 rounded-full drop-shadow-[0_0px_10px_rgba(0,0,0,0.2)]"
                 sizes="calc(1.96vw + 75px)"
             />
-            <div className='font-[700] group text-2xl flex flex-row text-[rgba(255,255,255,0.85)] items-center gap-[0.4rem] min-w-[15rem]'>
+            <div className='font-[700] group text-2xl flex flex-row text-[rgba(255,255,255,0.85)] items-center gap-[0.4rem] lg:min-w-[15rem]'>
                 <div>I'm </div><div className='group-hover:hidden'>Samet Alpdeger</div><div className='text-white hidden group-hover:flex animate-fade-down'>404!</div>
             </div>
         </div>
