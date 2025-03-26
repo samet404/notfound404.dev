@@ -70,7 +70,7 @@ export const SkillIcon = ({ icon, title, description, skillLevel, learning, type
             style={{
                 borderColor: typeStatusColor,
             }}
-            className={`group bg-[#ffffffa3] border-[0.15rem] p-[0.2rem] flex w-[3rem] h-[3rem] relative flex-col items-center justify-center rounded-lg`}
+            className={`group bg-[#ffffffa3] border-[0.15rem] p-[0.15rem] flex w-[3rem] h-[3rem] relative flex-col items-center justify-center rounded-lg`}
         >
             {icon ? icon : <Svg src='ban' className='w-9 h-9 opacity-20' alt='no image' />}
             {learning && <div className='animate-pulse shadow-[0_0px_10px_1px_rgba(0,0,0,0.4)] absolute bottom-[-3px] right-[-3px] w-2 h-2 rounded-full bg-[#ff7dee]'></div>}

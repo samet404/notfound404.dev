@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     default: 'notfound404.dev',
     template: '404 - %s',
   },
-  creator: '404',
+  creator: 'Samet alpdeger - 404',
   description,
   keywords: [
     '404',
@@ -73,10 +73,9 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
   const os = getOSFromUA(headersRes.get('user-agent'))
 
 
-
   return (
     <html lang="en">
-      <body className={`${outfit.className} relative selection:bg-[#ffffff54]`}>
+      <body className={`${outfit.className} relative`}>
         <Providers>
           {process.env.NODE_ENV === 'development' && <script
             crossOrigin="anonymous"
@@ -87,7 +86,6 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
           {children}
           <Nav />
         </Providers>
-
       </body>
     </html>
   )

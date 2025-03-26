@@ -5,11 +5,17 @@ import Link from 'next/link'
 import { useState, useEffect, type ReactNode } from 'react'
 import { NavScrollbarContainerAtom } from './atoms'
 import { Svg } from '@/src/components/Svg'
+import { usePathname } from 'next/navigation'
 
 export const Nav = () => {
+    const pathname = usePathname()
     const [isVisible, setIsVisible] = useState(true)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const scrollContainer = useAtomValue(NavScrollbarContainerAtom)
+
+    useEffect(() => {
+        setIsVisible(true)
+    }, [pathname])
 
     useEffect(() => {
         if (!scrollContainer) { return }

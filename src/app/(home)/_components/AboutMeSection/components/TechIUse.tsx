@@ -111,6 +111,14 @@ export const TechIUse = () => {
                     type='language'
                 />
 
+                <SkillIcon
+                    icon={<Svg src='wasm' className='w-11 h-11 rounded-md' alt='Wasm logo' />}
+                    title='Web Assembly'
+                    description='Web assembly allows to run low-level code directly in the browser.'
+                    skillLevel={30}
+                    learning
+                    type='language'
+                />
 
                 <SkillIcon
                     title='Python'
@@ -146,10 +154,25 @@ export const TechIUse = () => {
                     learning
                 />
 
+                <SkillIcon
+                    icon={<Svg src='colab' className='w-10 h-10' alt='Colab logo' />}
+                    title="Google Colab"
+                    description="Google Colab is a free Jupyter notebook environment."
+                    type='tool'
+                />
 
                 <SkillIcon
-                    icon={<Svg src='pandas' className='w-10 h-10' alt='Numpy logo' />}
-                    title="pandas"
+                    icon={<Svg src='matplotlib' className='w-10 h-10' alt='Matplotlib logo' />}
+                    title="Matplotlib"
+                    description="Python library for creating graphs and charts."
+                    skillLevel={10}
+                    type='library-framework'
+                />
+
+
+                <SkillIcon
+                    icon={<Svg src='pandas' className='w-10 h-10' alt='Pandas logo' />}
+                    title="Pandas"
                     description="Python library for data analysis and manipulation."
                     skillLevel={5}
                     type='library-framework'
@@ -157,7 +180,7 @@ export const TechIUse = () => {
                 />
 
                 <SkillIcon
-                    icon={<Svg src='pytorch' className='w-9 h-9' alt='HTML5 logo' />}
+                    icon={<Svg src='pytorch' className='w-9 h-9' alt='Pytorch logo' />}
                     title="PyTorch"
                     description="Most popular machine learning library for Python."
                     skillLevel={6}
@@ -168,10 +191,19 @@ export const TechIUse = () => {
                 <SkillIcon
                     icon={<Svg src='html-5' className='w-10 h-10' alt='HTML5 logo' />}
                     title="HTML5"
-                    description="Markup language for creating the user interface of my websites and applications"
+                    description="Standart markup language for creating the structres."
                     skillLevel={100}
                     type='language'
                 />
+
+                <SkillIcon
+                    icon={<Svg src='xml' className='w-10 h-10' alt='HTML5 logo' />}
+                    title="XML"
+                    description="Standart markup language for creating the structres."
+                    skillLevel={100}
+                    type='language'
+                />
+
                 <SkillIcon
                     icon={<Svg src='css-3' className='w-10 h-10' alt='CSS3 logo' />}
                     title="CSS3"
@@ -515,6 +547,72 @@ export const TechIUse = () => {
                     type='low-skill'
                 />
 
+                {/* <SkillIcon
+                    icon={<Svg src='net' className='w-10 h-10 rounded-md' alt='Colab logo' />}
+                    title="Google Colab"
+                    description="Google Colab is a free Jupyter notebook environment."
+                    type='library-framework'
+                />
+                <SkillIcon
+                    icon={<Svg src='nginx' className='w-10 h-10 rounded-md' alt='Colab logo' />}
+                    title="Google Colab"
+                    description="Google Colab is a free Jupyter notebook environment."
+                    type='library-framework'
+                />
+
+                <SkillIcon
+                    icon={<Svg src='aws' className='w-10 h-10 rounded-md' alt='Colab logo' />}
+                    title="Google Colab"
+                    description="Google Colab is a free Jupyter notebook environment."
+                    type='library-framework'
+                />
+
+
+                <SkillIcon
+                    icon={<Svg src='elasticsearch' className='w-10 h-10 rounded-md' alt='Colab logo' />}
+                    title="Google Colab"
+                    description="Google Colab is a free Jupyter notebook environment."
+                    type='library-framework'
+                />
+
+
+                <SkillIcon
+                    icon={<Svg src='nestjs' className='w-10 h-10 rounded-md' alt='Colab logo' />}
+                    title="Google Colab"
+                    description="Google Colab is a free Jupyter notebook environment."
+                    type='library-framework'
+                />
+
+
+                <SkillIcon
+                    icon={<Svg src='kafka' className='w-9 h-9 rounded-md' alt='Colab logo' />}
+                    title="Google Colab"
+                    description="Google Colab is a free Jupyter notebook environment."
+                    type='library-framework'
+                />
+
+
+                <SkillIcon
+                    icon={<Svg src='rabbitmq' className='w-9 h-9 rounded-md' alt='Colab logo' />}
+                    title="Google Colab"
+                    description="Google Colab is a free Jupyter notebook environment."
+                    type='library-framework'
+                />
+
+                <SkillIcon
+                    icon={<Svg src='memcached' className='w-9 h-9 rounded-md' alt='Colab logo' />}
+                    title="Google Colab"
+                    description="Google Colab is a free Jupyter notebook environment."
+                    type='library-framework'
+                />
+
+
+                <SkillIcon
+                    icon={<Svg src='bash' className='w-9 h-9 rounded-md' alt='Colab logo' />}
+                    title="Google Colab"
+                    description="Google Colab is a free Jupyter notebook environment."
+                    type='library-framework'
+                /> */}
             </div>
         </div>)
 }

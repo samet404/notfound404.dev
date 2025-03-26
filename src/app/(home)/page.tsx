@@ -17,7 +17,7 @@ const Home = () => {
             'radial-gradient(at 20% 20%, hsla(188, 92%, 56%, 1) 0px, transparent 50%), radial-gradient(at 40% 20%, hsla(200, 92%, 56%, 1) 0px, transparent 50%)',
           scrollbarWidth: 'none',
         }}
-        className="flex w-full flex-col gap-7 pt-[5rem] justify-center "
+        className="selection:bg-[#ffffff54] flex w-full flex-col gap-7 pt-[5rem] justify-center "
       >
         <SetScrollContainer />
 

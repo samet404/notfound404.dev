@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "id": "how-to-run-wasm-in-nextjs",
+    "title": "How to run wasm in nextjs?",
+    "description": "In this article, I explained how to create a basic Next.js application that runs Web assembly (WASM) in a react client component.",
+    "date": "2025-03-28"
+  }
+]

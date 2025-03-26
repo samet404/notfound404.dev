@@ -11,6 +11,7 @@ export const CustomCursor = () => {
     const previousCursorPos = useRef({ x: 0, y: 0 })
 
     useEffect(() => {
+        if (window.innerWidth < 768) return
         const canvas = canvasRef.current
         if (!canvas) return
 
@@ -30,7 +31,7 @@ export const CustomCursor = () => {
         const drawCursor = () => {
             // Clear only the previous cursor area (including shadow area)
             ctx.clearRect(
-                previousCursorPos.current.x - 15, // Slightly larger than cursor to account for shadow
+                previousCursorPos.current.x - 15,
                 previousCursorPos.current.y - 15,
                 30,
                 30
@@ -42,13 +43,14 @@ export const CustomCursor = () => {
             // Draw main cursor
             if (cursorPos.current.x >= 0 && cursorPos.current.y >= 0) {
                 ctx.beginPath()
-                ctx.arc(cursorPos.current.x, cursorPos.current.y, 10, 0, Math.PI * 2)
-                ctx.fillStyle = isClicked.current ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0.4)'
-                ctx.shadowColor = 'rgba(0, 0, 0, 0.1)'
-                ctx.shadowBlur = 5
-                ctx.shadowOffsetX = 0
-                ctx.shadowOffsetY = 0
+                ctx.arc(cursorPos.current.x, cursorPos.current.y, 7, 0, Math.PI * 2)
+                ctx.fillStyle = isClicked.current ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0.7)'
                 ctx.fill()
+
+                // Add border
+                ctx.strokeStyle = 'rgba(0, 0, 0, 0.8)'
+                ctx.lineWidth = 2
+                ctx.stroke()
             }
 
             rafRef.current = requestAnimationFrame(drawCursor)
