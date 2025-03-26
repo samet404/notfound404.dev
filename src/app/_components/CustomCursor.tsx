@@ -11,7 +11,6 @@ export const CustomCursor = () => {
     const previousCursorPos = useRef({ x: 0, y: 0 })
 
     useEffect(() => {
-        if (window.innerWidth < 768) return
         const canvas = canvasRef.current
         if (!canvas) return
 
