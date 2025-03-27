@@ -160,6 +160,8 @@ export const DisplayMsgBtn = () => {
 };
 ```
 
+When we click on the button, it will call the `myFunction` in the wasm file via [ccall](https://emscripten.org/docs/api_reference/preamble.js.html#id3) and display a message in the browser console.
+
 If you are using Typescript, you might see `Property 'hello' does not exist on type 'Window & typeof globalThis'` error. This is because we are using `window` object in typescript. To fix this, we can create a new file named `window.d.ts` in the `src/types` directory of our project and paste the following code in it. If you want to know more about that, you can check this article [here](https://www.totaltypescript.com/how-to-properly-type-window)
 
 ```
