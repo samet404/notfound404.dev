@@ -16,15 +16,23 @@ export const TechIUse = () => {
         <div className='flex flex-col gap-2 items-center'>
 
             <div className='flex flex-col items-center'>
-                <h2 className='text-center px-4'>Main Technologies & Services I Used</h2>
-                <p className='text-center px-7'>Hover or click on the icons to see more information about them. Each border color represents it's type.</p>
+                <h2 className='text-center px-4'>My skills</h2>
+                <p className='text-center xxs:max-w-[18rem] md:max-w-[23rem] lg:max-w-[30rem]'>Hover or click on the icons to see more information about them. Each border color represents it's type.</p>
             </div>
             <div className='gap-2 flex flex-row flex-wrap justify-center'>
                 <SkillIcon
                     title='Kotlin'
                     description="Kotlin is a modern programming language that is fully interoperable with Java. Kotlin makes easier to develop java applications."
                     icon={<Svg src="kotlin" alt='kotlin' className='w-8 h-8' />}
-                    skillLevel={60}
+                    skillLevel={80}
+                    learning={true}
+                    type='language'
+                />
+
+                <SkillIcon
+                    title='Java'
+                    icon={<Svg src="java" alt='Java' className='w-10 h-10' />}
+                    skillLevel={25}
                     learning={true}
                     type='language'
                 />
@@ -115,17 +123,15 @@ export const TechIUse = () => {
                     icon={<Svg src='wasm' className='w-11 h-11 rounded-md' alt='Wasm logo' />}
                     title='Web Assembly'
                     description='Web assembly allows to run low-level code directly in the browser.'
-                    skillLevel={30}
-                    learning
+                    skillLevel={70}
                     type='language'
                 />
 
                 <SkillIcon
                     title='Python'
-                    skillLevel={30}
+                    skillLevel={60}
                     icon={<Svg src='python' className='w-10 h-10' alt='Python logo' />}
                     type='language'
-                    learning
                 />
 
                 <SkillIcon
@@ -141,7 +147,6 @@ export const TechIUse = () => {
                     title="Jupyter Notebook"
                     description="Web-based interactive computing environment for huge computational python tasks."
                     skillLevel={20}
-                    learning={true}
                     type='service'
                 />
 
@@ -151,7 +156,6 @@ export const TechIUse = () => {
                     description="Python library for fast array computations than original Python lists."
                     skillLevel={15}
                     type='library-framework'
-                    learning
                 />
 
                 <SkillIcon
@@ -176,7 +180,6 @@ export const TechIUse = () => {
                     description="Python library for data analysis and manipulation."
                     skillLevel={5}
                     type='library-framework'
-                    learning
                 />
 
                 <SkillIcon
@@ -185,7 +188,6 @@ export const TechIUse = () => {
                     description="Most popular machine learning library for Python."
                     skillLevel={6}
                     type='library-framework'
-                    learning
                 />
 
                 <SkillIcon
@@ -357,7 +359,6 @@ export const TechIUse = () => {
                     description="Vector database for storing and querying vector data. Vector databases are used for machine learning and data analysis."
                     skillLevel={30}
                     type='database'
-                    learning={true}
                 />
 
 
