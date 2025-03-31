@@ -83,7 +83,7 @@ export const TechIUse = () => {
                     title='Jetpack Compose'
                     description="Jetpack compose is a modern UI library for building native java/kotlin applications."
                     icon={<Svg src="jetpackcompose" alt='jetpack compose' className='w-8 h-8' />}
-                    skillLevel={54}
+                    skillLevel={100}
                     type='library-framework'
                 />
 
