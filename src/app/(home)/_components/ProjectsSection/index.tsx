@@ -5,7 +5,7 @@ import { Svg } from '@/src/components/Svg'
 import dynamic from 'next/dynamic'
 import { Spinner } from '@/src/components/Spinner'
 
-const Repos = dynamic(() => import('./components/Repos.tsx').then(m => m.Repos), { loading: () => <div className='w-full flex items-center justify-center'><Spinner /></div> })
+const Repos = dynamic(() => import('./components/Repos').then(m => m.Repos), { loading: () => <div className='w-full flex items-center justify-center'><Spinner /></div> })
 
 export const ProjectsSection = () => {
   return (
