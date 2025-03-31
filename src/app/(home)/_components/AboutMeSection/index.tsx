@@ -17,7 +17,6 @@ export const AboutMeSection = () => {
         <div className='flex flex-col gap-4 rounded-lg relative text-[0.9rem] leading-5 text-[rgba(255,255,255,0.7)]'>
           <div className="prose prose-headings:text-[#ffffffdd] pt-10 pb-10 prose-strong:text-[#ffffffc0] prose-p:text-[#ffffffc1] prose-li:text-[#ffffffa0]">
             <Description />
-
             <TechIUse />
           </div>
         </div>

@@ -5,7 +5,7 @@ export const Spinner = () => {
         <Svg
             src='spinner-one-third-svgrepo-com'
             alt="spinner"
-            className="animate-spin animate-infinite w-12 h-12 animate-ease-in-out"
+            className="animate-spin animate-infinite z-40 w-12 h-12 animate-ease-in-out"
         />
     )
 }

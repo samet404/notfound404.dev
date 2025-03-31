@@ -2,6 +2,10 @@ import Image from 'next/image'
 import ProjectBox from './components/ProjectBox'
 import pixgulogo from '@/png/logo.png'
 import { Svg } from '@/src/components/Svg'
+import dynamic from 'next/dynamic'
+import { Spinner } from '@/src/components/Spinner'
+
+const Repos = dynamic(() => import('./components/Repos.tsx').then(m => m.Repos), { loading: () => <div className='w-full flex items-center justify-center'><Spinner /></div> })
 
 export const ProjectsSection = () => {
   return (
@@ -15,7 +19,7 @@ export const ProjectsSection = () => {
           </div>
         </div>
       </div>
-      <div className='bg-[rgba(255,255,255,0.3)] flex flex-col gap-16 items-center pb-8'>
+      <div className='bg-[rgba(255,255,255,0.3)] flex flex-col gap-5 items-center pb-8'>
         <div className="flex flex-row w-full flex-wrap justify-center items-start gap-10 xxs:px-1 md:px-3 py-20">
           <ProjectBox
             name={'PIXGU'}
@@ -47,7 +51,8 @@ export const ProjectsSection = () => {
             link={'https://synoon.app/'}
           /> */}
         </div>
-        <div className='text-center drop-shadow-[0_0px_50px_rgba(0,0,0,0.7)] font-[400] rounded-md px-2 py-1 text-white'>{`Made with <3 by 404`}</div>
+        <Repos />
+        <div className='text-center drop-shadow-[0_0px_50px_rgba(0,0,0,0.7)] font-[400] rounded-md px-2 py-1 text-white'>{`Made with <3 by sametalpdeger/404`}</div>
       </div>
     </div>
   )
