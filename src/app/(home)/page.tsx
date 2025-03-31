@@ -6,7 +6,7 @@ import { ProjectsSection } from './_components/ProjectsSection'
 const Home = () => {
   return (
     <div style={{
-      scrollbarWidth: 'none',
+      scrollbarWidth: 'thin',
     }}
       id='scroll-container'
       className='overflow-y-scroll w-screen h-screen'>
