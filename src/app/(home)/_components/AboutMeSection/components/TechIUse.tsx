@@ -24,7 +24,7 @@ export const TechIUse = () => {
                     title='Kotlin'
                     description="Kotlin is a modern programming language that is fully interoperable with Java. Kotlin makes easier to develop java applications."
                     icon={<Svg src="kotlin" alt='kotlin' className='w-8 h-8' />}
-                    skillLevel={35}
+                    skillLevel={60}
                     learning={true}
                     type='language'
                 />
