@@ -19,7 +19,7 @@ export const Links = () => {
                     <Svg src='phone' className='w-7 h-7' alt='stackoverflow logo' />
                 </ProfileLink>
                 |
-                <ProfileLink href="https://github.com/404nnotfoundddd">
+                <ProfileLink href="https://github.com/sametalpdeger">
                     <Svg src='github' className='w-6 h-6' alt='github logo' />
                 </ProfileLink>
                 |
