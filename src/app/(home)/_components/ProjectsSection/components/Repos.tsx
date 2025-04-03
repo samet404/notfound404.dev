@@ -1,6 +1,7 @@
 "use client"
 
 import { Spinner } from '@/src/components/Spinner';
+import { constants } from '@/src/constants';
 import Link from 'next/link';
 import { useEffect, useState } from 'react'
 
@@ -16,7 +17,7 @@ export const Repos = () => {
     useEffect(() => {
         (async () => {
             try {
-                const response = await fetch("https://api.github.com/users/sametalpdeger/repos")
+                const response = await fetch(`https://api.github.com/users/${constants.githubUsername}/repos`)
                 const json = await response.json()
                 setRepos(json.map((repo: any) => ({
                     name: repo.name,

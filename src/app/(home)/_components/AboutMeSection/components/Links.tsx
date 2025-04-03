@@ -1,5 +1,6 @@
 import { Svg } from '@/src/components/Svg'
 import { ProfileLink } from './ProfileLink'
+import { constants } from '@/src/constants'
 
 export const Links = () => {
     return (
@@ -19,7 +20,7 @@ export const Links = () => {
                     <Svg src='phone' className='w-7 h-7' alt='stackoverflow logo' />
                 </ProfileLink>
                 |
-                <ProfileLink href="https://github.com/sametalpdeger">
+                <ProfileLink href={`https://github.com/${constants.githubUsername}`}>
                     <Svg src='github' className='w-6 h-6' alt='github logo' />
                 </ProfileLink>
                 |
