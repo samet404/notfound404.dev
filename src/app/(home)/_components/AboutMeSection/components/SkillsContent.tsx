@@ -138,6 +138,15 @@ export const SkillsContent = () => {
             />
 
             <SkillIcon
+                title='lua'
+                icon={<Svg src="lua" alt='lua logo' className='w-10 h-10' />}
+                skillLevel={30}
+                learning={true}
+                type='language'
+            />
+
+
+            <SkillIcon
                 icon={<Svg src='flask' className='w-10 h-10' alt='Flask logo' />}
                 title="Flask"
                 description="Python web framework for building web applications and APIs. Similar to express.js, fastify and ktor."
