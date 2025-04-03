@@ -4,6 +4,7 @@ import pixgulogo from '@/png/logo.png'
 import { Svg } from '@/src/components/Svg'
 import dynamic from 'next/dynamic'
 import { Spinner } from '@/src/components/Spinner'
+import { constants } from '@/src/constants'
 
 const Repos = dynamic(() => import('./components/Repos').then(m => m.Repos), { loading: () => <div className='w-full flex items-center justify-center'><Spinner /></div> })
 
@@ -36,10 +37,27 @@ export const ProjectsSection = () => {
 
           <ProjectBox
             name={'Aspect'}
-            tags={['personal project']}
+            tags={['under development', 'personal project']}
             description={'Aspect, a decentralized peer-to-peer (P2P) chat application designed to work across Android devices. This project currently under development and represents my commitment to creating privacy-focused communication solutions using modern technologies.'}
             thumbnail={<Svg src={'aspectus'} className='w-[7rem]' alt='Aspectus logo' />}
-            link={'https://github.com/404nnotfoundddd/Aspect'}
+            link={`https://github.com/${constants.githubUsername}/Aspect`}
+          />
+
+
+          <ProjectBox
+            name={'Jetmark'}
+            tags={['under development', 'personal project']}
+            description={'Jetmark is a Markdown Editor UI library for jetpack compose. Provides highly customizable and extensible UI composable text input that has markdown syntax highlighting, code highlighting, and more. Jetmark uses java functions instead of regex to improve performance. Jetmark also will work on ios, android, web, macos, linux and windows.'}
+            thumbnail={<Svg src={'jetmark'} className='w-[7rem]' alt='Jetmark logo' />}
+            link={`https://github.com/${constants.githubUsername}/jetmark`}
+          />
+
+          <ProjectBox
+            name={'Bloomy'}
+            tags={['under development', 'personal project']}
+            description={'Bloomy is compeletly free, fast and open source AI powered note taking app. It is built with Jetpack Compose and Kotlin Multiplatform. AI training (rag, fine tunning) is done with personal gemini API key.'}
+            thumbnail={null}
+            link={`https://github.com/${constants.githubUsername}/bloomy`}
           />
 
 
