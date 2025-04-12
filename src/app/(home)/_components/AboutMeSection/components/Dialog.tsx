@@ -60,7 +60,7 @@ export const Dialog = () => {
     useEffect(() => {
         if (!info || info.isHovering) return
 
-        const closeTimeout = setTimeout(() => setDialogInfo(null), 100)
+        const closeTimeout = setTimeout(() => setDialogInfo(null), 300)
         return () => clearTimeout(closeTimeout)
     }, [info?.isHovering, setDialogInfo])
 

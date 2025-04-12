@@ -8,6 +8,7 @@ import trpc from '@/png/trpc.png'
 import kmp from '@/png/kmp.png'
 import ktor from '@/png/ktor.png'
 import koin from '@/png/koin.png'
+import raylib from '@/png/raylib.png'
 
 const imageSizes = 'calc(1vw + 37px)'
 
@@ -19,15 +20,14 @@ export const SkillsContent = () => {
                 description="Kotlin is a modern programming language that is fully interoperable with Java. Kotlin makes easier to develop java applications."
                 icon={<Svg src="kotlin" alt='kotlin' className='w-8 h-8' />}
                 skillLevel={80}
-                learning={true}
                 type='language'
             />
 
             <SkillIcon
                 title='Java'
                 icon={<Svg src="java" alt='Java' className='w-10 h-10' />}
-                skillLevel={50}
-                learning={true}
+                skillLevel={30}
+                learning
                 type='language'
             />
 
@@ -35,8 +35,7 @@ export const SkillsContent = () => {
                 icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={kmp} className='w-10 h-10 rounded-md' alt='Kotlin Multiplatform' />}
                 title="Kotlin Multiplatform (Android, Desktop)"
                 description="Kotlin Multiplatform is a framework for building cross-platform applications with Kotlin."
-                skillLevel={56}
-                learning={true}
+                skillLevel={100}
                 type='library-framework'
             />
 
@@ -54,7 +53,6 @@ export const SkillsContent = () => {
                 title="Ktor"
                 description="Kotlin server framework for building server applications with Kotlin. Very similar to express.js."
                 skillLevel={27}
-                learning={true}
                 type='library-framework'
             />
 
@@ -101,11 +99,37 @@ export const SkillsContent = () => {
             <SkillIcon
                 icon={<Svg src='c' className='w-10 h-10' alt='C logo' />}
                 title="C"
-                description="Mother of all programming languages."
-                skillLevel={10}
+                description="Mother of most programming languages."
+                skillLevel={25}
+                learning
                 type='language'
             />
 
+            <SkillIcon
+                icon={<Svg src='makefile' className='w-12 h-12 pl-1' alt='C logo' />}
+                title="Makefile"
+                description="Makefile is a build automation tool to automate the build process of C and C++ projects."
+                skillLevel={35}
+                learning
+                type='tool'
+            />
+
+            <SkillIcon
+                icon={<Svg src='cmake' className='w-10 h-10' alt='C logo' />}
+                title="CMake"
+                skillLevel={2}
+                learning
+                type='tool'
+            />
+
+            <SkillIcon
+                icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={raylib} className='w-9 h-9 rounded-md' alt='Raylib logo' />}
+                title="Raylib"
+                description="Raylib is a simple and easy-to-use library to enjoy videogames programming."
+                skillLevel={5}
+                learning
+                type='library-framework'
+            />
 
             <SkillIcon
                 icon={<Svg src='typescript' className='w-10 h-10' alt='TypeScript logo' />}
@@ -141,7 +165,6 @@ export const SkillsContent = () => {
                 title='lua'
                 icon={<Svg src="lua" alt='lua logo' className='w-10 h-10' />}
                 skillLevel={30}
-                learning={true}
                 type='language'
             />
 

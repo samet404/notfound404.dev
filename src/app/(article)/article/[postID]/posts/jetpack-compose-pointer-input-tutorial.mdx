@@ -1,0 +1,106 @@
+# Jetpack Compose Pointer Input Tutorial
+
+## Introduction
+
+Jetpack compose is a modern and powerful UI library helps developers to build UI's faster and easier. In this tutorial, I will be explain everything about pointerInput in Jetpack Compose.
+
+First time I tried to use pointerInput modifier in Jetpack Compose, I was a bit confused about how to use it. I tried to follow the official documentation, but I think it was pain and not clear enough. But I think their [video](https://youtu.be/1tkVjBxdGrk) is good, but again, it's not enough to start coding using pointerInput. So I decided to write this tutorial to help you understand it better.
+
+So why we need pointerInput? Well, it is a modifier that allows us to detect the pointer events in the composable. It is useful when we want to handle more complex the pointer events. It's significant to understand how pointers, gestures, and touch events work in Jetpack Compose. You maybe asking what is pointer, gesture, and touch event? Let's dive into it.
+
+## Understanding concepts
+
+According to the [official documentation](https://developer.android.com/develop/ui/compose/touch-input/pointer-input/understand-gestures#definitions), these are the definitions of pointer, gesture, and touch event:
+
+- **Pointer:** A physical object you can use to interact with your application. For mobile devices, the most common pointer is your finger interacting with the touchscreen. Alternatively, you could use a stylus to replace your finger. For large screens, you can use a mouse or trackpad to indirectly i nteract with the display. An input device must be able to "point" at a coordinate to be considered a pointer, so a keyboard, for example, cannot be considered a pointer. In Compose, the pointer type is included in pointer changes using PointerType.
+
+- **Pointer event:** Describes a low-level interaction of one or more pointers with the application at a given time. Any pointer interaction, such as putting a finger on the screen or dragging a mouse, would trigger an event. In Compose, all relevant information for such an event is contained in the PointerEvent class.
+
+- **Gesture:** A sequence of pointer events that can be interpreted as a single action. For example, a tap gesture can be considered a sequence of a down event followed by an up event. There are common gestures that are used by many apps, such as tap, drag, or transform, but you can also create your own custom gesture when needed.
+
+We can think like, pointer is a mouse, pointer event is a right click and gesture is a long press. I hope you understand the concepts because it's important to understand before we start using pointerInput.
+
+## Ways of creating gestures
+
+In Jetpack Compose there are four ways to create gestures:
+
+- Composables: Composables like [Button](https://developer.android.com/develop/ui/compose/components/button) are already have built-in gesture implementations. You can use them directly.
+
+```Kotlin
+Button(onClick = { println("Click me (< *o*)>") })
+```
+
+- Modifiers: Modifiers are easy to use but also adds additional features, such as support for focus and mouse, animations and styles like ripple effect . You probably used it before.
+
+```Kotlin
+Box(
+    modifier = Modifier
+        .clickable { println("Please don't click me it hurts") }
+)
+```
+
+- Recognizers: Recognizers works with pointerInput modifier. It's more powerful than modifiers and has no additional features. You can use it to create custom gestures.
+
+```Kotlin
+Box(
+    modifier = Modifier
+        .pointerInput(Unit) {
+            // PointerInputScope
+            detectTapGestures(
+                onTap = { println("Don't click me") }
+                onDoubleTap = { println("Don't click me twice") }
+                onLongPress = { println("I said, please don't click me") }
+                onPress = { println("Don't click me") }
+            )
+
+        }
+)
+```
+
+- Raw pointer events: Raw pointer events is the most hard and advanced way to create gestures. If you want to create a custom gesture, you can use raw pointer events.
+
+```Kotlin
+Box(
+    modifier = Modifier
+        .pointerInput(Unit) {
+            // PointerInputScope
+            forEachGesture {
+                awaitPointerEventScope {
+                    val down = awaitFirstDown()
+                    val up = awaitPointerEvent(down.id)
+                    println("I hate my life")
+                }
+            }
+        }
+)
+```
+
+## Modifiers
+
+Modifiers are easy to use and most cases they are enough. There are many types of gesture modifiers in Jetpack Compose:
+
+- [clickable](<https://developer.android.com/reference/kotlin/androidx/compose/ui/Modifier#(androidx.compose.ui.Modifier).clickable(kotlin.Boolean,kotlin.String,androidx.compose.ui.semantics.Role,kotlin.Function0)>): Simply, takes a lamba function that will be executed on clicks.
+- [combinedClickable](<https://developer.android.com/reference/kotlin/androidx/compose/ui/Modifier#(androidx.compose.ui.Modifier).combinedClickable(kotlin.Boolean,kotlin.String,androidx.compose.ui.semantics.Role,kotlin.String,kotlin.Function0,kotlin.Function0,kotlin.Boolean,kotlin.Function0)>): If you wanna handle multiple click you can use it.
+
+```Kotlin
+    Box(
+        modifier = Modifier
+            .width(100.dp)
+            .height(100.dp)
+            .background(Color.Red)
+            .combinedClickable(
+                onClick = {
+                    println("onClick")
+                },
+                onLongClick = {
+                    println("onLongClick")
+                },
+                onDoubleClick = {
+                    println("onDoubleClick")
+                },
+
+            )
+    )
+```
+
+- [draggable](<https://developer.android.com/reference/kotlin/androidx/compose/foundation/gestures/package-summary#(androidx.compose.ui.Modifier).draggable(androidx.compose.foundation.gestures.DraggableState,androidx.compose.foundation.gestures.Orientation,kotlin.Boolean,androidx.compose.foundation.interaction.MutableInteractionSource,kotlin.Boolean,kotlin.coroutines.SuspendFunction2,kotlin.coroutines.SuspendFunction2,kotlin.Boolean)>): Allows to configure touch dragging for the UI element in a single [Orientation](https://developer.android.com/reference/kotlin/androidx/compose/foundation/gestures/Orientation)
