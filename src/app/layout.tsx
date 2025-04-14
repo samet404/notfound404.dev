@@ -7,6 +7,7 @@ import { Providers } from './_components/Providers'
 import { CustomCursor } from './_components/CustomCursor'
 import { headers } from 'next/headers'
 import { getOSFromUA } from '../utils/getOSFromUA'
+import { DisplayPresence } from './_components/DisplayPresence'
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -72,6 +73,7 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
   const headersRes = await headers()
   const os = getOSFromUA(headersRes.get('user-agent'))
 
+  console.log(os)
 
   return (
     <html lang="en">
@@ -81,9 +83,10 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
             crossOrigin="anonymous"
             src="//unpkg.com/react-scan/dist/auto.global.js"
           />}
-          {os?.includes('android') || os?.includes('ios') ? null : <CustomCursor />}
+          {os == 'Android' || os == 'ios' ? null : <CustomCursor />}
 
           {children}
+          {os == 'Windows' || os == 'macOS' || os == 'Linux' ? <DisplayPresence /> : null}
           <Nav />
         </Providers>
       </body>
