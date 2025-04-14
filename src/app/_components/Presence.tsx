@@ -74,7 +74,7 @@ export const Presence = () => {
                         key={activity.name}
                         className="p-2   rounded w-[10rem]"
                     >
-                        {activity.type === 2 ? (
+                        {activity.type === 2 || activity.type === 3 && (
                             <div className="space-y-0.5 text-[0.65rem]">
                                 <div className=" font-medium text-gray-800 dark:text-gray-200">
                                     {activity.details}
@@ -85,12 +85,6 @@ export const Presence = () => {
                                 <div className=" text-gray-500">
                                     {activity.name}
                                 </div>
-                            </div>
-                        ) : (
-                            <div className="text-sm text-gray-600 dark:text-gray-300">
-                                {activity.name}
-                                {activity.details && <div>{activity.details}</div>}
-                                {activity.state && <div>{activity.state}</div>}
                             </div>
                         )}
                     </div>
