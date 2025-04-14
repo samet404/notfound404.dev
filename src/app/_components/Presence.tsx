@@ -59,7 +59,7 @@ export const Presence = () => {
 
     return (
         <div className="fixed bottom-2 left-2 bg-[#000000aa] backdrop-blur-sm rounded-lg z-30 animate-fade-up animate-delay-100 shadow-lg p-1 max-w-sm space-y-2">
-            <div className="flex items-center gap-2 px-1 pt-1">
+            <div className="flex items-center gap-2 px-1 py-[0.35rem]">
                 <div className={`w-2 h-2 rounded-full ${getStatusColor(presenceData.discord_status)}`} />
                 <span className="text-[0.6rem] text-gray-600 dark:text-gray-300 capitalize">
                     {presenceData.discord_status} ({getPlatformStatus()})
