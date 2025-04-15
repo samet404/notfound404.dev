@@ -6,6 +6,14 @@ import { useState, useEffect, type ReactNode } from 'react'
 import { NavScrollbarContainerAtom } from './atoms'
 import { Svg } from '@/src/components/Svg'
 import { usePathname } from 'next/navigation'
+import useIsDarkTheme from '@/src/store/isDarkTheme'
+
+const DarkThemeButton = () => {
+    const setDarkTheme = useIsDarkTheme((state) => state.set)
+    const darkTheme = useIsDarkTheme((state) => state.value)
+
+    return <Svg src='dark-theme' onClick={() => setDarkTheme(!darkTheme)} className='w-6 h-6  bg-white opacity-50 rounded-full' alt='menu' />
+}
 
 export const Nav = () => {
     const pathname = usePathname()
@@ -49,7 +57,7 @@ export const Nav = () => {
     }, [scrollContainer])
 
     return (
-        <div className='fixed h-[4rem] w-full flex p-2 justify-center top-0 z-[45]'>
+        <div className='fixed h-[4rem] w-full flex p-2 justify-center top-0 z-[45] pointer-events-none'>
             <nav
                 style={{ transform: `translateY(${isVisible ? '0' : '-200%'})`, transition: 'transform 0.3s ease', pointerEvents: isVisible ? 'auto' : 'none' }}
                 className='md:w-[50rem] xxs:w-full flex h-full px-5 top-0 rounded-lg shadow-[0_0px_20px_0.5px_rgba(0,0,0,0.3)] md:bg-[#00000061] xxs:bg-[#0000009a] xxs:backdrop-blur-sm md:backdrop-blur-md items-center justify-between drop-shadow-md relative'
@@ -62,6 +70,7 @@ export const Nav = () => {
                 <div className='hidden xs:flex flex-row gap-6'>
                     <NavLink href="/articles">Articles</NavLink>
                     <NavLink href="/">About me</NavLink>
+                    <DarkThemeButton />
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -91,6 +100,8 @@ export const NavLink = ({ href, children, className }: NavLinkProps) => {
         </Link>
     )
 }
+
+
 
 type NavLinkProps = {
     href: string

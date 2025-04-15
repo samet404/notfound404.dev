@@ -9,6 +9,7 @@ import kmp from '@/png/kmp.png'
 import ktor from '@/png/ktor.png'
 import koin from '@/png/koin.png'
 import raylib from '@/png/raylib.png'
+import turbo from '@/png/turbo.png'
 
 const imageSizes = 'calc(1vw + 37px)'
 
@@ -92,7 +93,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='gradle' className='w-10 h-10' alt='gradle logo' />}
                 title="Gradle"
                 description="Package manager and build tool for Java and Kotlin projects."
-                skillLevel={60}
+                skillLevel={100}
                 type='library-framework'
             />
 
@@ -109,7 +110,24 @@ export const SkillsContent = () => {
                 icon={<Svg src='makefile' className='w-12 h-12 pl-1' alt='C logo' />}
                 title="Makefile"
                 description="Makefile is a build automation tool to automate the build process of C and C++ projects."
-                skillLevel={35}
+                skillLevel={10}
+                learning
+                type='tool'
+            />
+
+            <SkillIcon
+                icon={<Svg src='meson' className='w-12 h-12' alt='C logo' />}
+                title="meson"
+                description="Meson is a user friendly build automation tool to automate the build process of C and C++ projects."
+                skillLevel={5}
+                learning
+                type='tool'
+            />
+
+            <SkillIcon
+                icon={<Svg src='clang' className='w-12 h-12' alt='C logo' />}
+                title="Clang"
+                skillLevel={2}
                 learning
                 type='tool'
             />
@@ -150,7 +168,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='wasm' className='w-11 h-11 rounded-md' alt='Wasm logo' />}
                 title='Web Assembly'
                 description='Web assembly allows to run low-level code directly in the browser.'
-                skillLevel={70}
+                skillLevel={100}
                 type='language'
             />
 
@@ -160,6 +178,14 @@ export const SkillsContent = () => {
                 icon={<Svg src='python' className='w-10 h-10' alt='Python logo' />}
                 type='language'
             />
+
+            <SkillIcon
+                title='Gemini API'
+                icon={<Svg src='gemini' className='w-10 h-10' alt='Gemini logo' />}
+                type='language'
+                description='I can use gemini API efficently by using fine tunning and applying Retrieval-augmented generation (RAG) techniques.'
+            />
+
 
             <SkillIcon
                 title='lua'
@@ -292,6 +318,17 @@ export const SkillsContent = () => {
                 skillLevel={100}
                 type='library-framework'
             />
+
+            <SkillIcon
+                icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={turbo} className='w-10 h-10 rounded-md' alt='Turborepo logo' />}
+                title="Turborepo"
+                description="Monorepo management tool for JavaScript and TypeScript projects."
+                skillLevel={40}
+                learning
+                type='library-framework'
+            />
+
+
             <SkillIcon
                 icon={<Svg src='react-query' className='w-10 h-10' alt='React Query logo' />}
                 title="React Query"

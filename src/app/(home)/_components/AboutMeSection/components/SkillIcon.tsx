@@ -4,11 +4,12 @@ import type { ReactNode } from 'react'
 import { useRef } from 'react'
 import { dialogInfoAtom } from './atoms'
 import { Svg } from '@/src/components/Svg'
+import useIsDarkTheme from '@/src/store/isDarkTheme'
 
 export const SkillIcon = ({ icon, title, description, skillLevel, learning, type }: Props) => {
     const iconRef = useRef<HTMLDivElement>(null)
     const setDialogInfo = useSetAtom(dialogInfoAtom)
-
+    const isDarkTheme = useIsDarkTheme((state) => state.value)
 
     const handleMouseEnter = (e: React.MouseEvent) => {
         setDialogInfo({
@@ -70,7 +71,7 @@ export const SkillIcon = ({ icon, title, description, skillLevel, learning, type
             style={{
                 borderColor: typeStatusColor,
             }}
-            className={`group bg-[#ffffffa3] hover:scale-110 hover:shadow-[0_0px_30px_1px_rgba(0,0,0,0.3)] duration-200 border-[0.15rem] p-[0.15rem] flex w-[3rem] h-[3rem] relative flex-col items-center justify-center rounded-lg`}
+            className={`group ${isDarkTheme ? 'bg-[#ffffffac]' : 'bg-[#ffffffa3]'} hover:scale-110 hover:shadow-[0_0px_30px_1px_rgba(0,0,0,0.3)] duration-200 border-[0.15rem] p-[0.15rem] flex w-[3rem] h-[3rem] relative flex-col items-center justify-center rounded-lg`}
         >
             {icon ? icon : <Svg src='ban' className='w-9 h-9 opacity-20' alt='no image' />}
             {learning && <div className='animate-pulse shadow-[0_0px_10px_1px_rgba(0,0,0,0.4)] absolute bottom-[-3px] right-[-3px] w-2 h-2 rounded-full bg-[#ff7dee]'></div>}

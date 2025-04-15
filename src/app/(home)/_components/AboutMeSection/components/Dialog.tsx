@@ -103,7 +103,7 @@ export const Dialog = () => {
                                 Skill level: {skillLevel}/100
                             </div>
                             <div className='text-[0.55rem]'>
-                                Calculated based on my guess, experience and the amount of time I've spent using the technology. Doesn't mean I know every little thing about it.
+                                Calculated based on my guess, experience and the amount of time I've spent using the technology. Doesn't mean I know every little thing about it. Just describes my workability with it.
                             </div>
                         </div>
                     )}
