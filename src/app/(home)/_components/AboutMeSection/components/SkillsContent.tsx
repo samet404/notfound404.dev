@@ -27,7 +27,7 @@ export const SkillsContent = () => {
             <SkillIcon
                 title='Java'
                 icon={<Svg src="java" alt='Java' className='w-10 h-10' />}
-                skillLevel={30}
+                skillLevel={35}
                 learning
                 type='language'
             />
@@ -43,8 +43,8 @@ export const SkillsContent = () => {
             <SkillIcon
                 icon={<Svg src='springboot' className='w-9 h-9' alt='Spring logo' />}
                 title="Spring Boot"
-                description="Spring Boot is a Java based backend framework.."
-                skillLevel={2}
+                description="Spring Boot is a Java based backend framework. Allows to build lightweight, fast, and scalable web applications using dependency injecton and other features."
+                skillLevel={10}
                 type='library-framework'
                 learning
             />
@@ -94,6 +94,15 @@ export const SkillsContent = () => {
                 title="Gradle"
                 description="Package manager and build tool for Java and Kotlin projects."
                 skillLevel={100}
+                type='library-framework'
+            />
+
+            <SkillIcon
+                icon={<Svg src='maven' className='w-10 h-10' alt='gradle logo' />}
+                title="Maven"
+                description="Package manager and build tool for Java and Kotlin projects."
+                skillLevel={30}
+                learning
                 type='library-framework'
             />
 
