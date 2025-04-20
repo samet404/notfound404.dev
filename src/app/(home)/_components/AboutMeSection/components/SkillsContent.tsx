@@ -41,10 +41,10 @@ export const SkillsContent = () => {
             />
 
             <SkillIcon
-                icon={<Svg src='springboot' className='w-9 h-9' alt='Spring logo' />}
-                title="Spring Boot"
-                description="Spring Boot is a Java based backend framework. Allows to build lightweight, fast, and scalable web applications using dependency injecton and other features."
-                skillLevel={10}
+                icon={<Svg src='spring' className='w-9 h-9' alt='Spring logo' />}
+                title="Spring"
+                description="Spring is a Java based backend framework. Allows us to build fast and scalable backend applications using dependency injecton and other features."
+                skillLevel={15}
                 type='library-framework'
                 learning
             />
@@ -119,8 +119,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='makefile' className='w-12 h-12 pl-1' alt='C logo' />}
                 title="Makefile"
                 description="Makefile is a build automation tool to automate the build process of C and C++ projects."
-                skillLevel={10}
-                learning
+                skillLevel={30}
                 type='tool'
             />
 
@@ -191,7 +190,7 @@ export const SkillsContent = () => {
             <SkillIcon
                 title='Gemini API'
                 icon={<Svg src='gemini' className='w-10 h-10' alt='Gemini logo' />}
-                type='language'
+                type='API'
                 description='I can use gemini API efficently by using fine tunning and applying Retrieval-augmented generation (RAG) techniques.'
             />
 
@@ -216,7 +215,6 @@ export const SkillsContent = () => {
                 icon={<Svg src='jupyter' className='w-10 h-10' alt='jupyter notebook logo' />}
                 title="Jupyter Notebook"
                 description="Web-based interactive computing environment for huge computational python tasks."
-                skillLevel={20}
                 type='service'
             />
 
@@ -224,7 +222,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='numpy' className='w-9 h-9' alt='Numpy logo' />}
                 title="Numpy"
                 description="Python library for fast array computations than original Python lists."
-                skillLevel={15}
+                skillLevel={100}
                 type='library-framework'
             />
 
@@ -273,6 +271,15 @@ export const SkillsContent = () => {
                 title="XML"
                 description="Standart markup language for creating the structres."
                 skillLevel={100}
+                type='language'
+            />
+
+            <SkillIcon
+                icon={<Svg src='latex' className='w-11 h-11' alt='Latex logo' />}
+                title="Latex"
+                description="Latex is an advanced markdown language for creating complex and scientific documents."
+                learning
+                skillLevel={70}
                 type='language'
             />
 
@@ -332,8 +339,6 @@ export const SkillsContent = () => {
                 icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={turbo} className='w-10 h-10 rounded-md' alt='Turborepo logo' />}
                 title="Turborepo"
                 description="Monorepo management tool for JavaScript and TypeScript projects."
-                skillLevel={40}
-                learning
                 type='library-framework'
             />
 
@@ -421,7 +426,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='postgresql' className='w-9 h-9' alt='PostgreSQL logo' />}
                 title="PostgreSQL"
                 description="Powerfull relational database. I'm using it for complex queries, data structres."
-                skillLevel={50}
+                skillLevel={100}
                 type='database'
             />
 
@@ -430,7 +435,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='mysql' className='w-9 h-9' alt='PostgreSQL logo' />}
                 title="MySQL"
                 description="One of the most popular relational databases."
-                skillLevel={50}
+                skillLevel={90}
                 type='database'
             />
 
@@ -447,7 +452,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='sqlite' className='w-9 h-9' alt='Sqlite logo' />}
                 title="SQLite"
                 description="Light, SQL database engine. I'm usually using for mobile applications."
-                skillLevel={50}
+                skillLevel={100}
                 type='database'
             />
             <SkillIcon

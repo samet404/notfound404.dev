@@ -31,25 +31,17 @@ export const ProjectsSection = () => {
               className="rounded-lg w-[9rem] "
               placeholder="blur"
             />}
-            tags={['personal project']}
+            tags={['personal project', 'Typescript', 'Next.js', 'React', 'WebRTC', 'WebSocket', 'Web Workers', 'HTML', 'CSS', 'JavaScript']}
             link={'https://pixgu.com'}
           />
 
+
           <ProjectBox
             name={'Aspect'}
-            tags={['under development', 'personal project']}
+            tags={['under development', 'personal project', 'Kotlin', 'Jetpack Compose', 'RSA/AES/TIGER/SHA']}
             description={'Aspect, a decentralized peer-to-peer (P2P) chat application designed to work across Android devices. This project currently under development and represents my commitment to creating privacy-focused communication solutions using modern technologies.'}
             thumbnail={<Svg src={'aspectus'} className='w-[7rem]' alt='Aspectus logo' />}
             link={`https://github.com/${constants.githubUsername}/Aspect`}
-          />
-
-
-          <ProjectBox
-            name={'Jetmark'}
-            tags={['under development', 'personal project']}
-            description={'Jetmark is a Markdown Editor UI library for jetpack compose. Provides highly customizable and extensible UI composable text input that has markdown syntax highlighting, code highlighting, and more. Jetmark uses java functions instead of regex to improve performance. Jetmark also will work on ios, android, web, macos, linux and windows.'}
-            thumbnail={<Svg src={'jetmark'} className='w-[7rem]' alt='Jetmark logo' />}
-            link={`https://github.com/${constants.githubUsername}/jetmark`}
           />
 
           <ProjectBox
@@ -58,6 +50,15 @@ export const ProjectsSection = () => {
             description={'Bloomy is compeletly free, fast and open source AI powered note taking app. It is built with Jetpack Compose and Kotlin Multiplatform. AI training (rag, fine tunning) is done with personal gemini API key.'}
             thumbnail={null}
             link={`https://github.com/${constants.githubUsername}/bloomy`}
+          />
+
+
+          <ProjectBox
+            name={'Vigilant'}
+            tags={['under development', 'personal project', 'Spring', 'Flask', 'Python', 'Kotlin', 'Java', 'Moondream', 'Google Gemini']}
+            description={'When there is sensitive information on the your screen, vigilant will detect it using vigilant AI server and notify all your connected devices, vigilant client apps about threads that are suspicious. E.g, if you are entering your password to your bank account and password is shown on your screen.'}
+            thumbnail={null}
+            link={`https://github.com/${constants.githubUsername}/vigilant`}
           />
 
 

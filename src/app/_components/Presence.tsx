@@ -31,7 +31,12 @@ export const Presence = () => {
 
     useEffect(() => {
         const localStoragePresence = localStorage.getItem('presence')
-        if (localStoragePresence === '0') return
+        if (localStoragePresence === '0') {
+            console.log('useEffect return')
+            return
+        }
+
+        if (!isOpen) setIsOpen(true)
 
         const fetchPresence = async () => {
             try {
@@ -101,13 +106,13 @@ export const Presence = () => {
                         className="pb-2 pl-1   rounded w-[10rem]"
                     >
                         <div className="space-y-0.5 text-[0.65rem]">
-                            <div className=" font-medium text-gray-800 dark:text-gray-200">
+                            <div className=" font-medium break-all text-gray-800 dark:text-gray-200">
                                 {activity.details}
                             </div>
-                            <div className=" text-gray-600 dark:text-gray-400">
+                            <div className=" text-gray-600 break-all dark:text-gray-400">
                                 {activity.state}
                             </div>
-                            <div className=" text-gray-500">
+                            <div className=" pt-[0.2rem] text-gray-500 break-all">
                                 {activity.name}
                             </div>
                         </div>

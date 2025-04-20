@@ -7,7 +7,9 @@ import { Providers } from './_components/Providers'
 import { CustomCursor } from './_components/CustomCursor'
 import { headers } from 'next/headers'
 import { getOSFromUA } from '../utils/getOSFromUA'
-import { DisplayPresence } from './_components/DisplayPresence'
+import dynamic from 'next/dynamic'
+
+const Presence = dynamic(() => import('./_components/Presence').then(m => m.Presence))
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -86,7 +88,7 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
           {os == 'Android' || os == 'ios' ? null : <CustomCursor />}
 
           {children}
-          {os == 'Windows' || os == 'macOS' || os == 'Linux' ? <DisplayPresence /> : null}
+          {os == 'Windows' || os == 'macOS' || os == 'Linux' ? <Presence /> : null}
           <Nav />
         </Providers>
       </body>

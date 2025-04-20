@@ -39,7 +39,7 @@ const ProjectBox = ({
 
 
             <div className='flex flex-col gap-1'>
-              <div className='flex flex-row gap-2 items-center flex-wrap'>
+              <div className='flex flex-row gap-[0.3rem] items-center flex-wrap'>
                 {tags.map((tag, index) => {
                   return (
                     <div
