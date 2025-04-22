@@ -44,7 +44,7 @@ export const Repos = () => {
                 </div>
             </div>
 
-            <div className='flex flex-col gap-2 text-[#000000a8]'>
+            <div className='flex flex-col items-center gap-2 text-[#000000a8]'>
                 {repos.map((repo) => (
                     <div key={repo.name} className='max-w-[40rem] xxs:w-[90%] lg:w-[40rem] p-2 rounded-md hover:opacity-50 bg-[#ffffff68]'>
 

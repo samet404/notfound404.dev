@@ -10,6 +10,7 @@ import ktor from '@/png/ktor.png'
 import koin from '@/png/koin.png'
 import raylib from '@/png/raylib.png'
 import turbo from '@/png/turbo.png'
+import clerk from '@/webp/clerk.webp'
 
 const imageSizes = 'calc(1vw + 37px)'
 
@@ -27,7 +28,7 @@ export const SkillsContent = () => {
             <SkillIcon
                 title='Java'
                 icon={<Svg src="java" alt='Java' className='w-10 h-10' />}
-                skillLevel={35}
+                skillLevel={55}
                 learning
                 type='language'
             />
@@ -365,6 +366,22 @@ export const SkillsContent = () => {
                 type='library-framework'
             />
 
+
+            <SkillIcon
+                icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={clerk} className='w-9 pr-1 h-9 rounded-md' alt='Raylib logo' />}
+                title="Clerk"
+                description="Easiest way to add authentication to your app with just a few lines of code."
+                type='service'
+            />
+
+            <SkillIcon
+                icon={<Svg src='better-auth' className='w-10 h-10 rounded-md' alt='Node.js logo' />}
+                title="Better Auth"
+                description="Typesafe, customizable and easy authentication library for Typescript and Javascript applications."
+                type='library-framework'
+            />
+
+
             <SkillIcon
                 icon={<Svg src='nodejs' className='w-10 h-10' alt='Node.js logo' />}
                 title="Node.js"
@@ -589,6 +606,12 @@ export const SkillsContent = () => {
                 description="I'm using Docker for containerizing applications, ensuring consistent development environments, and simplifying deployment processes."
                 skillLevel={30}
                 type='tool'
+            />
+            <SkillIcon
+                icon={<Svg src='nginx' className='w-10 h-10' alt='Docker logo' />}
+                title="Nginx"
+                skillLevel={2}
+                type='low-skill'
             />
             <SkillIcon
                 icon={<Svg src='porkbun' className='w-10 h-10' alt='Porkbun logo' />}

@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import ProjectBox from './components/ProjectBox'
 import pixgulogo from '@/png/logo.png'
+import dysphoria from '@/png/dysphoria.png'
+import bloomy from '@/png/bloomy.png'
+
 import { Svg } from '@/src/components/Svg'
 import dynamic from 'next/dynamic'
 import { Spinner } from '@/src/components/Spinner'
@@ -28,38 +31,62 @@ export const ProjectsSection = () => {
             thumbnail={<Image
               src={pixgulogo}
               alt="project"
-              className="rounded-lg w-[9rem] "
+              className="rounded-lg w-[9rem] pt-4"
               placeholder="blur"
+              sizes="calc(3.48vw + 136px)"
             />}
             tags={['personal project', 'Typescript', 'Next.js', 'React', 'WebRTC', 'WebSocket', 'Web Workers', 'HTML', 'CSS', 'JavaScript']}
             link={'https://pixgu.com'}
           />
 
 
+
           <ProjectBox
             name={'Aspect'}
             tags={['under development', 'personal project', 'Kotlin', 'Jetpack Compose', 'RSA/AES/TIGER/SHA']}
             description={'Aspect, a decentralized peer-to-peer (P2P) chat application designed to work across Android devices. This project currently under development and represents my commitment to creating privacy-focused communication solutions using modern technologies.'}
-            thumbnail={<Svg src={'aspectus'} className='w-[7rem]' alt='Aspectus logo' />}
+            thumbnail={<Svg src={'aspect'} className='w-[7rem] pt-4' alt='Aspect logo' />}
             link={`https://github.com/${constants.githubUsername}/Aspect`}
           />
 
+
           <ProjectBox
+            name={'Dysphoria'}
+            description={'Story based pixel art game. Uses C programming language and raylib engine.'}
+            thumbnail={<Image
+              src={dysphoria}
+              alt="project"
+              className="rounded-lg w-full border-4 border-[rgba(255,255,255,0.3)] "
+              placeholder="blur"
+              sizes="calc(5.33vw + 204px)"
+            />}
+            tags={['personal project', 'C', 'raylib', 'meson', 'cmake']}
+            link={`https://github.com/${constants.githubUsername}/Dysphoria`}
+          />
+
+          <ProjectBox
+            thumbnail={<Image
+              src={bloomy}
+              alt="project"
+              className="rounded-lg w-full border-4 border-[rgba(255,255,255,0.3)] "
+              placeholder="blur"
+              sizes="calc(5.33vw + 204px)"
+            />}
             name={'Bloomy'}
             tags={['under development', 'personal project']}
             description={'Bloomy is compeletly free, fast and open source AI powered note taking app. It is built with Jetpack Compose and Kotlin Multiplatform. AI training (rag, fine tunning) is done with personal gemini API key.'}
-            thumbnail={null}
             link={`https://github.com/${constants.githubUsername}/bloomy`}
           />
 
 
-          <ProjectBox
+
+          {/* <ProjectBox
             name={'Vigilant'}
             tags={['under development', 'personal project', 'Spring', 'Flask', 'Python', 'Kotlin', 'Java', 'Moondream', 'Google Gemini']}
-            description={'When there is sensitive information on the your screen, vigilant will detect it using vigilant AI server and notify all your connected devices, vigilant client apps about threads that are suspicious. E.g, if you are entering your password to your bank account and password is shown on your screen.'}
+            description={''}
             thumbnail={null}
             link={`https://github.com/${constants.githubUsername}/vigilant`}
-          />
+          /> */}
 
 
           {/* <ProjectBox
@@ -71,7 +98,7 @@ export const ProjectsSection = () => {
           /> */}
         </div>
         <Repos />
-        <div className='text-center drop-shadow-[0_0px_50px_rgba(0,0,0,0.7)] font-[400] rounded-md px-2 py-1 text-white'>{`Made with <3 by sametalpdeger/404`}</div>
+        <div className='text-center drop-shadow-[0_0px_50px_rgba(0,0,0,0.7)] font-[400] rounded-md px-2 py-1 text-white'>{`Made with <3 by 404`}</div>
       </div>
     </div>
   )

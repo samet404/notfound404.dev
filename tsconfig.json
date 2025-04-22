@@ -32,7 +32,8 @@
       "@/jpg*": ["public/images/jpg/*"],
       "@/fonts*": ["public/fonts/*"],
       "@/videos*": ["public/videos/*"],
-      "@/store*": ["src/store/*"]
+      "@/store*": ["src/store/*"],
+      "@/webp*": ["public/images/webp/*"],
     },
     "plugins": [{ "name": "next" }]
   },
