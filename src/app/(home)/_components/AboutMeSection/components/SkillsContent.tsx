@@ -44,7 +44,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='spring' className='w-9 h-9' alt='Spring logo' />}
                 title="Spring"
                 description="Spring is a Java based backend framework. Allows us to build fast and scalable backend applications using dependency injecton and other features."
-                skillLevel={15}
+                skillLevel={20}
                 type='library-framework'
                 learning
             />
