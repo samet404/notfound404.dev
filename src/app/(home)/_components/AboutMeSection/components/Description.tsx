@@ -11,7 +11,7 @@ export const Description = () => {
                 I'm a self-taught developer who believes in real coding experience and hands-on learning. I dedicate around 100 hours per week to coding and expanding my technical knowledge.
             </p>
             <p>
-                I'm always open to new opportunities and collaborations. If you want to contact me, you can always find my social media accounts, email and my phone number listed above.
+                I'm always open to new opportunities and collaborations. If you want to contact me, you can always find my social media accounts and email listed above.
             </p>
         </div>
     )

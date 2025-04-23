@@ -15,10 +15,10 @@ export const Links = () => {
                 >
                     <Svg src='mail' className='w-7 h-7' alt='email logo' />
                 </ProfileLink>
-                |
-                <ProfileLink href="tel:+90505-502-0559">
+
+                {/* <ProfileLink href="tel:+90505-502-0559">
                     <Svg src='phone' className='w-7 h-7' alt='stackoverflow logo' />
-                </ProfileLink>
+                </ProfileLink> */}
                 |
                 <ProfileLink href={`https://github.com/${constants.githubUsername}`}>
                     <Svg src='github' className='w-6 h-6' alt='github logo' />
