@@ -43,10 +43,10 @@ export const ProjectsSection = () => {
 
           <ProjectBox
             name={'Aspect'}
-            tags={['under development', 'personal project', 'Kotlin', 'Jetpack Compose', 'RSA/AES/TIGER/SHA']}
-            description={'Aspect, a decentralized peer-to-peer (P2P) chat application designed to work across Android devices. This project currently under development and represents my commitment to creating privacy-focused communication solutions using modern technologies.'}
+            tags={['under development', 'personal project', 'Kotlin', 'Haskell', 'Jetpack Compose']}
+            description={'Aspect - Fork of simplex-chat, anonymous, user-friendly messaging platform with privacy-first design. Decentralized, encrypted, and identifier-free. Available on Linux, Windows and Android.'}
             thumbnail={<Svg src={'aspect'} className='w-[7rem] pt-4' alt='Aspect logo' />}
-            link={`https://github.com/${constants.githubUsername}/Aspect`}
+            link={`https://github.com/aspect-chat`}
           />
 
 

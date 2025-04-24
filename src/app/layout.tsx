@@ -22,7 +22,7 @@ const title = "notfound404.dev"
 export const metadata: Metadata = {
   title: {
     absolute: '',
-    default: 'notfound404.dev',
+    default: 'title not found',
     template: '404 - %s',
   },
   creator: 'Samet alpdeger - 404',
@@ -31,6 +31,8 @@ export const metadata: Metadata = {
     '404',
     'portfolio',
     'software',
+    'kotlin',
+    'kotlin multiplatform',
     'engineer',
     'software engineer',
     'personal website',
@@ -85,10 +87,10 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
             crossOrigin="anonymous"
             src="//unpkg.com/react-scan/dist/auto.global.js"
           />}
-          {os == 'Android' || os == 'ios' ? null : <CustomCursor />}
+          {os === 'Android' || os === 'ios' ? null : <CustomCursor />}
 
           {children}
-          {os == 'Windows' || os == 'macOS' || os == 'Linux' ? <Presence /> : null}
+          {os === 'Windows' || os === 'macOS' || os === 'Linux' ? <Presence /> : null}
           <Nav />
         </Providers>
       </body>

@@ -1,15 +1,17 @@
 "use client"
-import { useSetAtom } from 'jotai'
+import { useAtomValue, useSetAtom } from 'jotai'
 import type { ReactNode } from 'react'
 import { useRef } from 'react'
-import { dialogInfoAtom } from './atoms'
+import { dialogInfoAtom, skillsCategoryAtom } from './atoms'
 import { Svg } from '@/src/components/Svg'
 import useIsDarkTheme from '@/src/store/isDarkTheme'
+import type { SkillType } from './types'
 
 export const SkillIcon = ({ icon, title, description, skillLevel, learning, type }: Props) => {
     const iconRef = useRef<HTMLDivElement>(null)
     const setDialogInfo = useSetAtom(dialogInfoAtom)
     const isDarkTheme = useIsDarkTheme((state) => state.value)
+    const selectedCategory = useAtomValue(skillsCategoryAtom)
 
     const handleMouseEnter = (e: React.MouseEvent) => {
         setDialogInfo({
@@ -44,23 +46,26 @@ export const SkillIcon = ({ icon, title, description, skillLevel, learning, type
     }
 
     const typeStatusColor = (() => {
+        if (selectedCategory !== 'All') return '#ffffff80'
         switch (type) {
-            case 'language':
+            case 'Language':
                 return '#ffb1f7ff'
-            case 'library-framework':
+            case 'Library-framework':
                 return '#fffab1ff'
-            case 'service':
+            case 'Service':
                 return '#9785ffff'
-            case 'tool':
+            case 'Tool':
                 return '#1184ffff'
-            case 'database':
+            case 'Database':
                 return '#42fba5bc'
-            case 'low-skill':
+            case 'Low-skill':
                 return '#ff00007d'
             case 'API':
                 return '#ffbe4dbc'
         }
     })()
+
+    if (selectedCategory !== 'All' && selectedCategory !== type) return null
 
     return (
         <div
@@ -71,7 +76,7 @@ export const SkillIcon = ({ icon, title, description, skillLevel, learning, type
             style={{
                 borderColor: typeStatusColor,
             }}
-            className={`group ${isDarkTheme ? 'bg-[#ffffffac]' : 'bg-[#ffffffa3]'} hover:scale-110 hover:shadow-[0_0px_30px_1px_rgba(0,0,0,0.3)] duration-200 border-[0.15rem] p-[0.15rem] flex w-[3rem] h-[3rem] relative flex-col items-center justify-center rounded-lg`}
+            className={`animate-fade group ${isDarkTheme ? 'bg-[#ffffffac]' : 'bg-[#ffffffa3]'} hover:scale-110 hover:shadow-[0_0px_30px_3px_#31a3fd] duration-200 border-[0.15rem] p-[0.15rem] flex w-[3rem] h-[3rem] relative flex-col items-center justify-center rounded-lg`}
         >
             {icon ? icon : <Svg src='ban' className='w-9 h-9 opacity-20' alt='no image' />}
             {learning && <div className='animate-pulse shadow-[0_0px_10px_1px_rgba(0,0,0,0.4)] absolute bottom-[-3px] right-[-3px] w-2 h-2 rounded-full bg-[#ff7dee]'></div>}
@@ -84,5 +89,5 @@ type Props = {
     description?: string
     skillLevel?: number | null
     learning?: boolean
-    type: 'tool' | 'service' | 'library-framework' | 'language' | 'database' | 'low-skill' | 'API'
+    type: SkillType
 }

@@ -1,4 +1,5 @@
 import { atom } from 'jotai';
+import type { SkillType } from './types';
 
 export const dialogInfoAtom = atom<{
     x: number,
@@ -12,3 +13,5 @@ export const dialogInfoAtom = atom<{
     isHovering: boolean,
     imageFound?: boolean
 } | null>(null)
+
+export const skillsCategoryAtom = atom<SkillType>('All')

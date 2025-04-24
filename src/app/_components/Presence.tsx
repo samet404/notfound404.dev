@@ -106,6 +106,7 @@ export const Presence = () => {
                         className="pb-2 pl-1   rounded w-[10rem]"
                     >
                         <div className="space-y-0.5 text-[0.65rem]">
+
                             <div className=" font-medium break-all text-gray-800 dark:text-gray-200">
                                 {activity.details}
                             </div>
@@ -114,6 +115,9 @@ export const Presence = () => {
                             </div>
                             <div className=" pt-[0.2rem] text-gray-500 break-all">
                                 {activity.name}
+                            </div>
+                            <div className=" pt-[0.3rem] text-[0.6rem] text-gray-500 break-all">
+                                Discord: 404nnotfoundd
                             </div>
                         </div>
                     </div>

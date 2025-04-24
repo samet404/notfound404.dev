@@ -11,6 +11,8 @@ import koin from '@/png/koin.png'
 import raylib from '@/png/raylib.png'
 import turbo from '@/png/turbo.png'
 import clerk from '@/webp/clerk.webp'
+import neon from '@/png/neon.png'
+
 
 const imageSizes = 'calc(1vw + 37px)'
 
@@ -21,16 +23,16 @@ export const SkillsContent = () => {
                 title='Kotlin'
                 description="Kotlin is a modern programming language that is fully interoperable with Java. Kotlin makes easier to develop java applications."
                 icon={<Svg src="kotlin" alt='kotlin' className='w-8 h-8' />}
-                skillLevel={80}
-                type='language'
+                skillLevel={100}
+                type='Language'
             />
 
             <SkillIcon
                 title='Java'
                 icon={<Svg src="java" alt='Java' className='w-10 h-10' />}
-                skillLevel={55}
+                skillLevel={65}
                 learning
-                type='language'
+                type='Language'
             />
 
             <SkillIcon
@@ -38,7 +40,7 @@ export const SkillsContent = () => {
                 title="Kotlin Multiplatform (Android, Desktop)"
                 description="Kotlin Multiplatform is a framework for building cross-platform applications with Kotlin."
                 skillLevel={100}
-                type='library-framework'
+                type='Library-framework'
             />
 
             <SkillIcon
@@ -46,7 +48,7 @@ export const SkillsContent = () => {
                 title="Spring"
                 description="Spring is a Java based backend framework. Allows us to build fast and scalable backend applications using dependency injecton and other features."
                 skillLevel={20}
-                type='library-framework'
+                type='Library-framework'
                 learning
             />
 
@@ -55,7 +57,7 @@ export const SkillsContent = () => {
                 title="Ktor"
                 description="Kotlin server framework for building server applications with Kotlin. Very similar to express.js."
                 skillLevel={27}
-                type='library-framework'
+                type='Library-framework'
             />
 
             <SkillIcon
@@ -63,7 +65,7 @@ export const SkillsContent = () => {
                 title="Koin"
                 description="Simple way to handle dependency injection in kotlin and kmp."
                 skillLevel={100}
-                type='library-framework'
+                type='Library-framework'
             />
 
             <SkillIcon
@@ -71,7 +73,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='android' className='w-10 h-10' alt='Android logo' />}
                 description="Dependency injection library for kotlin and android."
                 skillLevel={70}
-                type='library-framework'
+                type='Library-framework'
             />
 
             <SkillIcon
@@ -79,7 +81,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='android' className='w-10 h-10' alt='Android logo' />}
                 description="SQLite database library for Android developed by Google."
                 skillLevel={40}
-                type='library-framework'
+                type='Library-framework'
             />
 
             <SkillIcon
@@ -87,7 +89,7 @@ export const SkillsContent = () => {
                 description="Jetpack compose is a modern UI library for building native java/kotlin applications."
                 icon={<Svg src="jetpackcompose" alt='jetpack compose' className='w-8 h-8' />}
                 skillLevel={100}
-                type='library-framework'
+                type='Library-framework'
             />
 
             <SkillIcon
@@ -95,7 +97,7 @@ export const SkillsContent = () => {
                 title="Gradle"
                 description="Package manager and build tool for Java and Kotlin projects."
                 skillLevel={100}
-                type='library-framework'
+                type='Library-framework'
             />
 
             <SkillIcon
@@ -104,7 +106,7 @@ export const SkillsContent = () => {
                 description="Package manager and build tool for Java and Kotlin projects."
                 skillLevel={30}
                 learning
-                type='library-framework'
+                type='Library-framework'
             />
 
             <SkillIcon
@@ -113,7 +115,7 @@ export const SkillsContent = () => {
                 description="Mother of most programming languages."
                 skillLevel={25}
                 learning
-                type='language'
+                type='Language'
             />
 
             <SkillIcon
@@ -121,7 +123,7 @@ export const SkillsContent = () => {
                 title="Makefile"
                 description="Makefile is a build automation tool to automate the build process of C and C++ projects."
                 skillLevel={30}
-                type='tool'
+                type='Tool'
             />
 
             <SkillIcon
@@ -129,24 +131,21 @@ export const SkillsContent = () => {
                 title="meson"
                 description="Meson is a user friendly build automation tool to automate the build process of C and C++ projects."
                 skillLevel={5}
-                learning
-                type='tool'
+                type='Tool'
             />
 
             <SkillIcon
                 icon={<Svg src='clang' className='w-12 h-12' alt='C logo' />}
                 title="Clang"
                 skillLevel={2}
-                learning
-                type='tool'
+                type='Tool'
             />
 
             <SkillIcon
                 icon={<Svg src='cmake' className='w-10 h-10' alt='C logo' />}
                 title="CMake"
                 skillLevel={2}
-                learning
-                type='tool'
+                type='Tool'
             />
 
             <SkillIcon
@@ -155,7 +154,7 @@ export const SkillsContent = () => {
                 description="Raylib is a simple and easy-to-use library to enjoy videogames programming."
                 skillLevel={5}
                 learning
-                type='library-framework'
+                type='Library-framework'
             />
 
             <SkillIcon
@@ -163,14 +162,14 @@ export const SkillsContent = () => {
                 title="TypeScript"
                 description="My preferred language for web development. I choose TypeScript whenever possible."
                 skillLevel={100}
-                type='language'
+                type='Language'
             />
             <SkillIcon
                 icon={<Svg src='javascript' className='w-10 h-10' alt='JavaScript logo' />}
                 title="JavaScript"
                 description="While I can work with plain JavaScript, I prefer TypeScript for its added type safety and tooling"
                 skillLevel={100}
-                type='language'
+                type='Language'
             />
 
             <SkillIcon
@@ -178,14 +177,14 @@ export const SkillsContent = () => {
                 title='Web Assembly'
                 description='Web assembly allows to run low-level code directly in the browser.'
                 skillLevel={100}
-                type='language'
+                type='Language'
             />
 
             <SkillIcon
                 title='Python'
-                skillLevel={60}
+                skillLevel={50}
                 icon={<Svg src='python' className='w-10 h-10' alt='Python logo' />}
-                type='language'
+                type='Language'
             />
 
             <SkillIcon
@@ -199,9 +198,19 @@ export const SkillsContent = () => {
             <SkillIcon
                 title='lua'
                 icon={<Svg src="lua" alt='lua logo' className='w-10 h-10' />}
-                skillLevel={30}
-                type='language'
+                skillLevel={10}
+                type='Language'
             />
+
+
+            <SkillIcon
+                title='Haskell'
+                icon={<Svg src="haskell" alt='haskell logo' className='w-10 h-10' />}
+                skillLevel={14}
+                learning
+                type='Language'
+            />
+
 
 
             <SkillIcon
@@ -209,14 +218,14 @@ export const SkillsContent = () => {
                 title="Flask"
                 description="Python web framework for building web applications and APIs. Similar to express.js, fastify and ktor."
                 skillLevel={10}
-                type='library-framework'
+                type='Library-framework'
             />
 
             <SkillIcon
                 icon={<Svg src='jupyter' className='w-10 h-10' alt='jupyter notebook logo' />}
                 title="Jupyter Notebook"
                 description="Web-based interactive computing environment for huge computational python tasks."
-                type='service'
+                type='Service'
             />
 
             <SkillIcon
@@ -224,14 +233,14 @@ export const SkillsContent = () => {
                 title="Numpy"
                 description="Python library for fast array computations than original Python lists."
                 skillLevel={100}
-                type='library-framework'
+                type='Library-framework'
             />
 
             <SkillIcon
                 icon={<Svg src='colab' className='w-10 h-10' alt='Colab logo' />}
                 title="Google Colab"
                 description="Google Colab is a free Jupyter notebook environment."
-                type='tool'
+                type='Dev tool'
             />
 
             <SkillIcon
@@ -239,7 +248,7 @@ export const SkillsContent = () => {
                 title="Matplotlib"
                 description="Python library for creating graphs and charts."
                 skillLevel={10}
-                type='library-framework'
+                type='Library-framework'
             />
 
 
@@ -248,7 +257,7 @@ export const SkillsContent = () => {
                 title="Pandas"
                 description="Python library for data analysis and manipulation."
                 skillLevel={5}
-                type='library-framework'
+                type='Library-framework'
             />
 
             <SkillIcon
@@ -256,7 +265,7 @@ export const SkillsContent = () => {
                 title="PyTorch"
                 description="Most popular machine learning library for Python."
                 skillLevel={6}
-                type='library-framework'
+                type='Library-framework'
             />
 
             <SkillIcon
@@ -264,7 +273,7 @@ export const SkillsContent = () => {
                 title="HTML5"
                 description="Standart markup language for creating the structres."
                 skillLevel={100}
-                type='language'
+                type='Language'
             />
 
             <SkillIcon
@@ -272,16 +281,15 @@ export const SkillsContent = () => {
                 title="XML"
                 description="Standart markup language for creating the structres."
                 skillLevel={100}
-                type='language'
+                type='Language'
             />
 
             <SkillIcon
                 icon={<Svg src='latex' className='w-11 h-11' alt='Latex logo' />}
                 title="Latex"
                 description="Latex is an advanced markdown language for creating complex and scientific documents."
-                learning
                 skillLevel={70}
-                type='language'
+                type='Language'
             />
 
             <SkillIcon
@@ -289,14 +297,14 @@ export const SkillsContent = () => {
                 title="CSS3"
                 description="Web design language for styling and layouting html pages."
                 skillLevel={100}
-                type='language'
+                type='Language'
             />
 
             <SkillIcon
                 icon={<Svg src='scss' className='w-10 h-10' alt='Scss logo' />}
                 title="SCSS"
                 skillLevel={90}
-                type='language'
+                type='Language'
             />
 
             <SkillIcon
@@ -304,7 +312,7 @@ export const SkillsContent = () => {
                 title="Tailwind CSS"
                 description="My preferred CSS library for building responsive and maintainable user interfaces with utility-first approach."
                 skillLevel={100}
-                type='library-framework'
+                type='Library-framework'
             />
 
             <SkillIcon
@@ -312,35 +320,35 @@ export const SkillsContent = () => {
                 title="React"
                 description="My primary web frontend library for building dynamic user interfaces."
                 skillLevel={100}
-                type='library-framework'
+                type='Library-framework'
             />
             <SkillIcon
                 icon={<Svg src='react' className='w-10 h-10' alt='React logo' />}
                 title="React Native"
                 description="Simple way to build basic mobile applications with React."
                 skillLevel={70}
-                type='library-framework'
+                type='Library-framework'
             />
             <SkillIcon
                 icon={<Svg src='expo' className='w-10 h-10' alt='Expo logo' />}
                 title="Expo"
                 description="A powerful framework built around React Native that simplifies mobile app development."
                 skillLevel={70}
-                type='library-framework'
+                type='Library-framework'
             />
             <SkillIcon
                 icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={nextjs} className='w-10 h-10 rounded-md' alt='Next.js logo' />}
                 title="Next.js"
                 description="Full-stack React framework for applications with features like server-side rendering, API routes, and optimized performance."
                 skillLevel={100}
-                type='library-framework'
+                type='Library-framework'
             />
 
             <SkillIcon
                 icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={turbo} className='w-10 h-10 rounded-md' alt='Turborepo logo' />}
                 title="Turborepo"
                 description="Monorepo management tool for JavaScript and TypeScript projects."
-                type='library-framework'
+                type='Library-framework'
             />
 
 
@@ -349,36 +357,48 @@ export const SkillsContent = () => {
                 title="React Query"
                 description="Powerful data-fetching library for React that handles caching, synchronization, and server state management with features like automatic background updates and optimistic updates."
                 skillLevel={64}
-                type='library-framework'
+                type='Library-framework'
             />
             <SkillIcon
                 icon={<Svg src='jotai' className='w-10 h-10' alt='Jotai logo' />}
                 title="Jotai"
                 description="Atomic state management library for React applications focusing on simplicity and performance."
                 skillLevel={100}
-                type='library-framework'
+                type='Library-framework'
             />
+
+            <SkillIcon
+                icon={<Svg src='vitest' className='w-10 h-10' alt='Vitest logo' />}
+                title="vitest"
+                description="Testing library for Javascript/Typescript applications."
+                skillLevel={100}
+                type='Library-framework'
+            />
+
+            <SkillIcon
+                icon={<Svg src='cypress' className='w-9 h-9' alt='Cypress logo' />}
+                title="Cypress"
+                description="E2E Testing library for Javascript/Typescript applications."
+                skillLevel={100}
+                type='Library-framework'
+            />
+
+
             <SkillIcon
                 icon={<Svg src='zustand' className='w-10 h-10' alt='Zustand logo' />}
                 title="Zustand"
                 description="Simple, fast and scalable state management solution for React applications."
                 skillLevel={100}
-                type='library-framework'
+                type='Library-framework'
             />
 
 
-            <SkillIcon
-                icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={clerk} className='w-9 pr-1 h-9 rounded-md' alt='Raylib logo' />}
-                title="Clerk"
-                description="Easiest way to add authentication to your app with just a few lines of code."
-                type='service'
-            />
 
             <SkillIcon
-                icon={<Svg src='better-auth' className='w-10 h-10 rounded-md' alt='Node.js logo' />}
+                icon={<Svg src='better-auth' className='w-10 h-10 rounded-md' alt='Better-auth logo' />}
                 title="Better Auth"
                 description="Typesafe, customizable and easy authentication library for Typescript and Javascript applications."
-                type='library-framework'
+                type='Library-framework'
             />
 
 
@@ -387,7 +407,7 @@ export const SkillsContent = () => {
                 title="Node.js"
                 description="Cross-platform JavaScript runtime environment and library"
                 skillLevel={100}
-                type='library-framework'
+                type='Library-framework'
             />
             <SkillIcon
                 icon={<Svg src='websocket' className='w-8 h-8' alt='WebSocket logo' />}
@@ -399,7 +419,7 @@ export const SkillsContent = () => {
             <SkillIcon
                 icon={<Svg src='socket' className='w-8 h-8' alt='Socket.io logo' />}
                 title="Socket.io"
-                description="Library for real-time bidirectional event-based communication."
+                description="Library for creating websocket server using node.js."
                 skillLevel={100}
                 type='API'
             />
@@ -429,14 +449,14 @@ export const SkillsContent = () => {
                 title="Express.js"
                 description="Creating RESTful APIs and web applications using Express.js framework."
                 skillLevel={100}
-                type='library-framework'
+                type='Library-framework'
             />
             <SkillIcon
                 icon={<Svg src='fastify' className='w-8 h-8' alt='Fastify logo' />}
                 title="Fastify"
                 description="Alternative to Express.js. Since Express.js is no longer actively maintained, I prefer using Fastify as my Node.js framework"
                 skillLevel={100}
-                type='library-framework'
+                type='Library-framework'
             />
 
             <SkillIcon
@@ -444,16 +464,43 @@ export const SkillsContent = () => {
                 title="PostgreSQL"
                 description="Powerfull relational database. I'm using it for complex queries, data structres."
                 skillLevel={100}
-                type='database'
+                type='Database'
             />
 
+            <SkillIcon
+                icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={clerk} className='w-9 pr-1 h-9 rounded-md' alt='Clerk logo' />}
+                title="Clerk"
+                description="Easiest way to add authentication to your app with just a few lines of code."
+                type='Service'
+            />
+
+            <SkillIcon
+                icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={neon} className='w-8 h-8 rounded-md' alt='Neon logo' />}
+                title="Neon"
+                description="Postgres database provider service."
+                type='Service'
+            />
+
+            <SkillIcon
+                icon={<Svg src='xata' className='w-8 h-8 rounded-md' alt='Xata logo' />}
+                title="Xata"
+                description="Postgres database provider service."
+                type='Service'
+            />
+
+            <SkillIcon
+                icon={<Svg src='upstash' className='w-8 h-8 rounded-md' alt='Upstash logo' />}
+                title="upstash"
+                description="I've used their redis service for a while. It's a great service."
+                type='Service'
+            />
 
             <SkillIcon
                 icon={<Svg src='mysql' className='w-9 h-9' alt='PostgreSQL logo' />}
                 title="MySQL"
                 description="One of the most popular relational databases."
                 skillLevel={90}
-                type='database'
+                type='Database'
             />
 
             <SkillIcon
@@ -461,7 +508,7 @@ export const SkillsContent = () => {
                 title="Chroma"
                 description="Vector database for storing and querying vector data. Vector databases are used for machine learning and data analysis."
                 skillLevel={30}
-                type='database'
+                type='Database'
             />
 
 
@@ -470,21 +517,21 @@ export const SkillsContent = () => {
                 title="SQLite"
                 description="Light, SQL database engine. I'm usually using for mobile applications."
                 skillLevel={100}
-                type='database'
+                type='Database'
             />
             <SkillIcon
-                icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={drizzle} className='w-9 h-9 rounded-md' alt='Drizzle ORM logo' />}
+                icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={drizzle} className='w-10 h-10 rounded-md' alt='Drizzle ORM logo' />}
                 title="Drizzle ORM"
                 description="TypeScript ORM for SQL databases with a focus on type safety and developer experience. I prefer using drizzle instead of Prisma because it's more lightweight."
                 skillLevel={55}
-                type='database'
+                type='Database'
             />
             <SkillIcon
                 icon={<Svg src='prisma' className='w-8 h-8' alt='Prisma logo' />}
                 title="Prisma"
                 description="Modern ORM for Node.js and TypeScript, providing type-safe database access and migrations."
                 skillLevel={30}
-                type='database'
+                type='Database'
             />
 
             <SkillIcon
@@ -492,14 +539,14 @@ export const SkillsContent = () => {
                 title="Redis"
                 description="In-memory database for caching, non persistent data storage and real-time data processing."
                 skillLevel={90}
-                type='database'
+                type='Database'
             />
             <SkillIcon
                 icon={<Svg src='keydb' className='w-9 h-9' alt='KeyDB logo' />}
                 title="KeyDB"
                 description="Multithreaded fork of Redis focusing on high performance and lower latency.."
                 skillLevel={null}
-                type='database'
+                type='Database'
             />
 
             <SkillIcon
@@ -507,14 +554,14 @@ export const SkillsContent = () => {
                 title="Git"
                 description="Version control system for tracking changes and collaborating on code projects."
                 skillLevel={60}
-                type='tool'
+                type='Tool'
             />
 
             <SkillIcon
                 icon={<Svg src='linux' className='w-10 h-10' alt='Linux logo' />}
                 title="Linux"
                 description="I hate windows."
-                type='tool'
+                type='Tool'
             />
 
 
@@ -523,21 +570,21 @@ export const SkillsContent = () => {
                 title="VS Code"
                 description="I'm using VS Code for coding web applications."
                 skillLevel={null}
-                type='tool'
+                type='Dev tool'
             />
             <SkillIcon
                 title='Android studio'
                 description="I'm using Android studio for developing kotlin-java applications. It's a powerful IDE with a wide range of features and plugins."
                 icon={<Svg src='androidstudio' className='w-9 h-9' alt='android studio' />}
                 skillLevel={null}
-                type='tool'
+                type='Dev tool'
             />
             <SkillIcon
                 title='IntelliJ IDEA'
                 description="I'm using IntelliJ for developing Kotlin applications."
                 icon={<Svg src='intellij' className='w-9 h-9' alt='IntelliJ' />}
                 skillLevel={null}
-                type='tool'
+                type='Dev tool'
             />
 
             <SkillIcon
@@ -545,7 +592,7 @@ export const SkillsContent = () => {
                 description="I'm using Pycharm for developing Python applications."
                 icon={<Svg src='pycharm' className='w-9 h-9' alt='Pycharm' />}
                 skillLevel={null}
-                type='tool'
+                type='Dev tool'
             />
 
             <SkillIcon
@@ -553,7 +600,7 @@ export const SkillsContent = () => {
                 title="Supermaven"
                 description="AI-powered development assistant for enhanced coding productivity."
                 skillLevel={null}
-                type='tool'
+                type='Dev tool'
             />
 
             <SkillIcon
@@ -561,21 +608,21 @@ export const SkillsContent = () => {
                 title="Figma"
                 description="Design tool for creating and implementing user interfaces and design systems."
                 skillLevel={40}
-                type='tool'
+                type='Dev tool'
             />
             <SkillIcon
                 icon={<Svg src='vite' className='w-9 h-9' alt='Vite logo' />}
                 title="Vite"
                 description="Next-generation frontend build tool offering lightning-fast development experience."
                 skillLevel={null}
-                type='library-framework'
+                type='Library-framework'
             />
             <SkillIcon
                 icon={<Svg src='webpack' className='w-9 h-9' alt='Webpack logo' />}
                 title="Webpack"
                 description="Module bundler for JavaScript applications with extensive configuration options."
                 skillLevel={null}
-                type='library-framework'
+                type='Library-framework'
             />
 
 
@@ -584,61 +631,61 @@ export const SkillsContent = () => {
                 title="Coolify"
                 description="Self-hosted Heroku/Vercel alternative for deploying applications, databases, and services. Used for managing personal infrastructure and hosting projects."
                 skillLevel={null}
-                type='tool'
+                type='Tool'
             />
             <SkillIcon
                 icon={<Svg src='vercel' className='w-8 h-8' alt='Vercel logo' />}
                 title="Vercel"
                 description="Platform for deploying and hosting web applications with automatic CI/CD."
                 skillLevel={null}
-                type='service'
+                type='Service'
             />
             <SkillIcon
                 icon={<Svg src='cloudflare' className='w-10 h-10' alt='Cloudflare logo' />}
                 title="Cloudflare"
                 description="Web infrastructure and security services including CDN, DNS, and DDoS protection."
                 skillLevel={null}
-                type='service'
+                type='Service'
             />
             <SkillIcon
                 icon={<Svg src='docker' className='w-10 h-10' alt='Docker logo' />}
                 title="Docker"
                 description="I'm using Docker for containerizing applications, ensuring consistent development environments, and simplifying deployment processes."
                 skillLevel={30}
-                type='tool'
+                type='Tool'
             />
-            <SkillIcon
+            {/* <SkillIcon
                 icon={<Svg src='nginx' className='w-10 h-10' alt='Docker logo' />}
                 title="Nginx"
                 skillLevel={2}
-                type='low-skill'
-            />
+                type='Low-skill'
+            /> */}
             <SkillIcon
                 icon={<Svg src='porkbun' className='w-10 h-10' alt='Porkbun logo' />}
                 title="Porkbun"
                 description="Domain registrar service for managing and purchasing domain names."
                 skillLevel={null}
-                type='service'
+                type='Service'
             />
             <SkillIcon
                 icon={<Svg src='php' className='w-10 h-10' alt='Php logo' />}
                 title="PHP"
                 skillLevel={5}
-                type='low-skill'
+                type='Low-skill'
             />
 
             <SkillIcon
                 icon={<Svg src='laravel' className='w-10 h-10' alt='Laravel logo' />}
                 title="Laravel"
                 skillLevel={4}
-                type='low-skill'
+                type='Low-skill'
             />
 
             <SkillIcon
                 icon={<Svg src='mongodb' className='w-10 h-10' alt='Mangodb logo' />}
                 title="Mangodb"
                 skillLevel={2}
-                type='low-skill'
+                type='Low-skill'
 
             />
 
@@ -646,7 +693,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='mongoose' className='w-10 h-10' alt='Mangoose logo' />}
                 title="Mangoose"
                 skillLevel={2}
-                type='low-skill'
+                type='Low-skill'
 
             />
 
@@ -654,75 +701,8 @@ export const SkillsContent = () => {
                 icon={<Svg src='csharp' className='w-[2.5rem] h-[2.5rem]' alt='C# logo' />}
                 title="C#"
                 skillLevel={1}
-                type='low-skill'
+                type='Low-skill'
             />
-
-            {/* <SkillIcon
-                    icon={<Svg src='net' className='w-10 h-10 rounded-md' alt='Colab logo' />}
-                    title="Google Colab"
-                    description="Google Colab is a free Jupyter notebook environment."
-                    type='library-framework'
-                />
-                <SkillIcon
-                    icon={<Svg src='nginx' className='w-10 h-10 rounded-md' alt='Colab logo' />}
-                    title="Google Colab"
-                    description="Google Colab is a free Jupyter notebook environment."
-                    type='library-framework'
-                />
-
-                <SkillIcon
-                    icon={<Svg src='aws' className='w-10 h-10 rounded-md' alt='Colab logo' />}
-                    title="Google Colab"
-                    description="Google Colab is a free Jupyter notebook environment."
-                    type='library-framework'
-                />
-
-
-                <SkillIcon
-                    icon={<Svg src='elasticsearch' className='w-10 h-10 rounded-md' alt='Colab logo' />}
-                    title="Google Colab"
-                    description="Google Colab is a free Jupyter notebook environment."
-                    type='library-framework'
-                />
-
-
-                <SkillIcon
-                    icon={<Svg src='nestjs' className='w-10 h-10 rounded-md' alt='Colab logo' />}
-                    title="Google Colab"
-                    description="Google Colab is a free Jupyter notebook environment."
-                    type='library-framework'
-                />
-
-
-                <SkillIcon
-                    icon={<Svg src='kafka' className='w-9 h-9 rounded-md' alt='Colab logo' />}
-                    title="Google Colab"
-                    description="Google Colab is a free Jupyter notebook environment."
-                    type='library-framework'
-                />
-
-
-                <SkillIcon
-                    icon={<Svg src='rabbitmq' className='w-9 h-9 rounded-md' alt='Colab logo' />}
-                    title="Google Colab"
-                    description="Google Colab is a free Jupyter notebook environment."
-                    type='library-framework'
-                />
-
-                <SkillIcon
-                    icon={<Svg src='memcached' className='w-9 h-9 rounded-md' alt='Colab logo' />}
-                    title="Google Colab"
-                    description="Google Colab is a free Jupyter notebook environment."
-                    type='library-framework'
-                />
-
-
-                <SkillIcon
-                    icon={<Svg src='bash' className='w-9 h-9 rounded-md' alt='Colab logo' />}
-                    title="Google Colab"
-                    description="Google Colab is a free Jupyter notebook environment."
-                    type='library-framework'
-                /> */}
         </div>
     )
 }
