@@ -33,10 +33,10 @@ export const Links = () => {
                 <ProfileLink href="https://stackoverflow.com/users/22740544/404nnotfoundd">
                     <Svg src='stack-overflow' className='w-7 h-7' alt='stackoverflow logo' />
                 </ProfileLink>
-                |
+                {/* |
                 <ProfileLink href="https://www.upwork.com/freelancers/~01627b457e8f4797b7">
                     <Svg src='upwork' className='w-7 h-7' alt='stackoverflow logo' />
-                </ProfileLink>
+                </ProfileLink> */}
             </div>
         </div>
     )
