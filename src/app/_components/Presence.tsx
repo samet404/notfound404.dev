@@ -1,6 +1,7 @@
 "use client"
 
 import { Svg } from '@/src/components/Svg'
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 type Activity = {
@@ -82,11 +83,11 @@ export const Presence = () => {
         ].filter(Boolean).join(', ')
 
     if (presenceData) return (
-        <div className="fixed bottom-2 left-2 bg-[#000000aa] backdrop-blur-sm rounded-lg z-30 animate-fade animate-delay-100 shadow-lg px-[0.5rem] py-1 max-w-sm space-y-2">
+        <div className="fixed bottom-2 left-2 bg-[#000000aa]  backdrop-blur-sm rounded-lg z-30 animate-fade animate-delay-100 shadow-lg pl-[0.3rem] pr-[0.8rem] py-1 max-w-sm ">
             <div className='flex w-full items-center justify-between'>
                 <div className="flex items-center gap-2 p-1 animate-pulse">
                     <div className={`w-2 h-2 rounded-full ${getStatusColor(presenceData.discord_status)}`} />
-                    <span className="text-[0.6rem] text-gray-600 dark:text-gray-300 capitalize">
+                    <span className="text-[0.5rem] text-gray-600 dark:text-gray-300 capitalize">
                         {presenceData.discord_status} ({getPlatformStatus()})
                     </span>
                 </div>
@@ -103,22 +104,39 @@ export const Presence = () => {
                 return (
                     <div
                         key={activity.name}
-                        className="pb-2 pl-1   rounded w-[10rem]"
+                        className="pb-1 pl-1 flex flex-col  rounded"
                     >
-                        <div className="space-y-0.5 text-[0.65rem]">
+                        <div className="space-y-0.5 gap-2 text-[0.55rem] items-center  flex flex-row">
 
-                            <div className=" font-medium break-all text-gray-800 dark:text-gray-200">
-                                {activity.details}
+                            {
+                                (activity.name === 'YouTube Music' && activity.assets?.large_image) && (
+                                    <Image
+                                        width={60}
+                                        height={60}
+                                        src={"https://" + activity.assets?.large_image.substring(activity.assets?.large_image.indexOf("https/") + 6)}
+                                        alt='youtube music'
+                                        className=' rounded-md w-[3rem] h-[3rem] shadow-[0_0px_10px_1px_rgba(0,0,0,0.2)]'
+                                    />
+                                )
+                            }
+
+                            <div className='flex flex-col max-w-[8rem]'>
+                                <div className=" font-medium break-all text-gray-800 dark:text-gray-200">
+                                    {activity.details}
+                                </div>
+
+                                <div className=" text-gray-600 break-all dark:text-gray-400">
+                                    {activity.state}
+                                </div>
+                                <div className=" pt-[0.2rem] text-gray-500 break-all">
+                                    {activity.name}
+                                </div>
+
                             </div>
-                            <div className=" text-gray-600 break-all dark:text-gray-400">
-                                {activity.state}
-                            </div>
-                            <div className=" pt-[0.2rem] text-gray-500 break-all">
-                                {activity.name}
-                            </div>
-                            <div className=" pt-[0.3rem] text-[0.6rem] text-gray-500 break-all">
-                                Discord: 404nnotfoundd
-                            </div>
+
+                        </div>
+                        <div className=" pt-[0.3rem] text-[0.5rem] text-gray-500 break-all">
+                            Discord: 404nnotfoundd
                         </div>
                     </div>
                 )

@@ -113,7 +113,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='c' className='w-10 h-10' alt='C logo' />}
                 title="C"
                 description="Mother of most programming languages."
-                skillLevel={25}
+                skillLevel={45}
                 learning
                 type='Language'
             />
