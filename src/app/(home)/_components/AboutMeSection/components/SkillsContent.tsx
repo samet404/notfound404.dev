@@ -131,6 +131,7 @@ export const SkillsContent = () => {
                 title="meson"
                 description="Meson is a user friendly build automation tool to automate the build process of C and C++ projects."
                 skillLevel={40}
+                learning
                 type='Tool'
             />
 
@@ -144,6 +145,7 @@ export const SkillsContent = () => {
             <SkillIcon
                 icon={<Svg src='cmake' className='w-10 h-10' alt='C logo' />}
                 title="CMake"
+                learning
                 skillLevel={15}
                 type='Tool'
             />
@@ -206,8 +208,7 @@ export const SkillsContent = () => {
             <SkillIcon
                 title='Haskell'
                 icon={<Svg src="haskell" alt='haskell logo' className='w-10 h-10' />}
-                skillLevel={14}
-                learning
+                skillLevel={1}
                 type='Language'
             />
 
@@ -553,7 +554,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='git' className='w-10 h-10' alt='Git logo' />}
                 title="Git"
                 description="Version control system for tracking changes and collaborating on code projects."
-                skillLevel={60}
+                skillLevel={100}
                 type='Tool'
             />
 

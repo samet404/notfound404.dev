@@ -84,9 +84,8 @@ export const Dialog = () => {
                 >
 
                     {learning && (
-                        <div className='flex flex-row gap-2 items-center'>
-                            <div className='w-4 h-4 rounded-full bg-[#ff0edf]'></div>
-                            <div className='text-sm font-bold'>Learning</div>
+                        <div className=' rounded-md text-[0.8rem] font-bold text-center items-center  bg-gradient-to-r from-[#ff0edf] via-[#ff8cf0] to-[#ff0edf]'>
+                            I'm currently learning
                         </div>
                     )}
 
@@ -102,8 +101,8 @@ export const Dialog = () => {
                             <div className='text-[0.9rem]'>
                                 Skill level: {skillLevel}/100
                             </div>
-                            <div className='text-[0.55rem]'>
-                                Calculated based on my guess, experience and the amount of time I've spent using the technology. Doesn't mean I know every little thing about it. Just describes my workability with it.
+                            <div className='text-[0.55rem] text-gray-400 leading-3'>
+                                Note: Skill level is calculated based on my guess, experience and the amount of time I've spent using the technology. Doesn't mean I know every little thing about it. Just describes my workability with it.
                             </div>
                         </div>
                     )}
