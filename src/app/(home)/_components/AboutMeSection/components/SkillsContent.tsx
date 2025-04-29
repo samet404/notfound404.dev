@@ -130,7 +130,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='meson' className='w-12 h-12' alt='C logo' />}
                 title="meson"
                 description="Meson is a user friendly build automation tool to automate the build process of C and C++ projects."
-                skillLevel={5}
+                skillLevel={40}
                 type='Tool'
             />
 
@@ -144,7 +144,7 @@ export const SkillsContent = () => {
             <SkillIcon
                 icon={<Svg src='cmake' className='w-10 h-10' alt='C logo' />}
                 title="CMake"
-                skillLevel={2}
+                skillLevel={15}
                 type='Tool'
             />
 
@@ -152,7 +152,7 @@ export const SkillsContent = () => {
                 icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={raylib} className='w-9 h-9 rounded-md' alt='Raylib logo' />}
                 title="Raylib"
                 description="Raylib is a simple and easy-to-use library to enjoy videogames programming."
-                skillLevel={5}
+                skillLevel={15}
                 learning
                 type='Library-framework'
             />
