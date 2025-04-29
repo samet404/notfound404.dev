@@ -83,13 +83,13 @@ export const Presence = () => {
         ].filter(Boolean).join(', ')
 
     if (presenceData) return (
-        <div className="fixed bottom-2 left-2 bg-[#000000aa]  backdrop-blur-sm rounded-lg z-30 animate-fade animate-delay-100 shadow-lg pl-[0.3rem] pr-[0.8rem] py-1 max-w-sm ">
-            <div className='flex w-full items-center justify-between'>
-                <div className="flex items-center gap-2 p-1 animate-pulse">
-                    <div className={`w-2 h-2 rounded-full ${getStatusColor(presenceData.discord_status)}`} />
-                    <span className="text-[0.5rem] text-gray-600 dark:text-gray-300 capitalize">
+        <div className="fixed bottom-2 left-2 bg-[#000000aa] w-[12rem] backdrop-blur-sm rounded-lg z-30 animate-fade animate-delay-100 shadow-lg pl-[0.3rem] pr-[0.3rem] py-1  max-w-sm ">
+            <div className='flex w-full items-center justify-between '>
+                <div className="flex items-center justify-center gap-[0.4rem] p-1 animate-pulse">
+                    <div className={`p-1 flex-shrink rounded-full ${getStatusColor(presenceData.discord_status)}`} />
+                    <div className="text-[0.5rem] text-gray-600 dark:text-gray-300 capitalize text-center  pt-[0.1rem] leading-0">
                         {presenceData.discord_status} ({getPlatformStatus()})
-                    </span>
+                    </div>
                 </div>
 
                 <Svg src={'line'} alt='' className="w-6 h-6 rotate-90  !fill-white opacity-50" onClick={() => {
@@ -104,9 +104,9 @@ export const Presence = () => {
                 return (
                     <div
                         key={activity.name}
-                        className="pb-1 pl-1 flex flex-col  rounded"
+                        className="py-1 pl-1 flex flex-col  rounded"
                     >
-                        <div className="space-y-0.5 gap-2 text-[0.55rem] items-center  flex flex-row">
+                        <div className="space-y-0.5 gap-2 text-[0.55rem] flex flex-row">
 
                             {
                                 (activity.name === 'YouTube Music' && activity.assets?.large_image) && (
@@ -115,32 +115,32 @@ export const Presence = () => {
                                         height={60}
                                         src={"https://" + activity.assets?.large_image.substring(activity.assets?.large_image.indexOf("https/") + 6)}
                                         alt='youtube music'
-                                        className=' rounded-md w-[3rem] h-[3rem] shadow-[0_0px_10px_1px_rgba(0,0,0,0.2)]'
+                                        className=' rounded-md w-[3rem] h-[3rem] '
                                     />
                                 )
                             }
 
-                            <div className='flex flex-col max-w-[8rem]'>
-                                <div className=" font-medium break-all text-gray-800 dark:text-gray-200">
+                            <div className='flex flex-col'>
+                                <div className="font-medium pr-3 overflow-hidden text-ellipsis whitespace-nowrap max-w-[200px] text-gray-800 dark:text-gray-200">
                                     {activity.details}
                                 </div>
 
-                                <div className=" text-gray-600 break-all dark:text-gray-400">
+                                <div className=" text-gray-600 pr-3 break-all dark:text-gray-400">
                                     {activity.state}
                                 </div>
-                                <div className=" pt-[0.2rem] text-gray-500 break-all">
+                                <div className=" pt-[0.2rem] pr-3 text-gray-500 break-all">
                                     {activity.name}
                                 </div>
-
                             </div>
 
                         </div>
-                        <div className=" pt-[0.3rem] text-[0.5rem] text-gray-500 break-all">
-                            Discord: 404nnotfoundd
-                        </div>
+
                     </div>
                 )
             })}
+            <div className="p-1 text-[0.5rem] text-gray-500 break-all">
+                Discord: 404nnotfoundd
+            </div>
         </div>
     )
 }
