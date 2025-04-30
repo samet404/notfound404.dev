@@ -1,1 +1,1 @@
-export type SkillType = 'All' | 'Tool' | 'Service' | 'Library-framework' | 'Language' | 'Database' | 'Low-skill' | 'API' | 'Dev tool'
+export type SkillType = 'All' | 'Tool' | 'Service' | 'Library-framework' | 'Language' | 'Database' | 'API' | 'Dev tool'

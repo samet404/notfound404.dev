@@ -139,6 +139,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='clang' className='w-12 h-12' alt='C logo' />}
                 title="Clang"
                 skillLevel={2}
+                learning
                 type='Tool'
             />
 
@@ -152,9 +153,9 @@ export const SkillsContent = () => {
 
             <SkillIcon
                 icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={raylib} className='w-9 h-9 rounded-md' alt='Raylib logo' />}
-                title="Raylib"
+                title="Raylib (2D)"
                 description="Raylib is a simple and easy-to-use library to enjoy videogames programming."
-                skillLevel={15}
+                skillLevel={30}
                 learning
                 type='Library-framework'
             />
@@ -211,8 +212,6 @@ export const SkillsContent = () => {
                 skillLevel={1}
                 type='Language'
             />
-
-
 
             <SkillIcon
                 icon={<Svg src='flask' className='w-10 h-10' alt='Flask logo' />}
@@ -672,21 +671,21 @@ export const SkillsContent = () => {
                 icon={<Svg src='php' className='w-10 h-10' alt='Php logo' />}
                 title="PHP"
                 skillLevel={5}
-                type='Low-skill'
+                type='Language'
             />
 
             <SkillIcon
                 icon={<Svg src='laravel' className='w-10 h-10' alt='Laravel logo' />}
                 title="Laravel"
                 skillLevel={4}
-                type='Low-skill'
+                type='Library-framework'
             />
 
             <SkillIcon
                 icon={<Svg src='mongodb' className='w-10 h-10' alt='Mangodb logo' />}
                 title="Mangodb"
                 skillLevel={2}
-                type='Low-skill'
+                type='Database'
 
             />
 
@@ -694,7 +693,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='mongoose' className='w-10 h-10' alt='Mangoose logo' />}
                 title="Mangoose"
                 skillLevel={2}
-                type='Low-skill'
+                type='Database'
 
             />
 
@@ -702,7 +701,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='csharp' className='w-[2.5rem] h-[2.5rem]' alt='C# logo' />}
                 title="C#"
                 skillLevel={1}
-                type='Low-skill'
+                type='Language'
             />
         </div>
     )
