@@ -24,54 +24,53 @@ export const ProjectsSection = () => {
         </div>
       </div>
       <div className='bg-[rgba(255,255,255,0.3)] flex flex-col gap-5 items-center pb-8'>
-        <div className="flex flex-row w-full flex-wrap justify-center items-start gap-10 xxs:px-1 md:px-3 py-20">
+        <div className="flex flex-col w-full flex-wrap justify-center items-center gap-8 pt-10 px-4">
           <ProjectBox
             name={'PIXGU'}
             description={'Real-time multiplayer drawing and guessing game built with Next.js 15 and React 19. Using peer-to-peer connections via WebRTC, WebSocket for real-time communication, and Web Workers for optimal performance. Inspired by popular games like Gartic.io and Skribbl.io.'}
-            thumbnail={<Image
+            thumbnails={[<Image
               src={pixgulogo}
               alt="project"
               className="rounded-lg w-[9rem] pt-4"
               placeholder="blur"
               sizes="calc(3.48vw + 136px)"
-            />}
+            />]}
             tags={['personal project', 'Typescript', 'Next.js', 'React', 'WebRTC', 'WebSocket', 'Web Workers', 'HTML', 'CSS', 'JavaScript']}
             link={'https://pixgu.com'}
-          />
-
-
-
-          <ProjectBox
-            name={'Aspect'}
-            tags={['under development', 'personal project', 'Kotlin', 'Haskell', 'Jetpack Compose']}
-            description={'Aspect - Fork of simplex-chat, anonymous, user-friendly messaging platform with privacy-first design. Decentralized, encrypted, and identifier-free. Available on Linux, Windows and Android.'}
-            thumbnail={<Svg src={'aspect'} className='w-[7rem] pt-4' alt='Aspect logo' />}
-            link={`https://github.com/aspect-chat`}
           />
 
 
           <ProjectBox
             name={'Dysphoria'}
             description={'Story based pixel art game. Uses C programming language and raylib engine.'}
-            thumbnail={<Image
+            thumbnails={[<Image
               src={dysphoria}
               alt="project"
-              className="rounded-lg w-full border-4 border-[rgba(255,255,255,0.3)] "
+              className="rounded-lg h-full object-contain border-4 border-[rgba(255,255,255,0.3)] "
               placeholder="blur"
               sizes="calc(5.33vw + 204px)"
-            />}
+            />]}
             tags={['personal project', 'C', 'raylib', 'meson', 'cmake']}
-            link={`https://github.com/${constants.githubUsername}/Dysphoria`}
+            link={`https://github.com/HellowStudios/Dysphoria`}
+          />
+
+
+          <ProjectBox
+            name={'Aspect'}
+            tags={['under development', 'personal project', 'Kotlin', 'Haskell', 'Jetpack Compose']}
+            description={'Aspect - Fork of simplex-chat, anonymous, user-friendly messaging platform with privacy-first design. Decentralized, encrypted, and identifier-free. Available on Linux, Windows and Android.'}
+            thumbnails={[<Svg src={'aspect'} className='w-[7rem] pt-4' alt='Aspect logo' />]}
+            link={`https://github.com/aspect-chat`}
           />
 
           <ProjectBox
-            thumbnail={<Image
+            thumbnails={[<Image
               src={bloomy}
               alt="project"
-              className="rounded-lg w-full border-4 border-[rgba(255,255,255,0.3)] "
+              className="rounded-lg object-contain h-full border-4 border-[rgba(255,255,255,0.3)]"
               placeholder="blur"
-              sizes="calc(5.33vw + 204px)"
-            />}
+              sizes="calc(8.33vw + 204px)"
+            />]}
             name={'Bloomy'}
             tags={['under development', 'personal project']}
             description={'Bloomy is compeletly free, fast and open source AI powered note taking app. It is built with Jetpack Compose and Kotlin Multiplatform. AI training (rag, fine tunning) is done with personal gemini API key.'}

@@ -1,24 +1,26 @@
 import Link from 'next/link'
 import type { ReactNode } from 'react'
+import { ProjectBoxThumbnals } from './ProjectBoxThumbnals'
 
 type ProjectBoxProps = {
   name: string
   description: string
-  thumbnail: ReactNode
+  thumbnails: ReactNode[]
   link: string | null
   tags: string[]
 }
 const ProjectBox = ({
   name,
   description,
-  thumbnail,
+  thumbnails,
   link,
   tags,
 }: ProjectBoxProps) => {
   return (
-    <Link href={link ? link : '/'} target="_blank">
-      <div className="backdrop-blur-2 flex w-[15rem] items-center justify-between flex-col gap-7 rounded-lg bg-[rgba(255,255,255,0.3)] px-2 pb-2 pt-2 shadow-[0_0px_60px_-15px_rgba(0,0,0,0.3)] duration-300 lg:hover:opacity-70 lg:hover:-translate-y-3">
-        {thumbnail}
+    <Link href={link ? link : '/'} className='md:w-[30rem] xxs:w-full' target="_blank">
+      <div className="backdrop-blur-2 flex  w-full  items-start justify-between flex-col gap-7 rounded-lg bg-[rgba(255,255,255,0.3)] px-2 pb-2 pt-2 shadow-[0_0px_60px_-15px_rgba(0,0,0,0.3)] duration-300 lg:hover:opacity-70">
+
+        <ProjectBoxThumbnals thumbnails={thumbnails} />
 
         <div className="flex flex-col gap-4 rounded-md items-start p-2">
           <div className='flex flex-col gap-5'>
@@ -33,8 +35,6 @@ const ProjectBox = ({
               >
                 {description}
               </div>
-
-
             </div>
 
 
@@ -54,9 +54,7 @@ const ProjectBox = ({
             </div>
           </div>
         </div>
-
       </div>
-
     </Link>
   )
 }
