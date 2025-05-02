@@ -12,7 +12,7 @@ import raylib from '@/png/raylib.png'
 import turbo from '@/png/turbo.png'
 import clerk from '@/webp/clerk.webp'
 import neon from '@/png/neon.png'
-
+import dragonflydb from '@/png/dragonflydb.png'
 
 const imageSizes = 'calc(1vw + 37px)'
 
@@ -47,7 +47,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='spring' className='w-9 h-9' alt='Spring logo' />}
                 title="Spring"
                 description="Spring is a Java based backend framework. Allows us to build fast and scalable backend applications using dependency injecton and other features."
-                skillLevel={20}
+                skillLevel={40}
                 type='Library-framework'
                 learning
             />
@@ -93,7 +93,7 @@ export const SkillsContent = () => {
             />
 
             <SkillIcon
-                icon={<Svg src='gradle' className='w-10 h-10' alt='gradle logo' />}
+                icon={<Svg src='gradle' className='w-10 h-10' alt='Gradle logo' />}
                 title="Gradle"
                 description="Package manager and build tool for Java and Kotlin projects."
                 skillLevel={100}
@@ -101,7 +101,7 @@ export const SkillsContent = () => {
             />
 
             <SkillIcon
-                icon={<Svg src='maven' className='w-10 h-10' alt='gradle logo' />}
+                icon={<Svg src='maven' className='w-10 h-10' alt='Maven logo' />}
                 title="Maven"
                 description="Package manager and build tool for Java and Kotlin projects."
                 skillLevel={30}
@@ -119,7 +119,7 @@ export const SkillsContent = () => {
             />
 
             <SkillIcon
-                icon={<Svg src='makefile' className='w-12 h-12 pl-1' alt='C logo' />}
+                icon={<Svg src='makefile' className='w-12 h-12 pl-1' alt='Makefile logo' />}
                 title="Makefile"
                 description="Makefile is a build automation tool to automate the build process of C and C++ projects."
                 skillLevel={30}
@@ -127,7 +127,7 @@ export const SkillsContent = () => {
             />
 
             <SkillIcon
-                icon={<Svg src='meson' className='w-12 h-12' alt='C logo' />}
+                icon={<Svg src='meson' className='w-12 h-12' alt='Meson logo' />}
                 title="meson"
                 description="Meson is a user friendly build automation tool to automate the build process of C and C++ projects."
                 skillLevel={40}
@@ -201,7 +201,7 @@ export const SkillsContent = () => {
             <SkillIcon
                 title='lua'
                 icon={<Svg src="lua" alt='lua logo' className='w-10 h-10' />}
-                skillLevel={10}
+                skillLevel={3}
                 type='Language'
             />
 
@@ -322,6 +322,16 @@ export const SkillsContent = () => {
                 skillLevel={100}
                 type='Library-framework'
             />
+
+            <SkillIcon
+                icon={<Svg src='vue' className='w-9 h-9' alt='Vue logo' />}
+                title="Vue"
+                description="Web frontend library for building user interfaces."
+                skillLevel={4}
+                learning
+                type='Library-framework'
+            />
+
             <SkillIcon
                 icon={<Svg src='react' className='w-10 h-10' alt='React logo' />}
                 title="React Native"
@@ -372,6 +382,22 @@ export const SkillsContent = () => {
                 title="vitest"
                 description="Testing library for Javascript/Typescript applications."
                 skillLevel={100}
+                type='Library-framework'
+            />
+
+            <SkillIcon
+                icon={<Svg src='php' className='w-10 h-10' alt='Php logo' />}
+                title="PHP"
+                learning
+                skillLevel={7}
+                type='Language'
+            />
+
+            <SkillIcon
+                icon={<Svg src='laravel' className='w-10 h-10' alt='Laravel logo' />}
+                title="Laravel"
+                skillLevel={4}
+                learning
                 type='Library-framework'
             />
 
@@ -541,10 +567,19 @@ export const SkillsContent = () => {
                 skillLevel={90}
                 type='Database'
             />
+
             <SkillIcon
                 icon={<Svg src='keydb' className='w-9 h-9' alt='KeyDB logo' />}
                 title="KeyDB"
                 description="Multithreaded fork of Redis focusing on high performance and lower latency.."
+                skillLevel={null}
+                type='Database'
+            />
+
+            <SkillIcon
+                icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={dragonflydb} className='w-12 h-12 rounded-md' alt='Dragonflydb logo' />}
+                title="Dragonflydb"
+                description="Alternative to Redis and keydb with a focus on performance and simplicity. Dragonflydb claims that it's 25x faster than Redis"
                 skillLevel={null}
                 type='Database'
             />
@@ -666,19 +701,6 @@ export const SkillsContent = () => {
                 description="Domain registrar service for managing and purchasing domain names."
                 skillLevel={null}
                 type='Service'
-            />
-            <SkillIcon
-                icon={<Svg src='php' className='w-10 h-10' alt='Php logo' />}
-                title="PHP"
-                skillLevel={5}
-                type='Language'
-            />
-
-            <SkillIcon
-                icon={<Svg src='laravel' className='w-10 h-10' alt='Laravel logo' />}
-                title="Laravel"
-                skillLevel={4}
-                type='Library-framework'
             />
 
             <SkillIcon

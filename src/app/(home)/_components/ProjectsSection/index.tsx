@@ -3,6 +3,7 @@ import ProjectBox from './components/ProjectBox'
 import pixgulogo from '@/png/logo.png'
 import dysphoria from '@/png/dysphoria.png'
 import bloomy from '@/png/bloomy.png'
+import doyoufeelbad from '@/png/doyoufeelbad.png'
 
 import { Svg } from '@/src/components/Svg'
 import dynamic from 'next/dynamic'
@@ -39,6 +40,20 @@ export const ProjectsSection = () => {
             link={'https://pixgu.com'}
           />
 
+          <ProjectBox
+            name={'doyoufeelbad'}
+            description={'doyoufeelbad helps you to keep track of your mood using personal AI. Basically you click on the button everytime you feel bad and AI asks you a question about your feelings then based on your answer it gives you a score.'}
+            thumbnails={[<Image
+              src={doyoufeelbad}
+              alt="project"
+              className="rounded-lg h-full object-contain bg-[rgba(255,255,255,0.3)]"
+              placeholder="blur"
+              sizes='(min-width: 540px) calc(10.49vw + 403px), calc(93.64vw - 29px)'
+            />]}
+            tags={['personal project', 'Typescript', 'Next.js', 'React', 'WebRTC', 'WebSocket', 'Web Workers', 'HTML', 'CSS', 'JavaScript']}
+            link={'https://pixgu.com'}
+          />
+
 
           <ProjectBox
             name={'Dysphoria'}
@@ -46,9 +61,9 @@ export const ProjectsSection = () => {
             thumbnails={[<Image
               src={dysphoria}
               alt="project"
-              className="rounded-lg h-full object-contain border-4 border-[rgba(255,255,255,0.3)] "
+              className="rounded-lg h-full object-contain bg-[rgba(255,255,255,0.3)] "
               placeholder="blur"
-              sizes="calc(5.33vw + 204px)"
+              sizes="(min-width: 540px) calc(10.49vw + 403px), calc(93.64vw - 29px)"
             />]}
             tags={['personal project', 'C', 'raylib', 'meson', 'cmake']}
             link={`https://github.com/HellowStudios/Dysphoria`}
@@ -67,9 +82,9 @@ export const ProjectsSection = () => {
             thumbnails={[<Image
               src={bloomy}
               alt="project"
-              className="rounded-lg object-contain h-full border-4 border-[rgba(255,255,255,0.3)]"
+              className="rounded-lg object-contain h-full bg-[rgba(255,255,255,0.3)]"
               placeholder="blur"
-              sizes="calc(8.33vw + 204px)"
+              sizes="(min-width: 500px) calc(9.64vw + 370px), calc(90vw - 18px)"
             />]}
             name={'Bloomy'}
             tags={['under development', 'personal project']}

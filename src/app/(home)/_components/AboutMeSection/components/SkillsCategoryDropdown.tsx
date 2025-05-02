@@ -30,10 +30,11 @@ export const SkillsCategoryDropdown = () => {
     }
 
     return (
-        <select
-            value={category}
-            onChange={(e) => setCategory(e.target.value as typeof category)}
-            className={`
+        <div className='pl-4'>
+            <select
+                value={category}
+                onChange={(e) => setCategory(e.target.value as typeof category)}
+                className={`
                 ${isDarkTheme ? 'bg-[#ffffff90]' : 'bg-[#ffffff90]'}
                 px-3 py-1.5
                 rounded-lg
@@ -43,19 +44,20 @@ export const SkillsCategoryDropdown = () => {
                 duration-200
                 hover:shadow-[0_0px_20px_1px_rgba(0,0,0,0.2)]
             `}
-            style={{
-                borderColor: getCategoryColor(category)
-            }}
-        >
-            {categories.map((cat) => (
-                <option
-                    key={cat}
-                    value={cat}
-                    className="bg-white text-black"
-                >
-                    {cat.replace('-', '/')}
-                </option>
-            ))}
-        </select>
+                style={{
+                    borderColor: getCategoryColor(category)
+                }}
+            >
+                {categories.map((cat) => (
+                    <option
+                        key={cat}
+                        value={cat}
+                        className="bg-white text-black"
+                    >
+                        {cat.replace('-', '/')}
+                    </option>
+                ))}
+            </select>
+        </div>
     )
 }

@@ -47,8 +47,13 @@ export default {
     extend: {
       animation: {
         position: "position 15s ease-in-out infinite",
+        gradient: 'gradient 15s ease infinite',
       },
       keyframes: {
+        gradient: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
         position: {
           "0%": { backgroundPosition: "0% 50%" },
           "50%": { backgroundPosition: "100% 50%" },
