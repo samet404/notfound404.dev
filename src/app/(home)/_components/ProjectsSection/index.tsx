@@ -51,7 +51,7 @@ export const ProjectsSection = () => {
               sizes='(min-width: 540px) calc(10.49vw + 403px), calc(93.64vw - 29px)'
             />]}
             tags={['personal project', 'Typescript', 'Next.js', 'React', 'WebRTC', 'WebSocket', 'Web Workers', 'HTML', 'CSS', 'JavaScript']}
-            link={'https://pixgu.com'}
+            link={''}
           />
 
 
