@@ -15,7 +15,7 @@ export const useMDXComponents = (components: MDXComponents): MDXComponents => {
         img: (props) => (
             <Image
                 sizes="(min-width: 820px) calc(16.06vw + 615px), 93.6vw"
-                width={500}
+                width={700}
                 height={400}
                 className='rounded-lg object-contain w-full bg-[#ffffff43]'
                 {...(props as ImageProps)}
