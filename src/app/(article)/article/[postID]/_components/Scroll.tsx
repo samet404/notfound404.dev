@@ -12,7 +12,7 @@ export const Scroll = ({ children }: { children: ReactNode }) => {
             style={{
                 scrollbarWidth: 'none',
             }}
-            className={`w-full ${isDarkTheme ? 'bg-[#202020]' : 'bg-[#fffdd7]'} pt-[7rem] pb-11 h-full  selection:bg-[#0000004b]  overflow-y-scroll`}>
+            className={`w-full ${isDarkTheme ? 'bg-[#202020]' : 'bg-[#fffee8]'} pt-[7rem] pb-11 h-full selection:bg-[#0000004b] overflow-y-scroll overflow-x-hidden`}>
             {children}
         </div>
     )

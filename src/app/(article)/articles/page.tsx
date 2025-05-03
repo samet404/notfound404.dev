@@ -24,7 +24,7 @@ const Article = async () => {
                 <Background>
                     {posts.length > 0 ? posts.map(post => {
                         if (post.done === true && 'id' in post && 'description' in post && 'date' in post) {
-                            return <Link href={`/article/${post.id}`} key={post.id} className=' flex flex-col gap-3'>
+                            return <Link href={`/article/${post.id}`} key={post.id} className='hover:from-[#97004b54] hover:to-transparent hover:bg-gradient-to-r  rounded-md hover:duration-300 p-3 flex flex-col gap-3'>
                                 <div className='flex flex-col gap-4'>
                                     <div className='text-[1.2rem] font-bold'>{post.title}</div>
                                     <p className='text-sm'>{post.description}</p>
@@ -36,7 +36,10 @@ const Article = async () => {
                                 </div>
                             </Link>
                         } else if ('title' in post) {
-                            return <div className=' flex flex-col gap-3'>{post.title}
+                            return <div className=' flex flex-col  gap-1 p-3'>
+                                <div className='text-[1.2rem] font-bold'>
+                                    {post.title}
+                                </div>
                                 <div className='text-pink-700'>Still in progress</div>
                             </div>
                         }

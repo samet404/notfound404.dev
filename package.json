@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build:appcss": "postcss src/app/_styles/globals.css -o output.css -w",
     "build": "next build",
     "dev": "next dev ",
     "lint": "next lint",

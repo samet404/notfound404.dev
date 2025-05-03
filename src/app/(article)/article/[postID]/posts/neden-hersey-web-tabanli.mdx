@@ -1,0 +1,106 @@
+![alt text](/images/article/google.jpg)
+
+# Neden Her Şey Web Tabanlı?
+
+Günlük hayatta kullandığımız birçok uygulama, programların çoğu genellikle web tabanlıdır. Bir web sitesine girmek, bir uygulama veya program indirip onu kurmak ve çalıştırmaktan daha kolay bir süreçtir. Bu makalede yazılım geliştiricilerine neden bir web tabanlı uygulamanın uzun süreçte daha çok gelir sağlayabileceğinin önemini konuşacağım.
+
+Eğer zamanınızın çoğunu [low level](https://en.wikipedia.org/wiki/Low-level_programming_language) dillerle geçiriyorsanız, bir yazılım geliştiricisi olarak kullandığınız çoğu şeyin web tabanlı olduğunu görmenin cidden sinir bozucu olduğunu düşünebilirsiniz, işte bu makale tam size göre. Evet low level sistemlerde uğraşmak zor ve eğlencesi de buradan geliyor. Bazılarınızın içinde makineye yakın olunca o havalı hissetme duygusu olabilir. Eğer böyle iseniz bir anlığına bakış açınızı değiştirmenizi istiyorum. Kısa bir süreliğine bir yazılımcı gibi düşünmenizi bir yana bırakmanızı, azıcık da gerçek bir iş insanı olduğunuzu düşünün. Siz bu kafa yapısına girdiğinize göre, hadi başlayalım.
+
+## Performans
+
+Direkt ana konudan başlamış olduk. Öncelikle bir dile performanslı veya performanslı değil dememiz için bir dilin performanslı olması ne demek onu anlamalıyız. Performans, genellikle kodu yazan takımın, kişinin, şirketin tecrübelerine dayanır. Eğer çok kötü bir Java kodu yazıyorsanız ve iyi bir Javascript kodu yazıyorsanız Javascript'te daha iyi performans yakalamanız kaçınılmazdır.
+
+Webde performans ise çoğunlukla client'ta yazdığınız Javascript koduna bağlıdır. İyi yönetilmiş, yazılmış bir Java kodu haliyle Javascript'ten hayli ile hızlı olacaktır ama ne demiştik biz bir iş insanıyız. Bulunduğumuz, gerçek kapitalist dünyada telefonlar ve elektronik cihazlar günden güne daha kırılabilir, bozulabilir ve pahalı yapılıyor. Laptopumuza su döktüğümüzde veya telefonumuzu düşürüp kırdığımızda hangimiz suçu şirkete atıyor? Bu sebeple, kolay yolu seçmekte sorun ne?
+
+## Client-Server uyumsuzluğu
+
+Öncelikle client-server uyumsuzluğu nedir ondan bahsedelim. Diyelim ki bir kullanıcı arayüzü tasarlıyorsunuz ve serverdan gelen dataların yapısına göre bu arayüzü şekillendiriyorsunuz.
+
+```json
+{
+  "user": {
+    "id": "404",
+    "basicInfo": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "phoneNumber": "+1-555-123-4567",
+      "dateOfBirth": "1990-05-15",
+      "gender": "female",
+      "portfolio": "https://notfound404.dev"
+    },
+    "preferences": {
+      "language": "en-US",
+      "theme": "dark",
+      "notifications": {
+        "email": true,
+        "sms": false,
+        "push": true
+      },
+    },
+  }
+}
+```
+
+JSON formatındaki bu datayı kullanıcı tarafında görüntüleyebilmeniz için yaptığınız tasarımın data ile uyumlu olması gerekmektedir. Aslında web sitelerinin asıl olayı da budur, bir web sitesine girdiğinizde yalnızca gerekli olan datayı değil, kullanıcı arayüzünü de internet üzerinden çekmiş olursunuz.
+
+alt text
+
+Eminim birçoğunuz görmüşsünüzdür, telefonunuza bir uygulama indirirsiniz ve eğer bu uygulama web tabanlı değil ise bir süre sonra geri açtığınızda karşınızda şöyle bir uyarı görürsünüz "Lütfen uygulamamızı güncelleyin bla bla". Bu uyarının genel sebepleri şunlardır:
+
+- Uygulamanın versiyonu backend sunucularının versiyonları ile uyumsuzdur.
+
+- Uygulamanın client tarafında bazı sistem hataları, uyumluluk sorunları vardır.
+
+Bu sorunu çözmek için muhtemelen uygulama mağazasına girersiniz, uygulamayı bulur ve güncelle butonuna basarsınız. Web tabanlı bir uygulama için ise bunu çözmek çok kolaydır tek yapmanız gereken o refresh butonuna tıklamak.
+
+Şimdi şöyle düşünebilirsiniz: "Kullanıcı sadece mağazaya girip güncelle butonuna basacak bu kadar. Bunu engellemek için bir web uygulaması yapmaya gerek yok. Şirketler çok tembel ve uygulamalarını optimize etmiyorlar". Ancak keşke olay bu kadar basit olsaydı.
+
+### Müşteri her zaman haklıdır
+
+Hatırlayın size ne demiştim, yazılımcı gibi değil, bir iş insanı olarak düşünün. Nüfusun birçoğu için uygulamayı indirmek, güncellemek bile büyük bir uğraş gibi gelebilir. Özellikle günümüzde insanların azalan dikkat süresini de dikkate alırsak, sürekli güncellenen, server bazlı bir uygulama için kullanıcıdan güncelleme için sürekli bir istekte bulunmak, evet kötü bir iş dizaynı.
+
+Bu sorunu teknik taraftan çözmek de ayrı bir baş ağrısıdır. Uygulamanın sadece yeni versiyonlarının düzgün şekilde çalışması değil, eski versiyonlarının da aynı kalitede çalışması lazımdır. İşin içine ödeme sistemleri, satın alımlar, güvenlik denetimlerinin ve daha yüzlerce olasılığın girdiğini düşünün, beni anladınız değil mi?
+
+Bir örnek olarak diyelim ki bazı kullanıcılara sınırlı süreli indirim yapmak istediniz. Satın alınan her ürünün %5'ini + kargo ücretini ücretsiz karşılayacağınızı söylediniz. Bunu yazılımsal olarak değiştirmek için görevi Bob'a verdiniz. Bob gayet iyi bir çalışan ancak ne yazık ki o gün Bob karısıyla kavga etti ve kod yazarken pek dikkat etmeyerek bu indirim oran hesabını serverda gerçekleştirmek yerine client tarafına yazdı. Bob'un bu hatası yüzünden indirim hala geçerli olmasa bile, uygulamalarını güncellemeyenler bu indirimi hala geçerli gibi görecek.
+
+Ama ne demiştik "Müşteri her zaman haklıdır". Acı gerçek şu ki bir native uygulama yapmak yerine web uygulaması yapsaydık bu sorunların hiçbiri olmayacaktı.
+
+## Erişebilirlik
+
+Web sitelerinde erişebilirlik özellikleri eklemek bir native uygulamaya göre katlarca kolaydır. Bunların arasında:
+
+1. Bir web uygulaması, cihaz bağımsızdır, her cihazda sorunsuz bir şekilde çalışabilir.
+
+2. Engelli kullanıcılar için destek sağlamak için hazır sistemler browser içerisinde bulunur.
+
+3. Açması kolaydır, örneğin şu yazıya tıklamanız bile yeterlidir.
+
+4. React, Angular, Vue gibi libraryler ile kullanıcı deneyimini arttırmak çok kolaydır.
+
+Erişebilirlik önemlidir, o kadar önemlidir ki reklamlama açısından bir numaralı etkendir. Sosyal medya üzerinden paylaştığınız mobil, desktop uygulamasını muhtemelen bir web uygulamasına kıyasla çoğu kişi indirip denemeyecektir bile. Bu siteye gelmenizin büyük sebeplerinden biri de bu. Cidden bu makaleyi okumak için native bir uygulama indirir miydiniz ki?
+
+## Savunulmayacak taraflar
+
+1. Tabi web alanında da her durumda olursa olsun saçma kararların alınabileceği olduğu kesin. Bunların arasında:
+
+2. Yüksek performans gerektiren uygulamaların web tabanlı yapılması (video düzenleme yazılımları, 3D modelleme araçları)
+
+3. Cihazın donanımına sürekli erişim gerektiren uygulamalar (kamera uygulamaları, fitness takip araçları)
+
+4. Offline çalışması gereken kritik uygulamalar (acil durum uygulamaları, sağlık takip sistemleri)
+
+5. Çok düşük internet bağlantısı olan bölgeler için geliştirilecek uygulamalar
+
+6. Güvenlik açısından hassas verilerin işlendiği uygulamalar (bankacılık uygulamaları, şifre yöneticileri)
+
+7. Gerçek zamanlı veri işleme gerektiren uygulamalar (oyunlar, simülasyonlar)
+
+## Sonuç olarak
+
+Web tabanlı uygulamalar, günümüz teknoloji dünyasında hem işletmeler hem de kullanıcılar için önemli avantajlar sunuyor. Performans konusunda doğru optimizasyonlarla tatmin edici sonuçlar elde edilebilirken,
+
+Ancak her teknolojide olduğu gibi, web uygulamalarının da sınırlamaları mevcut. Yüksek performans gerektiren işlemler, donanıma direkt erişim ihtiyacı veya offline çalışma gerekliliği gibi durumlarda native uygulamalar hala daha iyi bir seçenek olabilir.
+
+Sonuç olarak, bir uygulama geliştirirken hedef kitlenizi, uygulamanızın gereksinimlerini ve uzun vadeli bakım maliyetlerini göz önünde bulundurarak seçim yapmanız önemli. Web tabanlı çözümler, birçok senaryo için maliyet-etkin ve sürdürülebilir bir seçenek sunuyor.
+
+Yazıyı okuduğunuz için teşekkür ederim. Yazılım geliştirme alanında 4 yıllık profesyonel deneyime sahibim. Projeleriniz için işbirliği yapmak veya sorularınızı yanıtlamak isterim. Benimle [https://notfound404.dev](https://notfound404.dev) üzerinden iletişime geçebilirsiniz.
