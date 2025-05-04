@@ -87,7 +87,7 @@ export const Presence = () => {
             <div className='flex w-full items-center justify-between '>
                 <div className="flex items-center justify-center gap-[0.4rem] p-1 animate-pulse">
                     <div className={`p-1 flex-shrink rounded-full ${getStatusColor(presenceData.discord_status)}`} />
-                    <div className="text-[0.5rem] text-gray-600 dark:text-gray-300 capitalize text-center  pt-[0.1rem] leading-0">
+                    <div className="text-[0.5rem] text-gray-600 dark:text-gray-300 shrink capitalize text-center  pt-[0.1rem] leading-0">
                         {presenceData.discord_status} ({getPlatformStatus()})
                     </div>
                 </div>

@@ -97,16 +97,23 @@ export const SkillsContent = () => {
                 title="Gradle"
                 description="Package manager and build tool for Java and Kotlin projects."
                 skillLevel={100}
-                type='Library-framework'
+                type='Tool'
             />
 
             <SkillIcon
                 icon={<Svg src='maven' className='w-10 h-10' alt='Maven logo' />}
                 title="Maven"
                 description="Package manager and build tool for Java and Kotlin projects."
-                skillLevel={30}
-                learning
-                type='Library-framework'
+                skillLevel={100}
+                type='Tool'
+            />
+
+            <SkillIcon
+                icon={<Svg src='npm' className='w-10 h-10' alt='Npm logo' />}
+                title="Npm"
+                description="Package manager for JavaScript and TypeScript projects."
+                skillLevel={100}
+                type='Tool'
             />
 
             <SkillIcon
