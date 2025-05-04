@@ -104,9 +104,9 @@ export const Presence = () => {
                 return (
                     <div
                         key={activity.name}
-                        className="py-1 pl-1 flex flex-col  rounded"
+                        className="py-1 pl-1 flex flex-col rounded grow"
                     >
-                        <div className="space-y-0.5 gap-2 text-[0.55rem] flex flex-row">
+                        <div className="space-y-0.5 gap-2 text-[0.55rem]  flex flex-row">
 
                             {
                                 (activity.name === 'YouTube Music' && activity.assets?.large_image) && (
@@ -115,20 +115,20 @@ export const Presence = () => {
                                         height={60}
                                         src={"https://" + activity.assets?.large_image.substring(activity.assets?.large_image.indexOf("https/") + 6)}
                                         alt='youtube music'
-                                        className=' rounded-md w-[3rem] h-[3rem] '
+                                        className='flex rounded-md w-[3rem] h-[3rem] '
                                     />
                                 )
                             }
 
-                            <div className='flex flex-col'>
-                                <div className="font-medium pr-3 overflow-hidden text-ellipsis whitespace-nowrap max-w-[200px] text-gray-800 dark:text-gray-200">
+                            <div className='flex flex-col w-[7rem]'>
+                                <div className="font-medium  overflow-hidden text-ellipsis whitespace-nowrap text-gray-800 dark:text-gray-200">
                                     {activity.details}
                                 </div>
 
-                                <div className=" text-gray-600 pr-3 break-all dark:text-gray-400">
+                                <div className=" text-gray-600 pr-3 break-all dark:text-gray-400 overflow-hidden text-ellipsis whitespace-nowrap">
                                     {activity.state}
                                 </div>
-                                <div className=" pt-[0.2rem] pr-3 text-gray-500 break-all">
+                                <div className=" pt-[0.2rem] pr-3 text-gray-500 break-all overflow-hidden text-ellipsis whitespace-nowrap">
                                     {activity.name}
                                 </div>
                             </div>
