@@ -7,7 +7,7 @@ export const dialogInfoAtom = atom<{
     title: string,
     description?: string,
     skillLevel?: number | null
-    skillType: string,
+    skillType: string | null,
     learning?: boolean,
     lastHoverTime: number,
     isHovering: boolean,

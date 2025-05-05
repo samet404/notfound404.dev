@@ -52,6 +52,16 @@ export const SkillsContent = () => {
                 learning
             />
 
+
+            <SkillIcon
+                icon={<Svg src='rabbitmq' className='w-9 h-9' alt='Spring logo' />}
+                title="RabbitMQ"
+                skillLevel={10}
+                type='Library-framework'
+                learning
+            />
+
+
             <SkillIcon
                 icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={ktor} className='w-10 h-10 rounded-md' alt='Ktor' />}
                 title="Ktor"

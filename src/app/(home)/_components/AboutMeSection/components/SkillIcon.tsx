@@ -75,5 +75,5 @@ type Props = {
     description?: string
     skillLevel?: number | null
     learning?: boolean
-    type: SkillType
+    type: SkillType | null
 }
