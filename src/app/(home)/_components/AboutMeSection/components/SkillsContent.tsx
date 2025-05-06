@@ -45,20 +45,28 @@ export const SkillsContent = () => {
 
             <SkillIcon
                 icon={<Svg src='spring' className='w-9 h-9' alt='Spring logo' />}
-                title="Spring"
+                title="Spring IoC"
                 description="Spring is a Java based backend framework. Allows us to build fast and scalable backend applications using dependency injecton and other features."
-                skillLevel={40}
+                skillLevel={80}
                 type='Library-framework'
-                learning
             />
 
 
             <SkillIcon
-                icon={<Svg src='rabbitmq' className='w-9 h-9' alt='Spring logo' />}
-                title="RabbitMQ"
+                icon={<Svg src='spring' className='w-9 h-9' alt='Spring logo' />}
+                title="Spring Boot"
+                description="Spring is a Java based backend framework. Allows us to build fast and scalable backend applications using dependency injecton and other features."
                 skillLevel={10}
-                type='Library-framework'
                 learning
+                type='Library-framework'
+            />
+
+
+            <SkillIcon
+                icon={<Svg src='rabbitmq' className='w-9 h-9' alt='RabbitMQ logo' />}
+                title="RabbitMQ"
+                skillLevel={20}
+                type='Library-framework'
             />
 
 
