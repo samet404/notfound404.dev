@@ -30,8 +30,7 @@ export const SkillsContent = () => {
             <SkillIcon
                 title='Java'
                 icon={<Svg src="java" alt='Java' className='w-10 h-10' />}
-                skillLevel={65}
-                learning
+                skillLevel={40}
                 type='Language'
             />
 
@@ -45,9 +44,9 @@ export const SkillsContent = () => {
 
             <SkillIcon
                 icon={<Svg src='spring' className='w-9 h-9' alt='Spring logo' />}
-                title="Spring IoC"
-                description="Spring is a Java based backend framework. Allows us to build fast and scalable backend applications using dependency injecton and other features."
-                skillLevel={80}
+                title="Spring IoC Container"
+                description="Spring IoC is a way to manage lifecycle and dependencies of objects in Java applications."
+                skillLevel={100}
                 type='Library-framework'
             />
 
@@ -55,9 +54,8 @@ export const SkillsContent = () => {
             <SkillIcon
                 icon={<Svg src='spring' className='w-9 h-9' alt='Spring logo' />}
                 title="Spring Boot"
-                description="Spring is a Java based backend framework. Allows us to build fast and scalable backend applications using dependency injecton and other features."
+                description="Spring Boot is a Java based backend framework. Allows us to build fast and scalable backend applications using IoC container and other features."
                 skillLevel={10}
-                learning
                 type='Library-framework'
             />
 
@@ -74,7 +72,8 @@ export const SkillsContent = () => {
                 icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={ktor} className='w-10 h-10 rounded-md' alt='Ktor' />}
                 title="Ktor"
                 description="Kotlin server framework for building server applications with Kotlin. Very similar to express.js."
-                skillLevel={27}
+                skillLevel={37}
+                learning
                 type='Library-framework'
             />
 
@@ -353,7 +352,6 @@ export const SkillsContent = () => {
                 title="Vue"
                 description="Web frontend library for building user interfaces."
                 skillLevel={4}
-                learning
                 type='Library-framework'
             />
 
@@ -403,6 +401,20 @@ export const SkillsContent = () => {
             />
 
             <SkillIcon
+                icon={<Svg src='php' className='w-10 h-10' alt='Php logo' />}
+                title="PHP"
+                skillLevel={3}
+                type='Language'
+            />
+
+            <SkillIcon
+                icon={<Svg src='laravel' className='w-10 h-10' alt='Laravel logo' />}
+                title="Laravel"
+                skillLevel={2}
+                type='Library-framework'
+            />
+
+            <SkillIcon
                 icon={<Svg src='vitest' className='w-10 h-10' alt='Vitest logo' />}
                 title="vitest"
                 description="Testing library for Javascript/Typescript applications."
@@ -411,18 +423,10 @@ export const SkillsContent = () => {
             />
 
             <SkillIcon
-                icon={<Svg src='php' className='w-10 h-10' alt='Php logo' />}
-                title="PHP"
-                learning
-                skillLevel={7}
-                type='Language'
-            />
-
-            <SkillIcon
-                icon={<Svg src='laravel' className='w-10 h-10' alt='Laravel logo' />}
-                title="Laravel"
-                skillLevel={4}
-                learning
+                icon={<Svg src='jest' className='w-9 h-9' alt='Jest logo' />}
+                title="Jest"
+                description="Jest is an unit testing library for Javascript/Typescript applications."
+                skillLevel={100}
                 type='Library-framework'
             />
 
@@ -443,6 +447,15 @@ export const SkillsContent = () => {
                 type='Library-framework'
             />
 
+
+            <SkillIcon
+                icon={<Svg src='oauth' className='w-11 h-11 rounded-md' alt='OAuth logo' />}
+                title="OAuth"
+                description="OAuth is a open standard for authentication systems. Allows users to sign in with their existing accounts."
+                learning
+                skillLevel={10}
+                type='Service'
+            />
 
 
             <SkillIcon

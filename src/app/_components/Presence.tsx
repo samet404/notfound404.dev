@@ -1,6 +1,7 @@
 "use client"
 
 import { Svg } from '@/src/components/Svg'
+import { cn } from '@/src/utils'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
@@ -101,6 +102,8 @@ export const Presence = () => {
             {presenceData.activities.map((activity) => {
                 if (activity.type === 4) return null
 
+                const showImage = (activity.name === 'YouTube Music' && activity.assets?.large_image)
+
                 return (
                     <div
                         key={activity.name}
@@ -108,21 +111,22 @@ export const Presence = () => {
                     >
                         <div className="space-y-0.5 gap-2 text-[0.55rem]  flex flex-row">
 
-                            {
-                                (activity.name === 'YouTube Music' && activity.assets?.large_image) && (
-                                    <Image
-                                        width={60}
-                                        height={60}
-                                        src={"https://" + activity.assets?.large_image.substring(activity.assets?.large_image.indexOf("https/") + 6)}
-                                        alt='youtube music'
-                                        className='flex rounded-md w-[3rem] h-[3rem] '
-                                    />
-                                )
+                            {showImage && (
+                                <Image
+                                    width={60}
+                                    height={60}
+                                    src={"https://" + activity.assets!.large_image!.substring(activity.assets!.large_image!.indexOf("https/") + 6)}
+                                    alt='youtube music'
+                                    className='flex rounded-md w-[3rem] h-[3rem] '
+                                />
+                            )
                             }
 
-                            <div className='flex flex-col w-[7rem]'>
+                            <div className={cn('flex flex-col w-[7rem]', {
+                                'w-[10rem]': !showImage
+                            })}>
                                 <div className="font-medium  overflow-hidden text-ellipsis whitespace-nowrap text-gray-800 dark:text-gray-200">
-                                    {activity.details}
+                                    {activity.details?.trim()}
                                 </div>
 
                                 <div className=" text-gray-600 pr-3 break-all dark:text-gray-400 overflow-hidden text-ellipsis whitespace-nowrap">

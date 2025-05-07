@@ -28,6 +28,18 @@ const config = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: '"i.ytimg.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.rcd.gg',
+        port: '',
+        pathname: '/**',
+      }
     ],
   },
 
