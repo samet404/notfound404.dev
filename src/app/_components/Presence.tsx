@@ -117,7 +117,7 @@ export const Presence = () => {
                                     height={60}
                                     src={"https://" + activity.assets!.large_image!.substring(activity.assets!.large_image!.indexOf("https/") + 6)}
                                     alt='youtube music'
-                                    className='flex rounded-md w-[3rem] h-[3rem] '
+                                    className='flex rounded-md w-[3rem] h-[3rem] object-cover'
                                 />
                             )
                             }
