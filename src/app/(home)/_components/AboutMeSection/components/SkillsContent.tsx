@@ -13,6 +13,7 @@ import turbo from '@/png/turbo.png'
 import clerk from '@/webp/clerk.webp'
 import neon from '@/png/neon.png'
 import dragonflydb from '@/png/dragonflydb.png'
+import sqldelight from '@/png/sqldelight.png'
 
 const imageSizes = 'calc(1vw + 37px)'
 
@@ -72,7 +73,7 @@ export const SkillsContent = () => {
                 icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={ktor} className='w-10 h-10 rounded-md' alt='Ktor' />}
                 title="Ktor"
                 description="Kotlin server framework for building server applications with Kotlin. Very similar to express.js."
-                skillLevel={37}
+                skillLevel={47}
                 learning
                 type='Library-framework'
             />
@@ -98,6 +99,15 @@ export const SkillsContent = () => {
                 icon={<Svg src='android' className='w-10 h-10' alt='Android logo' />}
                 description="SQLite database library for Android developed by Google."
                 skillLevel={40}
+                type='Library-framework'
+            />
+
+
+            <SkillIcon
+                title="SQLDelight"
+                icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={sqldelight} className='w-10 h-10 rounded-md' alt='Ktor' />}
+                skillLevel={10}
+                learning
                 type='Library-framework'
             />
 
@@ -137,8 +147,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='c' className='w-10 h-10' alt='C logo' />}
                 title="C"
                 description="Mother of most programming languages."
-                skillLevel={45}
-                learning
+                skillLevel={35}
                 type='Language'
             />
 
@@ -155,7 +164,6 @@ export const SkillsContent = () => {
                 title="meson"
                 description="Meson is a user friendly build automation tool to automate the build process of C and C++ projects."
                 skillLevel={40}
-                learning
                 type='Tool'
             />
 
@@ -163,14 +171,12 @@ export const SkillsContent = () => {
                 icon={<Svg src='clang' className='w-12 h-12' alt='C logo' />}
                 title="Clang"
                 skillLevel={2}
-                learning
                 type='Tool'
             />
 
             <SkillIcon
                 icon={<Svg src='cmake' className='w-10 h-10' alt='C logo' />}
                 title="CMake"
-                learning
                 skillLevel={15}
                 type='Tool'
             />
@@ -180,7 +186,6 @@ export const SkillsContent = () => {
                 title="Raylib (2D)"
                 description="Raylib is a simple and easy-to-use library to enjoy videogames programming."
                 skillLevel={30}
-                learning
                 type='Library-framework'
             />
 
@@ -452,7 +457,6 @@ export const SkillsContent = () => {
                 icon={<Svg src='oauth' className='w-11 h-11 rounded-md' alt='OAuth logo' />}
                 title="OAuth"
                 description="OAuth is a open standard for authentication systems. Allows users to sign in with their existing accounts."
-                learning
                 skillLevel={10}
                 type='Service'
             />
