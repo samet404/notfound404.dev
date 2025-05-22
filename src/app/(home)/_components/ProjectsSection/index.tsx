@@ -41,6 +41,20 @@ export const ProjectsSection = () => {
           />
 
           <ProjectBox
+            thumbnails={[<Image
+              src={bloomy}
+              alt="project"
+              className="rounded-lg object-contain h-full bg-[rgba(255,255,255,0.3)]"
+              placeholder="blur"
+              sizes="(min-width: 500px) calc(9.64vw + 370px), calc(90vw - 18px)"
+            />]}
+            name={'Bloomy'}
+            tags={['under development', 'personal project']}
+            description={'Bloomy is compeletly free, fast and open source AI powered note taking app. It is built with Jetpack Compose and Kotlin Multiplatform. AI training (rag, fine tunning) is done with personal gemini API key.'}
+            link={`https://github.com/${constants.githubUsername}/bloomy`}
+          />
+
+          <ProjectBox
             name={'doyoufeelbad'}
             description={'doyoufeelbad helps you to keep track of your mood using personal AI. Basically you click on the button everytime you feel bad and AI asks you a question about your feelings then based on your answer it gives you a score.'}
             thumbnails={[<Image
@@ -78,19 +92,6 @@ export const ProjectsSection = () => {
             link={`https://github.com/aspect-chat`}
           />
 
-          <ProjectBox
-            thumbnails={[<Image
-              src={bloomy}
-              alt="project"
-              className="rounded-lg object-contain h-full bg-[rgba(255,255,255,0.3)]"
-              placeholder="blur"
-              sizes="(min-width: 500px) calc(9.64vw + 370px), calc(90vw - 18px)"
-            />]}
-            name={'Bloomy'}
-            tags={['under development', 'personal project']}
-            description={'Bloomy is compeletly free, fast and open source AI powered note taking app. It is built with Jetpack Compose and Kotlin Multiplatform. AI training (rag, fine tunning) is done with personal gemini API key.'}
-            link={`https://github.com/${constants.githubUsername}/bloomy`}
-          />
 
 
 

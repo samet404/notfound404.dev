@@ -14,6 +14,7 @@ import clerk from '@/webp/clerk.webp'
 import neon from '@/png/neon.png'
 import dragonflydb from '@/png/dragonflydb.png'
 import sqldelight from '@/png/sqldelight.png'
+import chaquopy from '@/png/chaquopy.png'
 
 const imageSizes = 'calc(1vw + 37px)'
 
@@ -97,19 +98,29 @@ export const SkillsContent = () => {
             <SkillIcon
                 title="Room database"
                 icon={<Svg src='android' className='w-10 h-10' alt='Android logo' />}
-                description="SQLite database library for Android developed by Google."
+                description="SQLite database ORM library for Android developed by Google."
                 skillLevel={40}
-                type='Library-framework'
+                type='Database'
             />
 
 
             <SkillIcon
                 title="SQLDelight"
-                icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={sqldelight} className='w-10 h-10 rounded-md' alt='Ktor' />}
-                skillLevel={10}
+                icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={sqldelight} className='w-10 h-10 rounded-md' alt='SQLDelight logo' />}
+                description='SQLDelight is a type-safe SQL library for Kotlin. It does the opposite of ORMs does. Instead of generating SQL from your code models, it generates models from your SQL AND I LOVE IT. I THINK  THAT SO MUCH BETTER THAN ORM CONCEPT.'
+                skillLevel={100}
+                type='Database'
+            />
+
+            <SkillIcon
+                title="Chaquopy"
+                icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={chaquopy} className='w-12 h-12 rounded-md' alt='Chaquopy logo' />}
+                description="Chaquopy allows us to run Python code in Android applications."
+                skillLevel={2}
                 learning
                 type='Library-framework'
             />
+
 
             <SkillIcon
                 title='Jetpack Compose'
@@ -356,7 +367,18 @@ export const SkillsContent = () => {
                 icon={<Svg src='vue' className='w-9 h-9' alt='Vue logo' />}
                 title="Vue"
                 description="Web frontend library for building user interfaces."
-                skillLevel={4}
+                skillLevel={6}
+                learning
+                type='Library-framework'
+            />
+
+
+            <SkillIcon
+                icon={<Svg src='pinia' className='w-9 h-9' alt='Vue logo' />}
+                title="Pinia"
+                description="Pinia is state-management solution for Vue applications."
+                skillLevel={6}
+                learning
                 type='Library-framework'
             />
 
@@ -440,6 +462,15 @@ export const SkillsContent = () => {
                 title="Cypress"
                 description="E2E Testing library for Javascript/Typescript applications."
                 skillLevel={100}
+                type='Library-framework'
+            />
+
+            <SkillIcon
+                icon={<Svg src='junit' className='w-9 h-9' alt='Junit logo' />}
+                title="Junit"
+                description="Unit testing library for Java."
+                skillLevel={14}
+                learning
                 type='Library-framework'
             />
 

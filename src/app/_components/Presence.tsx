@@ -3,6 +3,7 @@
 import { Svg } from '@/src/components/Svg'
 import { cn } from '@/src/utils'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 type Activity = {
@@ -107,8 +108,12 @@ export const Presence = () => {
                 return (
                     <div
                         key={activity.name}
-                        className="py-1 pl-1 flex flex-col rounded grow"
+                        className="py-1 pl-1 flex flex-col relative rounded grow"
                     >
+                        {activity.name === 'YouTube Music' && (
+                            <Link href={`https://music.youtube.com/watch?v=${getYTMusicLink(activity.assets!.large_image!)}&list=LM`} target="_blank" className="absolute top-0 left-0 w-full h-full z-10 hover:opacity-100 opacity-0 flex items-center justify-center duration-500 text-sm text-white rounded-lg bg-[#0000006c]">Open in YouTube Music</Link>
+
+                        )}
                         <div className="space-y-0.5 gap-2 text-[0.55rem]  flex flex-row">
 
                             {showImage && (
@@ -132,13 +137,15 @@ export const Presence = () => {
                                 <div className=" text-gray-600 pr-3 break-all dark:text-gray-400 overflow-hidden text-ellipsis whitespace-nowrap">
                                     {activity.state}
                                 </div>
+
                                 <div className=" pt-[0.2rem] pr-3 text-gray-500 break-all overflow-hidden text-ellipsis whitespace-nowrap">
                                     {activity.name}
                                 </div>
                             </div>
 
-                        </div>
 
+
+                        </div>
                     </div>
                 )
             })}
@@ -147,4 +154,27 @@ export const Presence = () => {
             </div>
         </div>
     )
+}
+
+const getYTMusicLink = (imageUrl: string): string | null => {
+    // Split the string by '/' and find the segment after 'vi'
+    const parts = imageUrl.split('/');
+    let videoId = '';
+
+    for (let i = 0; i < parts.length; i++) {
+        if (parts[i] === 'vi' && i + 1 < parts.length) {
+            const nextPart = parts[i + 1];
+            if (!nextPart) return null
+
+            videoId = nextPart
+
+            const foundVideoId = videoId.split('?')[0]?.split('/')[0]
+            if (!foundVideoId) return null
+
+            videoId = foundVideoId;
+            break; // Found the ID, no need to continue
+        }
+    }
+
+    return videoId;
 }
