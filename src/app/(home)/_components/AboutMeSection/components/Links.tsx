@@ -15,28 +15,14 @@ export const Links = () => {
                 >
                     <Svg src='mail' className='w-7 h-7' alt='email logo' />
                 </ProfileLink>
-
-                {/* <ProfileLink href="tel:+90505-502-0559">
-                    <Svg src='phone' className='w-7 h-7' alt='stackoverflow logo' />
-                </ProfileLink> */}
                 |
                 <ProfileLink href={`https://github.com/${constants.githubUsername}`}>
                     <Svg src='github' className='w-6 h-6' alt='github logo' />
                 </ProfileLink>
                 |
-                <ProfileLink
-                    href="https://www.linkedin.com/in/samet-alpdeger-291a132b5"
-                >
-                    <Svg src='linkedin' className='w-6 h-6' alt='linkedin logo' />
-                </ProfileLink>
-                |
                 <ProfileLink href="https://stackoverflow.com/users/22740544/404nnotfoundd">
                     <Svg src='stack-overflow' className='w-7 h-7' alt='stackoverflow logo' />
                 </ProfileLink>
-                {/* |
-                <ProfileLink href="https://www.upwork.com/freelancers/~01627b457e8f4797b7">
-                    <Svg src='upwork' className='w-7 h-7' alt='stackoverflow logo' />
-                </ProfileLink> */}
             </div>
         </div>
     )
