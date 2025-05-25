@@ -11,7 +11,7 @@ export const Links = () => {
 
             <div className='flex rounded-lg text-[0.8rem] flex-row items-center justify-center text-[white]  flex-wrap gap-3'>
                 <ProfileLink
-                    href="mailto:sametalpdeger9@gmail.com"
+                    href="mailto:notfound404dev@gmail.com"
                 >
                     <Svg src='mail' className='w-7 h-7' alt='email logo' />
                 </ProfileLink>
