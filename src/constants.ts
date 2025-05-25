@@ -1,3 +1,3 @@
 export const constants = {
-    githubUsername: 'sametalpdeger',
+    githubUsername: 'samet404',
 }
