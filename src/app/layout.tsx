@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     default: 'title not found',
     template: '404 - %s',
   },
-  creator: 'Samet alpdeger - 404',
+  creator: '404',
   description,
   keywords: [
     '404',
