@@ -8,7 +8,7 @@ export const SkillsCategoryDropdown = () => {
     const [category, setCategory] = useAtom(skillsCategoryAtom)
     const isDarkTheme = useIsDarkTheme((state) => state.value)
 
-    const categories = ['All', 'Language', 'Library-framework', 'Service', 'Tool', 'Database', 'API', 'Dev tool'] as const
+    const categories = ['All', 'Language', 'Library-framework', 'Service', 'Tool', 'Database', 'API', 'Dev tool', 'Other'] as const
 
     const getCategoryColor = (cat: typeof categories[number]) => {
         switch (cat) {
