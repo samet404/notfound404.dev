@@ -54,17 +54,17 @@ export const SkillIcon = ({ icon, title, description, skillLevel, learning, type
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             ref={iconRef}
-            className={cn(`animate-fade group bg-[#ffffffa3] hover:scale-110 hover:shadow-[0_0px_30px_3px_#31a3fd] duration-200 border-[0.15rem] p-[0.15rem] flex w-[3rem] h-[3rem] relative flex-col items-center justify-center rounded-lg`, {
+            className={cn(` group bg-[#ffffffa3] hover:scale-110 hover:shadow-[0_0px_30px_3px_#31a3fd] duration-200 border-[0.15rem] p-[0.15rem]  flex w-[3rem] h-[3rem] relative flex-col items-center justify-center rounded-lg`, {
                 'bg-[#ffffffac]': isDarkTheme,
                 'border-[#fff67e]': type === 'Language',
                 'border-[#8975ff]': type === 'Service',
                 'border-[#1184ff]': type === 'Tool',
                 'border-[#42fba5]/[0.74]': type === 'Database',
                 'border-[#ffbe4d]/[0.74]': type === 'API',
-                'border-[#ff1e1eac]': skillLevel && (skillLevel < 10),
+                'hover:opacity-100 opacity-50': skillLevel && (skillLevel < 10),
             })}
         >
-            {icon ? icon : <Svg src='ban' className='w-9 h-9 opacity-20' alt='no image' />}
+            {icon ? icon : <Svg src='ban' className='w-9 h-9' alt='no image' />}
             {learning && <div className='animate-pulse shadow-[0_0px_10px_1px_rgba(0,0,0,0.4)] absolute bottom-[-3px] right-[-3px] w-2 h-2 rounded-full bg-[#ff7dee]'></div>}
         </div>
     )

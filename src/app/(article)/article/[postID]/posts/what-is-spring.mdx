@@ -1,0 +1,38 @@
+# What is Spring or Spring boot?
+
+When I first started to learn Spring it was quite confusing to understand what is Spring, Spring Framework, Spring Boot. Especially if you are starting new to Java and Dependency injection it can be hard to understand. 
+
+In this article I'll basically tell you what is Spring boot and Spring IoC container without confusing you like other sources did. I'll explain what's the purpose of these technologies, how we can use them or should we.
+
+# Spring IoC
+
+Let's first start by describing what Spring IoC container is. 
+
+Spring IoC container, it's a basically allows us to use one of the programming language design pattern called [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection) and that's it. Spring IoC container allows us to manage dependencies of objects. You can use IoC container in a anywhere you want if you like dependency injection design pattern and a way of Spring to handle that.
+
+Dependency injection is, instead of passing depenencies of objects in your code, you are passing, configuring, selecting object's dependencies inside your preferred configuration method. In Spring IoC container there is so much [ways to create configuration](https://www.baeldung.com/Spring-application-context). I recommend to use XML based configuration because it's more easy and scaleable than using Java annotations.
+
+Spring IoC container calls these configuration dependencies as "Bean" because, it's cool, I think? I don't know.
+
+
+## Where to learn?
+
+I recommend everyone to learn Spring IoC from it's [actual documentation](https://docs.spring.io/spring-framework/reference/overview.html). There are so much videos, too boring and unnecessary long.
+
+# Spring boot
+
+Spring boot is easy to use, Java based backend framework that provides various built-in development tools like DAO support, Redis adapters, JDBC and much more to easily build backend applications. You can create so much things like Authentication systems, REST APIs, AI applications, Web applications, Microservices and much more. It also uses Spring IoC container to allows us to manage dependencies of your application.
+
+The main goal of Spring boot is providing enterprise level solutions to companies. Using JVM, you don't need to deal with memory management and cross-compatibility. Spring is a widely used, tested, trustable backend solution and probably more safer than using Rust/C/C++. 
+
+## Where to learn
+
+Unlike IoC container, I don't recommend learning Spring from it's actual website. They just making marketing and trying to get you into their ecosystem instead of explaining concepts. Instead what I recommend is start coding to learn. You can start from some [github examples](https://github.com/Spring-projects/Spring-petclinic) and [Spring initializr](https://start.Spring.io/).
+
+# Should I use Spring?
+
+Personally don't like Java and OOP design paradigms and hate it. You can say, so why am I explaining Spring? Am I dumb? No I just I don't care what you are using.
+
+Well Java is not best language to make backend services. But I think it's better than using Javascript/Typescript as a backend service. Its secure, cross-platform and uses garbage collector. You can probably find more job opportunities working with Java compared to other low level languages. 
+
+Spring is widely used in banking systems, enterprise level applications. It makes easier to develop backend applications.

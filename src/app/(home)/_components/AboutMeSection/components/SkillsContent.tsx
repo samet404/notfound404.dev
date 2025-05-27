@@ -116,11 +116,8 @@ export const SkillsContent = () => {
                 title="Chaquopy"
                 icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={chaquopy} className='w-12 h-12 rounded-md' alt='Chaquopy logo' />}
                 description="Chaquopy allows us to run Python code in Android applications."
-                skillLevel={2}
-                learning
                 type='Library-framework'
             />
-
 
             <SkillIcon
                 title='Jetpack Compose'
@@ -328,7 +325,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='latex' className='w-11 h-11' alt='Latex logo' />}
                 title="Latex"
                 description="Latex is an advanced markdown language for creating complex and scientific documents."
-                skillLevel={70}
+                skillLevel={9}
                 type='Language'
             />
 
@@ -367,7 +364,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='vue' className='w-9 h-9' alt='Vue logo' />}
                 title="Vue"
                 description="Web frontend library for building user interfaces."
-                skillLevel={6}
+                skillLevel={10}
                 learning
                 type='Library-framework'
             />
@@ -469,7 +466,6 @@ export const SkillsContent = () => {
                 icon={<Svg src='junit' className='w-9 h-9' alt='Junit logo' />}
                 title="Junit"
                 description="Unit testing library for Java."
-                skillLevel={14}
                 learning
                 type='Library-framework'
             />
@@ -497,9 +493,34 @@ export const SkillsContent = () => {
                 icon={<Svg src='better-auth' className='w-10 h-10 rounded-md' alt='Better-auth logo' />}
                 title="Better Auth"
                 description="Typesafe, customizable and easy authentication library for Typescript and Javascript applications."
+                skillLevel={100}
                 type='Library-framework'
             />
 
+
+            <SkillIcon
+                icon={<div className='bg-black w-10 h-10 flex items-center justify-center p-1 rounded-md'><Svg src='jwt' className='w-full h-full' alt='JWT logo' /></div>}
+                title="JWT"
+                skillLevel={100}
+                description='JSON Web Token (JWT) is an encryption method for generating authentication tokens. These tokens can be used to verify the identity of a user and grant access to protected resources.'
+                type='Other'
+            />
+
+            <SkillIcon
+                icon={<div className='bg-black w-10 h-10 flex items-center justify-center p-1 rounded-md'><Svg src='key' className='w-full h-full' alt='Key logo' /></div>}
+
+                title="Encryption algorithms I used"
+                skillLevel={100}
+                description='AES 256, RSA, GCM, TIGER, SHA-256, SHA-512, PADDING, HMAC, PBKDF2, Bcrypt, Argon2, and more.'
+                type='Other'
+            />
+
+            <SkillIcon
+                icon={<Svg src='hcaptcha' className='w-10 h-10' alt='HCaptcha logo' />}
+                title="HCaptcha"
+                description="HCaptcha is a bot protection, human verification, and CAPTCHA service."
+                type='Service'
+            />
 
             <SkillIcon
                 icon={<Svg src='nodejs' className='w-10 h-10' alt='Node.js logo' />}
@@ -550,6 +571,15 @@ export const SkillsContent = () => {
                 skillLevel={100}
                 type='Library-framework'
             />
+
+            <SkillIcon
+                icon={<Svg src='hono' className='w-9 h-9' alt='Express.js logo' />}
+                title="Hono"
+                description="Hono is a simple web framework for Node.js."
+                skillLevel={100}
+                type='Library-framework'
+            />
+
             <SkillIcon
                 icon={<Svg src='fastify' className='w-8 h-8' alt='Fastify logo' />}
                 title="Fastify"
@@ -609,6 +639,8 @@ export const SkillsContent = () => {
                 skillLevel={30}
                 type='Database'
             />
+
+
 
 
             <SkillIcon
@@ -762,12 +794,15 @@ export const SkillsContent = () => {
                 skillLevel={30}
                 type='Tool'
             />
-            {/* <SkillIcon
+            <SkillIcon
                 icon={<Svg src='nginx' className='w-10 h-10' alt='Docker logo' />}
                 title="Nginx"
-                skillLevel={2}
-                type='Low-skill'
-            /> */}
+                skillLevel={20}
+                type='Tool'
+                description='Nginx is a reverse proxy server that sits in front of servers to handle incoming requests and distribute them to the appropriate servers. It can improve security, performance, and scalability.'
+                learning
+            />
+
             <SkillIcon
                 icon={<Svg src='porkbun' className='w-10 h-10' alt='Porkbun logo' />}
                 title="Porkbun"
@@ -782,21 +817,6 @@ export const SkillsContent = () => {
                 skillLevel={2}
                 type='Database'
 
-            />
-
-            <SkillIcon
-                icon={<Svg src='mongoose' className='w-10 h-10' alt='Mangoose logo' />}
-                title="Mangoose"
-                skillLevel={2}
-                type='Database'
-
-            />
-
-            <SkillIcon
-                icon={<Svg src='csharp' className='w-[2.5rem] h-[2.5rem]' alt='C# logo' />}
-                title="C#"
-                skillLevel={1}
-                type='Language'
             />
         </div>
     )
