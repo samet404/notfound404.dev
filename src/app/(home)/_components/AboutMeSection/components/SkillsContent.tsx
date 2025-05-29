@@ -15,6 +15,7 @@ import neon from '@/png/neon.png'
 import dragonflydb from '@/png/dragonflydb.png'
 import sqldelight from '@/png/sqldelight.png'
 import chaquopy from '@/png/chaquopy.png'
+import milvus from '@/png/milvus.png'
 
 const imageSizes = 'calc(1vw + 37px)'
 
@@ -636,11 +637,18 @@ export const SkillsContent = () => {
                 icon={<Svg src='chroma' className='w-9 h-9' alt='Chroma logo' />}
                 title="Chroma"
                 description="Vector database for storing and querying vector data. Vector databases are used for machine learning and data analysis."
-                skillLevel={30}
+                skillLevel={50}
                 type='Database'
             />
 
-
+            <SkillIcon
+                icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={milvus} className='w-10 h-10 rounded-md' alt='Milvus Db logo' />}
+                title="Milvus"
+                description="Compared to Chroma, Milvus is more advanced vector database for building complex applications using machine learning, data analysis, search, and recommendation systems."
+                skillLevel={10}
+                learning
+                type='Database'
+            />
 
 
             <SkillIcon
