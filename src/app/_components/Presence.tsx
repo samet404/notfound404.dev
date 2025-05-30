@@ -118,11 +118,11 @@ export const Presence = () => {
 
                             {showImage && (
                                 <Image
-                                    width={60}
-                                    height={60}
+                                    width={70}
+                                    height={70}
                                     src={"https://" + activity.assets!.large_image!.substring(activity.assets!.large_image!.indexOf("https/") + 6)}
                                     alt='youtube music'
-                                    className='flex rounded-md w-[3rem] h-[3rem] object-cover'
+                                    className='flex rounded-md w-[3.2rem] h-[3.2rem] object-cover'
                                 />
                             )
                             }

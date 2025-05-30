@@ -223,7 +223,7 @@ export const SkillsContent = () => {
 
             <SkillIcon
                 title='Python'
-                skillLevel={50}
+                skillLevel={100}
                 icon={<Svg src='python' className='w-10 h-10' alt='Python logo' />}
                 type='Language'
             />

@@ -36,6 +36,7 @@ export const ProjectsSection = () => {
               placeholder="blur"
               sizes="calc(3.48vw + 136px)"
             />]}
+            videoPath='/videos/pixgu.mp4'
             tags={['personal project', 'Typescript', 'Next.js', 'React', 'WebRTC', 'WebSocket', 'Web Workers', 'HTML', 'CSS', 'JavaScript']}
             link={'https://pixgu.com'}
           />
@@ -48,12 +49,13 @@ export const ProjectsSection = () => {
               placeholder="blur"
               sizes="(min-width: 500px) calc(9.64vw + 370px), calc(90vw - 18px)"
             />]}
-            name={'Bloomy'}
-            tags={['under development', 'personal project']}
-            description={'Bloomy is compeletly free, fast and open source AI powered note taking app. It is built with Jetpack Compose and Kotlin Multiplatform. AI training (rag, fine tunning) is done with personal gemini API key.'}
+            videoPath='/videos/bloomia.mp4'
+            name={'Bloomia'}
+            tags={['under development', 'personal project', 'Kotlin', 'Kotlin Multiplatform', 'Jetpack Compose', 'Python', 'Pytorch', 'Milvus', 'SQLite', 'Dragonflydb', 'Nginx', 'Docker', 'Next.js', 'React', 'Websockets', 'Typescript', 'Flask', 'Node.JS', 'Hono', 'tRPC', 'Cloudflare', 'SQLDelight', 'Ktor', 'Koin DI', 'PostgreSQL', 'Gradle', 'Better-auth']}
+            description={'Bloomia is a note taking AI editor. It is built with Jetpack Compose and Kotlin Multiplatform. Unlike traditional AI apps, Bloomia has so many advanced features like Embedding Model selection, Multiple AI providers, more clear RAG customizations...'}
             link={`https://github.com/${constants.githubUsername}/bloomy`}
           />
-
+          {/* 
           <ProjectBox
             name={'doyoufeelbad'}
             description={'doyoufeelbad helps you to keep track of your mood using personal AI. Basically you click on the button everytime you feel bad and AI asks you a question about your feelings then based on your answer it gives you a score.'}
@@ -66,7 +68,7 @@ export const ProjectsSection = () => {
             />]}
             tags={['personal project', 'Typescript', 'Next.js', 'React', 'WebRTC', 'WebSocket', 'Web Workers', 'HTML', 'CSS', 'JavaScript']}
             link={''}
-          />
+          /> */}
 
 
           <ProjectBox
@@ -79,6 +81,7 @@ export const ProjectsSection = () => {
               placeholder="blur"
               sizes="(min-width: 540px) calc(10.49vw + 403px), calc(93.64vw - 29px)"
             />]}
+            videoPath='/videos/dysphoria.mp4'
             tags={['personal project', 'C', 'raylib', 'meson', 'cmake']}
             link={`https://github.com/HellowStudios/Dysphoria`}
           />
