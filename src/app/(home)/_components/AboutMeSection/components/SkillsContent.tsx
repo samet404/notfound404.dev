@@ -14,7 +14,7 @@ import clerk from '@/webp/clerk.webp'
 import neon from '@/png/neon.png'
 import dragonflydb from '@/png/dragonflydb.png'
 import sqldelight from '@/png/sqldelight.png'
-import chaquopy from '@/png/chaquopy.png'
+// import chaquopy from '@/png/chaquopy.png'
 import milvus from '@/png/milvus.png'
 
 const imageSizes = 'calc(1vw + 37px)'
@@ -113,12 +113,12 @@ export const SkillsContent = () => {
                 type='Database'
             />
 
-            <SkillIcon
+            {/* <SkillIcon
                 title="Chaquopy"
                 icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={chaquopy} className='w-12 h-12 rounded-md' alt='Chaquopy logo' />}
                 description="Chaquopy allows us to run Python code in Android applications."
                 type='Library-framework'
-            />
+            /> */}
 
             <SkillIcon
                 title='Jetpack Compose'
@@ -326,7 +326,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='latex' className='w-11 h-11' alt='Latex logo' />}
                 title="Latex"
                 description="Latex is an advanced markdown language for creating complex and scientific documents."
-                skillLevel={9}
+                skillLevel={4}
                 type='Language'
             />
 
@@ -365,7 +365,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='vue' className='w-9 h-9' alt='Vue logo' />}
                 title="Vue"
                 description="Web frontend library for building user interfaces."
-                skillLevel={10}
+                skillLevel={8}
                 learning
                 type='Library-framework'
             />
@@ -645,7 +645,7 @@ export const SkillsContent = () => {
                 icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={milvus} className='w-10 h-10 rounded-md' alt='Milvus Db logo' />}
                 title="Milvus"
                 description="Compared to Chroma, Milvus is more advanced vector database for building complex applications using machine learning, data analysis, search, and recommendation systems."
-                skillLevel={10}
+                skillLevel={60}
                 learning
                 type='Database'
             />
@@ -711,8 +711,6 @@ export const SkillsContent = () => {
                 description="I hate windows."
                 type='Tool'
             />
-
-
             <SkillIcon
                 icon={<Svg src='vscode' className='w-10 h-10' alt='VS Code logo' />}
                 title="VS Code"
@@ -755,30 +753,25 @@ export const SkillsContent = () => {
                 icon={<Svg src='figma' className='w-10 h-10' alt='Figma logo' />}
                 title="Figma"
                 description="Design tool for creating and implementing user interfaces and design systems."
-                skillLevel={40}
-                type='Dev tool'
+                skillLevel={100}
+                type='Tool'
             />
             <SkillIcon
                 icon={<Svg src='vite' className='w-9 h-9' alt='Vite logo' />}
                 title="Vite"
                 description="Next-generation frontend build tool offering lightning-fast development experience."
-                skillLevel={null}
                 type='Library-framework'
             />
             <SkillIcon
                 icon={<Svg src='webpack' className='w-9 h-9' alt='Webpack logo' />}
                 title="Webpack"
                 description="Module bundler for JavaScript applications with extensive configuration options."
-                skillLevel={null}
                 type='Library-framework'
             />
-
-
             <SkillIcon
                 icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={coolify} className='w-12 h-12 rounded-md' alt='Coolify logo' />}
                 title="Coolify"
                 description="Self-hosted Heroku/Vercel alternative for deploying applications, databases, and services. Used for managing personal infrastructure and hosting projects."
-                skillLevel={null}
                 type='Tool'
             />
             <SkillIcon
@@ -799,13 +792,13 @@ export const SkillsContent = () => {
                 icon={<Svg src='docker' className='w-10 h-10' alt='Docker logo' />}
                 title="Docker"
                 description="I'm using Docker for containerizing applications, ensuring consistent development environments, and simplifying deployment processes."
-                skillLevel={30}
+                skillLevel={40}
                 type='Tool'
             />
             <SkillIcon
                 icon={<Svg src='nginx' className='w-10 h-10' alt='Docker logo' />}
                 title="Nginx"
-                skillLevel={20}
+                skillLevel={40}
                 type='Tool'
                 description='Nginx is a reverse proxy server that sits in front of servers to handle incoming requests and distribute them to the appropriate servers. It can improve security, performance, and scalability.'
                 learning
@@ -822,7 +815,7 @@ export const SkillsContent = () => {
             <SkillIcon
                 icon={<Svg src='mongodb' className='w-10 h-10' alt='Mangodb logo' />}
                 title="Mangodb"
-                skillLevel={2}
+                skillLevel={9}
                 type='Database'
 
             />
