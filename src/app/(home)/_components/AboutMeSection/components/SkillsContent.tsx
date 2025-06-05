@@ -11,8 +11,10 @@ import koin from '@/png/koin.png'
 import raylib from '@/png/raylib.png'
 import turbo from '@/png/turbo.png'
 import clerk from '@/webp/clerk.webp'
+import hetzner from '@/webp/hetzner.webp'
 import neon from '@/png/neon.png'
 import dragonflydb from '@/png/dragonflydb.png'
+import lemonsqueezy from '@/jpg/lemonsquezzy.jpg'
 import sqldelight from '@/png/sqldelight.png'
 // import chaquopy from '@/png/chaquopy.png'
 import milvus from '@/png/milvus.png'
@@ -32,9 +34,19 @@ export const SkillsContent = () => {
 
             <SkillIcon
                 title='Java'
+                description='Java is a popular programming language for building enterprise applications. It is a high-level, class-based, object-oriented language. Java is first designed to be make easy to develop platform-independent application GUIs.'
                 icon={<Svg src="java" alt='Java' className='w-10 h-10' />}
                 skillLevel={40}
                 type='Language'
+            />
+
+            <SkillIcon
+                title='JNI (Java Native Interface)'
+                description='Java Native Interface is a way to call native code from Java. It allows you to write code in C, C++ and call it from Java.'
+                icon={<Svg src="java" alt='Java' className='w-10 h-10' />}
+                skillLevel={15}
+                learning
+                type='API'
             />
 
             <SkillIcon
@@ -192,7 +204,8 @@ export const SkillsContent = () => {
 
             <SkillIcon
                 icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={raylib} className='w-9 h-9 rounded-md' alt='Raylib logo' />}
-                title="Raylib (2D)"
+                title="Raylib"
+                learning
                 description="Raylib is a simple and easy-to-use library to enjoy videogames programming."
                 skillLevel={30}
                 type='Library-framework'
@@ -255,7 +268,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='flask' className='w-10 h-10' alt='Flask logo' />}
                 title="Flask"
                 description="Python web framework for building web applications and APIs. Similar to express.js, fastify and ktor."
-                skillLevel={10}
+                skillLevel={30}
                 type='Library-framework'
             />
 
@@ -366,7 +379,6 @@ export const SkillsContent = () => {
                 title="Vue"
                 description="Web frontend library for building user interfaces."
                 skillLevel={8}
-                learning
                 type='Library-framework'
             />
 
@@ -376,7 +388,6 @@ export const SkillsContent = () => {
                 title="Pinia"
                 description="Pinia is state-management solution for Vue applications."
                 skillLevel={6}
-                learning
                 type='Library-framework'
             />
 
@@ -467,7 +478,6 @@ export const SkillsContent = () => {
                 icon={<Svg src='junit' className='w-9 h-9' alt='Junit logo' />}
                 title="Junit"
                 description="Unit testing library for Java."
-                learning
                 type='Library-framework'
             />
 
@@ -662,7 +672,7 @@ export const SkillsContent = () => {
                 icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={drizzle} className='w-10 h-10 rounded-md' alt='Drizzle ORM logo' />}
                 title="Drizzle ORM"
                 description="TypeScript ORM for SQL databases with a focus on type safety and developer experience. I prefer using drizzle instead of Prisma because it's more lightweight."
-                skillLevel={55}
+                skillLevel={100}
                 type='Database'
             />
             <SkillIcon
@@ -778,6 +788,21 @@ export const SkillsContent = () => {
                 icon={<Svg src='vercel' className='w-8 h-8' alt='Vercel logo' />}
                 title="Vercel"
                 description="Platform for deploying and hosting web applications with automatic CI/CD."
+                skillLevel={null}
+                type='Service'
+            />
+            <SkillIcon
+                icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={lemonsqueezy} className='w-12 h-12 rounded-md' alt='Coolify logo' />}
+                title="Lemonsquezzy"
+                description="Lemonsquezzy is a payment system similar to Stripe. It's a great way to accept payments online. I'm also trying to use it because of supporting Turkey."
+                learning
+                skillLevel={3}
+                type='Service'
+            />
+            <SkillIcon
+                icon={<Image loading='lazy' sizes={imageSizes} placeholder='blur' src={hetzner} className='w-10 h-10 rounded-md' alt='Hetzner logo' />}
+                title="Hetzner"
+                description="Hetzner is a cloud hosting provider that offers a range of services including virtual servers, managed databases, and managed DNS. I'm using it for VPS."
                 skillLevel={null}
                 type='Service'
             />
