@@ -44,7 +44,7 @@ export const SkillsContent = () => {
                 title='JNI (Java Native Interface)'
                 description='Java Native Interface is a way to call native code from Java. It allows you to write code in C, C++ and call it from Java.'
                 icon={<Svg src="java" alt='Java' className='w-10 h-10' />}
-                skillLevel={15}
+                skillLevel={35}
                 learning
                 type='API'
             />
@@ -109,6 +109,15 @@ export const SkillsContent = () => {
             />
 
             <SkillIcon
+                title="Android NDK"
+                icon={<Svg src='android' className='w-10 h-10' alt='Android logo' />}
+                description="Android Native Development Kit (NDK) is a set of tools that allows you to use C and C++ code with Android."
+                skillLevel={20}
+                learning
+                type='Other'
+            />
+
+            <SkillIcon
                 title="Room database"
                 icon={<Svg src='android' className='w-10 h-10' alt='Android logo' />}
                 description="SQLite database ORM library for Android developed by Google."
@@ -168,7 +177,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='c' className='w-10 h-10' alt='C logo' />}
                 title="C"
                 description="Mother of most programming languages."
-                skillLevel={35}
+                skillLevel={65}
                 type='Language'
             />
 
@@ -176,7 +185,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='makefile' className='w-12 h-12 pl-1' alt='Makefile logo' />}
                 title="Makefile"
                 description="Makefile is a build automation tool to automate the build process of C and C++ projects."
-                skillLevel={30}
+                skillLevel={9}
                 type='Tool'
             />
 
@@ -184,21 +193,21 @@ export const SkillsContent = () => {
                 icon={<Svg src='meson' className='w-12 h-12' alt='Meson logo' />}
                 title="meson"
                 description="Meson is a user friendly build automation tool to automate the build process of C and C++ projects."
-                skillLevel={40}
+                skillLevel={80}
                 type='Tool'
             />
 
             <SkillIcon
                 icon={<Svg src='clang' className='w-12 h-12' alt='C logo' />}
                 title="Clang"
-                skillLevel={2}
+                skillLevel={5}
                 type='Tool'
             />
 
             <SkillIcon
                 icon={<Svg src='cmake' className='w-10 h-10' alt='C logo' />}
                 title="CMake"
-                skillLevel={15}
+                skillLevel={35}
                 type='Tool'
             />
 
@@ -207,7 +216,7 @@ export const SkillsContent = () => {
                 title="Raylib"
                 learning
                 description="Raylib is a simple and easy-to-use library to enjoy videogames programming."
-                skillLevel={30}
+                skillLevel={40}
                 type='Library-framework'
             />
 
@@ -268,7 +277,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='flask' className='w-10 h-10' alt='Flask logo' />}
                 title="Flask"
                 description="Python web framework for building web applications and APIs. Similar to express.js, fastify and ktor."
-                skillLevel={30}
+                skillLevel={40}
                 type='Library-framework'
             />
 
@@ -425,7 +434,7 @@ export const SkillsContent = () => {
                 icon={<Svg src='react-query' className='w-10 h-10' alt='React Query logo' />}
                 title="React Query"
                 description="Powerful data-fetching library for React that handles caching, synchronization, and server state management with features like automatic background updates and optimistic updates."
-                skillLevel={64}
+                skillLevel={100}
                 type='Library-framework'
             />
             <SkillIcon
