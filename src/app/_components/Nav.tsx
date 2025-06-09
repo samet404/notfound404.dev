@@ -60,7 +60,7 @@ export const Nav = () => {
         <div className='fixed h-[4rem] w-full flex p-2 justify-center top-0 z-[45] pointer-events-none'>
             <nav
                 style={{ transform: `translateY(${isVisible ? '0' : '-200%'})`, transition: 'transform 0.3s ease', pointerEvents: isVisible ? 'auto' : 'none' }}
-                className='md:w-[50rem] xxs:w-full flex h-full px-5 top-0 rounded-lg shadow-[0_0px_20px_0.5px_rgba(0,0,0,0.3)] md:bg-[#00000061] xxs:bg-[#0000009a] xxs:backdrop-blur-sm md:backdrop-blur-md items-center justify-between drop-shadow-md relative'
+                className='md:w-[50rem] xxs:w-full flex h-full px-5 top-0 rounded-lg shadow-[0_0px_20px_0.5px_rgba(0,0,0,0.3)] md:bg-[#00000061] xxs:bg-[#00000071] xxs:backdrop-blur-sm md:backdrop-blur-md items-center justify-between drop-shadow-md relative'
             >
                 <NavLink href="/">
                     notfound404.dev
@@ -72,18 +72,19 @@ export const Nav = () => {
                     <NavLink href="/">About me</NavLink>
                     <DarkThemeButton />
                 </div>
+                <div className='flex flex-row gap-3 xs:hidden items-center'>
+                    <DarkThemeButton />
+                    <button
+                        className='text-[#ffffff7e] hover:text-[#ffffff] transition-colors'
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    >
+                        <Svg src='menu' className='w-6 h-6 opacity-75' alt='menu' />
+                    </button>
 
-                {/* Mobile Menu Button */}
-                <button
-                    className='xs:hidden text-[#ffffff7e] hover:text-[#ffffff] transition-colors'
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                >
-                    <Svg src='menu' className='w-6 h-6 opacity-75' alt='menu' />
-                </button>
-
+                </div>
                 {/* Mobile Menu */}
                 {isMobileMenuOpen && (
-                    <div className='absolute top-full left-0 right-0 items-center mt-2 bg-[#000000] backdrop-blur-md rounded-lg p-4 flex flex-col gap-4 xs:hidden '>
+                    <div className='absolute top-full left-0 right-0 items-center mt-2 bg-[#2b2b2b] backdrop-blur-md rounded-lg p-4 flex flex-col gap-4 xs:hidden '>
                         <NavLink href="/articles">Articles</NavLink>
                         <NavLink href="/">About me</NavLink>
                     </div>
