@@ -2,6 +2,7 @@ import { SetScrollContainer } from '@/src/components/SetScrollContainer'
 import { AboutMeSection } from './_components/AboutMeSection'
 import { ProjectsSection } from './_components/ProjectsSection'
 import { BackgroundColor } from './_components/BackgroundColor'
+import ScrollProgressBar from './_components/Scrollprogrressbar'
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       className='overflow-y-scroll w-screen h-screen'>
       <BackgroundColor>
         <SetScrollContainer />
+        <ScrollProgressBar />
 
         <div className=''>
           <AboutMeSection />

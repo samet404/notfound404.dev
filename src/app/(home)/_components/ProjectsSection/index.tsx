@@ -19,7 +19,7 @@ export const ProjectsSection = () => {
         <div
           className='rounded-lg bg-[rgba(255,255,255,0.59)] text-2xl shadow-[0_0px_15px_5px_rgba(0,0,0,0.1)]'
         >
-          <div className=" bg-gradient-to-tl font-[700]  from-blue-600 via-blue-400 to-blue-500  bg-clip-text  px-3 py-1 text-transparent ">
+          <div className=" bg-gradient-to-tl font-[700]  from-blue-700 via-blue-400 to-blue-600  bg-clip-text  px-3 py-1 text-transparent ">
             {"Projects I'm working on"}
           </div>
         </div>

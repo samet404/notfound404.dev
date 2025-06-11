@@ -7,8 +7,8 @@ import { DialogLoader } from './components/DialogLoader'
 export const AboutMeSection = () => {
   return (
     <div className="flex w-full flex-col items-center px-2 py-2 ">
-      <div className="flex flex-col gap-3 max-w-[40rem] items-start">
-        <div className='flex flex-col gap-9  w-full justify-center items-center  rounded-lg p-3 lg:justify-between'>
+      <div className="flex flex-col  max-w-[40rem] items-start">
+        <div className='flex flex-col gap-5  w-full justify-center items-center  rounded-lg p-3 lg:justify-between'>
           <FirstPart />
           <Links />
         </div>

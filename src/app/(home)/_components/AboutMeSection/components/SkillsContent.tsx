@@ -830,6 +830,14 @@ export const SkillsContent = () => {
                 type='Tool'
             />
             <SkillIcon
+                icon={<Svg src='kubernetes' className='w-10 h-10' alt='Kubernetes logo' />}
+                title="Kubernetes"
+                description='Kubernetes is open source, docker ochestration system developed by google. It makes it easy to manage multiple docker containers.'
+                skillLevel={4}
+                learning
+                type='Tool'
+            />
+            <SkillIcon
                 icon={<Svg src='nginx' className='w-10 h-10' alt='Docker logo' />}
                 title="Nginx"
                 skillLevel={40}

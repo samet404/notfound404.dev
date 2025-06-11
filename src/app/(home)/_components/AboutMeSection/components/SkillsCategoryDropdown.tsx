@@ -45,7 +45,7 @@ export const SkillsCategoryDropdown = () => {
     }, [])
 
     return (
-        <div className="relative  cursor-none inline-block pl-4" ref={dropdownRef}>
+        <div className="relative  cursor-none inline-block " ref={dropdownRef}>
             <button
                 onClick={() => setIsOpen(!isOpen)}
                 className={`
