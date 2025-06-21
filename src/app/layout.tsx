@@ -16,6 +16,7 @@ const outfit = Outfit({
   weight: ['500', '600', '700', '900'],
 })
 
+
 const description = "Hi! I'm a software engineer, interested in kotlin and web programming. You can learn more about me on my website."
 const title = "notfound404.dev"
 

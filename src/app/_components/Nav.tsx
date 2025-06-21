@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { useAtomValue } from 'jotai'
 import Link from 'next/link'
@@ -9,103 +9,118 @@ import { usePathname } from 'next/navigation'
 import useIsDarkTheme from '@/src/store/isDarkTheme'
 
 const DarkThemeButton = () => {
-    const setDarkTheme = useIsDarkTheme((state) => state.set)
-    const darkTheme = useIsDarkTheme((state) => state.value)
+  const setDarkTheme = useIsDarkTheme((state) => state.set)
+  const darkTheme = useIsDarkTheme((state) => state.value)
 
-    return <Svg src='dark-theme' onClick={() => setDarkTheme(!darkTheme)} className='w-6 h-6  bg-white opacity-50 rounded-full' alt='menu' />
+  return (
+    <Svg
+      src="dark-theme"
+      onClick={() => setDarkTheme(!darkTheme)}
+      className="h-6 w-6  rounded-full bg-white opacity-50"
+      alt="menu"
+    />
+  )
 }
 
 export const Nav = () => {
-    const pathname = usePathname()
-    const [isVisible, setIsVisible] = useState(true)
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-    const scrollContainer = useAtomValue(NavScrollbarContainerAtom)
+  const pathname = usePathname()
+  const [isVisible, setIsVisible] = useState(true)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const scrollContainer = useAtomValue(NavScrollbarContainerAtom)
 
-    useEffect(() => {
-        setIsVisible(true)
-    }, [pathname])
+  useEffect(() => {
+    setIsVisible(true)
+  }, [pathname])
 
-    useEffect(() => {
-        if (!scrollContainer) { return }
+  useEffect(() => {
+    if (!scrollContainer) {
+      return
+    }
 
-        let lastScrollY = 0
-        const scrollThreshold = 10 // Minimum scroll distance needed to trigger hide/show
-        let lastScrollTime = Date.now()
-        const debounceTime = 50 // Milliseconds to wait between scroll events
+    let lastScrollY = 0
+    const scrollThreshold = 10 // Minimum scroll distance needed to trigger hide/show
+    let lastScrollTime = Date.now()
+    const debounceTime = 50 // Milliseconds to wait between scroll events
 
-        const handleScroll = () => {
-            const now = Date.now()
-            const currentScrollY = scrollContainer.scrollTop
-            const scrollDifference = Math.abs(currentScrollY - lastScrollY)
+    const handleScroll = () => {
+      const now = Date.now()
+      const currentScrollY = scrollContainer.scrollTop
+      const scrollDifference = Math.abs(currentScrollY - lastScrollY)
 
-            // Only process scroll if threshold is met and enough time has passed
-            if (scrollDifference > scrollThreshold && (now - lastScrollTime) > debounceTime) {
-                if (currentScrollY > lastScrollY) {
-                    setIsVisible(false)
-                    setIsMobileMenuOpen(false)
-                } else {
-                    setIsVisible(true)
-                }
-
-                lastScrollY = currentScrollY
-                lastScrollTime = now
-            }
+      // Only process scroll if threshold is met and enough time has passed
+      if (
+        scrollDifference > scrollThreshold &&
+        now - lastScrollTime > debounceTime
+      ) {
+        if (currentScrollY > lastScrollY) {
+          setIsVisible(false)
+          setIsMobileMenuOpen(false)
+        } else {
+          setIsVisible(true)
         }
 
-        scrollContainer.addEventListener('scroll', handleScroll)
-        return () => scrollContainer.removeEventListener('scroll', handleScroll)
-    }, [scrollContainer])
+        lastScrollY = currentScrollY
+        lastScrollTime = now
+      }
+    }
 
-    return (
-        <div className='fixed h-[4rem] w-full flex p-2 justify-center top-0 z-[45] pointer-events-none'>
-            <nav
-                style={{ transform: `translateY(${isVisible ? '0' : '-200%'})`, transition: 'transform 0.3s ease', pointerEvents: isVisible ? 'auto' : 'none' }}
-                className='md:w-[50rem] xxs:w-full flex h-full px-5 top-0 rounded-lg shadow-[0_0px_20px_0.5px_rgba(0,0,0,0.3)] md:bg-[#00000061] xxs:bg-[#00000071] xxs:backdrop-blur-sm md:backdrop-blur-md items-center justify-between drop-shadow-md relative'
-            >
-                <NavLink href="/">
-                    notfound404.dev
-                </NavLink>
+    scrollContainer.addEventListener('scroll', handleScroll)
+    return () => scrollContainer.removeEventListener('scroll', handleScroll)
+  }, [scrollContainer])
 
-                {/* Desktop Menu */}
-                <div className='hidden xs:flex flex-row gap-6'>
-                    <NavLink href="/articles">Articles</NavLink>
-                    <NavLink href="/">About me</NavLink>
-                    <DarkThemeButton />
-                </div>
-                <div className='flex flex-row gap-3 xs:hidden items-center'>
-                    <DarkThemeButton />
-                    <button
-                        className='text-[#ffffff7e] hover:text-[#ffffff] transition-colors'
-                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    >
-                        <Svg src='menu' className='w-6 h-6 opacity-75' alt='menu' />
-                    </button>
+  return (
+    <div className="pointer-events-none fixed top-0 z-[45] flex h-[4rem] w-full justify-center p-2">
+      <nav
+        style={{
+          transform: `translateY(${isVisible ? '0' : '-200%'})`,
+          transition: 'transform 0.3s ease',
+          pointerEvents: isVisible ? 'auto' : 'none',
+        }}
+        className="relative top-0 flex h-full items-center justify-between rounded-lg px-5 shadow-[0_0px_20px_0.5px_rgba(0,0,0,0.3)] drop-shadow-md xxs:w-full xxs:bg-[#00000071] xxs:backdrop-blur-sm md:w-[50rem] md:bg-[#00000061] md:backdrop-blur-md"
+      >
+        <NavLink href="/">notfound404.dev</NavLink>
 
-                </div>
-                {/* Mobile Menu */}
-                {isMobileMenuOpen && (
-                    <div className='absolute top-full left-0 right-0 items-center mt-2 bg-[#2b2b2b] backdrop-blur-md rounded-lg p-4 flex flex-col gap-4 xs:hidden '>
-                        <NavLink href="/articles">Articles</NavLink>
-                        <NavLink href="/">About me</NavLink>
-                    </div>
-                )}
-            </nav>
+        {/* Desktop Menu */}
+        <div className="hidden flex-row gap-6 xs:flex">
+          <NavLink href="/calender">Calender</NavLink>
+          <NavLink href="/articles">Articles</NavLink>
+          <NavLink href="/">About me</NavLink>
+          <DarkThemeButton />
         </div>
-    )
+        <div className="flex flex-row items-center gap-3 xs:hidden">
+          <DarkThemeButton />
+          <button
+            className="text-[#ffffff7e] transition-colors hover:text-[#ffffff]"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <Svg src="menu" className="h-6 w-6 opacity-75" alt="menu" />
+          </button>
+        </div>
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="absolute left-0 right-0 top-full mt-2 flex flex-col items-center gap-4 rounded-lg bg-[#2b2b2b] p-4 backdrop-blur-md xs:hidden ">
+            <NavLink href="/articles">Articles</NavLink>
+            <NavLink href="/">About me</NavLink>
+          </div>
+        )}
+      </nav>
+    </div>
+  )
 }
 
 export const NavLink = ({ href, children, className }: NavLinkProps) => {
-    return (
-        <Link className={`text-[#ffffff7e] hover:text-[#ffffff] transition-colors ${className}`} href={href}>
-            {children}
-        </Link>
-    )
+  return (
+    <Link
+      className={`text-[#ffffff7e] transition-colors hover:text-[#ffffff] ${className}`}
+      href={href}
+    >
+      {children}
+    </Link>
+  )
 }
 
-
-
 type NavLinkProps = {
-    href: string
-    children: ReactNode
-    className?: string
+  href: string
+  children: ReactNode
+  className?: string
 }

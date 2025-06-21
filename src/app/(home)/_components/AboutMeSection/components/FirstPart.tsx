@@ -1,19 +1,9 @@
 import Image from 'next/image'
-import { Kaushan_Script } from 'next/font/google'
-
-const kausan = Kaushan_Script({
-    weight: '400',
-    subsets: ['latin'],
-})
 
 export const FirstPart = () => {
     return (
         <div className={`flex flex-col items-center justify-center gap-5`}>
-            <div>
-                <div className={` ${kausan.className} text-[1.5rem] pb-5 md:text-[2rem]  bg-gradient-to-r from-white via-[#ffffffa5] to-white inline-block text-transparent bg-clip-text text-center -skew-y-2   drop-shadow-[0_0px_10px_rgba(255,255,255,0.744)]`}>
-                    I don't have any job experience but I could fucking learn, I'm confident I have the potential to be one of the best<span className='text-[3rem] leading-3 pl-2'>.</span>
-                </div>
-            </div>
+          
             <Image
                 width={500}
                 height={500}
