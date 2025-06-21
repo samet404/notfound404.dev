@@ -10,7 +10,7 @@ const Calender = () => {
         scrollbarWidth: 'none',
       }}
       id="scroll-container"
-      className="h-screen w-screen  overflow-y-scroll"
+      className="h-screen w-screen  overflow-y-scroll "
     >
       <BackgroundColor>
         <SetScrollContainer />

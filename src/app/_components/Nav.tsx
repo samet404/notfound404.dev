@@ -16,7 +16,7 @@ const DarkThemeButton = () => {
     <Svg
       src="dark-theme"
       onClick={() => setDarkTheme(!darkTheme)}
-      className="h-6 w-6  rounded-full bg-white opacity-50"
+      className="h-6 w-6   rounded-full bg-white opacity-50"
       alt="menu"
     />
   )
@@ -81,13 +81,13 @@ export const Nav = () => {
         <NavLink href="/">notfound404.dev</NavLink>
 
         {/* Desktop Menu */}
-        <div className="hidden flex-row gap-6 xs:flex">
+        <div className="hidden flex-row gap-5 min-[600px]:flex">
           <NavLink href="/calender">Calender</NavLink>
           <NavLink href="/articles">Articles</NavLink>
           <NavLink href="/">About me</NavLink>
           <DarkThemeButton />
         </div>
-        <div className="flex flex-row items-center gap-3 xs:hidden">
+        <div className="flex flex-row items-center gap-3 min-[600px]:hidden">
           <DarkThemeButton />
           <button
             className="text-[#ffffff7e] transition-colors hover:text-[#ffffff]"
@@ -98,7 +98,8 @@ export const Nav = () => {
         </div>
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="absolute left-0 right-0 top-full mt-2 flex flex-col items-center gap-4 rounded-lg bg-[#2b2b2b] p-4 backdrop-blur-md xs:hidden ">
+          <div className="absolute left-0 right-0 top-full mt-2 flex flex-col items-center gap-4 rounded-lg bg-[#2b2b2b] p-4 backdrop-blur-md min-[600px]:hidden ">
+            <NavLink href="/calender">Calender</NavLink>
             <NavLink href="/articles">Articles</NavLink>
             <NavLink href="/">About me</NavLink>
           </div>
