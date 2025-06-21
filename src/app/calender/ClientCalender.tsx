@@ -62,7 +62,10 @@ console.log('day',day.getFullYear(), day.getMonth(), day.getDate())
             'relative h-[4.6875rem] border border-gray-400  transition-all duration-500 hover:bg-gray-200',
             day.currentMonth ? 'bg-white' : 'bg-gray-50',
             day.selected &&
-              'bg-yellow-300 font-bold opacity-80 hover:bg-yellow-400',
+              'bg-yellow-300 font-bold opacity-80 hover:bg-yellow-400', 
+              {
+              'opacity-20':day.date < new Date(1750358609712)
+              }
           )}
         >
           <p

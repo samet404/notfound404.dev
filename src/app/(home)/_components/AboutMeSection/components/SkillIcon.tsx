@@ -54,7 +54,7 @@ export const SkillIcon = ({ icon, title, description, skillLevel, learning, type
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             ref={iconRef}
-            className={cn(` group bg-[#ffffffa3] hover:scale-110 hover:shadow-[0_0px_30px_3px_#31a3fd] duration-200 border-[0.15rem] p-[0.15rem]  flex w-[3rem] h-[3rem] relative flex-col items-center justify-center rounded-lg`, {
+            className={cn(` group bg-[#ffffffa3] hover:scale-110 hover:shadow-[0_0px_30px_3px_#ffffff79] duration-200 border-[0.15rem] p-[0.15rem]  flex w-[3rem] h-[3rem] relative flex-col items-center justify-center rounded-lg`, {
                 'bg-[#ffffffac]': isDarkTheme,
                 'border-[#fff67e]': type === 'Language',
                 'border-[#8975ff]': type === 'Service',
