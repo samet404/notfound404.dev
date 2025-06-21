@@ -125,7 +125,7 @@ const CalendarClient: React.FC = () => {
             <ArrowLeft />
           </ControlButton>
           <p className="mx-auto">
-            {months[currentDay.getMonth()].substring(0, 3)}{' '}
+            {months[currentDay.getMonth()]?.substring(0, 3)}{' '}
             {currentDay.getDate()}
           </p>
           <ControlButton onClick={nextDay}>
