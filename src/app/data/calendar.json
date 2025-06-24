@@ -1,4 +1,29 @@
 {
-  "2025-5-20": ["I improved my GenAI-pool server implementation and thinked about how can I decrease rate limit errors","I learned how can I use raylib in 3D", "I've tried Clion IDE little bit and liked it", "I've watched some game videos to protect my mental health and being away from work for a while"],
-  "2025-5-21": ["I added this calender feature you see to my website", "I've made three models in blender for my 3D simulation game", "I've listened music while modelling.", "I've watched this blender tutorial video a bit again https://youtu.be/4haAdmHqGOw ", "Answered two questions on stackoverflow"]
+  "2025-5-20": [
+    "I improved my GenAI-pool server implementation and thought about how can I decrease rate limit errors",
+    "I learned how can I use raylib in 3D",
+    "I've tried Clion IDE little bit and liked it",
+    "I've watched some game videos to protect my mental health and to be away from work for a while"
+  ],
+  "2025-5-21": [
+    "I added this calender feature you see to my website",
+    "I've made three models in blender for my 3D simulation game",
+    "I've listened music while modelling.",
+    "I've watched this blender tutorial video a bit again https://youtu.be/4haAdmHqGOw ",
+    "Answered two questions on stackoverflow"
+  ],
+  "2025-5-22": [
+    "I really don't remember what I did this day",
+    "I think I've worked too hard and not remember much",
+    "ig thought about how can I apply rate-limit to my GenAI-pool server"
+  ],
+  "2025-5-23": [
+    "I've fixed some dumb bugs in my GenAI-pool server and made it stable",
+    "I've watched youtube videos and listened music like everyday"
+  ],
+  "2025-5-24": [
+    "I've implemented GAIS server implementation for client-side, removed SQLDelight codes in my Bloomia Kotlin Client.",
+    "I've fixed some code design problems in my PIXGU websocket server and Website",
+    "I've watched youtube videos and listened music again"
+  ]
 }
