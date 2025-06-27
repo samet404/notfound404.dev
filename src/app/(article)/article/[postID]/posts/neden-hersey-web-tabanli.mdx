@@ -2,6 +2,8 @@
 
 # Neden Her Şey Web Tabanlı?
 
+> Bu yazının önceki versiyonu çok cringe olduğundan güncellenmiştir.
+
 Günlük hayatta kullandığımız birçok uygulama, programların çoğu genellikle web tabanlıdır. Bir web sitesine girmek, bir uygulama veya program indirip onu kurmak ve çalıştırmaktan daha kolay bir süreçtir. Bu makalede yazılım geliştiricilerine neden bir web tabanlı uygulamanın uzun süreçte daha çok gelir sağlayabileceğinin önemini konuşacağım.
 
 Eğer zamanınızın çoğunu [low level](https://en.wikipedia.org/wiki/Low-level_programming_language) dillerle geçiriyorsanız, bir yazılım geliştiricisi olarak kullandığınız çoğu şeyin web tabanlı olduğunu görmenin cidden sinir bozucu olduğunu düşünebilirsiniz, işte bu makale tam size göre. Evet low level sistemlerde uğraşmak zor ve eğlencesi de buradan geliyor. Bazılarınızın içinde makineye yakın olunca o havalı hissetme duygusu olabilir. Eğer böyle iseniz bir anlığına bakış açınızı değiştirmenizi istiyorum. Kısa bir süreliğine bir yazılımcı gibi düşünmenizi bir yana bırakmanızı, azıcık da gerçek bir iş insanı olduğunuzu düşünün. Siz bu kafa yapısına girdiğinize göre, hadi başlayalım.
@@ -10,7 +12,9 @@ Eğer zamanınızın çoğunu [low level](https://en.wikipedia.org/wiki/Low-leve
 
 Direkt ana konudan başlamış olduk. Öncelikle bir dile performanslı veya performanslı değil dememiz için bir dilin performanslı olması ne demek onu anlamalıyız. Performans, genellikle kodu yazan takımın, kişinin, şirketin tecrübelerine dayanır. Eğer çok kötü bir Java kodu yazıyorsanız ve iyi bir Javascript kodu yazıyorsanız Javascript'te daha iyi performans yakalamanız kaçınılmazdır.
 
-Webde performans ise çoğunlukla client'ta yazdığınız Javascript koduna bağlıdır. İyi yönetilmiş, yazılmış bir Java kodu haliyle Javascript'ten hayli ile hızlı olacaktır ama ne demiştik biz bir iş insanıyız. Bulunduğumuz, gerçek kapitalist dünyada telefonlar ve elektronik cihazlar günden güne daha kırılabilir, bozulabilir ve pahalı yapılıyor. Laptopumuza su döktüğümüzde veya telefonumuzu düşürüp kırdığımızda hangimiz suçu şirkete atıyor? Bu sebeple, kolay yolu seçmekte sorun ne?
+Webde performans ise çoğunlukla client'ta yazdığınız Javascript koduna bağlıdır. İyi yönetilmiş, yazılmış bir Java kodu haliyle Javascript'ten hayli ile hızlı olacaktır ama ne demiştik biz bir iş insanıyız.
+
+Eğer bir iş kararı veriyorsak, kolay, pahalı ve hızlı yolu, eğer kariyer kararı veriyorsak zor ve scaleable olanı seçmek en mantıklısıdır.
 
 ## Client-Server uyumsuzluğu
 
@@ -35,8 +39,8 @@ Webde performans ise çoğunlukla client'ta yazdığınız Javascript koduna ba�
         "email": true,
         "sms": false,
         "push": true
-      },
-    },
+      }
+    }
   }
 }
 ```
