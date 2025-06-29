@@ -1,1 +1,1 @@
-export type SkillType = 'All' | 'Tool' | 'Service' | 'Library-framework' | 'Language' | 'Database' | 'API' | 'Dev tool' | 'Other' | "I can't take it anymore I want job "
+export type SkillType = 'All' | 'Tool' | 'Service' | 'Library-framework' | 'Language' | 'Database' | 'API' | 'Dev tool' | 'Other'
