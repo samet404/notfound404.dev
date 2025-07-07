@@ -1,18 +1,18 @@
-# How to use firewall in ubuntu with docker
+# How to use UFW with docker
 
-![Photo by Stephen Radford on https://unsplash.com/photos/photo-of-burning-house-hLUTRzcVkqg](/images/article/firewall.jpg)
+![Photo by Stephen Radford on https://unsplash.com/photos/photo-of-burning-house-hLUTRzcVkqg](/images/article/how-to-use-ufw-with-docker.jpg)
 
 ## Introduction
 
-One of the most important thing when creating secure Web applications is setting up good firewall. UFW, or Uncomplicated Firewall, is a command line tool that allows you to configure firewall settings easily compared to using iptables. In this tutorial we will prepare Docker container contains basic Nginx code with using UFW to showcase use case in real life.
+One of the most important things when creating secure Web applications is setting up good firewall. UFW, or Uncomplicated Firewall, is a command line tool that allows you to configure firewall settings easily compared to using iptables. In this tutorial we will prepare Docker container contains basic Nginx code with using UFW to showcase use case in real life.
 
 I also provided more resources in the end of this article.
 
 ## Prerequisites
 
-Before starting our journey let's check are you ready, or not, following prerequisites:
+Before starting our journey, let's check if you meet the following prerequisites:
 
-1. Would be good if you have basic understanding of how Docker and Docker Compose works. Familarity with basic commands like `docker compose up`, `docker ps`, `docker build` and `docker run`.
+1. Would be good if you have basic understanding of how Docker and Docker Compose works. Familiarity with basic commands like `docker compose up`, `docker ps`, `docker build` and `docker run`.
 
 2. General understanding of how reverse proxies, Nginx works.
 
@@ -32,7 +32,7 @@ If its not exists we can simply install it:
 sudo apt install ufw
 ```
 
-To check if installation was succesfull or not, we can run `sudo ufw status` again.
+To check if installation was succesful or not, we can run `sudo ufw status` again.
 
 ## Preparing docker compose file
 
@@ -115,7 +115,7 @@ There are lots of configuration files allows us to fine tune ufw or adding new i
 
 ### Applying changes
 
-After changing configuration files, rules, we can apply and run ufw enabling ufw. But before doing that be aware, UFW in default blocks SSH connection so first we need to allow SSH before enabling it otherwise we will not able to connect our server.
+After changing configuration files, rules, we can apply and run ufw enabling ufw. But before doing that be aware, UFW by default blocks SSH connection so first we need to allow SSH before enabling it otherwise we will not able to connect our server.
 
 ```bash
 sudo ufw allow ssh
@@ -134,7 +134,7 @@ And let's start ufw by running:
 sudo ufw enable
 ```
 
-Now UFW will run automaticly whenever we start our server.
+Now UFW will run automatically whenever we start our server.
 
 ### Configuring ports
 
@@ -146,7 +146,7 @@ sudo ufw default deny incoming
 
 ### Issues with docker
 
-Now you shouldn't be able to access the website publicly, right? because we deny all incoming requests. Well... the issue is, Docker in default changes iptables and that causes UFW to can't deny incoming requests even if we denied them. We need to somehow disable this behaviour from docker.
+Now you shouldn't be able to access the website publicly, right? because we deny all incoming requests. Well... the issue is, Docker by default changes iptables and that causes UFW to can't deny incoming requests even if we denied them. We need to somehow disable this behaviour from docker.
 
 Thanks to [Feng's stack overflow answer](https://stackoverflow.com/a/51741599/22740544) we can do that by modifying UFW configuration file `/etc/ufw/after.rules` and add following rules at the end of the file:
 
@@ -173,8 +173,25 @@ COMMIT
 # END UFW AND DOCKER
 ```
 
-Run following command to restart UFW:
+Run following commands to restart UFW and docker:
 
 ```bash
-sudo systemctl restart ufw
+sudo systemctl restart ufw &&
+sudo systemctl restart docker
 ```
+
+Now when we try to access our website at port 8082, it should be blocked. To allow access to specific ports, we can use:
+
+```bash
+sudo ufw allow 8082
+```
+
+## Conclusion
+
+We've learned how to:
+
+- Install and configure UFW
+- Set up Docker with Nginx
+- Handle Docker's interaction with UFW
+- Manage firewall rules for specific ports
+- Configure basic security settings

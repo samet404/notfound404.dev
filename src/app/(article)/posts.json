@@ -14,7 +14,10 @@
     "done": true
   },
   {
-    "title": "My current tech stack",
-    "done": false
+    "id": "how-to-use-ufw-with-docker",
+    "title": "How to use UFW with docker",
+    "date": "2025-07-07",
+    "done": true,
+    "description": "I explained how to use ufw with docker which is basic firewall for linux systems."
   }
 ]
