@@ -2,25 +2,42 @@ import { Spinner } from '@/src/components/Spinner'
 import dynamic from 'next/dynamic'
 import { SkillsCategoryDropdown } from './SkillsCategoryDropdown'
 
-const Content = dynamic(() => import('./SkillsContent').then(m => m.SkillsContent), {
-    loading: () => <div className='flex w-full justify-center items-center'>
+const Content = dynamic(
+  () => import('./SkillsContent').then((m) => m.SkillsContent),
+  {
+    loading: () => (
+      <div className="flex w-full items-center justify-center">
         <Spinner />
-    </div>
-})
+      </div>
+    ),
+  },
+)
 
 export const Skills = () => {
-    return (
-        <div className='flex flex-col gap-5 '>
-
-            <div className='flex flex-col p-2'>
-                <h2>My skills</h2>
-                <p className='xxs:max-w-[25rem] md:max-w-[26rem] lg:max-w-[30rem]'>Maybe you can think like, I listed everything even if I used just 4 minutes of them but no! I used at least 10 hours of each technology. There is even so much things I don't wanna put in this list.</p>
-                <p className='xxs:max-w-[25rem] md:max-w-[26rem] lg:max-w-[30rem]'>Hover or click on the icons to see more information about them. Each border color represents it's type. You can see how much I know about each skill by the skill level. </p>
-            </div>
-            <div className='flex flex-col gap-5 items-center'>
-                <SkillsCategoryDropdown />
-                <Content />
-            </div>
-        </div>
-    )
+  return (
+    <div className="flex flex-col gap-5 ">
+      <div className="flex flex-col p-2">
+        <h2>My skills</h2>
+        <p className="xxs:max-w-[25rem] md:max-w-[26rem] lg:max-w-[30rem]">
+          You might think I've listed skills that I've only used for a few
+          minutes, but...
+          <span className="font-bold"> NO</span>. I used at least 20 hours of
+          each technology. There are even so many things I don't wanna put in
+          this list and I want to learn even more things. If you don't believe
+          me, I have almost 70 github repo and many projects as I described at
+          the bottom. Also please, don't think I'm trying to learn everything,
+          as I said before, I'm mainly focusing on Kotlin and Web ecosystem.
+        </p>
+        <p className="xxs:max-w-[25rem] md:max-w-[26rem] lg:max-w-[30rem]">
+          Hover or click on the icons to see more information about them. Each
+          border color represents its type. You can see how much I know about
+          each skill by the skill level and its opacity.
+        </p>
+      </div>
+      <div className="flex flex-col items-center gap-5">
+        <SkillsCategoryDropdown />
+        <Content />
+      </div>
+    </div>
+  )
 }

@@ -72,7 +72,7 @@ export const SkillsContent = () => {
         icon={<Svg src="spring" className="h-9 w-9" alt="Spring logo" />}
         title="Spring IoC Container"
         description="Spring IoC is a way to manage lifecycle and dependencies of objects in Java applications."
-        skillLevel={100}
+        skillLevel={50}
         type="Library-framework"
       />
 
@@ -104,7 +104,7 @@ export const SkillsContent = () => {
         }
         title="Ktor"
         description="Kotlin server framework for building server applications with Kotlin. Very similar to express.js."
-        skillLevel={47}
+        skillLevel={57}
         learning
         type="Library-framework"
       />
@@ -575,16 +575,6 @@ export const SkillsContent = () => {
         description="Simple, fast and scalable state management solution for React applications."
         skillLevel={100}
         type="Library-framework"
-      />
-
-      <SkillIcon
-        icon={
-          <Svg src="oauth" className="h-11 w-11 rounded-md" alt="OAuth logo" />
-        }
-        title="OAuth"
-        description="OAuth is a open standard for authentication systems. Allows users to sign in with their existing accounts."
-        skillLevel={10}
-        type="Service"
       />
 
       <SkillIcon
