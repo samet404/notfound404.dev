@@ -1,6 +1,6 @@
 export const Description = () => {
   return (
-    <div className="p-2">
+    <div className="p-2 w-full ">
       <p>
         Hello, welcome to my personal website. This website about me and my
         articles and my other content.

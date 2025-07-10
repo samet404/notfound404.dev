@@ -2,7 +2,7 @@
 import { useAtomValue, useSetAtom } from 'jotai'
 import type { ReactNode } from 'react'
 import { useRef } from 'react'
-import { dialogInfoAtom, skillsCategoryAtom } from './atoms'
+import { dialogInfoAtom, skillsCategoryAtom, skillsShrinkedAtom } from './atoms'
 import { Svg } from '@/src/components/Svg'
 import useIsDarkTheme from '@/src/store/isDarkTheme'
 import type { SkillType } from './types'
@@ -15,11 +15,15 @@ export const SkillIcon = ({
   skillLevel,
   learning,
   type,
+  hideWhenShrinked = false,
 }: Props) => {
   const iconRef = useRef<HTMLDivElement>(null)
   const setDialogInfo = useSetAtom(dialogInfoAtom)
   const isDarkTheme = useIsDarkTheme((state) => state.value)
   const selectedCategory = useAtomValue(skillsCategoryAtom)
+  const isShrinked = useAtomValue(skillsShrinkedAtom)
+
+  if (selectedCategory === 'All' && hideWhenShrinked && isShrinked) return null
 
   const handleMouseEnter = (e: React.MouseEvent) => {
     setDialogInfo({
@@ -97,6 +101,7 @@ export const SkillIcon = ({
   )
 }
 type Props = {
+  hideWhenShrinked?: boolean
   icon?: ReactNode
   title: string
   description?: string

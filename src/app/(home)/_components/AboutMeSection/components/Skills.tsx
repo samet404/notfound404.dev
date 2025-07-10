@@ -1,6 +1,8 @@
 import { Spinner } from '@/src/components/Spinner'
 import dynamic from 'next/dynamic'
 import { SkillsCategoryDropdown } from './SkillsCategoryDropdown'
+import { SkillLastUpdated } from './SkillLastUpdated'
+import { ShrinkSkills } from './ShrinkSkills'
 
 const Content = dynamic(
   () => import('./SkillsContent').then((m) => m.SkillsContent),
@@ -34,8 +36,14 @@ export const Skills = () => {
           each skill by the skill level and its opacity.
         </p>
       </div>
-      <div className="flex flex-col items-center gap-5">
-        <SkillsCategoryDropdown />
+      <div className="flex flex-col items-center gap-7 md:gap-2">
+        <div className="flex w-full flex-col justify-between gap-4 rounded-md bg-[#ffffff24] p-2  md:flex-row md:items-end">
+          <div className="flex flex-row flex-wrap justify-between h-full items-center gap-3">
+            <SkillsCategoryDropdown />
+            <ShrinkSkills />
+          </div>
+          <SkillLastUpdated />
+        </div>
         <Content />
       </div>
     </div>

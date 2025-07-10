@@ -9,6 +9,7 @@ import { Svg } from '@/src/components/Svg'
 import dynamic from 'next/dynamic'
 import { Spinner } from '@/src/components/Spinner'
 import { constants } from '@/src/constants'
+import { FinalWordsDisplay } from './components/FinalWordsDisplay'
 
 const Repos = dynamic(() => import('./components/Repos').then(m => m.Repos), { loading: () => <div className='w-full flex items-center justify-center'><Spinner /></div> })
 
@@ -116,7 +117,8 @@ export const ProjectsSection = () => {
           /> */}
         </div>
         <Repos />
-        <div className='text-center drop-shadow-[0_0px_50px_rgba(0,0,0,0.7)] font-[400] rounded-md px-2 py-1 text-white'>{`Made with <3 by 404`}</div>
+      <FinalWordsDisplay />
+
       </div>
     </div>
   )

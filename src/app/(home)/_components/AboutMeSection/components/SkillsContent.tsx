@@ -3,7 +3,6 @@ import { SkillIcon } from './SkillIcon'
 import Image from 'next/image'
 import drizzle from '@/png/drizzle.png'
 import nextjs from '@/png/nextjs.png'
-import coolify from '@/png/coolify.png'
 import trpc from '@/png/trpc.png'
 import kmp from '@/png/kmp.png'
 import ktor from '@/png/ktor.png'
@@ -17,8 +16,7 @@ import dragonflydb from '@/png/dragonflydb.png'
 import lemonsqueezy from '@/jpg/lemonsquezzy.jpg'
 import sqldelight from '@/png/sqldelight.png'
 import pgbackrest from '@/png/pgbackrest.png'
-
-// import chaquopy from '@/png/chaquopy.png'
+import pydantic from '@/png/pydantic.png'
 import milvus from '@/png/milvus.png'
 
 const imageSizes = 'calc(1vw + 37px)'
@@ -34,24 +32,8 @@ export const SkillsContent = () => {
         type="Language"
       />
 
-      <SkillIcon
-        title="Java"
-        description="Java is a popular programming language for building enterprise applications. It is a high-level, class-based, object-oriented language. Java is first designed to be make easy to develop platform-independent application GUIs."
-        icon={<Svg src="java" alt="Java" className="h-10 w-10" />}
-        skillLevel={40}
-        type="Language"
-      />
 
-      <SkillIcon
-        title="JNI (Java Native Interface)"
-        description="Java Native Interface is a way to call native code from Java. It allows you to write code in C, C++ and call it from Java."
-        icon={<Svg src="java" alt="Java" className="h-10 w-10" />}
-        skillLevel={35}
-        learning
-        type="API"
-      />
-
-      <SkillIcon
+    <SkillIcon
         icon={
           <Image
             loading="lazy"
@@ -69,27 +51,41 @@ export const SkillsContent = () => {
       />
 
       <SkillIcon
-        icon={<Svg src="spring" className="h-9 w-9" alt="Spring logo" />}
-        title="Spring IoC Container"
-        description="Spring IoC is a way to manage lifecycle and dependencies of objects in Java applications."
-        skillLevel={50}
-        type="Library-framework"
+        title="Java"
+        description="Java is a popular programming language for building enterprise applications. It is a high-level, class-based, object-oriented language. Java is first designed to be make easy to develop platform-independent application GUIs."
+        hideWhenShrinked
+        icon={<Svg src="java" alt="Java" className="h-10 w-10" />}
+        skillLevel={40}
+        type="Language"
+      />
+      <SkillIcon
+        icon={
+          <Svg src="typescript" className="h-10 w-10" alt="TypeScript logo" />
+        }
+        title="TypeScript"
+        description="My preferred language for web development. I choose TypeScript whenever possible."
+        skillLevel={100}
+        type="Language"
+      />
+      <SkillIcon
+        icon={
+          <Svg src="javascript" className="h-10 w-10" alt="JavaScript logo" />
+        }
+        title="JavaScript"
+        description="While I can work with plain JavaScript, I prefer TypeScript for its added type safety and tooling"
+        skillLevel={100}
+        type="Language"
       />
 
-      <SkillIcon
-        icon={<Svg src="spring" className="h-9 w-9" alt="Spring logo" />}
-        title="Spring Boot"
-        description="Spring Boot is a Java based backend framework. Allows us to build fast and scalable backend applications using IoC container and other features."
-        skillLevel={10}
-        type="Library-framework"
-      />
+      {/* <SkillIcon
+        title="JNI (Java Native Interface)"
+        description="Java Native Interface is a way to call native code from Java. It allows you to write code in C, C++ and call it from Java."
+        icon={<Svg src="java" alt="Java" className="h-10 w-10" />}
+        skillLevel={35}
+        learning
+        type="API"
+      /> */}
 
-      <SkillIcon
-        icon={<Svg src="rabbitmq" className="h-9 w-9" alt="RabbitMQ logo" />}
-        title="RabbitMQ"
-        skillLevel={20}
-        type="Library-framework"
-      />
 
       <SkillIcon
         icon={
@@ -120,6 +116,7 @@ export const SkillsContent = () => {
             alt="Ktor"
           />
         }
+        hideWhenShrinked
         title="Koin"
         description="Simple way to handle dependency injection in kotlin and kmp."
         skillLevel={100}
@@ -131,6 +128,7 @@ export const SkillsContent = () => {
         icon={<Svg src="android" className="h-10 w-10" alt="Android logo" />}
         description="Dependency injection library for kotlin and android."
         skillLevel={70}
+        hideWhenShrinked
         type="Library-framework"
       />
 
@@ -140,11 +138,13 @@ export const SkillsContent = () => {
         description="Android Native Development Kit (NDK) is a set of tools that allows you to use C and C++ code with Android."
         skillLevel={20}
         learning
+        hideWhenShrinked
         type="Other"
       />
 
       <SkillIcon
         title="Room database"
+        hideWhenShrinked
         icon={<Svg src="android" className="h-10 w-10" alt="Android logo" />}
         description="SQLite database ORM library for Android developed by Google."
         skillLevel={40}
@@ -153,6 +153,7 @@ export const SkillsContent = () => {
 
       <SkillIcon
         title="SQLDelight"
+        hideWhenShrinked
         icon={
           <Image
             loading="lazy"
@@ -190,6 +191,7 @@ export const SkillsContent = () => {
         title="Gradle"
         description="Package manager and build tool for Java and Kotlin projects."
         skillLevel={100}
+        hideWhenShrinked
         type="Tool"
       />
 
@@ -198,6 +200,7 @@ export const SkillsContent = () => {
         title="Maven"
         description="Package manager and build tool for Java and Kotlin projects."
         skillLevel={100}
+        hideWhenShrinked
         type="Tool"
       />
 
@@ -206,6 +209,7 @@ export const SkillsContent = () => {
         title="Npm"
         description="Package manager for JavaScript and TypeScript projects."
         skillLevel={100}
+        hideWhenShrinked
         type="Tool"
       />
 
@@ -218,16 +222,6 @@ export const SkillsContent = () => {
       />
 
       <SkillIcon
-        icon={
-          <Svg src="makefile" className="h-12 w-12 pl-1" alt="Makefile logo" />
-        }
-        title="Makefile"
-        description="Makefile is a build automation tool to automate the build process of C and C++ projects."
-        skillLevel={9}
-        type="Tool"
-      />
-
-      <SkillIcon
         icon={<Svg src="meson" className="h-12 w-12" alt="Meson logo" />}
         title="meson"
         description="Meson is a user friendly build automation tool to automate the build process of C and C++ projects."
@@ -236,60 +230,10 @@ export const SkillsContent = () => {
       />
 
       <SkillIcon
-        icon={<Svg src="clang" className="h-12 w-12" alt="C logo" />}
-        title="Clang"
-        skillLevel={5}
-        type="Tool"
-      />
-
-      <SkillIcon
-        icon={<Svg src="cmake" className="h-10 w-10" alt="C logo" />}
-        title="CMake"
-        skillLevel={10}
-        type="Tool"
-      />
-
-      <SkillIcon
-        icon={
-          <Image
-            loading="lazy"
-            sizes={imageSizes}
-            placeholder="blur"
-            src={raylib}
-            className="h-9 w-9 rounded-md"
-            alt="Raylib logo"
-          />
-        }
-        title="Raylib"
-        learning
-        description="Raylib is a simple and easy-to-use library to enjoy videogames programming."
-        skillLevel={40}
-        type="Library-framework"
-      />
-
-      <SkillIcon
-        icon={
-          <Svg src="typescript" className="h-10 w-10" alt="TypeScript logo" />
-        }
-        title="TypeScript"
-        description="My preferred language for web development. I choose TypeScript whenever possible."
-        skillLevel={100}
-        type="Language"
-      />
-      <SkillIcon
-        icon={
-          <Svg src="javascript" className="h-10 w-10" alt="JavaScript logo" />
-        }
-        title="JavaScript"
-        description="While I can work with plain JavaScript, I prefer TypeScript for its added type safety and tooling"
-        skillLevel={100}
-        type="Language"
-      />
-
-      <SkillIcon
         icon={
           <Svg src="wasm" className="h-11 w-11 rounded-md" alt="Wasm logo" />
         }
+        hideWhenShrinked
         title="Web Assembly"
         description="Web assembly allows to run low-level code directly in the browser."
         skillLevel={100}
@@ -304,6 +248,22 @@ export const SkillsContent = () => {
       />
 
       <SkillIcon
+        title="Pydantic"
+        skillLevel={100}
+        icon={
+          <Image
+            loading="lazy"
+            sizes={imageSizes}
+            placeholder="blur"
+            src={pydantic}
+            className="h-12 w-12 rounded-md"
+            alt="Pydantic logo"
+          />
+        }
+        type="Language"
+      />
+
+      <SkillIcon
         title="Gemini API"
         icon={<Svg src="gemini" className="h-10 w-10" alt="Gemini logo" />}
         type="API"
@@ -311,24 +271,27 @@ export const SkillsContent = () => {
       />
 
       <SkillIcon
-        title="lua"
-        icon={<Svg src="lua" alt="lua logo" className="h-10 w-10" />}
-        skillLevel={3}
-        type="Language"
-      />
-
-      <SkillIcon
-        title="Haskell"
-        icon={<Svg src="haskell" alt="haskell logo" className="h-10 w-10" />}
-        skillLevel={1}
-        type="Language"
+        title="Google Cloud (VertexAI)"
+        icon={
+          <Svg
+            src="google-cloud"
+            className="h-10 w-10"
+            alt="Google Cloud logo"
+          />
+        }
+        type="Service"
+        hideWhenShrinked
+        description="I started to learn Google Cloud Vertex AI for managing my Gemini APIs more efficently."
+        skillLevel={10}
+        learning
       />
 
       <SkillIcon
         icon={<Svg src="flask" className="h-10 w-10" alt="Flask logo" />}
         title="Flask"
         description="Python web framework for building web applications and APIs. Similar to express.js, fastify and ktor."
-        skillLevel={40}
+        skillLevel={80}
+        learning
         type="Library-framework"
       />
 
@@ -340,50 +303,18 @@ export const SkillsContent = () => {
             alt="jupyter notebook logo"
           />
         }
+        hideWhenShrinked
         title="Jupyter Notebook"
         description="Web-based interactive computing environment for huge computational python tasks."
         type="Service"
       />
 
       <SkillIcon
-        icon={<Svg src="numpy" className="h-9 w-9" alt="Numpy logo" />}
-        title="Numpy"
-        description="Python library for fast array computations than original Python lists."
-        skillLevel={100}
-        type="Library-framework"
-      />
-
-      <SkillIcon
         icon={<Svg src="colab" className="h-10 w-10" alt="Colab logo" />}
         title="Google Colab"
+        hideWhenShrinked
         description="Google Colab is a free Jupyter notebook environment."
         type="Dev tool"
-      />
-
-      <SkillIcon
-        icon={
-          <Svg src="matplotlib" className="h-10 w-10" alt="Matplotlib logo" />
-        }
-        title="Matplotlib"
-        description="Python library for creating graphs and charts."
-        skillLevel={10}
-        type="Library-framework"
-      />
-
-      <SkillIcon
-        icon={<Svg src="pandas" className="h-10 w-10" alt="Pandas logo" />}
-        title="Pandas"
-        description="Python library for data analysis and manipulation."
-        skillLevel={5}
-        type="Library-framework"
-      />
-
-      <SkillIcon
-        icon={<Svg src="pytorch" className="h-9 w-9" alt="Pytorch logo" />}
-        title="PyTorch"
-        description="Most popular machine learning library for Python."
-        skillLevel={6}
-        type="Library-framework"
       />
 
       <SkillIcon
@@ -397,6 +328,7 @@ export const SkillsContent = () => {
       <SkillIcon
         icon={<Svg src="xml" className="h-10 w-10" alt="HTML5 logo" />}
         title="XML"
+        hideWhenShrinked
         description="Standart markup language for creating the structres."
         skillLevel={100}
         type="Language"
@@ -440,14 +372,6 @@ export const SkillsContent = () => {
         title="React"
         description="My primary web frontend library for building dynamic user interfaces."
         skillLevel={100}
-        type="Library-framework"
-      />
-
-      <SkillIcon
-        icon={<Svg src="vue" className="h-9 w-9" alt="Vue logo" />}
-        title="Vue"
-        description="Web frontend library for building user interfaces."
-        skillLevel={8}
         type="Library-framework"
       />
 
@@ -502,6 +426,7 @@ export const SkillsContent = () => {
             alt="Turborepo logo"
           />
         }
+        hideWhenShrinked
         title="Turborepo"
         description="Monorepo management tool for JavaScript and TypeScript projects."
         type="Library-framework"
@@ -525,22 +450,9 @@ export const SkillsContent = () => {
       />
 
       <SkillIcon
-        icon={<Svg src="php" className="h-10 w-10" alt="Php logo" />}
-        title="PHP"
-        skillLevel={3}
-        type="Language"
-      />
-
-      <SkillIcon
-        icon={<Svg src="laravel" className="h-10 w-10" alt="Laravel logo" />}
-        title="Laravel"
-        skillLevel={2}
-        type="Library-framework"
-      />
-
-      <SkillIcon
         icon={<Svg src="vitest" className="h-10 w-10" alt="Vitest logo" />}
         title="vitest"
+        hideWhenShrinked
         description="Testing library for Javascript/Typescript applications."
         skillLevel={100}
         type="Library-framework"
@@ -549,6 +461,7 @@ export const SkillsContent = () => {
       <SkillIcon
         icon={<Svg src="jest" className="h-9 w-9" alt="Jest logo" />}
         title="Jest"
+        hideWhenShrinked
         description="Jest is an unit testing library for Javascript/Typescript applications."
         skillLevel={100}
         type="Library-framework"
@@ -557,6 +470,7 @@ export const SkillsContent = () => {
       <SkillIcon
         icon={<Svg src="cypress" className="h-9 w-9" alt="Cypress logo" />}
         title="Cypress"
+        hideWhenShrinked
         description="E2E Testing library for Javascript/Typescript applications."
         skillLevel={100}
         type="Library-framework"
@@ -565,6 +479,7 @@ export const SkillsContent = () => {
       <SkillIcon
         icon={<Svg src="junit" className="h-9 w-9" alt="Junit logo" />}
         title="Junit"
+        hideWhenShrinked
         description="Unit testing library for Java."
         type="Library-framework"
       />
@@ -618,6 +533,7 @@ export const SkillsContent = () => {
       <SkillIcon
         icon={<Svg src="hcaptcha" className="h-10 w-10" alt="HCaptcha logo" />}
         title="HCaptcha"
+        hideWhenShrinked
         description="HCaptcha is a bot protection, human verification, and CAPTCHA service."
         type="Service"
       />
@@ -673,6 +589,7 @@ export const SkillsContent = () => {
         skillLevel={90}
         type="API"
       />
+
       <SkillIcon
         icon={<Svg src="express" className="h-10 w-10" alt="Express.js logo" />}
         title="Express.js"
@@ -684,6 +601,7 @@ export const SkillsContent = () => {
       <SkillIcon
         icon={<Svg src="hono" className="h-9 w-9" alt="Express.js logo" />}
         title="Hono"
+        hideWhenShrinked
         description="Hono is a simple web framework for Node.js."
         skillLevel={100}
         type="Library-framework"
@@ -692,6 +610,7 @@ export const SkillsContent = () => {
       <SkillIcon
         icon={<Svg src="fastify" className="h-8 w-8" alt="Fastify logo" />}
         title="Fastify"
+        hideWhenShrinked
         description="Alternative to Express.js. Since Express.js is no longer actively maintained, I prefer using Fastify as my Node.js framework"
         skillLevel={100}
         type="Library-framework"
@@ -721,6 +640,7 @@ export const SkillsContent = () => {
         }
         learning
         skillLevel={30}
+        hideWhenShrinked
         title="Pgbackrest"
         description="Pgbackrest is a command-line tool for backing up PostgreSQL databases."
         type="Dev tool"
@@ -737,6 +657,7 @@ export const SkillsContent = () => {
             alt="Clerk logo"
           />
         }
+        hideWhenShrinked
         title="Clerk"
         description="Easiest way to add authentication to your app with just a few lines of code."
         type="Service"
@@ -753,6 +674,7 @@ export const SkillsContent = () => {
             alt="Neon logo"
           />
         }
+        hideWhenShrinked
         title="Neon"
         description="Postgres database provider service."
         type="Service"
@@ -761,7 +683,45 @@ export const SkillsContent = () => {
       <SkillIcon
         icon={<Svg src="xata" className="h-8 w-8 rounded-md" alt="Xata logo" />}
         title="Xata"
+        hideWhenShrinked
         description="Postgres database provider service."
+        type="Service"
+      />
+      <SkillIcon
+        icon={<Svg src="vercel" className="h-8 w-8" alt="Vercel logo" />}
+        title="Vercel"
+        hideWhenShrinked
+        description="Platform for deploying and hosting web applications with automatic CI/CD."
+        skillLevel={null}
+        type="Service"
+      />
+
+      <SkillIcon
+        icon={
+          <Image
+            loading="lazy"
+            sizes={imageSizes}
+            placeholder="blur"
+            src={hetzner}
+            className="h-10 w-10 rounded-md"
+            alt="Hetzner logo"
+          />
+        }
+        hideWhenShrinked
+        title="Hetzner"
+        description="Hetzner is a cloud hosting provider that offers a range of services including virtual servers, managed databases, and managed DNS. I'm using it for VPS."
+        skillLevel={null}
+        type="Service"
+      />
+
+      <SkillIcon
+        icon={
+          <Svg src="cloudflare" className="h-10 w-10" alt="Cloudflare logo" />
+        }
+        title="Cloudflare"
+        hideWhenShrinked
+        description="Web infrastructure and security services including CDN, DNS, and DDoS protection."
+        skillLevel={null}
         type="Service"
       />
 
@@ -773,6 +733,7 @@ export const SkillsContent = () => {
             alt="Upstash logo"
           />
         }
+        hideWhenShrinked
         title="upstash"
         description="I've used their redis service for a while. It's a great service."
         type="Service"
@@ -781,8 +742,9 @@ export const SkillsContent = () => {
       <SkillIcon
         icon={<Svg src="mysql" className="h-9 w-9" alt="PostgreSQL logo" />}
         title="MySQL"
+        hideWhenShrinked
         description="One of the most popular relational databases."
-        skillLevel={90}
+        skillLevel={40}
         type="Database"
       />
 
@@ -790,7 +752,8 @@ export const SkillsContent = () => {
         icon={<Svg src="chroma" className="h-9 w-9" alt="Chroma logo" />}
         title="Chroma"
         description="Vector database for storing and querying vector data. Vector databases are used for machine learning and data analysis."
-        skillLevel={50}
+        hideWhenShrinked
+        skillLevel={30}
         type="Database"
       />
 
@@ -854,6 +817,7 @@ export const SkillsContent = () => {
       <SkillIcon
         icon={<Svg src="keydb" className="h-9 w-9" alt="KeyDB logo" />}
         title="KeyDB"
+        hideWhenShrinked
         description="Multithreaded fork of Redis focusing on high performance and lower latency.."
         skillLevel={null}
         type="Database"
@@ -870,6 +834,7 @@ export const SkillsContent = () => {
             alt="Dragonflydb logo"
           />
         }
+        hideWhenShrinked
         title="Dragonflydb"
         description="Alternative to Redis and keydb with a focus on performance and simplicity. Dragonflydb claims that it's 25x faster than Redis"
         skillLevel={null}
@@ -887,6 +852,7 @@ export const SkillsContent = () => {
       <SkillIcon
         icon={<Svg src="linux" className="h-10 w-10" alt="Linux logo" />}
         title="Linux"
+        hideWhenShrinked
         description="I hate windows."
         type="Tool"
       />
@@ -896,6 +862,7 @@ export const SkillsContent = () => {
         description="Blender is a free 3D modelling software for creating 3D models, animations, and simulations."
         skillLevel={8}
         learning
+        hideWhenShrinked
         type="Dev tool"
       />
       <SkillIcon
@@ -903,6 +870,7 @@ export const SkillsContent = () => {
         title="VS Code"
         description="I'm using VS Code for coding web applications."
         skillLevel={null}
+        hideWhenShrinked
         type="Dev tool"
       />
       <SkillIcon
@@ -911,6 +879,7 @@ export const SkillsContent = () => {
         icon={
           <Svg src="androidstudio" className="h-9 w-9" alt="android studio" />
         }
+        hideWhenShrinked
         skillLevel={null}
         type="Dev tool"
       />
@@ -918,6 +887,7 @@ export const SkillsContent = () => {
         title="IntelliJ IDEA"
         description="I'm using IntelliJ for developing Kotlin applications."
         icon={<Svg src="intellij" className="h-9 w-9" alt="IntelliJ" />}
+        hideWhenShrinked
         skillLevel={null}
         type="Dev tool"
       />
@@ -927,6 +897,7 @@ export const SkillsContent = () => {
         description="I'm using Pycharm for developing Python applications."
         icon={<Svg src="pycharm" className="h-9 w-9" alt="Pycharm" />}
         skillLevel={null}
+        hideWhenShrinked
         type="Dev tool"
       />
 
@@ -935,6 +906,7 @@ export const SkillsContent = () => {
         description="Clion is a powerfull IDE for developing C/C++ applications."
         icon={<Svg src="clion" className="h-10 w-10" alt="Clion" />}
         skillLevel={null}
+        hideWhenShrinked
         type="Dev tool"
       />
 
@@ -945,6 +917,7 @@ export const SkillsContent = () => {
         title="Supermaven"
         description="AI-powered development assistant for enhanced coding productivity."
         skillLevel={null}
+        hideWhenShrinked
         type="Dev tool"
       />
 
@@ -960,84 +933,33 @@ export const SkillsContent = () => {
         title="Vite"
         description="Next-generation frontend build tool offering lightning-fast development experience."
         type="Library-framework"
+        hideWhenShrinked
       />
       <SkillIcon
         icon={<Svg src="webpack" className="h-9 w-9" alt="Webpack logo" />}
         title="Webpack"
         description="Module bundler for JavaScript applications with extensive configuration options."
         type="Library-framework"
+        hideWhenShrinked
       />
+
       <SkillIcon
-        icon={
-          <Image
-            loading="lazy"
-            sizes={imageSizes}
-            placeholder="blur"
-            src={coolify}
-            className="h-12 w-12 rounded-md"
-            alt="Coolify logo"
-          />
-        }
-        title="Coolify"
-        description="Self-hosted Heroku/Vercel alternative for deploying applications, databases, and services. Used for managing personal infrastructure and hosting projects."
+        icon={<Svg src="nginx" className="h-10 w-10" alt="Docker logo" />}
+        title="Nginx"
+        skillLevel={60}
         type="Tool"
-      />
-      <SkillIcon
-        icon={<Svg src="vercel" className="h-8 w-8" alt="Vercel logo" />}
-        title="Vercel"
-        description="Platform for deploying and hosting web applications with automatic CI/CD."
-        skillLevel={null}
-        type="Service"
-      />
-      <SkillIcon
-        icon={
-          <Image
-            loading="lazy"
-            sizes={imageSizes}
-            placeholder="blur"
-            src={lemonsqueezy}
-            className="h-12 w-12 rounded-md"
-            alt="Coolify logo"
-          />
-        }
-        title="Lemonsquezzy"
-        description="Lemonsquezzy is a payment system similar to Stripe. It's a great way to accept payments online. I'm also trying to use it because of supporting Turkey."
+        description="Nginx is a reverse proxy server that sits in front of servers to handle incoming requests and distribute them to the appropriate servers. It can improve security, performance, and scalability."
         learning
-        skillLevel={3}
-        type="Service"
       />
-      <SkillIcon
-        icon={
-          <Image
-            loading="lazy"
-            sizes={imageSizes}
-            placeholder="blur"
-            src={hetzner}
-            className="h-10 w-10 rounded-md"
-            alt="Hetzner logo"
-          />
-        }
-        title="Hetzner"
-        description="Hetzner is a cloud hosting provider that offers a range of services including virtual servers, managed databases, and managed DNS. I'm using it for VPS."
-        skillLevel={null}
-        type="Service"
-      />
-      <SkillIcon
-        icon={
-          <Svg src="cloudflare" className="h-10 w-10" alt="Cloudflare logo" />
-        }
-        title="Cloudflare"
-        description="Web infrastructure and security services including CDN, DNS, and DDoS protection."
-        skillLevel={null}
-        type="Service"
-      />
+
       <SkillIcon
         icon={<Svg src="docker" className="h-10 w-10" alt="Docker logo" />}
         title="Docker"
         description="I'm using Docker for containerizing applications, ensuring consistent development environments, and simplifying deployment processes."
-        skillLevel={40}
+        skillLevel={100}
         type="Tool"
       />
+
       <SkillIcon
         icon={
           <Svg src="kubernetes" className="h-10 w-10" alt="Kubernetes logo" />
@@ -1048,20 +970,135 @@ export const SkillsContent = () => {
         learning
         type="Tool"
       />
+
       <SkillIcon
-        icon={<Svg src="nginx" className="h-10 w-10" alt="Docker logo" />}
-        title="Nginx"
-        skillLevel={40}
+        icon={<Svg src="clang" className="h-12 w-12" alt="C logo" />}
+        title="Clang"
+        skillLevel={5}
+        hideWhenShrinked
         type="Tool"
-        description="Nginx is a reverse proxy server that sits in front of servers to handle incoming requests and distribute them to the appropriate servers. It can improve security, performance, and scalability."
-        learning
       />
 
       <SkillIcon
-        icon={<Svg src="porkbun" className="h-10 w-10" alt="Porkbun logo" />}
-        title="Porkbun"
-        description="Domain registrar service for managing and purchasing domain names."
-        skillLevel={null}
+        icon={<Svg src="cmake" className="h-10 w-10" alt="C logo" />}
+        title="CMake"
+        skillLevel={10}
+        hideWhenShrinked
+        type="Tool"
+      />
+
+      <SkillIcon
+        icon={
+          <Image
+            loading="lazy"
+            sizes={imageSizes}
+            placeholder="blur"
+            src={raylib}
+            className="h-9 w-9 rounded-md"
+            alt="Raylib logo"
+          />
+        }
+        title="Raylib"
+        learning
+        description="Raylib is a simple and easy-to-use library to enjoy videogames programming."
+        skillLevel={40}
+        hideWhenShrinked
+        type="Library-framework"
+      />
+
+      <SkillIcon
+        icon={<Svg src="php" className="h-10 w-10" alt="Php logo" />}
+        title="PHP"
+        skillLevel={3}
+        hideWhenShrinked
+        type="Language"
+      />
+
+      <SkillIcon
+        icon={<Svg src="laravel" className="h-10 w-10" alt="Laravel logo" />}
+        title="Laravel"
+        skillLevel={2}
+        hideWhenShrinked
+        type="Library-framework"
+      />
+
+      <SkillIcon
+        icon={<Svg src="pytorch" className="h-9 w-9" alt="Pytorch logo" />}
+        title="PyTorch"
+        description="Most popular machine learning library for Python. I tried to learn it for 20 hours or something but my math skills are not good enough for pytorch. Maybe I'll try it again later."
+        skillLevel={6}
+        hideWhenShrinked
+        type="Library-framework"
+      />
+
+      <SkillIcon
+        icon={<Svg src="spring" className="h-9 w-9" alt="Spring logo" />}
+        title="Spring IoC Container"
+        description="Spring IoC is a way to manage lifecycle and dependencies of objects in Java applications."
+        skillLevel={50}
+        hideWhenShrinked
+        type="Library-framework"
+      />
+
+      <SkillIcon
+        icon={<Svg src="spring" className="h-9 w-9" alt="Spring logo" />}
+        title="Spring Boot"
+        description="Spring Boot is a Java based backend framework. Allows us to build fast and scalable backend applications using IoC container and other features."
+        skillLevel={10}
+        hideWhenShrinked
+        type="Library-framework"
+      />
+
+      <SkillIcon
+        icon={<Svg src="rabbitmq" className="h-9 w-9" alt="RabbitMQ logo" />}
+        title="RabbitMQ"
+        skillLevel={20}
+        hideWhenShrinked
+        type="Library-framework"
+      />
+
+      <SkillIcon
+        icon={
+          <Svg src="makefile" className="h-12 w-12 pl-1" alt="Makefile logo" />
+        }
+        title="Makefile"
+        description="Makefile is a build automation tool to automate the build process of C and C++ projects."
+        skillLevel={9}
+        hideWhenShrinked
+        type="Language"
+      />
+
+      <SkillIcon
+        title="lua"
+        icon={<Svg src="lua" alt="lua logo" className="h-10 w-10" />}
+        skillLevel={5}
+        hideWhenShrinked
+        type="Language"
+      />
+
+      <SkillIcon
+        title="Haskell"
+        icon={<Svg src="haskell" alt="haskell logo" className="h-10 w-10" />}
+        skillLevel={1}
+        hideWhenShrinked
+        type="Language"
+      />
+
+      <SkillIcon
+        icon={
+          <Image
+            loading="lazy"
+            sizes={imageSizes}
+            placeholder="blur"
+            src={lemonsqueezy}
+            className="h-12 w-12 rounded-md"
+            alt="Lemonsquezzy logo"
+          />
+        }
+        title="Lemonsquezzy"
+        description="Lemonsquezzy is a payment system similar to Stripe. It's a great way to accept payments online. I'm also trying to use it because of supporting Turkey."
+        learning
+        skillLevel={3}
         type="Service"
       />
 
@@ -1069,6 +1106,7 @@ export const SkillsContent = () => {
         icon={<Svg src="mongodb" className="h-10 w-10" alt="Mangodb logo" />}
         title="Mangodb"
         skillLevel={9}
+        hideWhenShrinked
         type="Database"
       />
     </div>

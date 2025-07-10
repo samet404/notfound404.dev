@@ -15,3 +15,5 @@ export const dialogInfoAtom = atom<{
 } | null>(null)
 
 export const skillsCategoryAtom = atom<SkillType>('All')
+
+export const skillsShrinkedAtom = atom<boolean>(true)

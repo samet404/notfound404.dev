@@ -63,7 +63,7 @@ export const SkillsCategoryDropdown = () => {
         onClick={() => setIsOpen(!isOpen)}
         className={`
                     ${isDarkTheme ? 'bg-[#ffffff90]' : 'bg-[#ffffff90]'}
-                    flex  w-[15rem] cursor-none flex-row
+                    flex  sm:w-[12rem] cursor-none flex-row
                     items-center
                     justify-between 
                     gap-2
