@@ -102,7 +102,7 @@ export const CustomCursor = () => {
     return (
         <canvas
             ref={canvasRef}
-            className='sm:hidden lg:flex'
+            className='hidden lg:flex'
             style={{
                 position: 'fixed',
                 top: 0,
