@@ -27,7 +27,7 @@
       "@/types*": ["./src/types/*"],
       "@/app*": ["./src/app/*"],
       "@/public*": ["./public/*"],
-      "@/svg*": ["public/images/svg/*"],
+      "@/svg/*": ["public/images/svg/*"],
       "@/png*": ["public/images/png/*"],
       "@/jpg*": ["public/images/jpg/*"],
       "@/fonts*": ["public/fonts/*"],

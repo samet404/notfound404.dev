@@ -13,7 +13,6 @@ import clerk from '@/webp/clerk.webp'
 import hetzner from '@/webp/hetzner.webp'
 import neon from '@/png/neon.png'
 import dragonflydb from '@/png/dragonflydb.png'
-import lemonsqueezy from '@/jpg/lemonsquezzy.jpg'
 import sqldelight from '@/png/sqldelight.png'
 import pgbackrest from '@/png/pgbackrest.png'
 import pydantic from '@/png/pydantic.png'
@@ -32,8 +31,7 @@ export const SkillsContent = () => {
         type="Language"
       />
 
-
-    <SkillIcon
+      <SkillIcon
         icon={
           <Image
             loading="lazy"
@@ -46,6 +44,34 @@ export const SkillsContent = () => {
         }
         title="Kotlin Multiplatform (Android, Desktop)"
         description="Kotlin Multiplatform is a framework for building cross-platform applications with Kotlin."
+        skillLevel={100}
+        type="Library-framework"
+      />
+
+      <SkillIcon
+        icon={
+          <Image
+            loading="lazy"
+            sizes={imageSizes}
+            placeholder="blur"
+            src={ktor}
+            className="h-10 w-10 rounded-md"
+            alt="Ktor"
+          />
+        }
+        title="Ktor"
+        description="Kotlin server framework for building server applications with Kotlin. Very similar to express.js."
+        skillLevel={57}
+        learning
+        type="Library-framework"
+      />
+
+      <SkillIcon
+        title="Jetpack Compose"
+        description="Jetpack compose is a modern UI library for building native java/kotlin applications."
+        icon={
+          <Svg src="jetpackcompose" alt="jetpack compose" className="h-9 w-9" />
+        }
         skillLevel={100}
         type="Library-framework"
       />
@@ -86,25 +112,6 @@ export const SkillsContent = () => {
         type="API"
       /> */}
 
-
-      <SkillIcon
-        icon={
-          <Image
-            loading="lazy"
-            sizes={imageSizes}
-            placeholder="blur"
-            src={ktor}
-            className="h-10 w-10 rounded-md"
-            alt="Ktor"
-          />
-        }
-        title="Ktor"
-        description="Kotlin server framework for building server applications with Kotlin. Very similar to express.js."
-        skillLevel={57}
-        learning
-        type="Library-framework"
-      />
-
       <SkillIcon
         icon={
           <Image
@@ -113,7 +120,7 @@ export const SkillsContent = () => {
             placeholder="blur"
             src={koin}
             className="h-10 w-10 rounded-md"
-            alt="Ktor"
+            alt="Koin"
           />
         }
         hideWhenShrinked
@@ -177,16 +184,6 @@ export const SkillsContent = () => {
             /> */}
 
       <SkillIcon
-        title="Jetpack Compose"
-        description="Jetpack compose is a modern UI library for building native java/kotlin applications."
-        icon={
-          <Svg src="jetpackcompose" alt="jetpack compose" className="h-8 w-8" />
-        }
-        skillLevel={100}
-        type="Library-framework"
-      />
-
-      <SkillIcon
         icon={<Svg src="gradle" className="h-10 w-10" alt="Gradle logo" />}
         title="Gradle"
         description="Package manager and build tool for Java and Kotlin projects."
@@ -224,6 +221,7 @@ export const SkillsContent = () => {
       <SkillIcon
         icon={<Svg src="meson" className="h-12 w-12" alt="Meson logo" />}
         title="meson"
+        hideWhenShrinked
         description="Meson is a user friendly build automation tool to automate the build process of C and C++ projects."
         skillLevel={80}
         type="Tool"
@@ -250,6 +248,7 @@ export const SkillsContent = () => {
       <SkillIcon
         title="Pydantic"
         skillLevel={100}
+        hideWhenShrinked
         icon={
           <Image
             loading="lazy"
@@ -268,22 +267,6 @@ export const SkillsContent = () => {
         icon={<Svg src="gemini" className="h-10 w-10" alt="Gemini logo" />}
         type="API"
         description="I can use gemini API efficently by using fine tunning and applying Retrieval-augmented generation (RAG) techniques."
-      />
-
-      <SkillIcon
-        title="Google Cloud (VertexAI)"
-        icon={
-          <Svg
-            src="google-cloud"
-            className="h-10 w-10"
-            alt="Google Cloud logo"
-          />
-        }
-        type="Service"
-        hideWhenShrinked
-        description="I started to learn Google Cloud Vertex AI for managing my Gemini APIs more efficently."
-        skillLevel={10}
-        learning
       />
 
       <SkillIcon
@@ -444,6 +427,7 @@ export const SkillsContent = () => {
       <SkillIcon
         icon={<Svg src="jotai" className="h-10 w-10" alt="Jotai logo" />}
         title="Jotai"
+        hideWhenShrinked
         description="Atomic state management library for React applications focusing on simplicity and performance."
         skillLevel={100}
         type="Library-framework"
@@ -487,6 +471,7 @@ export const SkillsContent = () => {
       <SkillIcon
         icon={<Svg src="zustand" className="h-10 w-10" alt="Zustand logo" />}
         title="Zustand"
+        hideWhenShrinked
         description="Simple, fast and scalable state management solution for React applications."
         skillLevel={100}
         type="Library-framework"
@@ -625,25 +610,6 @@ export const SkillsContent = () => {
         skillLevel={100}
         learning
         type="Database"
-      />
-
-      <SkillIcon
-        icon={
-          <Image
-            loading="lazy"
-            sizes={imageSizes}
-            placeholder="blur"
-            src={pgbackrest}
-            className="h-9 w-9 rounded-md pr-1"
-            alt="Pgbackrest logo"
-          />
-        }
-        learning
-        skillLevel={30}
-        hideWhenShrinked
-        title="Pgbackrest"
-        description="Pgbackrest is a command-line tool for backing up PostgreSQL databases."
-        type="Dev tool"
       />
 
       <SkillIcon
@@ -966,6 +932,7 @@ export const SkillsContent = () => {
         }
         title="Kubernetes"
         description="Kubernetes is open source, docker ochestration system developed by google. It makes it easy to manage multiple docker containers."
+        hideWhenShrinked
         skillLevel={4}
         learning
         type="Tool"
@@ -985,6 +952,15 @@ export const SkillsContent = () => {
         skillLevel={10}
         hideWhenShrinked
         type="Tool"
+      />
+
+      <SkillIcon
+        title="Godot"
+        hideWhenShrinked
+        learning
+        icon={<Svg src="godot" alt="Godot logo" className="h-10 w-10" />}
+        skillLevel={1}
+        type="Other"
       />
 
       <SkillIcon
@@ -1082,24 +1058,6 @@ export const SkillsContent = () => {
         skillLevel={1}
         hideWhenShrinked
         type="Language"
-      />
-
-      <SkillIcon
-        icon={
-          <Image
-            loading="lazy"
-            sizes={imageSizes}
-            placeholder="blur"
-            src={lemonsqueezy}
-            className="h-12 w-12 rounded-md"
-            alt="Lemonsquezzy logo"
-          />
-        }
-        title="Lemonsquezzy"
-        description="Lemonsquezzy is a payment system similar to Stripe. It's a great way to accept payments online. I'm also trying to use it because of supporting Turkey."
-        learning
-        skillLevel={3}
-        type="Service"
       />
 
       <SkillIcon

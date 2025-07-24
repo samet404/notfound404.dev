@@ -1,8 +1,11 @@
+"use client"
+
 import { Spinner } from '@/src/components/Spinner'
 import dynamic from 'next/dynamic'
 import { SkillsCategoryDropdown } from './SkillsCategoryDropdown'
 import { SkillLastUpdated } from './SkillLastUpdated'
 import { ShrinkSkills } from './ShrinkSkills'
+import { useEffect, useState } from 'react'
 
 const Content = dynamic(
   () => import('./SkillsContent').then((m) => m.SkillsContent),
@@ -16,6 +19,12 @@ const Content = dynamic(
 )
 
 export const Skills = () => {
+  const [mounted, setMounted] = useState<boolean>(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   return (
     <div className="flex flex-col gap-5 ">
       <div className="flex flex-col p-2">
@@ -44,7 +53,7 @@ export const Skills = () => {
           </div>
           <SkillLastUpdated />
         </div>
-        <Content />
+        {mounted && <Content />}  
       </div>
     </div>
   )

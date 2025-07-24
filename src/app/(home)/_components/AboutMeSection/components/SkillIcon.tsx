@@ -82,7 +82,7 @@ export const SkillIcon = ({
       onMouseLeave={handleMouseLeave}
       ref={iconRef}
       className={cn(
-        `group relative flex h-[3rem] w-[3rem] flex-col items-center justify-center  rounded-lg border-[0.15rem] bg-[#ffffffa3] p-[0.15rem] duration-200 hover:scale-110 hover:!opacity-100 hover:shadow-[0_0px_30px_3px_#ffffff79]`,
+        `group relative flex h-[3rem] w-[3rem] flex-col items-center justify-center  rounded-lg border-[0.15rem] bg-[#ffffffa3] p-[0.15rem] duration-200 hover:scale-110 hover:!opacity-100 hover:shadow-[0_0px_30px_3px_#ffffff9b]`,
         {
           'bg-[#ffffffac]': isDarkTheme,
           'border-[#fff67e]': type === 'Language',

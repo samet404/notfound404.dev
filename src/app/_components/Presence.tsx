@@ -100,7 +100,7 @@ export const Presence = () => {
       idle: 'bg-yellow-500',
       dnd: 'bg-red-500',
       offline: 'bg-gray-500',
-    })[status] || 'bg-gray-500'
+    })[status] ?? 'bg-gray-500'
 
   const getPlatformStatus = () =>
     [
@@ -112,7 +112,7 @@ export const Presence = () => {
       .join(', ')
 
   return (
-    <div className="fixed bottom-2 left-2 z-30 w-[12rem] max-w-sm animate-fade rounded-lg bg-[#000000aa] py-1 pl-[0.3rem] pr-[0.3rem] shadow-lg backdrop-blur-sm animate-delay-100">
+    <div className="fixed bottom-2 left-2 z-30 w-[12rem] max-w-sm animate-fade rounded-lg bg-[#000000aa] py-1 pl-[0.3rem] pr-[0.3rem] shadow-[0_0px_10px_1px_rgba(0,0,0,0.5)] backdrop-blur-sm animate-delay-100">
       <div className="flex w-full items-center justify-between">
         <div className="flex animate-pulse items-center justify-center gap-[0.4rem] p-1">
           <div

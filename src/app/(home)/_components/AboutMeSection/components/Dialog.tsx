@@ -80,7 +80,7 @@ export const Dialog = () => {
   const position = getDialogPosition(x, y)
 
   return (
-    <div className="pointer-events-none absolute inset-0 z-50">
+    <div className="pointer-events-none absolute inset-0 z-50 ">
       <div
         style={{
           position: 'absolute',
