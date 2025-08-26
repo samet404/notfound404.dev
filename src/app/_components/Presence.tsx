@@ -1,3 +1,5 @@
+/* eslint-disable no-constant-condition */
+/* eslint-disable @typescript-eslint/no-floating-promises */
 'use client'
 
 import { Svg } from '@/src/components/Svg'
@@ -5,6 +7,15 @@ import { cn } from '@/src/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import {
+  getPresenceTimeWorker,
+  postMsgToTimerWorker,
+  terminateTimerWorker,
+} from './presenceTimeWorkerUtils'
+import type {
+  TimerOnMsgData,
+  TimerWorkerPostMsgData,
+} from './presenceTimeWorker'
 
 type Activity = {
   name: string
@@ -40,37 +51,57 @@ export const Presence = () => {
   }, [])
 
   useEffect(() => {
-    try {
-      const localStoragePresence = localStorage.getItem('presence')
-      if (localStoragePresence === '0') {
-        return
-      }
-
-      if (!isOpen) setIsOpen(true)
-
-      const fetchPresence = async () => {
-        try {
-          const res = await fetch(
-            'https://api.lanyard.rest/v1/users/713803539117244496',
-          )
-          const json = await res.json()
-          if (json?.data) {
-            setPresenceData(json.data)
-          }
-        } catch (error) {
-          console.error('Failed to fetch presence:', error)
-          setError(true)
+    ;(async () => {
+      try {
+        const localStoragePresence = localStorage.getItem('presence')
+        if (localStoragePresence === '0') {
+          return
         }
+
+        if (!isOpen) setIsOpen(true)
+
+        const fetchPresence = async () => {
+          try {
+            const res = await fetch(
+              'https://api.lanyard.rest/v1/users/713803539117244496',
+            )
+            const json = await res.json()
+            if (json?.data) {
+              setPresenceData(json.data as unknown as PresenceData)
+            }
+          } catch (error) {
+            console.error('Failed to fetch presence:', error)
+            setError(true)
+          }
+        }
+
+        await fetchPresence()
+        const timerWorker = getPresenceTimeWorker()
+        const workerMsg: TimerOnMsgData = {
+          ID: 'presence',
+          ms: 2000,
+          type: 'interval',
+          event: 'start',
+        }
+
+        timerWorker.current.postMessage(workerMsg)
+        timerWorker.current.onmessage = (e: any) => {
+          const data = e.data as TimerWorkerPostMsgData
+          const { ID } = data
+
+          switch (ID) {
+            case 'presence':
+              fetchPresence()
+              break
+          }
+        }
+
+        return () => terminateTimerWorker()
+      } catch (e) {
+        console.error('Failed to setup presence:', e)
+        setError(true)
       }
-
-      fetchPresence()
-
-      const interval = setInterval(fetchPresence, 1000)
-      return () => clearInterval(interval)
-    } catch (e) {
-      console.error('Failed to setup presence:', e)
-      setError(true)
-    }
+    })()
   }, [isOpen])
 
   if (error || isMobile) return null
@@ -152,7 +183,7 @@ export const Presence = () => {
             {activity.name === 'YouTube Music' &&
               activity.assets?.large_image && (
                 <Link
-                  href={`https://music.youtube.com/watch?v=${getYTMusicLink(activity.assets.large_image) || ''}&list=LM`}
+                  href={getYTMusicLink(activity.assets.large_image) ?? ''}
                   target="_blank"
                   className="absolute left-0 top-0 z-10 flex h-full w-full items-center justify-center rounded-lg bg-[#0000006c] text-sm text-white opacity-0 duration-500 hover:opacity-100"
                 >
@@ -205,15 +236,35 @@ export const Presence = () => {
 
 const getYTMusicLink = (imageUrl: string): string | null => {
   try {
-    const parts = imageUrl.split('/')
-    const viIndex = parts.indexOf('vi')
+    if (!imageUrl) return null
 
-    if (viIndex === -1 || viIndex + 1 >= parts.length) return null
+    let foundLink = false
+    let link = ''
+    let charIndex = imageUrl.length - 1
+    let slashFound = 0
 
-    const nextPart = parts[viIndex + 1]
-    if (!nextPart) return null
+    while (true) {
+      if (charIndex < 0) break
 
-    return nextPart.split('?')[0]?.split('/')[0] || null
+      const char = imageUrl[charIndex]
+      if (char === '/') {
+        if (slashFound == 1) {
+          foundLink = true
+          break
+        }
+
+        slashFound++
+        charIndex--
+        continue
+      }
+
+      if (slashFound === 1) link = imageUrl[charIndex] + link
+      charIndex--
+    }
+
+    if (!foundLink) return null
+
+    return `https://music.youtube.com/watch?v=${link}`
   } catch (e) {
     console.error('Failed to extract YouTube Music link:', e)
     return null

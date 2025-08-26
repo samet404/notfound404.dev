@@ -32,6 +32,7 @@ const config = {
     JSX: true,
   },
   rules: {
+    'no-extra-semi': 'off',
     // These opinionated rules are enabled in stylistic-type-checked above.
     // Feel free to reconfigure them to your own preference.
     'react/react-in-jsx-scope': 'off',

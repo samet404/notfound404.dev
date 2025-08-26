@@ -14,9 +14,9 @@ import hetzner from '@/webp/hetzner.webp'
 import neon from '@/png/neon.png'
 import dragonflydb from '@/png/dragonflydb.png'
 import sqldelight from '@/png/sqldelight.png'
-import pgbackrest from '@/png/pgbackrest.png'
 import pydantic from '@/png/pydantic.png'
 import milvus from '@/png/milvus.png'
+import openrouter from '@/png/openrouter.png'
 
 const imageSizes = 'calc(1vw + 37px)'
 
@@ -61,8 +61,7 @@ export const SkillsContent = () => {
         }
         title="Ktor"
         description="Kotlin server framework for building server applications with Kotlin. Very similar to express.js."
-        skillLevel={57}
-        learning
+        skillLevel={100}
         type="Library-framework"
       />
 
@@ -101,6 +100,17 @@ export const SkillsContent = () => {
         description="While I can work with plain JavaScript, I prefer TypeScript for its added type safety and tooling"
         skillLevel={100}
         type="Language"
+      />
+
+      <SkillIcon
+        title="Webflow"
+        icon={
+          <Svg src="webflow" className="h-8 w-8" alt="JavaScript logo" />
+        }
+        type="Tool"
+        learning
+        description='Webflow is a website builder for creating basic, designer-friendly websites. It is a great tool for beginners and small businesses.'
+        skillLevel={30}
       />
 
       {/* <SkillIcon
@@ -270,11 +280,27 @@ export const SkillsContent = () => {
       />
 
       <SkillIcon
+        title="Openrouter"
+        icon={
+          <Image
+            loading="lazy"
+            sizes={imageSizes}
+            placeholder="blur"
+            src={openrouter}
+            className="h-10 w-10 rounded-md"
+            alt="Kotlin Multiplatform"
+          />
+        }
+        type="Service"
+        description="Openrouter is a very good service which gives you accesss to all the AI models with one API call. Without openrouter, its really hard to maintain different Cloud service providers for different models at the same time."
+        skillLevel={100}
+      />
+
+      <SkillIcon
         icon={<Svg src="flask" className="h-10 w-10" alt="Flask logo" />}
         title="Flask"
         description="Python web framework for building web applications and APIs. Similar to express.js, fastify and ktor."
         skillLevel={80}
-        learning
         type="Library-framework"
       />
 
@@ -975,7 +1001,6 @@ export const SkillsContent = () => {
           />
         }
         title="Raylib"
-        learning
         description="Raylib is a simple and easy-to-use library to enjoy videogames programming."
         skillLevel={40}
         hideWhenShrinked

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import ProjectBox from './ProjectBox'
 import pixgulogo from '@/png/logo.png'
 import dysphoria from '@/png/dysphoria.png'
-import bloomy from '@/png/bloomy.png'
+import bloomia from '@/png/bloomia.png'
 import { Svg } from '@/src/components/Svg'
 import { FinalWordsDisplay } from './FinalWordsDisplay'
 import { Repos } from './Repos'
@@ -56,14 +56,13 @@ export const Content = () => {
             thumbnail={
               <Image
                 key={0}
-                src={bloomy}
+                src={bloomia}
                 alt="project"
                 className="h-full rounded-lg bg-[rgba(255,255,255,0.3)] object-contain"
                 placeholder="blur"
                 sizes="(min-width: 500px) calc(9.64vw + 370px), calc(90vw - 18px)"
               />
             }
-            videoPath="/videos/bloomia.mp4"
             name={'Bloomia'}
             tags={[
               'under development',
