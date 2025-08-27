@@ -104,13 +104,20 @@ export const SkillsContent = () => {
 
       <SkillIcon
         title="Webflow"
-        icon={
-          <Svg src="webflow" className="h-8 w-8" alt="JavaScript logo" />
-        }
+        icon={<Svg src="webflow" className="h-8 w-8" alt="Webflow logo" />}
         type="Tool"
         learning
-        description='Webflow is a website builder for creating basic, designer-friendly websites. It is a great tool for beginners and small businesses.'
-        skillLevel={30}
+        description="Webflow is a website builder for creating basic, designer-friendly websites. It is a great tool for beginners and small businesses."
+        skillLevel={50}
+      />
+
+      <SkillIcon
+        title="GSAP"
+        icon={<Svg src="gsap" className="h-10 w-10" alt="GSAP logo" />}
+        type="Library-framework"
+        learning
+        description="GSAP is a highly customizable Javascript animation library."
+        skillLevel={22}
       />
 
       {/* <SkillIcon
@@ -140,20 +147,20 @@ export const SkillsContent = () => {
         type="Library-framework"
       />
 
-      <SkillIcon
+      {/* <SkillIcon
         title="Dagger hilt"
         icon={<Svg src="android" className="h-10 w-10" alt="Android logo" />}
         description="Dependency injection library for kotlin and android."
         skillLevel={70}
         hideWhenShrinked
         type="Library-framework"
-      />
+      /> */}
 
       <SkillIcon
         title="Android NDK"
         icon={<Svg src="android" className="h-10 w-10" alt="Android logo" />}
         description="Android Native Development Kit (NDK) is a set of tools that allows you to use C and C++ code with Android."
-        skillLevel={20}
+        skillLevel={1}
         learning
         hideWhenShrinked
         type="Other"
@@ -276,6 +283,7 @@ export const SkillsContent = () => {
         title="Gemini API"
         icon={<Svg src="gemini" className="h-10 w-10" alt="Gemini logo" />}
         type="API"
+        hideWhenShrinked
         description="I can use gemini API efficently by using fine tunning and applying Retrieval-augmented generation (RAG) techniques."
       />
 
@@ -288,11 +296,11 @@ export const SkillsContent = () => {
             placeholder="blur"
             src={openrouter}
             className="h-10 w-10 rounded-md"
-            alt="Kotlin Multiplatform"
+            alt="Operouter logo"
           />
         }
-        type="Service"
-        description="Openrouter is a very good service which gives you accesss to all the AI models with one API call. Without openrouter, its really hard to maintain different Cloud service providers for different models at the same time."
+        type="API"
+        description="Openrouter is a very good API service which gives you accesss to all the AI models with one API call. Without openrouter, its really hard to maintain multiple Cloud service providers to use different models at the same time."
         skillLevel={100}
       />
 
@@ -561,6 +569,7 @@ export const SkillsContent = () => {
         title="WebSocket"
         description="Protocol for full-duplex communication channels over TCP connection."
         skillLevel={100}
+        hideWhenShrinked
         type="API"
       />
       <SkillIcon
@@ -983,7 +992,6 @@ export const SkillsContent = () => {
       <SkillIcon
         title="Godot"
         hideWhenShrinked
-        learning
         icon={<Svg src="godot" alt="Godot logo" className="h-10 w-10" />}
         skillLevel={1}
         type="Other"
