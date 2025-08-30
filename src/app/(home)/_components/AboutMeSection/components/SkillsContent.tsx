@@ -108,7 +108,7 @@ export const SkillsContent = () => {
         type="Tool"
         learning
         description="Webflow is a website builder for creating basic, designer-friendly websites. It is a great tool for beginners and small businesses."
-        skillLevel={50}
+        skillLevel={70}
       />
 
       <SkillIcon
@@ -117,7 +117,7 @@ export const SkillsContent = () => {
         type="Library-framework"
         learning
         description="GSAP is a highly customizable Javascript animation library."
-        skillLevel={22}
+        skillLevel={32}
       />
 
       {/* <SkillIcon
