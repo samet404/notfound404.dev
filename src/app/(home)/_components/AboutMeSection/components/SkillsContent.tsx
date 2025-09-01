@@ -120,6 +120,15 @@ export const SkillsContent = () => {
         skillLevel={32}
       />
 
+      <SkillIcon
+        title="Three.js"
+        icon={<Svg src="threejs" className="h-9 w-9" alt="GSAP logo" />}
+        type="Library-framework"
+        learning
+        description="Three.js is a popular Javascript library for creating 3D scenes using html canvas. Its simple, basic, and easy to use."
+        skillLevel={16}
+      />
+
       {/* <SkillIcon
         title="JNI (Java Native Interface)"
         description="Java Native Interface is a way to call native code from Java. It allows you to write code in C, C++ and call it from Java."
