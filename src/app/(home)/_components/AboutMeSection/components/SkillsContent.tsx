@@ -106,9 +106,8 @@ export const SkillsContent = () => {
         title="Webflow"
         icon={<Svg src="webflow" className="h-8 w-8" alt="Webflow logo" />}
         type="Tool"
-        learning
         description="Webflow is a website builder for creating basic, designer-friendly websites. It is a great tool for beginners and small businesses."
-        skillLevel={70}
+        skillLevel={100}
       />
 
       <SkillIcon
@@ -117,7 +116,7 @@ export const SkillsContent = () => {
         type="Library-framework"
         learning
         description="GSAP is a highly customizable Javascript animation library."
-        skillLevel={32}
+        skillLevel={42}
       />
 
       <SkillIcon
