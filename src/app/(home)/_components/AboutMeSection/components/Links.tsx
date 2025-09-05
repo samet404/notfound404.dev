@@ -57,6 +57,14 @@ export const Links = () => {
             alt="stackoverflow logo"
           />
         </ProfileLink>
+        <Divider />
+        <ProfileLink href="https://www.youtube.com/@404nnotfoundd">
+          <Svg
+            src="youtube"
+            className="h-8 w-8"
+            alt="youtube logo"
+          />
+        </ProfileLink>
       </div>
     </div>
   )
