@@ -121,11 +121,11 @@ export const SkillsContent = () => {
 
       <SkillIcon
         title="Three.js"
-        icon={<Svg src="threejs" className="h-9 w-9" alt="GSAP logo" />}
+        icon={<Svg src="threejs" className="h-9 w-9" alt="Three.js logo" />}
         type="Library-framework"
         learning
         description="Three.js is a popular Javascript library for creating 3D scenes using html canvas. Its simple, basic, and easy to use."
-        skillLevel={16}
+        skillLevel={38}
       />
 
       {/* <SkillIcon
