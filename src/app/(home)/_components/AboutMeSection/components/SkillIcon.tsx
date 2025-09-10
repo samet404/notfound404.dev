@@ -15,7 +15,10 @@ export const SkillIcon = ({
   skillLevel,
   learning,
   type,
+  reachedSkillLevel,
+  forgotButCanRelearnIn,
   hideWhenShrinked = false,
+  useReachedSkillLevelAsOpacityFactorFirst = true,
 }: Props) => {
   const iconRef = useRef<HTMLDivElement>(null)
   const setDialogInfo = useSetAtom(dialogInfoAtom)
@@ -32,11 +35,13 @@ export const SkillIcon = ({
       skillLevel,
       x: e.clientX,
       y: e.clientY,
+      reachedSkillLevel,
       learning,
       lastHoverTime: Date.now(),
       isHovering: true,
       imageFound: !!icon,
       skillType: type,
+      forgotButCanRelearnIn
     })
   }
 
@@ -47,7 +52,7 @@ export const SkillIcon = ({
             ...prev,
             x: e.clientX,
             y: e.clientY,
-            lastHoverTime: Date.now(),
+            lastHoverTime: performance.now(),
           }
         : null,
     )
@@ -59,7 +64,7 @@ export const SkillIcon = ({
         ? {
             ...prev,
             isHovering: false,
-            lastHoverTime: Date.now(),
+            lastHoverTime: performance.now(),
           }
         : null,
     )
@@ -67,13 +72,15 @@ export const SkillIcon = ({
 
   if (selectedCategory !== 'All' && selectedCategory !== type) return null
 
+  const opacityFactor = useReachedSkillLevelAsOpacityFactorFirst ? reachedSkillLevel ?? skillLevel : skillLevel ?? reachedSkillLevel
+
   return (
     <div
       style={{
         opacity:
-          typeof skillLevel === 'number'
-            ? skillLevel / 100 > 0.1
-              ? skillLevel / 100
+          typeof opacityFactor === 'number'
+            ? opacityFactor / 100 > 0.1
+              ? opacityFactor / 100
               : 0.1
             : 1,
       }}
@@ -97,6 +104,9 @@ export const SkillIcon = ({
       {learning && (
         <div className="absolute bottom-[-3px] right-[-3px] h-2 w-2 animate-pulse rounded-full bg-[#ff7dee] shadow-[0_0px_10px_1px_rgba(0,0,0,0.4)]"></div>
       )}
+      {forgotButCanRelearnIn && (
+        <div className="absolute bottom-[-3px] left-[-3px] h-[0.3rem] w-4 rounded-full bg-[#33ff99] shadow-[0_0px_10px_1px_rgba(0,0,0,0.3)]"></div>
+      )}
     </div>
   )
 }
@@ -104,8 +114,11 @@ type Props = {
   hideWhenShrinked?: boolean
   icon?: ReactNode
   title: string
-  description?: string
+  description?: string,
+  reachedSkillLevel?: number | null
   skillLevel?: number | null
   learning?: boolean
   type: SkillType | null
+  forgotButCanRelearnIn?: string,
+  useReachedSkillLevelAsOpacityFactorFirst?: boolean
 }

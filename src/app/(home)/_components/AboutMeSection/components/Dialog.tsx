@@ -75,7 +75,9 @@ export const Dialog = () => {
     skillLevel,
     learning,
     imageFound,
+    reachedSkillLevel,
     skillType,
+    forgotButCanRelearnIn
   } = info
   const position = getDialogPosition(x, y)
 
@@ -98,21 +100,35 @@ export const Dialog = () => {
             </div>
           )}
 
+          {forgotButCanRelearnIn && (
+            <div className="items-center rounded-md bg-gradient-to-r from-[#33ff99] via-[#26bcb2]  to-[#33ff99] text-center text-[0.8rem] font-bold">
+            I can relearn in {' '}
+              {forgotButCanRelearnIn}
+            </div>
+          )}
+
           <div className="flex flex-col gap-1">
             <div className="text-sm font-bold">{title}</div>
             {description && <div className="text-[0.7rem]">{description}</div>}
           </div>
 
-          {skillLevel && (
-            <div className="flex flex-col">
-              <div className="text-[0.9rem]">Skill level: {skillLevel}/100</div>
+          {typeof skillLevel === 'number' && (
+            <div className="flex flex-col gap-2">
+              <div className='w-full h-[0.1rem] bg-[#ffffff45]'></div>
+              <div className='flex flex-col'>
+                <div className="text-[0.9rem]"><span className='text-[#ffffffd0]'>Skill level:</span> {skillLevel}/100</div>
+                {reachedSkillLevel &&  <div className="text-[0.9rem]">
+                  <span className='text-[#ffffffd0]'>Reached skill level:</span> {reachedSkillLevel}/100
+                </div>}
+              </div>
+
               <div className="text-[0.55rem] leading-3 text-gray-400">
                 Note: Skill level is calculated based on my guess, experience
                 and the amount of time I've spent using the technology.{' '}
                 <span className="font-medium italic text-gray-300">
                   Doesn't mean I know every little thing about it. Just
                   describes my workability with it.
-                </span>
+                </span> {reachedSkillLevel && <span>The reached skill level represents the max level I've reached with that skill.</span>}
               </div>
             </div>
           )}

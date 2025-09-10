@@ -11,7 +11,9 @@ export const dialogInfoAtom = atom<{
     learning?: boolean,
     lastHoverTime: number,
     isHovering: boolean,
-    imageFound?: boolean
+    imageFound?: boolean,
+    reachedSkillLevel?: number | null,
+    forgotButCanRelearnIn?: string
 } | null>(null)
 
 export const skillsCategoryAtom = atom<SkillType>('All')
