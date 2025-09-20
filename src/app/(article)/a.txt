@@ -1,0 +1,7 @@
+{
+    "id": "neden-hersey-web-tabanli",
+    "title": "Neden her şey web tabanlı?",
+    "description": "Bu makalede yazılım geliştiricilerine neden bir web tabanlı uygulamanın uzun süreçte daha çok gelir sağlayabileceğinin önemini konuşacağım.",
+    "date": "2025-04-03",
+    "done": true
+  },
