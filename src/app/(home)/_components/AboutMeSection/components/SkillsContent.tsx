@@ -107,7 +107,17 @@ export const SkillsContent = () => {
         icon={<Svg src="webflow" className="h-8 w-8" alt="Webflow logo" />}
         type="Tool"
         description="Webflow is a website builder for creating basic, designer-friendly websites. It is a great tool for beginners and small businesses."
-        skillLevel={100}
+        skillLevel={80}
+        learning
+      />
+
+      <SkillIcon
+        title="Client-first"
+        icon={<Svg src="client-first" className="h-9 w-9" alt="Client-first logo" />}
+        type="Other"
+        description='Client-first is a style guide for building Webflow applications.'
+        skillLevel={30}
+        learning
       />
 
       <SkillIcon
@@ -116,7 +126,7 @@ export const SkillsContent = () => {
         type="Library-framework"
         learning
         description="GSAP is a highly customizable Javascript animation library."
-        skillLevel={42}
+        skillLevel={52}
       />
 
       <SkillIcon
@@ -197,7 +207,7 @@ export const SkillsContent = () => {
         icon={<Svg src="android" className="h-10 w-10" alt="Android logo" />}
         description="SQLite database ORM library for Android developed by Google."
         skillLevel={0}
-        forgotButCanRelearnIn='2 days'
+        forgotButCanRelearnIn="2 days"
         reachedSkillLevel={50}
         type="Database"
       />
@@ -254,9 +264,37 @@ export const SkillsContent = () => {
       <SkillIcon
         icon={<Svg src="c" className="h-10 w-10" alt="C logo" />}
         title="C"
-        description="Mother of most programming languages."
+        description="Mother of most high-level programming languages."
         skillLevel={65}
+        learning
         type="Language"
+      />
+
+      <SkillIcon
+        icon={<Svg src="c++" className="h-10 w-10" alt="C logo" />}
+        title="C++"
+        skillLevel={2}
+        learning
+        type="Language"
+      />
+
+      <SkillIcon
+        icon={
+          <Image
+            loading="lazy"
+            sizes={imageSizes}
+            placeholder="blur"
+            src={raylib}
+            className="h-9 w-9 rounded-md"
+            alt="Raylib logo"
+          />
+        }
+        learning
+        hideWhenShrinked
+        title="Raylib"
+        description="Raylib is a simple and easy-to-use library to enjoy videogames programming."
+        skillLevel={40}
+        type="Library-framework"
       />
 
       <SkillIcon
@@ -265,8 +303,7 @@ export const SkillsContent = () => {
         hideWhenShrinked
         description="Meson is a user friendly build automation tool to automate the build process of C and C++ projects."
         skillLevel={30}
-        reachedSkillLevel={80}
-        forgotButCanRelearnIn='4 days'
+        learning
         type="Tool"
       />
 
@@ -279,14 +316,14 @@ export const SkillsContent = () => {
         description="Web assembly allows to run low-level code directly in the browser."
         skillLevel={20}
         reachedSkillLevel={100}
-        forgotButCanRelearnIn='1 day'
+        forgotButCanRelearnIn="1 day"
         type="Language"
       />
 
       <SkillIcon
         title="Python"
         skillLevel={100}
-        description='Very basic, high-level, not-scalable, educational programming language.'
+        description="Very basic, high-level, not-scalable, educational programming language."
         icon={<Svg src="python" className="h-10 w-10" alt="Python logo" />}
         type="Language"
       />
@@ -433,7 +470,7 @@ export const SkillsContent = () => {
         title="React Native"
         description="Simple way to build basic mobile applications with React."
         skillLevel={10}
-        forgotButCanRelearnIn='4 days'
+        forgotButCanRelearnIn="4 days"
         reachedSkillLevel={100}
         type="Library-framework"
       />
@@ -442,7 +479,7 @@ export const SkillsContent = () => {
         title="Expo"
         description="A powerful framework built around React Native that simplifies mobile app development."
         skillLevel={10}
-        forgotButCanRelearnIn='4 days'
+        forgotButCanRelearnIn="4 days"
         reachedSkillLevel={100}
         type="Library-framework"
       />
@@ -476,7 +513,7 @@ export const SkillsContent = () => {
         }
         hideWhenShrinked
         skillLevel={30}
-        forgotButCanRelearnIn='3 hours'
+        forgotButCanRelearnIn="3 hours"
         reachedSkillLevel={100}
         title="Turborepo"
         description="Monorepo management tool for JavaScript and TypeScript projects."
@@ -525,11 +562,10 @@ export const SkillsContent = () => {
         hideWhenShrinked
         description="E2E Testing library for Javascript/Typescript applications."
         skillLevel={5}
-        forgotButCanRelearnIn='5 hours'
+        forgotButCanRelearnIn="5 hours"
         reachedSkillLevel={100}
         type="Library-framework"
       />
-
 
       <SkillIcon
         icon={<Svg src="zustand" className="h-10 w-10" alt="Zustand logo" />}
@@ -833,7 +869,7 @@ export const SkillsContent = () => {
         skillLevel={10}
         reachedSkillLevel={100}
         useReachedSkillLevelAsOpacityFactorFirst={false}
-        forgotButCanRelearnIn='4 days'
+        forgotButCanRelearnIn="4 days"
         type="Database"
       />
 
@@ -1014,13 +1050,13 @@ export const SkillsContent = () => {
         icon={<Svg src="cmake" className="h-10 w-10" alt="C logo" />}
         title="CMake"
         skillLevel={0}
-        forgotButCanRelearnIn='2 weeks'
+        forgotButCanRelearnIn="2 weeks"
         useReachedSkillLevelAsOpacityFactorFirst={false}
         reachedSkillLevel={15}
         hideWhenShrinked
         type="Tool"
       />
-{/* 
+      {/* 
       <SkillIcon
         title="Godot"
         hideWhenShrinked
@@ -1028,24 +1064,6 @@ export const SkillsContent = () => {
         skillLevel={1}
         type="Other"
       /> */}
-
-      <SkillIcon
-        icon={
-          <Image
-            loading="lazy"
-            sizes={imageSizes}
-            placeholder="blur"
-            src={raylib}
-            className="h-9 w-9 rounded-md"
-            alt="Raylib logo"
-          />
-        }
-        title="Raylib"
-        description="Raylib is a simple and easy-to-use library to enjoy videogames programming."
-        skillLevel={40}
-        hideWhenShrinked
-        type="Library-framework"
-      />
 
       <SkillIcon
         icon={<Svg src="php" className="h-10 w-10" alt="Php logo" />}
@@ -1083,7 +1101,7 @@ export const SkillsContent = () => {
         description="Spring IoC is a way to manage lifecycle and dependencies of objects in Java applications."
         skillLevel={0}
         reachedSkillLevel={50}
-        forgotButCanRelearnIn='7 days'
+        forgotButCanRelearnIn="7 days"
         hideWhenShrinked
         type="Library-framework"
       />
@@ -1103,7 +1121,7 @@ export const SkillsContent = () => {
         title="RabbitMQ"
         reachedSkillLevel={30}
         skillLevel={5}
-        forgotButCanRelearnIn='3 days'
+        forgotButCanRelearnIn="3 days"
         hideWhenShrinked
         type="Library-framework"
       />
@@ -1116,7 +1134,7 @@ export const SkillsContent = () => {
         description="Makefile is a build automation tool to automate the build process of C and C++ projects."
         reachedSkillLevel={12}
         skillLevel={0}
-        forgotButCanRelearnIn='4 days'
+        forgotButCanRelearnIn="4 days"
         useReachedSkillLevelAsOpacityFactorFirst={false}
         hideWhenShrinked
         type="Language"
@@ -1127,7 +1145,7 @@ export const SkillsContent = () => {
         icon={<Svg src="lua" alt="lua logo" className="h-10 w-10" />}
         reachedSkillLevel={8}
         skillLevel={0}
-        forgotButCanRelearnIn='7 days'
+        forgotButCanRelearnIn="7 days"
         hideWhenShrinked
         type="Language"
       />

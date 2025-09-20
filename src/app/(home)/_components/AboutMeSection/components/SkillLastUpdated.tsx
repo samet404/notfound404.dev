@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 
-const lastUpdated = 1757529095972
+const lastUpdated = 1758389954830
 
 export const SkillLastUpdated = () => {
   const [timeElapsed, setTimeElapsed] = useState('')
