@@ -116,7 +116,7 @@ export const SkillsContent = () => {
         icon={<Svg src="client-first" className="h-9 w-9" alt="Client-first logo" />}
         type="Other"
         description='Client-first is a style guide for building Webflow applications.'
-        skillLevel={30}
+        skillLevel={100}
         learning
       />
 
