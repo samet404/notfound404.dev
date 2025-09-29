@@ -107,7 +107,7 @@ export const SkillsContent = () => {
         icon={<Svg src="webflow" className="h-8 w-8" alt="Webflow logo" />}
         type="Tool"
         description="Webflow is a website builder for creating basic, designer-friendly websites. It is a great tool for beginners and small businesses."
-        skillLevel={80}
+        skillLevel={90}
         learning
       />
 
@@ -138,7 +138,7 @@ export const SkillsContent = () => {
         skillLevel={38}
       />
 
-      <SkillIcon
+      {/* <SkillIcon
         title="WebGL (GLSL)"
         icon={<Svg src="webgl" className="h-10 w-10" alt="Webgl logo" />}
         type="API"
@@ -154,7 +154,7 @@ export const SkillsContent = () => {
         learning
         hideWhenShrinked
         skillLevel={2}
-      />
+      /> */}
 
       {/* <SkillIcon
         title="JNI (Java Native Interface)"
@@ -192,14 +192,14 @@ export const SkillsContent = () => {
         type="Library-framework"
       /> */}
 
-      <SkillIcon
+      {/* <SkillIcon
         title="Android NDK"
         icon={<Svg src="android" className="h-10 w-10" alt="Android logo" />}
         description="Android Native Development Kit (NDK) is a set of tools that allows you to use C and C++ code with Android."
         skillLevel={1}
         hideWhenShrinked
         type="Other"
-      />
+      /> */}
 
       <SkillIcon
         title="Room database"
@@ -270,13 +270,13 @@ export const SkillsContent = () => {
         type="Language"
       />
 
-      <SkillIcon
+      {/* <SkillIcon
         icon={<Svg src="c++" className="h-10 w-10" alt="C logo" />}
         title="C++"
         skillLevel={2}
         learning
         type="Language"
-      />
+      /> */}
 
       <SkillIcon
         icon={
@@ -293,7 +293,7 @@ export const SkillsContent = () => {
         hideWhenShrinked
         title="Raylib"
         description="Raylib is a simple and easy-to-use library to enjoy videogames programming."
-        skillLevel={40}
+        skillLevel={44}
         type="Library-framework"
       />
 
@@ -302,7 +302,7 @@ export const SkillsContent = () => {
         title="meson"
         hideWhenShrinked
         description="Meson is a user friendly build automation tool to automate the build process of C and C++ projects."
-        skillLevel={30}
+        skillLevel={32}
         learning
         type="Tool"
       />
@@ -407,13 +407,6 @@ export const SkillsContent = () => {
         type="Language"
       />
 
-      <SkillIcon
-        icon={<Svg src="xml" className="h-10 w-10" alt="HTML5 logo" />}
-        title="XML"
-        hideWhenShrinked
-        description="Standart markup language for creating the structres."
-        type="Language"
-      />
       {/* 
             <SkillIcon
                 icon={<Svg src='latex' className='w-11 h-11' alt='Latex logo' />}
