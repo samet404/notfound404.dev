@@ -107,7 +107,7 @@ export const SkillsContent = () => {
         icon={<Svg src="webflow" className="h-8 w-8" alt="Webflow logo" />}
         type="Tool"
         description="Webflow is a website builder for creating basic, designer-friendly websites. It is a great tool for beginners and small businesses."
-        skillLevel={90}
+        skillLevel={100}
         learning
       />
 
@@ -126,14 +126,13 @@ export const SkillsContent = () => {
         type="Library-framework"
         learning
         description="GSAP is a highly customizable Javascript animation library."
-        skillLevel={52}
+        skillLevel={80}
       />
 
       <SkillIcon
         title="Three.js"
         icon={<Svg src="threejs" className="h-9 w-9" alt="Three.js logo" />}
         type="Library-framework"
-        learning
         description="Three.js is a popular Javascript library for creating 3D scenes using html canvas. Its simple, basic, and easy to use."
         skillLevel={38}
       />
@@ -303,7 +302,6 @@ export const SkillsContent = () => {
         hideWhenShrinked
         description="Meson is a user friendly build automation tool to automate the build process of C and C++ projects."
         skillLevel={32}
-        learning
         type="Tool"
       />
 
