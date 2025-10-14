@@ -6,7 +6,7 @@ import { Svg } from '@/src/components/Svg'
 import { cn } from '@/src/utils'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import {
   getPresenceTimeWorker,
   postMsgToTimerWorker,
@@ -41,6 +41,7 @@ export const Presence = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(true)
   const [error, setError] = useState(false)
+  const imgRef = useRef<HTMLImageElement>(null)
 
   useEffect(() => {
     try {
@@ -175,6 +176,7 @@ export const Presence = () => {
         const showImage =
           activity.name === 'YouTube Music' && activity.assets?.large_image
 
+        console.log('img:', imgRef.current?.naturalWidth)
         return (
           <div
             key={activity.name}
@@ -193,6 +195,7 @@ export const Presence = () => {
             <div className="flex flex-row gap-2 space-y-0.5 text-[0.55rem]">
               {showImage && activity.assets?.large_image && (
                 <Image
+                  ref={imgRef}
                   width={70}
                   height={70}
                   src={
@@ -201,8 +204,12 @@ export const Presence = () => {
                       activity.assets.large_image.indexOf('https/') + 6,
                     )
                   }
+                  style={{
+                    objectFit:
+                      (imgRef.current?.naturalWidth ?? 0) > 70 ? 'none' : 'cover',
+                  }}
                   alt="youtube music"
-                  className="flex h-[3.2rem] w-[3.2rem] rounded-md object-cover"
+                  className="flex h-[3.2rem] w-[3.2rem] rounded-md object-cover object-center"
                 />
               )}
 
