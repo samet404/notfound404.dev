@@ -206,7 +206,10 @@ export const Presence = () => {
                   }
                   style={{
                     objectFit:
-                      (imgRef.current?.naturalWidth ?? 0) > 70 ? 'none' : 'cover',
+                      imgRef.current?.naturalWidth !==
+                      imgRef.current?.naturalHeight
+                        ? 'none'
+                        : 'cover',
                   }}
                   alt="youtube music"
                   className="flex h-[3.2rem] w-[3.2rem] rounded-md object-cover object-center"
