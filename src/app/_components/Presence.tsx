@@ -42,7 +42,7 @@ export const Presence = () => {
   const [isMobile, setIsMobile] = useState(true)
   const [error, setError] = useState(false)
   const imgRef = useRef<HTMLImageElement>(null)
-
+  console.log('presenceData: ', presenceData)
   useEffect(() => {
     try {
       setIsMobile(window.innerWidth < 768)
@@ -170,73 +170,75 @@ export const Presence = () => {
         />
       </div>
 
-      {presenceData.activities?.map((activity) => {
-        if (!activity || activity.type === 4) return null
+      <div className="flex flex-col gap-2">
+        {presenceData.activities?.map((activity, index) => {
+          if (!activity || activity.type === 4) return null
 
-        const showImage =
-          activity.name === 'YouTube Music' && activity.assets?.large_image
+          const showImage =
+            activity.name === 'YouTube Music' && activity.assets?.large_image
 
-        console.log('img:', imgRef.current?.naturalWidth)
-        return (
-          <div
-            key={activity.name}
-            className="relative flex grow flex-col rounded py-1 pl-1"
-          >
-            {activity.name === 'YouTube Music' &&
-              activity.assets?.large_image && (
-                <Link
-                  href={getYTMusicLink(activity.assets.large_image) ?? ''}
-                  target="_blank"
-                  className="absolute left-0 top-0 z-10 flex h-full w-full items-center justify-center rounded-lg bg-[#0000006c] text-sm text-white opacity-0 duration-500 hover:opacity-100"
+          console.log('img:', imgRef.current?.naturalWidth)
+          return (
+            <div
+              key={index}
+              className="relative flex grow flex-col   rounded py-1 pl-1"
+            >
+              {activity.name === 'YouTube Music' &&
+                activity.assets?.large_image && (
+                  <Link
+                    href={getYTMusicLink(activity.assets.large_image) ?? ''}
+                    target="_blank"
+                    className="absolute left-0 top-0 z-10 flex h-full w-full items-center justify-center rounded-lg bg-[#0000006c] text-sm text-white opacity-0 duration-500 hover:opacity-100"
+                  >
+                    Open in YouTube Music
+                  </Link>
+                )}
+              <div className="flex flex-row gap-2 space-y-0.5 text-[0.55rem]">
+                {showImage && activity.assets?.large_image && (
+                  <Image
+                    ref={imgRef}
+                    width={70}
+                    height={70}
+                    src={
+                      'https://' +
+                      activity.assets.large_image.substring(
+                        activity.assets.large_image.indexOf('https/') + 6,
+                      )
+                    }
+                    style={{
+                      objectFit:
+                        imgRef.current?.naturalWidth !==
+                        imgRef.current?.naturalHeight
+                          ? 'none'
+                          : 'cover',
+                    }}
+                    alt="youtube music"
+                    className="flex h-[3.2rem] w-[3.2rem] rounded-md object-cover object-center"
+                  />
+                )}
+
+                <div
+                  className={cn('flex w-[7rem] flex-col', {
+                    'w-[10rem]': !showImage,
+                  })}
                 >
-                  Open in YouTube Music
-                </Link>
-              )}
-            <div className="flex flex-row gap-2 space-y-0.5 text-[0.55rem]">
-              {showImage && activity.assets?.large_image && (
-                <Image
-                  ref={imgRef}
-                  width={70}
-                  height={70}
-                  src={
-                    'https://' +
-                    activity.assets.large_image.substring(
-                      activity.assets.large_image.indexOf('https/') + 6,
-                    )
-                  }
-                  style={{
-                    objectFit:
-                      imgRef.current?.naturalWidth !==
-                      imgRef.current?.naturalHeight
-                        ? 'none'
-                        : 'cover',
-                  }}
-                  alt="youtube music"
-                  className="flex h-[3.2rem] w-[3.2rem] rounded-md object-cover object-center"
-                />
-              )}
+                  <div className="overflow-hidden text-ellipsis whitespace-nowrap font-medium text-gray-800 dark:text-gray-200">
+                    {activity.details?.trim()}
+                  </div>
 
-              <div
-                className={cn('flex w-[7rem] flex-col', {
-                  'w-[10rem]': !showImage,
-                })}
-              >
-                <div className="overflow-hidden text-ellipsis whitespace-nowrap font-medium text-gray-800 dark:text-gray-200">
-                  {activity.details?.trim()}
-                </div>
+                  <div className="overflow-hidden text-ellipsis whitespace-nowrap break-all pr-3 text-gray-600 dark:text-gray-400">
+                    {activity.state}
+                  </div>
 
-                <div className="overflow-hidden text-ellipsis whitespace-nowrap break-all pr-3 text-gray-600 dark:text-gray-400">
-                  {activity.state}
-                </div>
-
-                <div className="overflow-hidden text-ellipsis whitespace-nowrap break-all pr-3 pt-[0.2rem] text-gray-500">
-                  {activity.name}
+                  <div className="overflow-hidden text-ellipsis whitespace-nowrap break-all pr-3 pt-[0.2rem] text-gray-500">
+                    {activity.name}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        )
-      })}
+          )
+        })}
+      </div>
       <div className="break-all p-1 text-[0.5rem] text-gray-500">
         Discord: 404nnotfoundd
       </div>
