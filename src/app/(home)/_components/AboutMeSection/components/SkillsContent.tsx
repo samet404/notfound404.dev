@@ -258,7 +258,7 @@ export const SkillsContent = () => {
             sizes={imageSizes}
             placeholder="blur"
             src={raylib}
-            className="h-9 w-9 rounded-md"
+            className="h-9 w-9 "
             alt="Raylib logo"
           />
         }
@@ -810,7 +810,7 @@ export const SkillsContent = () => {
         title="Linux"
         hideWhenShrinked
         description="I hate windows."
-        type="Tool"
+        type="Other"
       />
       <SkillIcon
         icon={<Svg src="blender" className="h-10 w-10" alt="Blender logo" />}

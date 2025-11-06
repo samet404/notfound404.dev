@@ -83,7 +83,6 @@ export const Nav = () => {
         {/* Desktop Menu */}
         <div className="hidden flex-row gap-5 min-[600px]:flex">
           <NavLink href="https://notfound404.life">Life</NavLink>
-          <NavLink href="/calender">Calender</NavLink>
           <NavLink href="/articles">Articles</NavLink>
           <NavLink href="/">About me</NavLink>
           <DarkThemeButton />

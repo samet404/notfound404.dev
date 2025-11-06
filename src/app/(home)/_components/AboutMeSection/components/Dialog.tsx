@@ -88,7 +88,7 @@ export const Dialog = () => {
           position: 'absolute',
           ...position,
         }}
-        className="pointer-events-none transition-transform xxs:duration-0 md:duration-150"
+        className=" pointer-events-none transition-transform "
       >
         <div
           style={dialogBaseStyle}

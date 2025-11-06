@@ -29,8 +29,7 @@ export const BackgroundColor = ({ children }: PropsWithChildren) => {
       <div className="relative z-10  pt-20">
         <div
          style={{
-          backgroundImage:
-            'radial-gradient(at 100% 0%, #ff2e5bff 0px, transparent 50%), radial-gradient(at 24% 0%, hsla(314,100%,76%,1) 0px, transparent 50%);',
+          backgroundImage:  'radial-gradient(at 100% 0%, #ff2e5bff 0px, transparent 50%), radial-gradient(at 24% 0%, hsla(314,100%,76%,1) 0px, transparent 50%)',
         }}
         className="absolute left-0 top-0 z-[-1] flex h-[40rem] w-full ">
         
