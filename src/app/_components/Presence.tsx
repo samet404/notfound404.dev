@@ -185,7 +185,7 @@ export const Presence = () => {
               {activity.name === 'YouTube Music' &&
                 activity.assets?.large_image && (
                   <Link
-                    href={`https://music.youtube.com/search?q=${activity.details?.trim()} ${activity.state}`}
+                    href={`https://music.youtube.com/search?q=${activity.details?.trim()}+${activity.state}`}
                     target="_blank"
                     className="absolute left-0 top-0 z-10 flex h-full w-full items-center justify-center rounded-lg bg-[#0000006c] text-sm text-white opacity-0 duration-500 hover:opacity-100"
                   >
