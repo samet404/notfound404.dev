@@ -15,8 +15,7 @@ export const Description = () => {
       </p>
       <p>
         I'm a self-taught developer who believes in real coding experience and
-        hands-on learning. I dedicate around 110 hours per week (sometimes even
-        more and people think I'm a robot or something) to coding and expanding
+        hands-on learning. I dedicate around 110 hours per week to coding and expanding
         my technical knowledge.
       </p>
       <p>

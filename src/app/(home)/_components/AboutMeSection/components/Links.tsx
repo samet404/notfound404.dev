@@ -10,10 +10,10 @@ export const Links = () => {
     <div className="flex flex-col flex-wrap items-center justify-center gap-4 rounded-lg  text-[0.8rem] text-[white]">
       <div className="flex flex-row flex-wrap justify-center gap-3">
         {/*
-        bg-[#f3be00]
-        drop-shadow-[0_0px_4px_#f3be00d7]
+       
         */}
-        <div className="flex rounded-md bg-[#ef45d3d7]  px-2 py-1 font-[600]  drop-shadow-[0_0px_24px_#ff45e0d7] ">
+        <div className="flex rounded-md  px-2 py-1 font-[600]  bg-[#ffce1d]
+        drop-shadow-[0_0px_4px_#f3be00d7]">
           Working full-time
         </div>
 

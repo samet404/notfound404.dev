@@ -26,15 +26,14 @@ export const BackgroundColor = ({ children }: PropsWithChildren) => {
         )}
       ></div>
 
-      <div className="relative z-9 pt-20">
-        <div className="absolute left-0 top-0 z-30 flex h-[10rem] w-full flex-row">
-          <div className="h-[90%] bg-gradient-to-b from-red-500 to-transparent w-full"></div>
-          <div className="h-full bg-gradient-to-b from-orange-400 to-transparent w-full"></div>
-          <div className="h-[80%] bg-gradient-to-b from-yellow-300 to-transparent w-full"></div>
-          <div className="h-full bg-gradient-to-b from-green-400 to-transparent w-full"></div>
-          <div className="h-full bg-gradient-to-b from-blue-500 to-transparent w-full"></div>
-          <div className="h-[90%] bg-gradient-to-b from-indigo-600 to-transparent w-full"></div>
-          <div className="h-full bg-gradient-to-b from-purple-500 to-transparent w-full"></div>
+      <div className="relative z-10  pt-20">
+        <div
+         style={{
+          backgroundImage:
+            'radial-gradient(at 100% 0%, #ff2e5bff 0px, transparent 50%), radial-gradient(at 24% 0%, hsla(314,100%,76%,1) 0px, transparent 50%);',
+        }}
+        className="absolute left-0 top-0 z-[-1] flex h-[40rem] w-full ">
+        
         </div>
         {children}
       </div>

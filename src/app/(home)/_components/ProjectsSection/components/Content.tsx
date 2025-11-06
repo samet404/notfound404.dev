@@ -24,7 +24,7 @@ export const Content = () => {
           <ProjectBox
             name={'PIXGU'}
             description={
-              'Real-time multiplayer drawing and guessing game built with Next.js 15 and React 19. Using peer-to-peer connections via WebRTC, WebSocket for real-time communication, and Web Workers for optimal performance. Inspired by popular games like Gartic.io and Skribbl.io.'
+              'Real-time multiplayer drawing and guessing game built with Next.js 15 and React 19. Using peer-to-peer connections via WebRTC, WebSocket for real-time communication, and Web Workers for optimal performance. Inspired by popular games like Gartic.io and Skribbl.io. I stopped working on this project after I realized that making game with React and javascript is not a good idea but at least I learned a lot.'
             }
             thumbnail={[
               <Image
@@ -69,9 +69,10 @@ export const Content = () => {
               'personal project',
               'Kotlin',
               'Kotlin Multiplatform',
+              'Opengl',
+              'Raylib',
               'Jetpack Compose',
               'Python',
-              'Pytorch',
               'Milvus',
               'SQLite',
               'Dragonflydb',
@@ -94,7 +95,7 @@ export const Content = () => {
               'Better-auth',
             ]}
             description={
-              'Bloomia is a note taking AI editor. It is built with Jetpack Compose and Kotlin Multiplatform. Unlike traditional AI apps, Bloomia has so many advanced features like Embedding Model selection, Multiple AI providers, more clear RAG customizations...'
+              `Bloomia has an interesting idea actually... It's not just a normal note-taking app. It is designed to be your path to your dreams, brainstorming, and creativity. Bloomia creates a 3D virtual world from your notes, diaries, or anything that can be transformed into AI knowledge where you can move, play, talk, and interact. It's a fully immersive experience that allows you to explore your imagination and create something truly unique. I'm still working on it, but I'm really excited about it. It's quite hard to make because of its complexity. I'm going to work on it after learning more about OpenGL, C, and raylib. The mobile and PC application is already done, but I haven't created the 3D environment yet. I'm also planning to rewrite all of the existing server code logic in C again.`
             }
             link={`https://bloomia.app`}
           />
@@ -113,48 +114,7 @@ export const Content = () => {
             link={''}
           /> */}
 
-          <ProjectBox
-            name={'Dysphoria'}
-            description={
-              'Story based pixel art game. Uses C programming language and raylib engine.'
-            }
-            thumbnail={[
-              <Image
-                src={dysphoria}
-                key={0}
-                alt="project"
-                className="h-full rounded-lg bg-[rgba(255,255,255,0.3)] object-contain "
-                placeholder="blur"
-                sizes="(min-width: 540px) calc(10.49vw + 403px), calc(93.64vw - 29px)"
-              />,
-            ]}
-            videoPath="/videos/dysphoria.mp4"
-            tags={['personal project', 'C', 'raylib', 'meson', 'cmake']}
-            link={`https://github.com/HellowStudios/Dysphoria`}
-          />
-
-          <ProjectBox
-            name={'Aspect'}
-            tags={[
-              'under development',
-              'personal project',
-              'Kotlin',
-              'Haskell',
-              'Jetpack Compose',
-            ]}
-            description={
-              'Aspect - Fork of simplex-chat, anonymous, user-friendly messaging platform with privacy-first design. Decentralized, encrypted, and identifier-free. Available on Linux, Windows and Android.'
-            }
-            thumbnail={
-              <Svg
-                key={0}
-                src={'aspect'}
-                className="w-[7rem] pt-4"
-                alt="Aspect logo"
-              />
-            }
-            link={`https://github.com/aspect-chat`}
-          />
+         
         </div>
         <Repos />
         <FinalWordsDisplay />

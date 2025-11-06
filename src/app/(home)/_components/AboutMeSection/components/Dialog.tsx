@@ -113,22 +113,22 @@ export const Dialog = () => {
           </div>
 
           {typeof skillLevel === 'number' && (
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-4">
               <div className='w-full h-[0.1rem] bg-[#ffffff45]'></div>
               <div className='flex flex-col'>
-                <div className="text-[0.9rem]"><span className='text-[#ffffffd0]'>Skill level:</span> {skillLevel}/100</div>
-                {reachedSkillLevel &&  <div className="text-[0.9rem]">
-                  <span className='text-[#ffffffd0]'>Reached skill level:</span> {reachedSkillLevel}/100
+                <div className="text-[0.8rem]"><span className='text-[#ffffffd0]'>Workability level:</span> {skillLevel}/100</div>
+                {reachedSkillLevel &&  <div className="text-[0.8rem]">
+                  <span className='text-[#ffffffd0]'>Reached workability level:</span> {reachedSkillLevel}/100
                 </div>}
               </div>
 
               <div className="text-[0.55rem] leading-3 text-gray-400">
-                Note: Skill level is calculated based on my guess, experience
+              <span className='text-white'>READ HERE BEFORE JUDGING ME:</span> Workability level is calculated based on my guess, experience
                 and the amount of time I've spent using the technology.{' '}
                 <span className="font-medium italic text-gray-300">
                   Doesn't mean I know every little thing about it. Just
-                  describes my workability with it.
-                </span> {reachedSkillLevel && <span>The reached skill level represents the max level I've reached with that skill.</span>}
+                  describes my workability with it. 
+                </span> {reachedSkillLevel && <span>The reached workability level represents the max level I've reached with that skill and it's also my personal thought. </span>} If you think I'm not good enough for that, just ask me okay?
               </div>
             </div>
           )}

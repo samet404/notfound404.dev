@@ -108,34 +108,23 @@ export const SkillsContent = () => {
         type="Tool"
         description="Webflow is a website builder for creating basic, designer-friendly websites. It is a great tool for beginners and small businesses."
         skillLevel={100}
-        learning
       />
-
-      <SkillIcon
-        title="Client-first"
-        icon={<Svg src="client-first" className="h-9 w-9" alt="Client-first logo" />}
-        type="Other"
-        description='Client-first is a style guide for building Webflow applications.'
-        skillLevel={100}
-        learning
-      />
-
+  
       <SkillIcon
         title="GSAP"
         icon={<Svg src="gsap" className="h-10 w-10" alt="GSAP logo" />}
         type="Library-framework"
-        learning
         description="GSAP is a highly customizable Javascript animation library."
-        skillLevel={80}
+        skillLevel={100}
       />
 
-      <SkillIcon
+      {/* <SkillIcon
         title="Three.js"
         icon={<Svg src="threejs" className="h-9 w-9" alt="Three.js logo" />}
         type="Library-framework"
         description="Three.js is a popular Javascript library for creating 3D scenes using html canvas. Its simple, basic, and easy to use."
         skillLevel={38}
-      />
+      /> */}
 
       {/* <SkillIcon
         title="WebGL (GLSL)"
@@ -239,32 +228,17 @@ export const SkillsContent = () => {
       <SkillIcon
         icon={<Svg src="gradle" className="h-10 w-10" alt="Gradle logo" />}
         title="Gradle"
-        description="Package manager and build tool for Java and Kotlin projects."
+        description="I fucking hate gradle. Just putting it here to say that."
         hideWhenShrinked
         type="Tool"
       />
 
-      <SkillIcon
-        icon={<Svg src="maven" className="h-10 w-10" alt="Maven logo" />}
-        title="Maven"
-        description="Package manager and build tool for Java and Kotlin projects."
-        hideWhenShrinked
-        type="Tool"
-      />
-
-      <SkillIcon
-        icon={<Svg src="npm" className="h-10 w-10" alt="Npm logo" />}
-        title="Npm"
-        description="Package manager for JavaScript and TypeScript projects."
-        hideWhenShrinked
-        type="Tool"
-      />
 
       <SkillIcon
         icon={<Svg src="c" className="h-10 w-10" alt="C logo" />}
         title="C"
-        description="Mother of most high-level programming languages."
-        skillLevel={65}
+        description="Mother of most high-level programming languages. I love C more than myself, its the best language so far. I wish had more time to learn it..."
+        skillLevel={30}
         learning
         type="Language"
       />
@@ -289,34 +263,13 @@ export const SkillsContent = () => {
           />
         }
         learning
-        hideWhenShrinked
         title="Raylib"
         description="Raylib is a simple and easy-to-use library to enjoy videogames programming."
         skillLevel={44}
         type="Library-framework"
       />
 
-      <SkillIcon
-        icon={<Svg src="meson" className="h-12 w-12" alt="Meson logo" />}
-        title="meson"
-        hideWhenShrinked
-        description="Meson is a user friendly build automation tool to automate the build process of C and C++ projects."
-        skillLevel={32}
-        type="Tool"
-      />
 
-      <SkillIcon
-        icon={
-          <Svg src="wasm" className="h-11 w-11 rounded-md" alt="Wasm logo" />
-        }
-        hideWhenShrinked
-        title="Web Assembly"
-        description="Web assembly allows to run low-level code directly in the browser."
-        skillLevel={20}
-        reachedSkillLevel={100}
-        forgotButCanRelearnIn="1 day"
-        type="Language"
-      />
 
       <SkillIcon
         title="Python"
@@ -326,22 +279,7 @@ export const SkillsContent = () => {
         type="Language"
       />
 
-      <SkillIcon
-        title="Pydantic"
-        skillLevel={100}
-        hideWhenShrinked
-        icon={
-          <Image
-            loading="lazy"
-            sizes={imageSizes}
-            placeholder="blur"
-            src={pydantic}
-            className="h-12 w-12 rounded-md"
-            alt="Pydantic logo"
-          />
-        }
-        type="Library-framework"
-      />
+ 
 
       <SkillIcon
         title="Gemini API"
@@ -377,32 +315,11 @@ export const SkillsContent = () => {
       />
 
       <SkillIcon
-        icon={
-          <Svg
-            src="jupyter"
-            className="h-10 w-10"
-            alt="jupyter notebook logo"
-          />
-        }
-        hideWhenShrinked
-        title="Jupyter Notebook"
-        description="Web-based interactive computing environment for huge computational python tasks."
-        type="Service"
-      />
-
-      <SkillIcon
         icon={<Svg src="colab" className="h-10 w-10" alt="Colab logo" />}
         title="Google Colab"
         hideWhenShrinked
         description="Google Colab is a free Jupyter notebook environment."
         type="Dev tool"
-      />
-
-      <SkillIcon
-        icon={<Svg src="html-5" className="h-10 w-10" alt="HTML5 logo" />}
-        title="HTML5"
-        description="Standart markup language for creating the structres."
-        type="Language"
       />
 
       {/* 
@@ -525,7 +442,6 @@ export const SkillsContent = () => {
         title="Jotai"
         hideWhenShrinked
         description="Atomic state management library for React applications focusing on simplicity and performance."
-        skillLevel={100}
         type="Library-framework"
       />
 
@@ -534,7 +450,6 @@ export const SkillsContent = () => {
         title="vitest"
         hideWhenShrinked
         description="Testing library for Javascript/Typescript applications."
-        skillLevel={100}
         type="Library-framework"
       />
 
@@ -553,7 +468,7 @@ export const SkillsContent = () => {
         hideWhenShrinked
         description="E2E Testing library for Javascript/Typescript applications."
         skillLevel={5}
-        forgotButCanRelearnIn="5 hours"
+        forgotButCanRelearnIn="2 hours"
         reachedSkillLevel={100}
         type="Library-framework"
       />
@@ -563,7 +478,6 @@ export const SkillsContent = () => {
         title="Zustand"
         hideWhenShrinked
         description="Simple, fast and scalable state management solution for React applications."
-        skillLevel={100}
         type="Library-framework"
       />
 
@@ -669,28 +583,12 @@ export const SkillsContent = () => {
       <SkillIcon
         icon={<Svg src="express" className="h-10 w-10" alt="Express.js logo" />}
         title="Express.js"
-        description="Creating RESTful APIs and web applications using Express.js framework."
+        description="Express is a high level node.js http server framework. I can also use fastify, hono, ktor and other similar technologies easily."
         skillLevel={100}
         type="Library-framework"
       />
 
-      <SkillIcon
-        icon={<Svg src="hono" className="h-9 w-9" alt="Express.js logo" />}
-        title="Hono"
-        hideWhenShrinked
-        description="Hono is a simple web framework for Node.js."
-        skillLevel={100}
-        type="Library-framework"
-      />
 
-      <SkillIcon
-        icon={<Svg src="fastify" className="h-8 w-8" alt="Fastify logo" />}
-        title="Fastify"
-        hideWhenShrinked
-        description="Alternative to Express.js. Since Express.js is no longer actively maintained, I prefer using Fastify as my Node.js framework"
-        skillLevel={100}
-        type="Library-framework"
-      />
 
       <SkillIcon
         icon={
