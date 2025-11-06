@@ -922,6 +922,22 @@ export const SkillsContent = () => {
         hideWhenShrinked
         type="Dev tool"
       />
+
+	 <SkillIcon 
+	 	icon={<Svg src="vim" className="h-10 w-10" alt="Vim Logo" />}
+		title="Vim"
+		description="Vim is a terminal based highly advanced file editor. It really speeds up my coding speed because of its super useful keybindings and performance."
+		skillLevel={6}
+		hideWhenShrinked
+		type="Dev tool"
+		learning
+
+	  />
+
+
+	
+		
+
       <SkillIcon
         icon={<Svg src="vscode" className="h-10 w-10" alt="VS Code logo" />}
         title="VS Code"
