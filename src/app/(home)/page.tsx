@@ -14,7 +14,6 @@ const Home = () => {
       className="h-screen w-screen overflow-y-scroll"
     >
       <BackgroundColor>
-      
         <SetScrollContainer />
         <ScrollProgressBar />
 

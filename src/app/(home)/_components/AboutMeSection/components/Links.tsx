@@ -27,17 +27,17 @@ export const Links = () => {
 
       <div className="flex flex-row flex-wrap items-center justify-center gap-3 rounded-lg px-10  text-[0.8rem] text-[white]">
         <ProfileLink href="mailto:hi@notfound404.dev">
-          <Svg src="mail" className="h-7 w-7" alt="email logo" />
+          <Svg src="mail" className="h-8 w-8" alt="email logo" />
         </ProfileLink>
         <Divider />
         <ProfileLink href={`https://github.com/${constants.githubUsername}`}>
-          <Svg src="github" className="h-6 w-6" alt="github logo" />
+          <Svg src="github" className="h-7 w-7" alt="github logo" />
         </ProfileLink>
         <Divider />
         <ProfileLink href="https://stackoverflow.com/users/22740544/404nnotfoundd">
           <Svg
             src="stack-overflow"
-            className="h-7 w-7"
+            className="h-8 w-8"
             alt="stackoverflow logo"
           />
         </ProfileLink>
@@ -51,10 +51,9 @@ export const Links = () => {
             alt="codepen"
           />
         </ProfileLink>
-        <Divider />
-        <ProfileLink href="https://leetcode.com/u/samet404/">
+        {/* <ProfileLink href="https://leetcode.com/u/samet404/">
           <Svg src="leetcode" className="h-7 w-7" alt="stackoverflow logo" />
-        </ProfileLink>
+        </ProfileLink> */}
         <Divider />
         <ProfileLink href="https://x.com/404nnotfounddd">
           <Svg src="xtwitter" className="h-6 w-6" alt="stackoverflow logo" />
