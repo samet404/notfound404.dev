@@ -109,7 +109,7 @@ export const SkillsContent = () => {
         description="Webflow is a website builder for creating basic, designer-friendly websites. It is a great tool for beginners and small businesses."
         skillLevel={100}
       />
-  
+
       <SkillIcon
         title="GSAP"
         icon={<Svg src="gsap" className="h-10 w-10" alt="GSAP logo" />}
@@ -135,14 +135,7 @@ export const SkillsContent = () => {
         skillLevel={1}
       />
 
-      <SkillIcon
-        title="GLSL"
-        icon={<Svg src="opengl" className="h-10 w-10" alt="Opengl logo" />}
-        type="Language"
-        learning
-        hideWhenShrinked
-        skillLevel={2}
-      /> */}
+     
 
       {/* <SkillIcon
         title="JNI (Java Native Interface)"
@@ -238,7 +231,7 @@ export const SkillsContent = () => {
         icon={<Svg src="c" className="h-10 w-10" alt="C logo" />}
         title="C"
         description="Mother of most high-level programming languages. I love C more than myself, its the best language so far. I wish had more time to learn it..."
-        skillLevel={30}
+        skillLevel={20}
         learning
         type="Language"
       />
@@ -250,6 +243,15 @@ export const SkillsContent = () => {
         learning
         type="Language"
       /> */}
+
+      <SkillIcon
+        title="OpenGL"
+        icon={<Svg src="opengl" className="h-10 w-10" alt="Opengl logo" />}
+        type="API"
+        description="I started interested in OpenGL after seeing how all of the modern game engines trying to be are high level, user friendly and OOP. I want to learn how Graphics Processing Units and Central Processing Units works with each other and how manufacturers designs their card around OpenGL spesification in the low level surface. Still learning it :>"
+        learning
+        skillLevel={2}
+      />
 
       <SkillIcon
         icon={
@@ -269,8 +271,6 @@ export const SkillsContent = () => {
         type="Library-framework"
       />
 
-
-
       <SkillIcon
         title="Python"
         skillLevel={100}
@@ -278,8 +278,6 @@ export const SkillsContent = () => {
         icon={<Svg src="python" className="h-10 w-10" alt="Python logo" />}
         type="Language"
       />
-
- 
 
       <SkillIcon
         title="Gemini API"
@@ -821,20 +819,16 @@ export const SkillsContent = () => {
         type="Dev tool"
       />
 
-	 <SkillIcon 
-	 	icon={<Svg src="vim" className="h-10 w-10" alt="Vim Logo" />}
-		title="Vim"
-		description="Vim is a terminal based highly advanced file editor. It really speeds up my coding speed because of its super useful keybindings and performance."
-		skillLevel={6}
-		hideWhenShrinked
-		type="Dev tool"
-		learning
+      <SkillIcon
+        icon={<Svg src="vim" className="h-10 w-10" alt="Vim Logo" />}
+        title="Vim"
+        description="Vim is a terminal based highly advanced file editor. It really speeds up my coding speed because of its super useful keybindings and performance."
+        skillLevel={6}
+        hideWhenShrinked
+        type="Dev tool"
+        learning
 
-	  />
-
-
-	
-		
+      />
 
       <SkillIcon
         icon={<Svg src="vscode" className="h-10 w-10" alt="VS Code logo" />}

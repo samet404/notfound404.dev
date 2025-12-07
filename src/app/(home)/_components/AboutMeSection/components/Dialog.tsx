@@ -123,12 +123,12 @@ export const Dialog = () => {
               </div>
 
               <div className="text-[0.55rem] leading-3 text-gray-400">
-              <span className='text-white'>READ HERE BEFORE JUDGING ME:</span> Workability level is calculated based on my guess, experience
+              <span className='text-white'>READ ME:</span> Workability level is calculated based on my guess, experience
                 and the amount of time I've spent using the technology.{' '}
                 <span className="font-medium italic text-gray-300">
                   Doesn't mean I know every little thing about it. Just
                   describes my workability with it. 
-                </span> {reachedSkillLevel && <span>The reached workability level represents the max level I've reached with that skill and it's also my personal thought. </span>} If you think I'm not good enough for that, just ask me okay?
+                </span> {reachedSkillLevel && <span>The reached workability level represents the max level I've reached with that skill and it's also my personal thought. </span>}
               </div>
             </div>
           )}
