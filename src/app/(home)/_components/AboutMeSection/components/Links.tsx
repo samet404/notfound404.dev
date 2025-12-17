@@ -21,7 +21,7 @@ export const Links = () => {
           href="mailto:hi@notfound404.dev"
           className="flex rounded-md bg-pink-500 px-2 py-1 font-[600] drop-shadow-[0_0px_4px_#e73c99] duration-200 hover:opacity-60  "
         >
-          Click to send an mail
+          Click to send a mail
         </Link>
       </div>
 
