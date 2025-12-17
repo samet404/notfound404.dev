@@ -15,7 +15,7 @@ export const Content = () => {
       <div className=" flex items-center justify-center ">
         <div className="rounded-lg bg-[rgba(255,255,255,0.59)] text-2xl shadow-[0_0px_15px_5px_rgba(0,0,0,0.1)]">
           <div className=" bg-gradient-to-tl from-blue-700  via-blue-400 to-blue-600 bg-clip-text  px-3  py-1 font-[700] text-transparent ">
-            {"Projects I'm working on"}
+            {"My Projects"}
           </div>
         </div>
       </div>

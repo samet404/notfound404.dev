@@ -14,9 +14,8 @@ export const Description = () => {
         services and AI applications.
       </p>
       <p>
-        I'm a self-taught developer who believes in real coding experience and
-        hands-on learning. I dedicate around 110 hours per week to coding and expanding
-        my technical knowledge.
+       I'm a self-taught developer who believes in real coding experience and hands-on learning. I believe that real learning comes from understanding what you are actually doing. It’s not about the tools you use; it’s about understanding the math and the methods you are applying behind them.
+
       </p>
       <p>
         I like to learn new things, listening music, playing games, reading

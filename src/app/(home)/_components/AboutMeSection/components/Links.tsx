@@ -13,8 +13,8 @@ export const Links = () => {
        
         */}
         <div className="flex rounded-md  px-2 py-1 font-[600]  bg-[#ffce1d]
-        drop-shadow-[0_0px_4px_#f3be00d7]">
-          Working full-time
+        ">
+          <div className='drop-shadow-[0_3px_2px_#ff00003a]'>Working full-time</div>
         </div>
 
         <Link

@@ -77,7 +77,7 @@ export const SkillsContent = () => {
 
       <SkillIcon
         title="Java"
-        description="Java is a popular programming language for building enterprise applications. It is a high-level, class-based, object-oriented language. Java is first designed to be make easy to develop platform-independent application GUIs."
+        description="Java is a popular programming language for building enterprise applications. It is a high-level, class-based, object-oriented language. Java is first designed to be make easy to develop platform-independent application GUIs. I actually don't like java much because of its OOP design. I prefer kotlin instead."
         hideWhenShrinked
         icon={<Svg src="java" alt="Java" className="h-10 w-10" />}
         skillLevel={40}
@@ -97,7 +97,7 @@ export const SkillsContent = () => {
           <Svg src="javascript" className="h-10 w-10" alt="JavaScript logo" />
         }
         title="JavaScript"
-        description="While I can work with plain JavaScript, I prefer TypeScript for its added type safety and tooling"
+        description="While I can work with plain JavaScript, I prefer TypeScript for its type safety."
         skillLevel={100}
         type="Language"
       />
@@ -106,7 +106,7 @@ export const SkillsContent = () => {
         title="Webflow"
         icon={<Svg src="webflow" className="h-8 w-8" alt="Webflow logo" />}
         type="Tool"
-        description="Webflow is a website builder for creating basic, designer-friendly websites. It is a great tool for beginners and small businesses."
+        description="Webflow is a website builder for creating designer-friendly websites."
         skillLevel={100}
       />
 
@@ -126,25 +126,7 @@ export const SkillsContent = () => {
         skillLevel={38}
       /> */}
 
-      {/* <SkillIcon
-        title="WebGL (GLSL)"
-        icon={<Svg src="webgl" className="h-10 w-10" alt="Webgl logo" />}
-        type="API"
-        learning
-        hideWhenShrinked
-        skillLevel={1}
-      />
 
-     
-
-      {/* <SkillIcon
-        title="JNI (Java Native Interface)"
-        description="Java Native Interface is a way to call native code from Java. It allows you to write code in C, C++ and call it from Java."
-        icon={<Svg src="java" alt="Java" className="h-10 w-10" />}
-        skillLevel={35}
-        learning
-        type="API"
-      /> */}
 
       {/* <SkillIcon
         icon={
@@ -236,6 +218,17 @@ export const SkillsContent = () => {
         type="Language"
       />
 
+
+      <SkillIcon
+        title="Lua"
+        icon={<Svg src="lua" alt="lua logo" className="h-10 w-10" />}
+        description='Lua is very good scripting language. I really like it.'
+        skillLevel={3}
+        type="Language"
+        learning
+      />
+
+
       {/* <SkillIcon
         icon={<Svg src="c++" className="h-10 w-10" alt="C logo" />}
         title="C++"
@@ -274,7 +267,7 @@ export const SkillsContent = () => {
       <SkillIcon
         title="Python"
         skillLevel={100}
-        description="Very basic, high-level, not-scalable, educational programming language."
+        description="Very basic, high-level, not-scalable, educational, toy programming language."
         icon={<Svg src="python" className="h-10 w-10" alt="Python logo" />}
         type="Language"
       />
@@ -339,6 +332,7 @@ export const SkillsContent = () => {
 
       <SkillIcon
         icon={<Svg src="scss" className="h-10 w-10" alt="Scss logo" />}
+        hideWhenShrinked
         title="SCSS"
         skillLevel={90}
         type="Language"
@@ -1035,16 +1029,6 @@ export const SkillsContent = () => {
         skillLevel={0}
         forgotButCanRelearnIn="4 days"
         useReachedSkillLevelAsOpacityFactorFirst={false}
-        hideWhenShrinked
-        type="Language"
-      />
-
-      <SkillIcon
-        title="lua"
-        icon={<Svg src="lua" alt="lua logo" className="h-10 w-10" />}
-        reachedSkillLevel={8}
-        skillLevel={0}
-        forgotButCanRelearnIn="7 days"
         hideWhenShrinked
         type="Language"
       />
