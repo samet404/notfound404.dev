@@ -30,7 +30,7 @@ export const Skills = () => {
       <div className="flex flex-col p-2">
         <h2>My experiences</h2>
         <p className="xxs:max-w-[25rem] md:max-w-[26rem] lg:max-w-[30rem]">
-          You might think I've listed skills that I've only used for a few
+          You might think I've listed all technologies that I've only used for a few
           minutes, but...
           <span className="font-bold"> NO</span>. I used at least 20 hours of
           each technology. There are even so many things I don't wanna put in
