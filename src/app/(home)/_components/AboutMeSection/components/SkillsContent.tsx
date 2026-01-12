@@ -24,58 +24,6 @@ export const SkillsContent = () => {
   return (
     <div className="flex flex-row flex-wrap justify-center gap-2">
       <SkillIcon
-        title="Kotlin"
-        description="Kotlin is a modern programming language that is fully interoperable with Java. Kotlin makes easier to develop java applications."
-        icon={<Svg src="kotlin" alt="kotlin" className="h-8 w-8" />}
-        skillLevel={100}
-        type="Language"
-      />
-
-      <SkillIcon
-        icon={
-          <Image
-            loading="lazy"
-            sizes={imageSizes}
-            placeholder="blur"
-            src={kmp}
-            className="h-10 w-10 rounded-md"
-            alt="Kotlin Multiplatform"
-          />
-        }
-        title="Kotlin Multiplatform (Android, Desktop)"
-        description="Kotlin Multiplatform is a framework for building cross-platform applications with Kotlin."
-        skillLevel={100}
-        type="Library-framework"
-      />
-
-      <SkillIcon
-        icon={
-          <Image
-            loading="lazy"
-            sizes={imageSizes}
-            placeholder="blur"
-            src={ktor}
-            className="h-10 w-10 rounded-md"
-            alt="Ktor"
-          />
-        }
-        title="Ktor"
-        description="Kotlin server framework for building server applications with Kotlin. Very similar to express.js."
-        skillLevel={100}
-        type="Library-framework"
-      />
-
-      <SkillIcon
-        title="Jetpack Compose"
-        description="Jetpack compose is a modern UI library for building native java/kotlin applications."
-        icon={
-          <Svg src="jetpackcompose" alt="jetpack compose" className="h-9 w-9" />
-        }
-        skillLevel={100}
-        type="Library-framework"
-      />
-
-      <SkillIcon
         title="Java"
         description="Java is a popular programming language for building enterprise applications. It is a high-level, class-based, object-oriented language. Java is first designed to be make easy to develop platform-independent application GUIs. I actually don't like java much because of its OOP design. I prefer kotlin instead."
         hideWhenShrinked
@@ -126,8 +74,6 @@ export const SkillsContent = () => {
         skillLevel={38}
       /> */}
 
-
-
       {/* <SkillIcon
         icon={
           <Image
@@ -163,6 +109,66 @@ export const SkillsContent = () => {
         hideWhenShrinked
         type="Other"
       /> */}
+
+      <SkillIcon
+        title="Kotlin"
+        description="Kotlin is a modern programming language that is fully interoperable with Java. Kotlin makes easier to develop java applications."
+        icon={<Svg src="kotlin" alt="kotlin" className="h-8 w-8" />}
+        skillLevel={50}
+        reachedSkillLevel={100}
+        type="Language"
+        forgotButCanRelearnIn="1 week"
+      />
+
+      <SkillIcon
+        icon={
+          <Image
+            loading="lazy"
+            sizes={imageSizes}
+            placeholder="blur"
+            src={kmp}
+            className="h-10 w-10 rounded-md"
+            alt="Kotlin Multiplatform"
+          />
+        }
+        title="Kotlin Multiplatform (Android, Desktop)"
+        description="Kotlin Multiplatform is a framework for building cross-platform applications with Kotlin."
+        skillLevel={50}
+        reachedSkillLevel={100}
+        type="Library-framework"
+        forgotButCanRelearnIn="1 week"
+      />
+
+      <SkillIcon
+        icon={
+          <Image
+            loading="lazy"
+            sizes={imageSizes}
+            placeholder="blur"
+            src={ktor}
+            className="h-10 w-10 rounded-md"
+            alt="Ktor"
+          />
+        }
+        title="Ktor"
+        description="Kotlin server framework for building server applications with Kotlin. Very similar to express.js."
+        skillLevel={10}
+        reachedSkillLevel={100}
+        type="Library-framework"
+        forgotButCanRelearnIn="1 week"
+      />
+
+      <SkillIcon
+        title="Jetpack Compose"
+        description="Jetpack compose is a modern UI library for building native java/kotlin applications."
+        icon={
+          <Svg src="jetpackcompose" alt="jetpack compose" className="h-9 w-9" />
+        }
+        skillLevel={10}
+        reachedSkillLevel={100}
+        forgotButCanRelearnIn="1 week"
+        type="Library-framework"
+      />
 
       <SkillIcon
         title="Room database"
@@ -208,26 +214,23 @@ export const SkillsContent = () => {
         type="Tool"
       />
 
-
       <SkillIcon
         icon={<Svg src="c" className="h-10 w-10" alt="C logo" />}
         title="C"
         description="Mother of most high-level programming languages. I love C more than myself, its the best language so far. I wish had more time to learn it..."
-        skillLevel={20}
+        skillLevel={30}
         learning
         type="Language"
       />
-
 
       <SkillIcon
         title="Lua"
         icon={<Svg src="lua" alt="lua logo" className="h-10 w-10" />}
-        description='Lua is very good scripting language. I really like it.'
+        description="Lua is very good scripting language. I really like it."
         skillLevel={3}
         type="Language"
         learning
       />
-
 
       {/* <SkillIcon
         icon={<Svg src="c++" className="h-10 w-10" alt="C logo" />}
@@ -241,7 +244,7 @@ export const SkillsContent = () => {
         title="OpenGL"
         icon={<Svg src="opengl" className="h-10 w-10" alt="Opengl logo" />}
         type="API"
-        description="I started interested in OpenGL after seeing how all of the modern game engines trying to be are high level, user friendly and OOP. I want to learn how Graphics Processing Units and Central Processing Units works with each other and how manufacturers designs their card around OpenGL spesification in the low level surface. Still learning it :>"
+        description="I started interested in OpenGL after seeing how all of the modern game engines trying to be are high level, user friendly and OOP. I want to learn how Graphics Processing Units and Central Processing Units works with each other and how manufacturers designs their card around OpenGL spesification in the low level surface. Still learning it :> Edit: OH GOD WHY ITS SO DIFFUCULT TO DRAW A BASIC TRIANGLE"
         learning
         skillLevel={2}
       />
@@ -259,7 +262,7 @@ export const SkillsContent = () => {
         }
         learning
         title="Raylib"
-        description="Raylib is a simple and easy-to-use library to enjoy videogames programming."
+        description="Raylib is a simple and easy-to-use library to enjoy videogames programming. Actually I know how raylib works do lot of stuff in it but I'm trying to learn everything about it and wanna use raw opengl with it."
         skillLevel={44}
         type="Library-framework"
       />
@@ -267,7 +270,7 @@ export const SkillsContent = () => {
       <SkillIcon
         title="Python"
         skillLevel={100}
-        description="Very basic, high-level, not-scalable, educational, toy programming language."
+        description="Very basic, high-level, not-scalable, educational, toy, annoying programming language."
         icon={<Svg src="python" className="h-10 w-10" alt="Python logo" />}
         type="Language"
       />
@@ -580,8 +583,6 @@ export const SkillsContent = () => {
         type="Library-framework"
       />
 
-
-
       <SkillIcon
         icon={
           <Svg src="postgresql" className="h-9 w-9" alt="PostgreSQL logo" />
@@ -716,7 +717,9 @@ export const SkillsContent = () => {
         }
         title="Milvus"
         description="Compared to Chroma, Milvus is more advanced vector database for building complex applications using machine learning, data analysis, search, and recommendation systems."
-        skillLevel={70}
+        skillLevel={0}
+        forgotButCanRelearnIn="2 weeks"
+        reachedSkillLevel={70}
         type="Database"
       />
 
@@ -821,7 +824,6 @@ export const SkillsContent = () => {
         hideWhenShrinked
         type="Dev tool"
         learning
-
       />
 
       <SkillIcon
@@ -905,9 +907,9 @@ export const SkillsContent = () => {
       <SkillIcon
         icon={<Svg src="nginx" className="h-10 w-10" alt="Docker logo" />}
         title="Nginx"
-        skillLevel={40}
+        skillLevel={50}
         type="Tool"
-        description="Nginx is a reverse proxy server that sits in front of servers to handle incoming requests and distribute them to the appropriate servers. It can improve security, performance, and scalability."
+        description="Nginx is a reverse proxy server that sits in front of servers to handle incoming requests and distribute them to the appropriate servers. It can improve security, performance, and scalability. I use it to just host basic websites."
       />
 
       <SkillIcon

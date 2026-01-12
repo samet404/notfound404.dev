@@ -102,7 +102,7 @@ export const Dialog = () => {
 
           {forgotButCanRelearnIn && (
             <div className="items-center rounded-md bg-gradient-to-r from-[#33ff99] via-[#26bcb2]  to-[#33ff99] text-center text-[0.8rem] font-bold">
-            I can relearn in {' '}
+            Forgot it but can relearn in {' '}
               {forgotButCanRelearnIn}
             </div>
           )}
@@ -116,9 +116,9 @@ export const Dialog = () => {
             <div className="flex flex-col gap-4">
               <div className='w-full h-[0.1rem] bg-[#ffffff45]'></div>
               <div className='flex flex-col'>
-                <div className="text-[0.8rem]"><span className='text-[#ffffffd0]'>Workability level:</span> {skillLevel}/100</div>
-                {reachedSkillLevel &&  <div className="text-[0.8rem]">
-                  <span className='text-[#ffffffd0]'>Reached workability level:</span> {reachedSkillLevel}/100
+                <div className="text-[0.8rem]"><span className='text-[#ffffffd0]'>Current Workability level:</span> {skillLevel}/100</div>
+                {reachedSkillLevel &&  <div className="text-[0.8rem] rounded-l-sm bg-gradient-to-r from-[#33ff998a] to-transparent text-center " >
+                  <span className='text-[#ffffffd0] ml-[-0.5rem]'>Reached workability level:</span> {reachedSkillLevel}/100
                 </div>}
               </div>
 
