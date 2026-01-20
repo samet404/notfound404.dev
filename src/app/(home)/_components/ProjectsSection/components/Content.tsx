@@ -15,7 +15,7 @@ export const Content = () => {
       <div className=" flex items-center justify-center ">
         <div className="rounded-lg bg-[rgba(255,255,255,0.59)] text-2xl shadow-[0_0px_15px_5px_rgba(0,0,0,0.1)]">
           <div className=" bg-gradient-to-tl from-blue-700  via-blue-400 to-blue-600 bg-clip-text  px-3  py-1 font-[700] text-transparent ">
-            {"My Projects"}
+            {'My unsuccessful projects'}
           </div>
         </div>
       </div>
@@ -24,7 +24,21 @@ export const Content = () => {
           <ProjectBox
             name={'PIXGU'}
             description={
-              'Real-time multiplayer drawing and guessing game built with Next.js 15 and React 19. Using peer-to-peer connections via WebRTC, WebSocket for real-time communication, and Web Workers for optimal performance. Inspired by popular games like Gartic.io and Skribbl.io. I stopped working on this project after I realized that making game with React and javascript is not a good idea but at least I learned a lot.'
+              <div className="flex flex-col gap-2">
+                <div>
+                  I stopped working on this project after I realized that making
+                  game with React and javascript is not a good idea but at least
+                  I learned a lot.
+                </div>
+
+                <div>
+                  'The idea was: Real-time multiplayer drawing and guessing game
+                  built with Next.js 15 and React 19. Using peer-to-peer
+                  connections via WebRTC, WebSocket for connecting Webrtc pairs,
+                  and Web Workers for optimal performance. Inspired by popular
+                  games like Gartic.io and Skribbl.io.'
+                </div>
+              </div>
             }
             thumbnail={[
               <Image
@@ -65,7 +79,7 @@ export const Content = () => {
             }
             name={'Bloomia'}
             tags={[
-              'under development',
+              'DISCONTINUED',
               'personal project',
               'Kotlin',
               'Kotlin Multiplatform',
@@ -95,9 +109,22 @@ export const Content = () => {
               'Better-auth',
             ]}
             description={
-              `Bloomia has an interesting idea actually... It's not just a normal note-taking app. It is designed to be your path to your dreams, brainstorming, and creativity. Bloomia creates a 3D virtual world from your notes, diaries, or anything that can be transformed into AI knowledge where you can move, play, talk, and interact. It's a fully immersive experience that allows you to explore your imagination and create something truly unique. I'm still working on it, but I'm really excited about it. It's quite hard to make because of its complexity. I'm going to work on it after learning more about OpenGL, C, and raylib. The mobile and PC application is already done, but I haven't created the 3D environment yet. I'm also planning to rewrite all of the existing server code logic in C again.`
+              <div className="flex flex-col gap-2">
+                <div>
+                  I stopped working on this project after realized I just
+                  overhyped for AI. I made it open-source so you can look at the
+                  code I wrote and understand how much kotlin I know.
+                </div>
+                <div>
+                  The idea was: Bloomia creates a 3D virtual world from your
+                  notes, diaries, or anything that can be transformed into AI
+                  knowledge where you can move, play, talk, and interact. It's a
+                  fully immersive experience that allows you to explore your
+                  imagination and create something unique.
+                </div>
+              </div>
             }
-            link={`https://bloomia.app`}
+            link={`https://github.com/samet404/Bloomia`}
           />
           {/* 
           <ProjectBox
@@ -113,8 +140,6 @@ export const Content = () => {
             tags={['personal project', 'Typescript', 'Next.js', 'React', 'WebRTC', 'WebSocket', 'Web Workers', 'HTML', 'CSS', 'JavaScript']}
             link={''}
           /> */}
-
-         
         </div>
         <Repos />
         <FinalWordsDisplay />

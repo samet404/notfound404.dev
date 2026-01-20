@@ -8,7 +8,7 @@ import Image from 'next/image'
 
 type ProjectBoxProps = {
   name: string
-  description: string
+  description: ReactNode
   thumbnail: ReactNode
   link: string
   tags: string[]
@@ -28,7 +28,7 @@ const ProjectBox = ({
 
   return (
     <div className="backdrop-blur-2 flex w-full max-w-[30rem] flex-col items-start justify-between gap-7 rounded-lg bg-[rgba(255,255,255,0.3)] px-2 pb-2 pt-2 shadow-[0_0px_60px_-15px_rgba(0,0,0,0.3)] duration-300">
-      {showVideo && (
+      {showVideo && videoPath !== undefined && (
         <video
           ref={videoRef}
           className={cn('h-[13rem] w-full animate-fade rounded-md bg-black', {
@@ -43,7 +43,9 @@ const ProjectBox = ({
         </video>
       )}
 
-      {!showVideo && <div className='w-full flex justify-center'>{thumbnail}</div>}
+      {!showVideo && (
+        <div className="flex w-full justify-center">{thumbnail}</div>
+      )}
 
       <div className="flex w-full flex-col items-start gap-4 rounded-md p-2">
         <div className="flex flex-col gap-1">
@@ -71,19 +73,21 @@ const ProjectBox = ({
         </div>
 
         <div className="flex w-full flex-row justify-end gap-2 pt-3">
-          <div
-            onMouseDown={() => {
-              setShowVideo(true)
-            }}
-            className={cn(
-              'flex rounded-lg border-4 border-[#ffffff69] bg-[#cc2e7d] p-1 hover:opacity-70',
-              {
-                'opacity-60': showVideo,
-              },
-            )}
-          >
-            <Video className="h-7 w-7 opacity-80" color="white" />
-          </div>
+          { typeof(videoPath ) === 'string' && (
+            <div
+              onMouseDown={() => {
+                setShowVideo(true)
+              }}
+              className={cn(
+                'flex rounded-lg border-4 border-[#ffffff69] bg-[#cc2e7d] p-1 hover:opacity-70',
+                {
+                  'opacity-60': showVideo,
+                },
+              )}
+            >
+              <Video className="h-7 w-7 opacity-80" color="white" />
+            </div>
+          )}
           <div
             onMouseDown={() => {
               setShowVideo(false)
