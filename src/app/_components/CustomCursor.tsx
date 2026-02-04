@@ -82,7 +82,7 @@ export const CustomCursor = () => {
 
         const handleResize = () => {
             setCanvasSize()
-            trail.current = [] // Reset trail on resize
+            trail.current = [] 
         }
 
         window.addEventListener('resize', handleResize)

@@ -84,7 +84,6 @@ export const Nav = () => {
         <div className="hidden flex-row gap-5 min-[600px]:flex">
           <NavLink href="https://notfound404.life">Life</NavLink>
           <NavLink href="/articles">Articles</NavLink>
-          <NavLink href="/">About me</NavLink>
           <DarkThemeButton />
         </div>
         <div className="flex flex-row items-center gap-3 min-[600px]:hidden">
@@ -100,9 +99,7 @@ export const Nav = () => {
         {isMobileMenuOpen && (
           <div className="absolute left-0 right-0 top-full mt-2 flex flex-col items-center gap-4 rounded-lg bg-[#2b2b2b] p-4 backdrop-blur-md min-[600px]:hidden ">
             <NavLink href="https://notfound404.life">Life</NavLink>
-            <NavLink href="/calender">Calender</NavLink>
             <NavLink href="/articles">Articles</NavLink>
-            <NavLink href="/">About me</NavLink>
           </div>
         )}
       </nav>

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 
-const lastUpdated = 1768242076152
+const lastUpdated = 1770233619535
 
 export const SkillLastUpdated = () => {
   const [timeElapsed, setTimeElapsed] = useState('')
@@ -55,7 +55,7 @@ export const SkillLastUpdated = () => {
       setTimeElapsed(calculateTimeElapsed())
     }
 
-    updateTime() // Initial calculation
+    updateTime() 
     const interval = setInterval(updateTime, 1000) // Update every second
 
     return () => clearInterval(interval)

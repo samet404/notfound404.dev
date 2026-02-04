@@ -1,6 +1,6 @@
 export const Description = () => {
   return (
-    <div className="p-2 w-full ">
+    <div className="w-full p-2 ">
       <p>
         Hello, welcome to my personal website. This website about me and my
         articles and my other content.
@@ -11,11 +11,21 @@ export const Description = () => {
         <span className="font-bold"> Web</span> developer. While I can use so
         many languages and frameworks, I'm focusing on Kotlin Multiplatform and
         Web ecosystem. I can create mobile apps, websites, desktop apps, backend
-        services and AI applications.
+        services applications.
       </p>
       <p>
-       I'm a self-taught developer who believes in real coding experience and hands-on learning. I believe that real learning comes from understanding what you are actually doing. It’s not about the tools you use; it’s about understanding the math and the methods you are applying behind them.
-
+        Additionally, I really enjoy learning low-level technologies such as the
+        C programming language, compilers, graphics APIs, and 3D rendering
+        libraries. However, I don't use these technologies to make money and I am not currently an expert in these; I
+        genuinely enjoy learning them. For me, coding isn't just about making
+        money, I am always curious about the technical and scientific aspects of programming.
+      </p>
+      <p>
+        I'm a self-taught developer who believes in real coding experience and
+        hands-on learning. I believe that real learning comes from understanding
+        what you are actually doing. It’s not about the tools you use; it’s
+        about understanding the math and the methods you are applying behind
+        them.
       </p>
       <p>
         I like to learn new things, listening music, playing games, reading

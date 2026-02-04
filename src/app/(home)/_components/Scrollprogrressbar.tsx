@@ -6,29 +6,23 @@ const ScrollProgressBar = () => {
   const [scrollProgress, setScrollProgress] = useState(0)
 
   useEffect(() => {
-
     const scrollContainer = document.getElementById('scroll-container')
     const documentScrollContainer =
       document.getElementById('scroll-container')
     if (!documentScrollContainer) return
 
     const calculateScrollProgress = () => {
-      // Get the total scrollable height
       const totalHeight =
         documentScrollContainer.scrollHeight -
         documentScrollContainer.clientHeight
-      // Get current scroll position of the container
       const currentScroll = documentScrollContainer.scrollTop
-      // Calculate progress percentage
       const scrollPercentage = (currentScroll / totalHeight) * 100
       setScrollProgress(Math.min(100, Math.max(0, scrollPercentage)))
     }
 
 
-    // Add scroll event listener to the container instead of window
     scrollContainer!.addEventListener('scroll', calculateScrollProgress)
 
-    // Cleanup listener on component unmount
     return () => {
       if (scrollContainer) {
         scrollContainer.removeEventListener('scroll', calculateScrollProgress)
@@ -48,7 +42,6 @@ const ScrollProgressBar = () => {
       }}
     >
       <div
-        className="duration-300"
         style={{
           height: '100%',
           width: `${scrollProgress}%`,

@@ -6,7 +6,7 @@ import { Svg } from '@/src/components/Svg'
 import { cn } from '@/src/utils'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useRef, useState } from 'react'
+import { Fragment, useEffect, useRef, useState } from 'react'
 import {
   getPresenceTimeWorker,
   postMsgToTimerWorker,
@@ -105,7 +105,7 @@ export const Presence = () => {
     })()
   }, [isOpen])
 
-  if (error || isMobile) return null
+  if (error) return null
 
   if (!isOpen)
     return (
@@ -148,7 +148,9 @@ export const Presence = () => {
       <div className="flex w-full items-center justify-between">
         <div className="flex animate-pulse items-center justify-center gap-[0.4rem] p-1">
           <div
-            className={`flex-shrink rounded-full p-1 ${getStatusColor(presenceData.discord_status)}`}
+            className={`flex-shrink rounded-full p-1 ${getStatusColor(
+              presenceData.discord_status,
+            )}`}
           />
           <div className="leading-0 shrink pt-[0.1rem] text-center text-[0.5rem] capitalize text-gray-600 dark:text-gray-300">
             {presenceData.discord_status} ({getPlatformStatus()})
@@ -185,7 +187,11 @@ export const Presence = () => {
               {activity.name === 'YouTube Music' &&
                 activity.assets?.large_image && (
                   <Link
-                    href={`https://music.youtube.com/search?q=${encodeURIComponent((activity.details?.trim() || '').replace(/\s+/g, '_'))}_${encodeURIComponent((activity.state?.trim() || '').replace(/\s+/g, '-'))}`}
+                    href={`https://music.youtube.com/search?q=${encodeURIComponent(
+                      (activity.details?.trim() || '').replace(/\s+/g, '_'),
+                    )}_${encodeURIComponent(
+                      (activity.state?.trim() || '').replace(/\s+/g, '-'),
+                    )}`}
                     target="_blank"
                     className="absolute left-0 top-0 z-10 flex h-full w-full items-center justify-center rounded-lg bg-[#0000006c] text-sm text-white opacity-0 duration-500 hover:opacity-100"
                   >
@@ -212,7 +218,7 @@ export const Presence = () => {
                           : 'cover',
                     }}
                     alt="youtube music"
-                    className="flex h-[3.2rem] w-[3.2rem] rounded-md object-cover object-center"
+                    className="flex h-[3rem] w-[3rem] rounded-md  object-cover object-center sm:h-[3.2rem] sm:w-[3.2rem]"
                   />
                 )}
 

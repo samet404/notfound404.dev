@@ -6,7 +6,7 @@ import { cn } from '@/src/utils'
 
 export const BackgroundColor = ({ children }: PropsWithChildren) => {
   const value = useIsDarkTheme((state) => state.value)
-
+const a = '#eda4b2'
   return (
     <div
       className="flex w-full flex-col justify-center gap-7 selection:bg-[#ffffff54]"
@@ -29,9 +29,9 @@ export const BackgroundColor = ({ children }: PropsWithChildren) => {
       <div className="relative z-10  pt-20">
         <div
          style={{
-          backgroundImage:  'radial-gradient(at 100% 0%, #eda4b2 0px, transparent 50%), radial-gradient(at 0% 0%, #ffffffad 0px, transparent 50%), radial-gradient(at 30% 0%, #eda4b2 0px, transparent 50%)',
+          backgroundImage:  window.innerWidth > 600 ? 'radial-gradient(at 100% 0%, #ffabbc 0px, transparent 50%), radial-gradient(at 0% 0%, #ffffffd3 0px, transparent 50%), radial-gradient(at 30% 0%, #eda4b2 0px, transparent 50%)' : 'radial-gradient(at 100% 0%, #ffabbc 0px, transparent 50%),radial-gradient(at 20% 20%, #eda4b2 0px, transparent 50%)',
         }}
-        className="absolute left-0 top-0 z-[-1] flex h-[40rem] w-full ">
+        className="absolute left-0 top-0 z-[-1]  flex h-[40rem] w-full ">
         
         </div>
         {children}
