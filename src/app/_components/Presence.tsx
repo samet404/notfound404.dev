@@ -177,7 +177,7 @@ export const Presence = () => {
           if (!activity || activity.type === 4) return null
 
           const showSmIcon = !!activity.assets?.small_image
-          const showImage = activity.name !== 'Stack Overflow'
+          const showImage = activity.name ===  'YouTube Music' || activity.name === 'Spotify'
           activity.assets?.large_image
 
           return (
