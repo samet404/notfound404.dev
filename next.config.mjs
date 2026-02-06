@@ -9,7 +9,9 @@ import createMDX from '@next/mdx';
 /** @type {import("next").NextConfig} */
 const config = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-
+  typescript: {
+    ignoreBuildErrors: false,
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
