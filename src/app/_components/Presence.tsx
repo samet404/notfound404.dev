@@ -144,7 +144,7 @@ export const Presence = () => {
       .join(', ')
 
   return (
-    <div className="fixed bottom-2 left-2 z-30 w-[12rem] max-w-sm animate-fade rounded-lg bg-[#000000aa] py-1 pl-[0.3rem] pr-[0.3rem] shadow-[0_0px_10px_1px_rgba(0,0,0,0.5)] backdrop-blur-sm animate-delay-100">
+    <div className="fixed bottom-2 left-2 z-30 w-[12rem] max-w-sm animate-fade rounded-lg bg-gradient-to-tr from-[#000000aa] to-[#4b1f3eaa] py-1 pl-[0.3rem] pr-[0.3rem] shadow-[0_0px_10px_1px_rgba(0,0,0,0.5)] backdrop-blur-sm animate-delay-100">
       <div className="flex w-full items-center justify-between">
         <div className="flex animate-pulse items-center justify-center gap-[0.4rem] p-1">
           <div
@@ -176,8 +176,9 @@ export const Presence = () => {
         {presenceData.activities?.map((activity, index) => {
           if (!activity || activity.type === 4) return null
 
-          const showImage =
-            activity.name === 'YouTube Music' && activity.assets?.large_image
+          const showSmIcon = !!activity.assets?.small_image
+          const showImage = activity.name !== 'Stack Overflow'
+          activity.assets?.large_image
 
           return (
             <div
@@ -198,6 +199,7 @@ export const Presence = () => {
                     Open in YouTube Music
                   </Link>
                 )}
+
               <div className="flex flex-row gap-2 space-y-0.5 text-[0.55rem]">
                 {showImage && activity.assets?.large_image && (
                   <Image
@@ -218,10 +220,9 @@ export const Presence = () => {
                           : 'cover',
                     }}
                     alt="youtube music"
-                    className="flex h-[3rem] w-[3rem] rounded-md  object-cover object-center sm:h-[3.2rem] sm:w-[3.2rem]"
+                    className="flex h-[3rem] w-[3rem] rounded-md  object-cover object-center "
                   />
                 )}
-
                 <div
                   className={cn('flex w-[7rem] flex-col', {
                     'w-[10rem]': !showImage,
@@ -234,9 +235,33 @@ export const Presence = () => {
                   <div className="overflow-hidden text-ellipsis whitespace-nowrap break-all pr-3 text-gray-600 dark:text-gray-400">
                     {activity.state}
                   </div>
+                  <div className="flex flex-row items-center gap-1 pr-3 pt-[0.2rem] ">
+                    {showSmIcon && activity.assets?.small_image && (
+                      <Image
+                        ref={imgRef}
+                        width={70}
+                        height={70}
+                        src={
+                          'https://' +
+                          activity.assets.small_image.substring(
+                            activity.assets.small_image.indexOf('https/') + 6,
+                          )
+                        }
+                        alt=""
+                        style={{
+                          objectFit:
+                            imgRef.current?.naturalWidth !==
+                            imgRef.current?.naturalHeight
+                              ? 'none'
+                              : 'cover',
+                        }}
+                        className="flex h-[0.8rem] w-[0.8rem] rounded-md  object-cover object-center "
+                      />
+                    )}
 
-                  <div className="overflow-hidden text-ellipsis whitespace-nowrap break-all pr-3 pt-[0.2rem] text-gray-500">
-                    {activity.name}
+                    <div className="overflow-hidden  text-[0.5rem] text-ellipsis whitespace-nowrap break-all  text-gray-500">
+                      {activity.assets?.small_text} {activity.name}
+                    </div>
                   </div>
                 </div>
               </div>
