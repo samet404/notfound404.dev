@@ -228,11 +228,11 @@ export const Presence = () => {
                     'w-[10rem]': !showImage,
                   })}
                 >
-                  <div className="overflow-hidden text-ellipsis whitespace-nowrap font-medium text-gray-800 dark:text-gray-200">
-                    {activity.details?.trim()}
+                  <div className="font-medium text-gray-800 dark:text-gray-200">
+                    {activity.details?.trim().replace(activity.state, ' ')}
                   </div>
 
-                  <div className="overflow-hidden text-ellipsis whitespace-nowrap break-all pr-3 text-gray-600 dark:text-gray-400">
+                  <div className="break-all pr-3 text-gray-600 dark:text-gray-400">
                     {activity.state}
                   </div>
                   <div className="flex flex-row items-center gap-1 pr-3 pt-[0.2rem] ">
