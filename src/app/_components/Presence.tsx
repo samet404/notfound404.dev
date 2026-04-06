@@ -270,7 +270,7 @@ export const Presence = () => {
         })}
       </div>
       <div className="break-all p-1 text-[0.5rem] text-gray-500">
-        Discord: 404nnotfoundd
+        Activity
       </div>
     </div>
   )
