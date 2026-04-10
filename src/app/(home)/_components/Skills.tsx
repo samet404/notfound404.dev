@@ -32,10 +32,9 @@ export const Skills = () => {
         <p className="xxs:max-w-[25rem] md:max-w-[26rem] lg:max-w-[30rem]">
           You might think I've listed all technologies that I've only used for a few
           minutes, but...
-          <span className="font-bold"> NO</span>. I used at least 20 hours of
+          <span className="font-bold"> actually no :P</span> I used at least 20 hours of
           each technology. There are even so many things I don't wanna put in
-          this list and I want to learn even more things. Also please, don't think I'm trying to learn everything,
-          as I said before, I'm mainly focusing on Kotlin and Web ecosystem.
+          this list and I want to learn even more things. And yes, I love learning.
         </p>
         <p className="xxs:max-w-[25rem] md:max-w-[26rem] lg:max-w-[30rem]">
           Hover or click on the icons to see more information about them. Each

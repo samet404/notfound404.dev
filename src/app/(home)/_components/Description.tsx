@@ -6,11 +6,8 @@ export const Description = () => {
         articles and my other content.
       </p>
       <p>
-        I'm a 19-year-old self-taught fullstack{' '}
-        <span className="font-bold">Kotlin</span> and
-        <span className="font-bold"> Web</span> developer. While I can use so
-        many languages and frameworks, I'm focusing on Kotlin Multiplatform and
-        Web ecosystem. I can create mobile apps, websites, desktop apps, backend
+        I'm a 20 year old self-taught fullstack <span className="font-bold"> Web</span> developer. While I can use so
+        many languages and frameworks, I'm focusing on Web ecosystem. I can create mobile apps, websites, desktop apps, backend
         services applications.
       </p>
       <p>

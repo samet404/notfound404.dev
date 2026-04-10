@@ -41,17 +41,7 @@ export const Links = () => {
             alt="stackoverflow logo"
           />
         </ProfileLink>
-        <Divider />
-        <ProfileLink href="https://codepen.io/samet404">
-          <Image
-            src={codepen}
-            placeholder="blur"
-            sizes="calc(0.7vw + 26px)"
-            className="h-7 w-7"
-            alt="codepen"
-          />
-        </ProfileLink>
-        {/* <ProfileLink href="https://leetcode.com/u/samet404/">
+               {/* <ProfileLink href="https://leetcode.com/u/samet404/">
           <Svg src="leetcode" className="h-7 w-7" alt="stackoverflow logo" />
         </ProfileLink> */}
         <Divider />

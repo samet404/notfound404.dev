@@ -110,6 +110,16 @@ export const SkillsContent = () => {
         type="Other"
       /> */}
 
+         <SkillIcon
+        icon={<Svg src="c" className="h-10 w-10" alt="C logo" />}
+        title="C"
+        description="Mother of most high-level programming languages. I love C more than myself, its the best language so far. I wish had more time to learn it..."
+        skillLevel={55}
+        learning
+        type="Language"
+      />
+
+
       <SkillIcon
         title="Kotlin"
         description="Kotlin is a modern programming language that is fully interoperable with Java. Kotlin makes easier to develop java applications."
@@ -214,15 +224,7 @@ export const SkillsContent = () => {
         type="Tool"
       />
 
-      <SkillIcon
-        icon={<Svg src="c" className="h-10 w-10" alt="C logo" />}
-        title="C"
-        description="Mother of most high-level programming languages. I love C more than myself, its the best language so far. I wish had more time to learn it..."
-        skillLevel={40}
-        learning
-        type="Language"
-      />
-
+   
       <SkillIcon
         icon={<Svg src="c++" className="h-10 w-10" alt="C logo" />}
         title="C++"
